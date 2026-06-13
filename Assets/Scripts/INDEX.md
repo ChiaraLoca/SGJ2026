@@ -39,6 +39,7 @@ Indice generale del codice. Ogni cartella ha un proprio `INDEX.md` (sottoindice)
 | Snapshot di stato per la rete/UI | `Network/GameStateDTO.cs`, costruito da `Network/GameStateDtoBuilder.cs` |
 | Cambiare il trasporto (offline → Photon) | `Network/INetworkTransport.cs` (impl: `LocalLoopbackTransport.cs`) |
 | Ridisegnare la UI sullo stato | `UI/GameView.cs` (ascolta `GameStateSyncedEvent`) |
+| Gestire musica/ambiente/SFX evento-driven | `UI/GameAudioController.cs` |
 | Valori di bilanciamento (round, mano, shop, conversione) | `Config/GameConfigSO.cs` |
 | Costanti strutturali (n. giocatori, comandanti, carte) | `Config/GameConstants.cs` |
 | Contenuti della partita (comandanti, carte, catalogo) | `Config/GameContentSO.cs` |
