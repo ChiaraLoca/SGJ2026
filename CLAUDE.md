@@ -208,6 +208,13 @@ private void OnDestroy()
 Tutti i valori di bilanciamento vivono qui:
 - `maxRounds`, `startingCardsPerCommander`, `cardsPlayablePerTurn[]` (array per round), `shopSlots`, `shopRefreshCost`, ecc.
 
+### Safe Area (UI mobile)
+Ogni scena con una Canvas UI **deve** avere la Safe Area configurata:
+- Il Canvas root contiene il componente `SafeAreaController` (`Assets/Scripts/UI/SafeAreaController.cs`).
+- Tutti i figli della Canvas vivono dentro un GameObject figlio chiamato `SafeAreaPanel` (RectTransform stretch completo), che `SafeAreaController` adatta dinamicamente a notch, home bar e Dynamic Island.
+- Per configurarla su una scena nuova: aprirla in Unity e usare il menu **`4E → Setup Safe Area nella scena attiva`** (script in `Assets/Scripts/UI/Editor/SafeAreaSetup.cs`). Lo script crea il pannello, sposta i figli esistenti e collega il componente in automatico.
+- Scelte attive: **MainMenu** e **SampleUI**.
+
 ---
 
 ## Cosa NON Fare (Jam Anti-Patterns)
