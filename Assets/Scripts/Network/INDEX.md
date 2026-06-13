@@ -18,10 +18,10 @@ Torna all'[indice generale](../INDEX.md).
 | [PhotonTransport.cs](PhotonTransport.cs) | `PhotonTransport` (`#if PHOTON_UNITY_NETWORKING`) | Implementazione PUN2 online host-authoritative. Intent→MasterClient, stato→Others via `RaiseEvent`; MasterClient = host (attore di gioco 0), ospite = 1. `RequestInitialState()` per il resync. `IDisposable` |
 | [SessionConfig.cs](SessionConfig.cs) | `enum NetworkMode` + `static SessionConfig` | Scelte del menu che sopravvivono al cambio scena: `Mode` (Hotseat/Online), `RoomCode`, `Player0Commanders`/`Player1Commanders` (`CommanderKind[]`, null = default). Lette dal `NetworkGameManager` per transport e selezione comandanti |
 | [NetworkSerializer.cs](NetworkSerializer.cs) | `static NetworkSerializer` | `byte[]`↔`GameIntent`/`GameStateDTO` con `BinaryWriter`/`Reader`. Indipendente da Photon |
-| [OnlineLauncher.cs](OnlineLauncher.cs) | `OnlineLauncher : MonoBehaviour` | Lato menu: connessione cloud + accoppiamento per codice stanza (`HostRoom`/`JoinExistingRoom`). A 2 giocatori l'host fa `LoadLevel("CommanderSelect")` (sincronizzata). Compila sempre; logica PUN2 sotto `#if`. Eventi `StatusChanged`/`Failed` |
+| [OnlineLauncher.cs](OnlineLauncher.cs) | `OnlineLauncher : MonoBehaviour` | Lato menu: connessione cloud + accoppiamento per codice stanza (`HostRoom`/`JoinExistingRoom`). A 2 giocatori l'host fa `LoadLevel("CommanderSelectUI")` (sincronizzata). Compila sempre; logica PUN2 sotto `#if`. Eventi `StatusChanged`/`Failed` |
 | [GameStateDtoBuilder.cs](GameStateDtoBuilder.cs) | `static GameStateDtoBuilder` | `Build(state, registry)`: costruisce il `GameStateDTO` dallo stato vivo |
 | [GameStateSyncedEvent.cs](GameStateSyncedEvent.cs) | struct `GameStateSyncedEvent` | Evento EventBus consumato dalla UI: `State`, `LocalActorNumber` |
-| [NetworkGameManager.cs](NetworkGameManager.cs) | `NetworkGameManager : MonoBehaviour` | Orchestratore. API UI `Submit*()`; host: `ProcessIntent()` (guard `IsHost`) → manager Core → `BroadcastState()`. Registra nei DTO carta e attore dell'ultima giocata per entrambi i client. `DefaultExecutionOrder(100)` |
+| [NetworkGameManager.cs](NetworkGameManager.cs) | `NetworkGameManager : MonoBehaviour` | Orchestratore. Applica le selezioni comandanti di `SessionConfig` prima di avviare il match. API UI `Submit*()`; host: `ProcessIntent()` (guard `IsHost`) → manager Core → `BroadcastState()`. Registra nei DTO carta e attore dell'ultima giocata per entrambi i client. `DefaultExecutionOrder(100)` |
 
 ## Note
 

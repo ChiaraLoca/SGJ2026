@@ -25,6 +25,7 @@ namespace FourE.UI
 
         [Header("Prefab")]
         [SerializeField] private CardView _cardPrefab;
+        [SerializeField] private CommanderAbilityPopup _commanderAbilityPopupPrefab;
         [SerializeField] private float _cardPreviewScale = 2.4f;
 
         [Header("Animazione carta giocata")]
@@ -67,7 +68,10 @@ namespace FourE.UI
         private readonly List<CardView> _spawnedShop = new();
         private Canvas _canvas;
         private CardView _cardPreview;
+        private CommanderAbilityPopup _commanderAbilityPopup;
         private CardPlayAnimationController _cardPlayAnimator;
+        private readonly Dictionary<(int ActorNumber, int CommanderIndex), bool> _secondaryUnlockStates = new();
+        private bool _hasRenderedCommanderUnlockStates;
         private bool _hasObservedPlayedCardSequence;
         private int _lastObservedPlayedCardSequence;
         private int _previousLocalActorNumber = -1;
@@ -128,6 +132,7 @@ namespace FourE.UI
         private void OnDestroy()
         {
             HideCardPreview();
+            HideCommanderAbilityPopup();
             _cardPlayAnimator?.Dispose();
             EventBus.Unsubscribe<GameStateSyncedEvent>(OnStateSynced);
         }
@@ -182,13 +187,13 @@ namespace FourE.UI
                 _remainingActionsLabel.gameObject.SetActive(showRemainingActions);
                 if (showRemainingActions)
                 {
-                    _remainingActionsLabel.text = $"Azioni rimanenti: {state.RemainingActions}";
+                    _remainingActionsLabel.text = state.RemainingActions.ToString();
                 }
             }
 
             if (_creditsLabel != null)
             {
-                _creditsLabel.text = $"Credits: {local.Credits}";
+                _creditsLabel.text = local.Credits.ToString();
             }
 
             if (_enemyCreditsLabel != null)
@@ -205,22 +210,22 @@ namespace FourE.UI
                     _enemyCreditsLocalActorNumber = localActorNumber;
                 }
 
-                _enemyCreditsLabel.text = $"Credits avversario: {_displayedEnemyCredits}";
+                _enemyCreditsLabel.text = _displayedEnemyCredits.ToString();
             }
 
             if (_notesLabel != null)
             {
-                _notesLabel.text = $"Note: {local.Notes}";
+                _notesLabel.text = local.Notes.ToString();
             }
 
             if (_deckCountLabel != null)
             {
-                _deckCountLabel.text = $"MAZZO\n{local.DeckCount}";
+                _deckCountLabel.text = local.DeckCount.ToString();
             }
 
             if (_discardCountLabel != null)
             {
-                _discardCountLabel.text = $"SCARTI\n{local.DiscardCount}";
+                _discardCountLabel.text = local.DiscardCount.ToString();
             }
 
             if (_outcomeLabel != null)
@@ -242,6 +247,7 @@ namespace FourE.UI
             BindCommander(_localCommander1, local, GameConstants.SecondCommanderIndex);
             BindCommander(_enemyCommander0, enemy, GameConstants.FirstCommanderIndex);
             BindCommander(_enemyCommander1, enemy, GameConstants.SecondCommanderIndex);
+            _hasRenderedCommanderUnlockStates = true;
         }
 
         /// <summary>
@@ -257,7 +263,59 @@ namespace FourE.UI
 
             CommanderDTO snapshot = player.Commanders[index];
             CommanderDataSO definition = _content.GetCommanderByKind((CommanderKind)snapshot.Kind);
-            view.Bind(snapshot, definition, player.ActorNumber, index);
+            (int ActorNumber, int CommanderIndex) key = (player.ActorNumber, index);
+            bool shouldPlayUnlockEffect =
+                _hasRenderedCommanderUnlockStates &&
+                _secondaryUnlockStates.TryGetValue(key, out bool wasUnlocked) &&
+                !wasUnlocked &&
+                snapshot.SecondaryUnlocked;
+
+            _secondaryUnlockStates[key] = snapshot.SecondaryUnlocked;
+            view.Bind(
+                snapshot,
+                definition,
+                player.ActorNumber,
+                index,
+                ShowCommanderAbilityPopup,
+                HideCommanderAbilityPopup);
+
+            if (shouldPlayUnlockEffect)
+            {
+                view.PlaySecondaryUnlockEffect();
+            }
+        }
+
+        /// <summary>
+        /// Mostra al centro del Canvas il riquadro con le abilita del comandante premuto.
+        /// </summary>
+        /// <param name="data">Definizione del comandante.</param>
+        /// <param name="secondaryUnlocked">Stato corrente della passiva secondaria.</param>
+        private void ShowCommanderAbilityPopup(CommanderDataSO data, bool secondaryUnlocked)
+        {
+            HideCommanderAbilityPopup();
+            if (_commanderAbilityPopupPrefab == null || _canvas == null || data == null)
+            {
+                return;
+            }
+
+            _commanderAbilityPopup = Instantiate(_commanderAbilityPopupPrefab, _canvas.transform);
+            _commanderAbilityPopup.transform.SetAsLastSibling();
+            _commanderAbilityPopup.Bind(data, secondaryUnlocked);
+            _commanderAbilityPopup.gameObject.SetActive(true);
+        }
+
+        /// <summary>
+        /// Chiude il riquadro delle abilita del comandante.
+        /// </summary>
+        private void HideCommanderAbilityPopup()
+        {
+            if (_commanderAbilityPopup == null)
+            {
+                return;
+            }
+
+            Destroy(_commanderAbilityPopup.gameObject);
+            _commanderAbilityPopup = null;
         }
 
         /// <summary>

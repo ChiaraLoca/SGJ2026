@@ -1850,7 +1850,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FourE.UI.MainMenuController
   _launcher: {fileID: 1456677908}
   _gameSceneName: SampleUI
-  _selectionSceneName: CommanderSelect
+  _selectionSceneName: CommanderSelectUI
   _modePanel: {fileID: 434766986}
   _roomPanel: {fileID: 602022144}
   _sameDeviceButton: {fileID: 196573425}
@@ -1873,7 +1873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb5f798ef75de594cb163a0445e9a499, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Network.OnlineLauncher
-  _selectionSceneName: CommanderSelect
+  _selectionSceneName: CommanderSelectUI
 --- !u!4 &1456677909
 Transform:
   m_ObjectHideFlags: 0

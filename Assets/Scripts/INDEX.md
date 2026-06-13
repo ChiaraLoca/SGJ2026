@@ -27,7 +27,7 @@ Indice generale del codice. Ogni cartella ha un proprio `INDEX.md` (sottoindice)
 |---|---|
 | Avviare una partita | `Core/GameStateManager.cs` → `StartMatch()` |
 | Passive dei comandanti (base/secondaria, sblocco) | `Core/CommanderPassiveSystem.cs`; identità in `Commanders/CommanderKind.cs`; costanti in `Commanders/CommanderPassiveConstants.cs` |
-| Selezione dei 2 comandanti a inizio partita | scena `Assets/Scenes/CommanderSelect.unity` + `UI/CommanderSelectController.cs`; scelta in `Network/SessionConfig.cs`, risolta da `Core/GameStateManager.SetCommanderSelections()` |
+| Selezione dei 2 comandanti a inizio partita | scena `Assets/Scenes/CommanderSelectUI.unity` + `UI/CommanderSelectController.cs`; griglia 3x2 pronta per 6 opzioni, scelta in `Network/SessionConfig.cs`, risolta da `Core/GameStateManager.SetCommanderSelections()` |
 | Capire il flusso delle fasi (Play→Verifica→Shop→Draw→Esame) | `Core/PhaseManager.cs` |
 | Giocare una carta / Verifica / fine turno | `Core/TurnManager.cs` |
 | Aggiungere un nuovo tipo di effetto carta | `Cards/CardEffectSO.cs` (base) + nuova classe in `Cards/Effects/` |
@@ -54,9 +54,9 @@ Indice generale del codice. Ogni cartella ha un proprio `INDEX.md` (sottoindice)
 
 ```
 Scena MainMenu → MainMenuController
-  → "Stesso telefono": SessionConfig.Mode=Hotseat → scena CommanderSelect
+  → "Stesso telefono": SessionConfig.Mode=Hotseat → scena CommanderSelectUI
         → ogni giocatore sceglie 2 comandanti → SessionConfig.Player0/1Commanders → scena di gioco (SampleUI)
-  → "Online": OnlineLauncher crea/raggiunge stanza per codice → (2 giocatori) LoadLevel(CommanderSelect)
+  → "Online": OnlineLauncher crea/raggiunge stanza per codice → (2 giocatori) LoadLevel(CommanderSelectUI)
         → ognuno sceglie i propri 2 comandanti (Custom Property Photon) → host raccoglie entrambe → LoadLevel(SampleUI)
 
 SampleScene → NetworkGameManager.Awake()

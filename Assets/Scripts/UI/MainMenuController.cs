@@ -16,9 +16,9 @@ namespace FourE.UI
         [Header("Rete")]
         [SerializeField] private OnlineLauncher _launcher;
         [Tooltip("Scena di gioco caricata in modalità hotseat (l'online la carica via Photon).")]
-        [SerializeField] private string _gameSceneName = "SampleScene";
+        [SerializeField] private string _gameSceneName = "SampleUI";
         [Tooltip("Scena di selezione comandanti caricata in hotseat prima della partita.")]
-        [SerializeField] private string _selectionSceneName = "CommanderSelect";
+        [SerializeField] private string _selectionSceneName = "CommanderSelectUI";
 
         [Header("Pannelli")]
         [SerializeField] private GameObject _modePanel;
