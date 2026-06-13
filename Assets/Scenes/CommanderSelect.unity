@@ -1829,6 +1829,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1533937793}
   - component: {fileID: 1533937792}
+  - component: {fileID: 1533937794}
   m_Layer: 0
   m_Name: CommanderSelect
   m_TagString: Untagged
@@ -1878,6 +1879,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1533937794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533937791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 592bd2e7ad7171949801ff532b65180e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FourE.UI.CommanderSelectController
+  _content: {fileID: 11400000, guid: ab94d01a7c5063d4ba727a5937db6885, type: 2}
+  _optionPrefab: {fileID: 0}
+  _optionsContainer: {fileID: 1189441890}
+  _commanderCardCellSize: {x: 200, y: 300}
+  _detailPanel: {fileID: 606228933}
+  _detailNameLabel: {fileID: 1333693555}
+  _detailBaseAbilityLabel: {fileID: 2076839376}
+  _detailUnlockLabel: {fileID: 643397458}
+  _detailSecondaryAbilityLabel: {fileID: 497992506}
+  _selectCommanderButton: {fileID: 628239961}
+  _titleLabel: {fileID: 91404345}
+  _selectionLabel: {fileID: 779378808}
+  _confirmButton: {fileID: 1363955938}
+  _clearButton: {fileID: 1236960616}
+  _gameSceneName: SampleScene
 --- !u!1 &1555496191
 GameObject:
   m_ObjectHideFlags: 0
