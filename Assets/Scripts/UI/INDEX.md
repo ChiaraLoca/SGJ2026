@@ -17,6 +17,15 @@ Torna all'[indice generale](../INDEX.md).
 | [GameView.cs](GameView.cs) | `GameView : MonoBehaviour` | HUD principale. Mostra crediti, mazzo/scarti locali, azioni rimanenti solo al giocatore attivo, mano con sovrapposizione adattiva, mercato 4x2 durante `Shop`, anteprima/animazioni carte e inoltro intent |
 | [MainMenuController.cs](MainMenuController.cs) | `MainMenuController : MonoBehaviour` | Menu iniziale (scena `MainMenu`). **Stesso telefono** (hotseat → carica `CommanderSelect`, poi la scena di gioco) e **Online** (codice stanza → `OnlineLauncher`). Imposta `SessionConfig.Mode`/`RoomCode`; azzera le selezioni comandanti; genera il codice stanza; pannelli modalità/stanza |
 | [SafeAreaController.cs](SafeAreaController.cs) | `SafeAreaController : MonoBehaviour` | Da collegare al Canvas principale di ogni scena. Adatta il pannello figlio `_panel` alla `Screen.safeArea` del dispositivo (notch, home bar, Dynamic Island). Si ricalcola automaticamente al cambio di orientamento. `DefaultExecutionOrder(-100)` |
+| [EffectTestSceneManager.cs](EffectTestSceneManager.cs) | `EffectTestSceneManager : MonoBehaviour` | Gestore della scena di test effetti offline. Crea 2 giocatori con 2 comandanti ciascuno; permette applicare effetti carte istantaneamente senza turni. Risolve effetti via `EffectResolver`. Scena: `Assets/Scenes/EffectTest.unity` |
+| [EffectTestUIController.cs](EffectTestUIController.cs) | `EffectTestUIController : MonoBehaviour` | UI per il test: dropdown carte/giocatore/bersaglio, toggle passive, bottoni Apply/Reset, log risultati. Comunica con `EffectTestSceneManager` |
+| [CommanderTestView.cs](CommanderTestView.cs) | `CommanderTestView : MonoBehaviour` | Vista di un comandante nel test: nome, Note, buff/debuff attivi, stato passiva secondaria. `SetCommander()` e `Refresh()` per aggiornamenti real-time |
+
+### Editor/ (automazioni scene, setup)
+
+| File | Tipo | Responsabilità |
+|---|---|---|
+| [Editor/EffectTestSceneSetup.cs](Editor/EffectTestSceneSetup.cs) | `EffectTestSceneSetup` | Setup automatico della scena `EffectTest.unity`. Menu editor `4E → Setup Scena Test Effetti`: genera Canvas, UI dropdowns, view comandanti, log output. Salva in `Assets/Scenes/EffectTest.unity` |
 
 ## Note
 

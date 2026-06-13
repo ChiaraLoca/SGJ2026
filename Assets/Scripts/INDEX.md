@@ -25,6 +25,7 @@ Indice generale del codice. Ogni cartella ha un proprio `INDEX.md` (sottoindice)
 
 | Voglio… | File / tipo |
 |---|---|
+| Testare effetti di carte isolatamente (sandbox offline) | scena `Assets/Scenes/EffectTest.unity` + `UI/EffectTestSceneManager.cs`; genera automaticamente con menu `4E → Setup Scena Test Effetti` |
 | Avviare una partita | `Core/GameStateManager.cs` → `StartMatch()` |
 | Passive dei comandanti (base/secondaria, sblocco) | `Core/CommanderPassiveSystem.cs`; identità in `Commanders/CommanderKind.cs`; costanti in `Commanders/CommanderPassiveConstants.cs` |
 | Selezione dei 2 comandanti a inizio partita | scena `Assets/Scenes/CommanderSelect.unity` + `UI/CommanderSelectController.cs`; scelta in `Network/SessionConfig.cs`, risolta da `Core/GameStateManager.SetCommanderSelections()` |
