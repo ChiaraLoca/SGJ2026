@@ -1,0 +1,41 @@
+namespace FourE.Network
+{
+    /// <summary>
+    /// Modalità di rete scelta nel menu iniziale, letta dal <see cref="NetworkGameManager"/>
+    /// per selezionare l'implementazione di <see cref="INetworkTransport"/>.
+    /// </summary>
+    public enum NetworkMode
+    {
+        /// <summary>Due giocatori sullo stesso dispositivo, a turni alternati (hotseat).</summary>
+        Hotseat,
+
+        /// <summary>Partita 1v1 online via Photon, accoppiamento per codice stanza.</summary>
+        Online
+    }
+
+    /// <summary>
+    /// Scelte del menu iniziale che sopravvivono al cambio di scena (stato statico di sessione).
+    /// Impostate dal menu prima di caricare la scena di gioco; lette dal livello di rete.
+    /// </summary>
+    public static class SessionConfig
+    {
+        /// <summary>Modalità di rete attiva per la prossima partita. Default: hotseat locale.</summary>
+        public static NetworkMode Mode { get; set; } = NetworkMode.Hotseat;
+
+        /// <summary>
+        /// Codice stanza condiviso per la modalità online: l'host lo crea, l'ospite lo digita.
+        /// Ignorato in hotseat.
+        /// </summary>
+        public static string RoomCode { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Riporta la sessione ai valori di default (hotseat, nessun codice).
+        /// Utile tra una partita e l'altra.
+        /// </summary>
+        public static void Reset()
+        {
+            Mode = NetworkMode.Hotseat;
+            RoomCode = string.Empty;
+        }
+    }
+}

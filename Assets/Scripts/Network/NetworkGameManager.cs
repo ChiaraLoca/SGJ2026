@@ -27,6 +27,15 @@ namespace FourE.Network
         private bool _gameOver;
         private int _winnerActorNumber = GameOverEvent.NoWinner;
         private bool _isDraw;
+        private bool _stateReceived;
+
+#if PHOTON_UNITY_NETWORKING
+        /// <summary>Intervallo tra i tentativi di resync del client online (secondi).</summary>
+        private const float ResyncIntervalSeconds = 1f;
+
+        /// <summary>Numero massimo di richieste di stato prima di rinunciare.</summary>
+        private const int MaxResyncAttempts = 15;
+#endif
 
         /// <summary>Trasporto di rete attivo (loopback offline o Photon).</summary>
         public INetworkTransport Transport => _transport;
@@ -43,10 +52,33 @@ namespace FourE.Network
         private void Awake()
         {
             _registry = CardRegistry.Build(_gameState.Content);
-            _transport = new HotseatTransport(GameConstants.FirstCommanderIndex);
+            _transport = CreateTransport();
             _transport.IntentReceived += OnIntentReceived;
             _transport.StateReceived += OnStateReceived;
+            _transport.ClientJoined += OnClientJoined;
+
+            // Il boot è guidato qui (host avvia, client attende): niente auto-start dal GameStateManager.
+            _gameState.AutoStartOffline = false;
             EventBus.Subscribe<GameOverEvent>(OnGameOver);
+        }
+
+        /// <summary>
+        /// Seleziona l'implementazione di trasporto in base alla modalità scelta nel menu.
+        /// Online usa Photon se installato, altrimenti ripiega sull'hotseat locale.
+        /// </summary>
+        /// <returns>Il trasporto da usare per questa partita.</returns>
+        private INetworkTransport CreateTransport()
+        {
+            if (SessionConfig.Mode == NetworkMode.Online)
+            {
+#if PHOTON_UNITY_NETWORKING
+                return new PhotonTransport();
+#else
+                Debug.LogWarning("Online mode requested but PUN2 is not installed; falling back to hotseat.");
+#endif
+            }
+
+            return new HotseatTransport(GameConstants.FirstCommanderIndex);
         }
 
         /// <summary>
@@ -54,6 +86,43 @@ namespace FourE.Network
         /// (garantito dall'ordine di esecuzione posticipato).
         /// </summary>
         private void Start()
+        {
+            // L'host (hotseat o MasterClient online) avvia la partita e ne broadcasta lo stato.
+            if (_transport.IsHost)
+            {
+                _gameState.StartMatch();
+                BroadcastCurrentState();
+                return;
+            }
+
+#if PHOTON_UNITY_NETWORKING
+            // Il client online non costruisce la partita: chiede lo stato all'host e attende.
+            StartCoroutine(RequestStateUntilSynced());
+#endif
+        }
+
+#if PHOTON_UNITY_NETWORKING
+        /// <summary>
+        /// Chiede ripetutamente lo stato all'host finché il primo snapshot non arriva,
+        /// coprendo eventuali differenze di tempo nel caricamento della scena tra i due device.
+        /// </summary>
+        /// <returns>Enumeratore della coroutine.</returns>
+        private System.Collections.IEnumerator RequestStateUntilSynced()
+        {
+            int attempts = 0;
+            while (!_stateReceived && attempts < MaxResyncAttempts)
+            {
+                (_transport as PhotonTransport)?.RequestInitialState();
+                attempts++;
+                yield return new WaitForSeconds(ResyncIntervalSeconds);
+            }
+        }
+#endif
+
+        /// <summary>
+        /// Sull'host, ri-broadcasta lo stato corrente quando un client chiede il resync.
+        /// </summary>
+        private void OnClientJoined()
         {
             BroadcastCurrentState();
         }
@@ -67,6 +136,8 @@ namespace FourE.Network
             {
                 _transport.IntentReceived -= OnIntentReceived;
                 _transport.StateReceived -= OnStateReceived;
+                _transport.ClientJoined -= OnClientJoined;
+                (_transport as System.IDisposable)?.Dispose();
             }
 
             EventBus.Unsubscribe<GameOverEvent>(OnGameOver);
@@ -142,6 +213,7 @@ namespace FourE.Network
         /// <param name="state">Stato ricevuto dal trasporto.</param>
         private void OnStateReceived(GameStateDTO state)
         {
+            _stateReceived = true;
             EventBus.Publish(new GameStateSyncedEvent(state, _transport.LocalActorNumber));
         }
 

@@ -70,6 +70,7 @@ namespace FourE.Cards.Effects
                 CountSource.OwnDiscardDistinctTags => CountDistinctTags(own),
                 CountSource.OwnDiscardWithTag => CountWithTag(own),
                 CountSource.EnemyDiscardWithTag => CountWithTag(enemy),
+                CountSource.BothDiscardWithTag => CountWithTag(own) + CountWithTag(enemy),
                 _ => 0
             };
         }

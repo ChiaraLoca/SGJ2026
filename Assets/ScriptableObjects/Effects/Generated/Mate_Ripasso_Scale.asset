@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbf7d2d0f4f4d2e4594bbbcc3b8dd4de, type: 3}
   m_Name: Mate_Ripasso_Scale
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.Effects.ScalingEffectSO
-  _target: 8
+  _target: 7
   _countSource: 0
   _tagFilter: 0
   _notePerCount: 1

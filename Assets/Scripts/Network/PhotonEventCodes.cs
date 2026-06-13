@@ -22,6 +22,9 @@ namespace FourE.Network
         /// <summary>Intent di conclusione acquisti shop (Client→Host).</summary>
         public const byte FinishShop = 5;
 
+        /// <summary>Richiesta di resync: un client pronto chiede all'host lo stato corrente (Client→Host).</summary>
+        public const byte RequestState = 6;
+
         /// <summary>Sincronizzazione completa dello stato (Host→All).</summary>
         public const byte StateSync = 10;
 

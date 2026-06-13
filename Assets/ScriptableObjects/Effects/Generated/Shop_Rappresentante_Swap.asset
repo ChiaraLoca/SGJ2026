@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08ae3715c019edb46b380975f0888077, type: 3}
   m_Name: Shop_Rappresentante_Swap
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.Effects.SwapNotesEffectSO
-  _target: 0
+  _target: 14

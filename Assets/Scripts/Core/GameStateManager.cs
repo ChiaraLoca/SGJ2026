@@ -31,6 +31,13 @@ namespace FourE.Core
         [SerializeField] private PhaseManager _phases;
         private IStartingPlayerDecider _startingPlayerDecider;
         private System.Random _rng;
+        private bool _matchStarted;
+
+        /// <summary>
+        /// Se la partita parte da sola in <c>Start</c>. Il livello di rete la disattiva per
+        /// guidare il boot (l'host avvia la partita, il client attende lo stato dall'host).
+        /// </summary>
+        public bool AutoStartOffline { get => _autoStartOffline; set => _autoStartOffline = value; }
 
         /// <summary>Istanza singleton accessibile dai sistemi che non si risolvono via Inspector.</summary>
         public static GameStateManager Instance { get; private set; }
@@ -94,6 +101,13 @@ namespace FourE.Core
         /// </summary>
         public void StartMatch()
         {
+            // Idempotente: hotseat (auto-start) e rete (boot guidato) non devono avviarla due volte.
+            if (_matchStarted)
+            {
+                return;
+            }
+
+            _matchStarted = true;
             BuildPlayers();
             BuildManagers();
 

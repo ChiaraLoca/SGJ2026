@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Storia_Tutor_Equalize
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.Effects.EqualizeNotesEffectSO
   _target: 0
-  _maxAmount: 99
+  _maxAmount: 4

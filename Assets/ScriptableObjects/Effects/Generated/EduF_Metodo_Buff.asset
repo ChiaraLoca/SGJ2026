@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13aedd38666b8ea4688a65d09680ce47, type: 3}
   m_Name: EduF_Metodo_Buff
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.Effects.BuffEffectSO
-  _target: 8
+  _target: 7
   _magnitude: 1
   _duration: 0
   _durationTurns: 1

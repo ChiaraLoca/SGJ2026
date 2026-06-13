@@ -21,6 +21,12 @@ namespace FourE.Network
         /// <inheritdoc />
         public event Action<GameStateDTO> StateReceived;
 
+        /// <inheritdoc />
+        // In hotseat non esistono client remoti: l'evento è dichiarato per contratto ma mai sollevato.
+#pragma warning disable 0067
+        public event Action ClientJoined;
+#pragma warning restore 0067
+
         /// <summary>
         /// Crea il trasporto hotseat.
         /// </summary>

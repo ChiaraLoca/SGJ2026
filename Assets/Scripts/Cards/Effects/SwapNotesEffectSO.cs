@@ -14,14 +14,15 @@ namespace FourE.Cards.Effects
         /// <inheritdoc/>
         public override void Apply(GameContext context)
         {
-            if (context.SelectedTargets.Count < 2)
+            // Richiede un comandante avversario e uno proprio (SelectedOwnAndEnemy).
+            if (context.SelectedEnemyTargets.Count < 1 || context.SelectedOwnTargets.Count < 1)
             {
                 return;
             }
 
-            CommanderState a = context.SelectedTargets[0];
-            CommanderState b = context.SelectedTargets[1];
-            context.RegisterChange(new SwapNotesChange(a, b));
+            CommanderState enemy = context.SelectedEnemyTargets[0];
+            CommanderState own = context.SelectedOwnTargets[0];
+            context.RegisterChange(new SwapNotesChange(enemy, own));
         }
     }
 }

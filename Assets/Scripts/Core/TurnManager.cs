@@ -67,6 +67,7 @@ namespace FourE.Core
 
         /// <summary>
         /// Avvia il turno di un giocatore, impostandolo come attivo e azzerando i contatori.
+        /// Pesca le carte di inizio turno dal mazzo.
         /// </summary>
         /// <param name="player">Giocatore di turno.</param>
         public void StartTurn(PlayerState player)
@@ -80,6 +81,24 @@ namespace FourE.Core
             foreach (CommanderState commander in player.Commanders)
             {
                 commander.SetNoteFloorLocked(false);
+            }
+
+            DrawTurnStartCards(player);
+        }
+
+        /// <summary>
+        /// Pesca le carte di inizio turno dal mazzo del giocatore, fino al limite configurato.
+        /// </summary>
+        /// <param name="player">Giocatore che pesca.</param>
+        private void DrawTurnStartCards(PlayerState player)
+        {
+            int count = _state.GameConfig.TurnStartDrawCount;
+            int drawable = Math.Min(count, player.Deck.Count);
+            for (int i = 0; i < drawable; i++)
+            {
+                int topIndex = player.Deck.Count - 1;
+                player.Hand.Add(player.Deck[topIndex]);
+                player.Deck.RemoveAt(topIndex);
             }
         }
 

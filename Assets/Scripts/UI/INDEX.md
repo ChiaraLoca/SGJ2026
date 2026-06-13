@@ -11,6 +11,7 @@ Torna all'[indice generale](../INDEX.md).
 | [CardView.cs](CardView.cs) | `CardView : MonoBehaviour` | Vista prefab di una carta: `Bind(card, onClick, interactable)`. Prefab in `Assets/Prefabs/UI/CardView.prefab` |
 | [CommanderView.cs](CommanderView.cs) | `CommanderView : MonoBehaviour` | Vista comandante: `Bind(CommanderDTO, CommanderDataSO, actorNumber, commanderIndex)` → nome, Note, ritratto, debuff. `SetSelectable(bool, Action<int,int>)` attiva/disattiva l'overlay di selezione bersaglio |
 | [GameView.cs](GameView.cs) | `GameView : MonoBehaviour` | HUD principale. Si ridisegna su `GameStateSyncedEvent`, istanzia le carte di mano/shop (inclusa Verifica), inoltra le azioni a `NetworkGameManager.Submit*()`. Gestisce la selezione bersaglio per carte `SelectedCommanders`. `DefaultExecutionOrder(200)` |
+| [MainMenuController.cs](MainMenuController.cs) | `MainMenuController : MonoBehaviour` | Menu iniziale (scena `MainMenu`). Sceglie tra **Stesso telefono** (hotseat → carica `SampleScene`) e **Online** (codice stanza → `OnlineLauncher`). Imposta `SessionConfig.Mode`/`RoomCode`; genera il codice stanza; pannelli modalità/stanza |
 
 ## Note
 
@@ -18,3 +19,4 @@ Torna all'[indice generale](../INDEX.md).
 - Le carte (`CardView`) sono **istanziate** da prefab `[SerializeField]`; il resto della HUD è in scena (vedi memoria `project_scene_run_setup`).
 - **Verifica in mano**: la carta Verifica è renderizzata in `RenderHand` come le altre; click → `SubmitPlayVerifica()`. Il bottone separato è disattivato via `SetActive(false)`.
 - **Selezione bersaglio**: carte con `RequiresTargetSelection=true` entrano in modalità selezione (overlay giallo sui CommanderView); il click sul comandante invia l'intent con i target.
+- **Menu iniziale**: la scena `Assets/Scenes/MainMenu.unity` (prima in Build Settings) ospita `MainMenuController` + `OnlineLauncher`. "Stesso telefono" carica `SampleScene` in hotseat; "Online" connette via Photon per codice stanza e poi `PhotonNetwork.LoadLevel("SampleScene")`.

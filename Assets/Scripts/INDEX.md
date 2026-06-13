@@ -37,7 +37,9 @@ Indice generale del codice. Ogni cartella ha un proprio `INDEX.md` (sottoindice)
 | Pubblicare/ascoltare un evento di gioco | `Events/EventBus.cs`, tipi in `Events/GameEvents.cs` |
 | Inviare un'azione dal client all'host (intent) | `Network/NetworkGameManager.cs` → `Submit*()`, `Network/GameIntent.cs` |
 | Snapshot di stato per la rete/UI | `Network/GameStateDTO.cs`, costruito da `Network/GameStateDtoBuilder.cs` |
-| Cambiare il trasporto (offline → Photon) | `Network/INetworkTransport.cs` (impl: `LocalLoopbackTransport.cs`) |
+| Cambiare il trasporto (hotseat ↔ Photon) | `Network/INetworkTransport.cs` (impl: `HotseatTransport.cs`, `PhotonTransport.cs`); scelta in `Network/NetworkGameManager.cs` da `Network/SessionConfig.cs` |
+| Menu iniziale (stesso telefono / online) | scena `Assets/Scenes/MainMenu.unity` + `UI/MainMenuController.cs` |
+| Connettersi online per codice stanza | `Network/OnlineLauncher.cs` (PUN2); App ID in `PhotonServerSettings.asset` |
 | Ridisegnare la UI sullo stato | `UI/GameView.cs` (ascolta `GameStateSyncedEvent`) |
 | Valori di bilanciamento (round, mano, shop, conversione) | `Config/GameConfigSO.cs` |
 | Costanti strutturali (n. giocatori, comandanti, carte) | `Config/GameConstants.cs` |
@@ -48,12 +50,20 @@ Indice generale del codice. Ogni cartella ha un proprio `INDEX.md` (sottoindice)
 ## Flusso principale (runtime)
 
 ```
+Scena MainMenu → MainMenuController
+  → "Stesso telefono": SessionConfig.Mode=Hotseat → carica SampleScene
+  → "Online": OnlineLauncher crea/raggiunge stanza per codice → (2 giocatori) LoadLevel(SampleScene)
+
+SampleScene → NetworkGameManager.Awake()
+  → sceglie il transport da SessionConfig.Mode (Hotseat | Photon)
+  → l'host avvia la partita; il client online attende lo stato
+
 GameStateManager.StartMatch()
   → MatchSetup.BuildPlayer() ×2            (Players, Commanders, mazzo, mano, shop pool)
   → PhaseManager.BeginMatch()              (entra in Play, primo turno)
 
 UI click → NetworkGameManager.Submit*()    (UI/GameView → Network)
-  → INetworkTransport.SendIntent()         (loopback offline)
+  → INetworkTransport.SendIntent()         (hotseat locale o Photon online)
   → NetworkGameManager.ProcessIntent()     (SOLO host)
       → TurnManager / ShopManager / PhaseManager
           → EffectResolver.Resolve()       (effetti carta → GameChanges → commit)
