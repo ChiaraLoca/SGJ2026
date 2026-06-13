@@ -23,6 +23,12 @@ namespace FourE.Network
 
         /// <summary>Numero di debuff a durata attivi.</summary>
         public int ActiveDebuffCount;
+
+        /// <summary>CommanderKind (identità), come valore int. Usato dalla UI per risolvere la definizione dal catalogo.</summary>
+        public int Kind;
+
+        /// <summary>True se l'abilità secondaria del comandante è stata sbloccata.</summary>
+        public bool SecondaryUnlocked;
     }
 
     /// <summary>

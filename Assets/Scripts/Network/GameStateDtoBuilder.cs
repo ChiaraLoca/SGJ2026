@@ -76,7 +76,9 @@ namespace FourE.Network
                 CurrentNote = commander.CurrentNote,
                 HasDebuff = commander.HasActiveDebuff,
                 ActiveBuffCount = commander.ActiveBuffs.Count,
-                ActiveDebuffCount = commander.ActiveDebuffs.Count
+                ActiveDebuffCount = commander.ActiveDebuffs.Count,
+                Kind = commander.Data != null ? (int)commander.Data.Kind : 0,
+                SecondaryUnlocked = commander.SecondaryUnlocked
             };
         }
     }
