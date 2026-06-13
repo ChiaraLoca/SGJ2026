@@ -36,7 +36,7 @@ Indice generale del codice. Ogni cartella ha un proprio `INDEX.md` (sottoindice)
 | Conversione Note→Credits e Esame Finale | `Core/PhaseManager.cs` → `ConvertAndAdvance()`, `ResolveOutcome()` |
 | Pubblicare/ascoltare un evento di gioco | `Events/EventBus.cs`, tipi in `Events/GameEvents.cs` |
 | Inviare un'azione dal client all'host (intent) | `Network/NetworkGameManager.cs` → `Submit*()`, `Network/GameIntent.cs` |
-| Snapshot di stato per la rete/UI | `Network/GameStateDTO.cs`, costruito da `Network/GameStateDtoBuilder.cs` |
+| Snapshot di stato per la rete/UI, inclusa ultima carta giocata | `Network/GameStateDTO.cs`, costruito da `Network/GameStateDtoBuilder.cs` e completato da `NetworkGameManager` |
 | Cambiare il trasporto (hotseat ↔ Photon) | `Network/INetworkTransport.cs` (impl: `HotseatTransport.cs`, `PhotonTransport.cs`); scelta in `Network/NetworkGameManager.cs` da `Network/SessionConfig.cs` |
 | Menu iniziale (stesso telefono / online) | scena `Assets/Scenes/MainMenu.unity` + `UI/MainMenuController.cs` |
 | Connettersi online per codice stanza | `Network/OnlineLauncher.cs` (PUN2); App ID in `PhotonServerSettings.asset` |
@@ -70,7 +70,7 @@ UI click → NetworkGameManager.Submit*()    (UI/GameView → Network)
           → EffectResolver.Resolve()       (effetti carta → GameChanges → commit)
   → NetworkGameManager.BroadcastState()    (GameStateDtoBuilder → DTO)
   → GameStateSyncedEvent (EventBus)
-  → GameView.Render()                       (ridisegno UI)
+  → GameView.Render()                       (ridisegno UI + animazione nuova carta giocata)
 ```
 
 Pattern architetturali e regole di codice: vedi `CLAUDE.md`. Specifica di gioco: vedi `SPEC.md`.

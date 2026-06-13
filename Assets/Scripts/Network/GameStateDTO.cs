@@ -81,5 +81,14 @@ namespace FourE.Network
 
         /// <summary>True se l'esito è un pareggio.</summary>
         public bool IsDraw;
+
+        /// <summary>Numero progressivo dell'ultima carta giocata, usato per attivare la UI una sola volta.</summary>
+        public int PlayedCardSequence;
+
+        /// <summary>Id registry dell'ultima carta giocata, o <see cref="CardRegistry.NoCard"/>.</summary>
+        public int LastPlayedCardId;
+
+        /// <summary>Attore che ha giocato l'ultima carta.</summary>
+        public int LastPlayedActorNumber;
     }
 }

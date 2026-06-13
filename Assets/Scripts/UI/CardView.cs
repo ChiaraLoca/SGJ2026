@@ -29,6 +29,9 @@ namespace FourE.UI
         private bool _isPreviewing;
         private bool _suppressNextClick;
 
+        /// <summary>Carta attualmente rappresentata dalla vista.</summary>
+        public CardDataSO Card => _card;
+
         /// <summary>
         /// Popola la vista e configura tap e pressione prolungata.
         /// </summary>
