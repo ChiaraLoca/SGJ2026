@@ -224,27 +224,26 @@ namespace FourE.UI
         /// </summary>
         private void RenderCommanders(PlayerDTO local, PlayerDTO enemy, int localIndex)
         {
-            IReadOnlyList<CommanderDataSO> localData = CommanderDataFor(localIndex);
-            IReadOnlyList<CommanderDataSO> enemyData = CommanderDataFor(1 - localIndex);
-
-            BindCommander(_localCommander0, local, GameConstants.FirstCommanderIndex, localData);
-            BindCommander(_localCommander1, local, GameConstants.SecondCommanderIndex, localData);
-            BindCommander(_enemyCommander0, enemy, GameConstants.FirstCommanderIndex, enemyData);
-            BindCommander(_enemyCommander1, enemy, GameConstants.SecondCommanderIndex, enemyData);
+            BindCommander(_localCommander0, local, GameConstants.FirstCommanderIndex);
+            BindCommander(_localCommander1, local, GameConstants.SecondCommanderIndex);
+            BindCommander(_enemyCommander0, enemy, GameConstants.FirstCommanderIndex);
+            BindCommander(_enemyCommander1, enemy, GameConstants.SecondCommanderIndex);
         }
 
         /// <summary>
-        /// Lega una view comandante allo snapshot e alla definizione, se entrambi presenti.
+        /// Lega una view comandante allo snapshot, risolvendo la definizione dal <see cref="CommanderKind"/>
+        /// presente nel DTO (così riflette i comandanti scelti nella schermata di selezione).
         /// </summary>
-        private void BindCommander(CommanderView view, PlayerDTO player, int index, IReadOnlyList<CommanderDataSO> data)
+        private void BindCommander(CommanderView view, PlayerDTO player, int index)
         {
             if (view == null || player.Commanders == null || index >= player.Commanders.Length)
             {
                 return;
             }
 
-            CommanderDataSO definition = data != null && index < data.Count ? data[index] : null;
-            view.Bind(player.Commanders[index], definition, player.ActorNumber, index);
+            CommanderDTO snapshot = player.Commanders[index];
+            CommanderDataSO definition = _content.GetCommanderByKind((CommanderKind)snapshot.Kind);
+            view.Bind(snapshot, definition, player.ActorNumber, index);
         }
 
         /// <summary>
@@ -502,16 +501,6 @@ namespace FourE.UI
         }
 
         /// <summary>
-        /// Restituisce le definizioni dei comandanti per l'indice di giocatore (0 o 1).
-        /// </summary>
-        /// <param name="playerIndex">Indice del giocatore nello stato.</param>
-        /// <returns>Lista delle definizioni comandante, o null.</returns>
-        private IReadOnlyList<CommanderDataSO> CommanderDataFor(int playerIndex)
-        {
-            return playerIndex == 0 ? _content.FirstPlayerCommanders : _content.SecondPlayerCommanders;
-        }
-
-        /// <summary>
         /// Compone il testo d'esito dal punto di vista del giocatore locale.
         /// </summary>
         private string ResolveOutcomeText(GameStateDTO state, int localActorNumber)
@@ -633,14 +622,16 @@ namespace FourE.UI
             if (_pendingTargetCard == null) return;
 
             CardDataSO card = _pendingTargetCard;
+            int savedEnemyActor = _pendingEnemyActorNumber;
+            int savedEnemyIndex = _pendingEnemyCommanderIndex;
             ExitTargetSelectionMode();
 
-            if (_pendingEnemyActorNumber >= 0)
+            if (savedEnemyActor >= 0)
             {
                 // Invia nemico prima, poi proprio: GameContext li smista per lato.
                 _network.SubmitPlayCard(card,
-                    new[] { _pendingEnemyActorNumber, actorNumber },
-                    new[] { _pendingEnemyCommanderIndex, commanderIndex });
+                    new[] { savedEnemyActor, actorNumber },
+                    new[] { savedEnemyIndex, commanderIndex });
             }
             else
             {

@@ -33,6 +33,18 @@ namespace FourE.UI
         [SerializeField] private CommanderOptionView _optionPrefab;
         [SerializeField] private Transform _optionsContainer;
 
+        [Header("Dimensioni griglia")]
+        [Tooltip("Larghezza × altezza di ogni carta comandante nella griglia (proporzione 2/3 = verticale).")]
+        [SerializeField] private Vector2 _commanderCardCellSize = new Vector2(200f, 300f);
+
+        [Header("Pannello dettaglio")]
+        [SerializeField] private GameObject _detailPanel;
+        [SerializeField] private Text _detailNameLabel;
+        [SerializeField] private Text _detailBaseAbilityLabel;
+        [SerializeField] private Text _detailUnlockLabel;
+        [SerializeField] private Text _detailSecondaryAbilityLabel;
+        [SerializeField] private Button _selectCommanderButton;
+
         [Header("Etichette")]
         [SerializeField] private Text _titleLabel;
         [SerializeField] private Text _selectionLabel;
@@ -53,6 +65,8 @@ namespace FourE.UI
         private int _currentPlayerStep;
         private bool _online;
         private bool _awaitingOthers;
+        private CommanderKind _inspectedKind;
+        private bool _hasInspectedKind;
 
         /// <summary>
         /// Genera le opzioni dal catalogo, collega i pulsanti e avvia la selezione.
@@ -61,17 +75,13 @@ namespace FourE.UI
         {
             _online = SessionConfig.Mode == NetworkMode.Online;
 
+            if (_detailPanel != null) _detailPanel.SetActive(false);
+            if (_selectCommanderButton != null) _selectCommanderButton.onClick.AddListener(OnSelectInspectedClicked);
+
             BuildOptions();
 
-            if (_confirmButton != null)
-            {
-                _confirmButton.onClick.AddListener(OnConfirmClicked);
-            }
-
-            if (_clearButton != null)
-            {
-                _clearButton.onClick.AddListener(ResetCurrentPicks);
-            }
+            if (_confirmButton != null) _confirmButton.onClick.AddListener(OnConfirmClicked);
+            if (_clearButton != null) _clearButton.onClick.AddListener(ResetCurrentPicks);
 
             if (_online)
             {
@@ -84,13 +94,19 @@ namespace FourE.UI
         }
 
         /// <summary>
-        /// Istanzia una <see cref="CommanderOptionView"/> per ogni comandante del catalogo.
+        /// Istanzia una <see cref="CommanderOptionView"/> per ogni comandante del catalogo
+        /// e applica le dimensioni configurate alla griglia.
         /// </summary>
         private void BuildOptions()
         {
             if (_optionPrefab == null || _optionsContainer == null || _content == null)
             {
                 return;
+            }
+
+            if (_optionsContainer.TryGetComponent(out GridLayoutGroup grid))
+            {
+                grid.cellSize = _commanderCardCellSize;
             }
 
             foreach (CommanderDataSO data in _content.CommanderCatalog)
@@ -101,8 +117,60 @@ namespace FourE.UI
                 }
 
                 CommanderOptionView view = Instantiate(_optionPrefab, _optionsContainer);
-                view.Bind(data, OnCommanderPicked);
+                view.Bind(data, OnCommanderInspected);
                 _options.Add(view);
+            }
+        }
+
+        /// <summary>
+        /// Mostra nel pannello di dettaglio le abilità del comandante selezionato.
+        /// Non aggiunge ancora il comandante alle scelte correnti.
+        /// </summary>
+        /// <param name="kind">Comandante toccato nella griglia.</param>
+        private void OnCommanderInspected(CommanderKind kind)
+        {
+            if (_awaitingOthers)
+            {
+                return;
+            }
+
+            _inspectedKind = kind;
+            _hasInspectedKind = true;
+
+            CommanderDataSO data = _content.GetCommanderByKind(kind);
+            ShowDetailPanel(data);
+        }
+
+        /// <summary>
+        /// Popola e mostra il pannello con nome, abilità e condizione di sblocco del comandante.
+        /// </summary>
+        /// <param name="data">Definizione del comandante da visualizzare; null nasconde il pannello.</param>
+        private void ShowDetailPanel(CommanderDataSO data)
+        {
+            if (_detailPanel != null)
+            {
+                _detailPanel.SetActive(data != null);
+            }
+
+            if (data == null)
+            {
+                return;
+            }
+
+            if (_detailNameLabel != null) _detailNameLabel.text = data.CommanderName;
+            if (_detailBaseAbilityLabel != null) _detailBaseAbilityLabel.text = data.BaseAbilityDescription;
+            if (_detailUnlockLabel != null) _detailUnlockLabel.text = data.UnlockConditionDescription;
+            if (_detailSecondaryAbilityLabel != null) _detailSecondaryAbilityLabel.text = data.SecondaryAbilityDescription;
+        }
+
+        /// <summary>
+        /// Aggiunge al piano delle scelte il comandante attualmente mostrato nel pannello di dettaglio.
+        /// </summary>
+        private void OnSelectInspectedClicked()
+        {
+            if (_hasInspectedKind)
+            {
+                OnCommanderPicked(_inspectedKind);
             }
         }
 

@@ -15,4 +15,4 @@ MonoBehaviour:
   _target: 0
   _mode: 1
   _cardCount: 0
-  _targetHandSize: 4
+  _targetHandSize: 5
