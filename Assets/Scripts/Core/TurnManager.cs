@@ -30,6 +30,9 @@ namespace FourE.Core
         /// <summary>Carte giocabili nel turno corrente, dal config in base al round.</summary>
         public int CardsAllowedThisTurn => _cardsAllowedThisTurn;
 
+        /// <summary>Azioni carta ancora disponibili nel turno corrente.</summary>
+        public int RemainingActions => Math.Max(0, _cardsAllowedThisTurn - _cardsPlayedThisTurn);
+
         /// <summary>Indice del turno all'interno del round corrente (1 = primo turno).</summary>
         public int TurnInRound => _turnInRound;
 

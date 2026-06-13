@@ -12,7 +12,7 @@ Torna all'[indice generale](../INDEX.md).
 | [CardPlayAnimationController.cs](CardPlayAnimationController.cs) | `CardPlayAnimationController` | Coda di presentazione delle carte giocate: movimento dalla zona del giocatore al centro, ingrandimento, permanenza e dissolvenza |
 | [CommanderView.cs](CommanderView.cs) | `CommanderView : MonoBehaviour` | Vista comandante: `Bind(CommanderDTO, CommanderDataSO, actorNumber, commanderIndex)` → nome, Note, ritratto, debuff. `SetSelectable(bool, Action<int,int>)` attiva/disattiva l'overlay di selezione bersaglio |
 | [GameAudioController.cs](GameAudioController.cs) | `GameAudioController : MonoBehaviour` | Controller persistente evento-driven: musica principale in loop, crowd per menu/selezione comandante, SFX su carta, Verifica, acquisto, Shop ed esito locale da `GameStateSyncedEvent`. Auto-bind clip in editor da `Assets/Audio/*` |
-| [GameView.cs](GameView.cs) | `GameView : MonoBehaviour` | HUD principale. Si ridisegna su `GameStateSyncedEvent`, mostra il mercato solo durante `Shop`, gestisce l'anteprima ingrandita su pressione prolungata e inoltra le azioni a `NetworkGameManager.Submit*()`. Gestisce la selezione bersaglio per carte `SelectedCommanders`. `DefaultExecutionOrder(200)` |
+| [GameView.cs](GameView.cs) | `GameView : MonoBehaviour` | HUD principale. Mostra crediti, azioni rimanenti solo al giocatore attivo, mercato durante `Shop`, anteprima/animazioni carte e inoltro intent |
 | [MainMenuController.cs](MainMenuController.cs) | `MainMenuController : MonoBehaviour` | Menu iniziale (scena `MainMenu`). Sceglie tra **Stesso telefono** (hotseat → carica `SampleScene`) e **Online** (codice stanza → `OnlineLauncher`). Imposta `SessionConfig.Mode`/`RoomCode`; genera il codice stanza; pannelli modalità/stanza |
 
 ## Note
@@ -24,4 +24,6 @@ Torna all'[indice generale](../INDEX.md).
 - **Anteprima carta**: pressione prolungata con touch o mouse mostra una copia ingrandita al centro del Canvas; il rilascio la chiude senza giocare/acquistare la carta.
 - **Mercato**: `ShopContainer` e le sue carte sono attivi solo durante la fase `Shop`.
 - **Carta giocata**: ogni nuovo `PlayedCardSequence` ricevuto nel DTO anima la carta locale dalla mano e quella avversaria dalla zona alta del campo; le animazioni sono accodate.
+- **Crediti avversari**: il valore mostrato viene aggiornato all'inizio del round, al cambio prospettiva hotseat e all'Esame Finale.
+- **Azioni rimanenti**: il contatore è visibile esclusivamente al giocatore attivo durante la fase `Play`.
 - **Menu iniziale**: la scena `Assets/Scenes/MainMenu.unity` (prima in Build Settings) ospita `MainMenuController` + `OnlineLauncher`. "Stesso telefono" carica `SampleScene` in hotseat; "Online" connette via Photon per codice stanza e poi `PhotonNetwork.LoadLevel("SampleScene")`.

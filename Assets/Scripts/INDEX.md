@@ -33,14 +33,14 @@ Indice generale del codice. Ogni cartella ha un proprio `INDEX.md` (sottoindice)
 | Applicare una modifica di stato (Note, pesca, effetto a durata) | `Core/GameChanges.cs` (`IGameChange`) |
 | Risolvere i bersagli di un effetto | `Core/GameContext.cs` → `ResolveCommanders()` / `ResolvePlayer()` |
 | Acquisto shop / refresh pool | `Shop/ShopManager.cs`, `Shop/ShopPool.cs` |
-| Conversione Note→Credits e Esame Finale | `Core/PhaseManager.cs` → `ConvertAndAdvance()`, `ResolveOutcome()` |
+| Conversione Note→Credits, salto Shop finale ed Esame Finale | `Core/PhaseManager.cs` → `HandleVerifica()`, `ConvertAndAdvance()`, `ResolveOutcome()` |
 | Pubblicare/ascoltare un evento di gioco | `Events/EventBus.cs`, tipi in `Events/GameEvents.cs` |
 | Inviare un'azione dal client all'host (intent) | `Network/NetworkGameManager.cs` → `Submit*()`, `Network/GameIntent.cs` |
-| Snapshot di stato per la rete/UI, inclusa ultima carta giocata | `Network/GameStateDTO.cs`, costruito da `Network/GameStateDtoBuilder.cs` e completato da `NetworkGameManager` |
+| Snapshot di stato per la rete/UI, inclusa ultima carta giocata e azioni rimanenti | `Network/GameStateDTO.cs`, costruito da `Network/GameStateDtoBuilder.cs` e completato da `NetworkGameManager` |
 | Cambiare il trasporto (hotseat ↔ Photon) | `Network/INetworkTransport.cs` (impl: `HotseatTransport.cs`, `PhotonTransport.cs`); scelta in `Network/NetworkGameManager.cs` da `Network/SessionConfig.cs` |
 | Menu iniziale (stesso telefono / online) | scena `Assets/Scenes/MainMenu.unity` + `UI/MainMenuController.cs` |
 | Connettersi online per codice stanza | `Network/OnlineLauncher.cs` (PUN2); App ID in `PhotonServerSettings.asset` |
-| Ridisegnare la UI sullo stato | `UI/GameView.cs` (ascolta `GameStateSyncedEvent`) |
+| Ridisegnare la UI sullo stato e mostrare le azioni al giocatore attivo | `UI/GameView.cs` (ascolta `GameStateSyncedEvent`) |
 | Gestire musica/ambiente/SFX evento-driven | `UI/GameAudioController.cs` |
 | Valori di bilanciamento (round, mano, shop, conversione) | `Config/GameConfigSO.cs` |
 | Costanti strutturali (n. giocatori, comandanti, carte) | `Config/GameConstants.cs` |
@@ -62,6 +62,10 @@ SampleScene → NetworkGameManager.Awake()
 GameStateManager.StartMatch()
   → MatchSetup.BuildPlayer() ×2            (Players, Commanders, mazzo, mano, shop pool)
   → PhaseManager.BeginMatch()              (entra in Play, primo turno)
+
+Verifica del round finale
+  → conversione Note→Credits
+  → Draw + Esame Finale                    (nessuna fase Shop)
 
 UI click → NetworkGameManager.Submit*()    (UI/GameView → Network)
   → INetworkTransport.SendIntent()         (hotseat locale o Photon online)

@@ -32,5 +32,8 @@ namespace FourE.Config
 
         /// <summary>Valore normalizzato usato per centrare gli elementi UI negli anchor del Canvas.</summary>
         public const float UiCenterAnchor = 0.5f;
+
+        /// <summary>Scarto tra un indice zero-based e il conteggio corrispondente.</summary>
+        public const int IndexToCountOffset = 1;
     }
 }

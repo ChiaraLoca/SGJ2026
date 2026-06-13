@@ -70,6 +70,9 @@ namespace FourE.Network
         /// <summary>Attore del giocatore di turno.</summary>
         public int ActiveActorNumber;
 
+        /// <summary>Azioni carta ancora disponibili al giocatore di turno.</summary>
+        public int RemainingActions;
+
         /// <summary>Stato dei due giocatori.</summary>
         public PlayerDTO[] Players;
 

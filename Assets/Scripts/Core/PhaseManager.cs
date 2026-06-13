@@ -67,8 +67,8 @@ namespace FourE.Core
         }
 
         /// <summary>
-        /// Gestisce il gioco della Verifica: converte subito le Note in Crediti per entrambi
-        /// (così i Crediti sono spendibili nello shop) ed entra nella Fase SHOP.
+        /// Gestisce il gioco della Verifica: converte subito le Note in Crediti per entrambi.
+        /// Entra nello Shop nei round intermedi; nell'ultimo procede direttamente al Draw.
         /// </summary>
         /// <param name="closer">Giocatore che ha chiuso il round.</param>
         public void HandleVerifica(PlayerState closer)
@@ -79,12 +79,19 @@ namespace FourE.Core
             ConvertNotesToCredits(_state.Player0);
             ConvertNotesToCredits(_state.Player1);
 
-            EnterShop();
+            if (_rounds.IsLastPlayableRound)
+            {
+                ConvertAndAdvance();
+            }
+            else
+            {
+                EnterShop();
+            }
         }
 
         /// <summary>
         /// Segnala che un giocatore ha terminato i propri acquisti. Quando entrambi
-        /// hanno finito, converte le Note e procede alla Fase DRAW.
+        /// hanno finito, procede alla Fase DRAW.
         /// </summary>
         /// <param name="player">Giocatore che ha concluso lo shop.</param>
         public void FinishShop(PlayerState player)
