@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Mate_Biblioteca
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
   _cardName: Biblioteca
-  _description: Pesca fino ad avere 5 carte.
+  _description: Pesca carte fino ad averne 4 in mano
   _cardType: 0
   _affinity: 1
   _tags: 20

@@ -73,6 +73,9 @@ namespace FourE.Core
         /// </summary>
         public CardAffinity SourceAffinity { get; private set; } = CardAffinity.Neutral;
 
+        /// <summary>Carta in corso di risoluzione, impostata dal resolver.</summary>
+        public CardDataSO Card { get; set; }
+
         /// <summary>
         /// Crea il contesto di risoluzione per una carta giocata.
         /// </summary>
@@ -96,6 +99,7 @@ namespace FourE.Core
             Config = config;
             SelectedTargets = selectedTargets ?? EmptyTargets;
             State = state;
+            Card = null;
 
             // Divide i bersagli selezionati per lato (proprio vs avversario).
             if (SelectedTargets.Count == 0)

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Shop_ChatGPT
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
   _cardName: Chat GPT
-  _description: Pesca 2 carte; +2 Note a un comandante.
+  _description: Pesca 2 carte; +2 azioni
   _cardType: 0
   _affinity: 2
   _tags: 48

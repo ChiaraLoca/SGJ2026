@@ -77,6 +77,7 @@
           {
             "name": "AudioBehaviour",
             "scenes": [
+              "Assets/Scenes/MainMenu.unity",
               "Assets/Scenes/SampleScene.unity"
             ],
             "dependencyType": 0,
@@ -91,6 +92,7 @@
           {
             "name": "AudioListener",
             "scenes": [
+              "Assets/Scenes/MainMenu.unity",
               "Assets/Scenes/SampleScene.unity"
             ],
             "dependencyType": 0,
@@ -134,6 +136,7 @@
           {
             "name": "Camera",
             "scenes": [
+              "Assets/Scenes/MainMenu.unity",
               "Assets/Scenes/SampleScene.unity"
             ],
             "dependencyType": 0,

@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13aedd38666b8ea4688a65d09680ce47, type: 3}
-  m_Name: Shop_ChatGPT_Buff
-  m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.Effects.BuffEffectSO
-  _target: 7
-  _magnitude: 2
-  _duration: 0
-  _durationTurns: 1
+  m_Script: {fileID: 11500000, guid: 9e1839a79c77c1941815f5af9e16f0ed, type: 3}
+  m_Name: Shop_ChatGPT_Act
+  m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.Effects.ExtraActionEffectSO
+  _target: 0
+  _doubleActions: 0
+  _actions: 2

@@ -23,6 +23,7 @@ Torna all'[indice generale](../INDEX.md).
 | [Effects/DrawEffectSO.cs](Effects/DrawEffectSO.cs) | `DrawEffectSO` + enum `DrawMode` | Pesca: conteggio fisso, fino a dimensione mano (Biblioteca), o intero mazzo (Approfondimento) |
 | [Effects/ConditionalEffectSO.cs](Effects/ConditionalEffectSO.cs) | `ConditionalEffectSO` | Applica un `_innerEffect` solo se `_condition.IsMet()` |
 | [Effects/ExtraActionEffectSO.cs](Effects/ExtraActionEffectSO.cs) | `ExtraActionEffectSO` | +/− azioni nel turno, o raddoppio (Metodo, Progetto, Copiare, Studio Notturno…) |
+| [Effects/CooperBuffEffectSO.cs](Effects/CooperBuffEffectSO.cs) | `CooperBuffEffectSO` | Applica +2 Note al comandante più debole; se nota ≤ 3 dopo, ritorna in mano (Test di Cooper) |
 | [Effects/ScalingEffectSO.cs](Effects/ScalingEffectSO.cs) | `ScalingEffectSO` | Note/azioni/pesca proporzionali a un `CountSource` (Ripasso, Riassunto, Iperka, Sabotaggio) |
 | [Effects/ForceDiscardEffectSO.cs](Effects/ForceDiscardEffectSO.cs) | `ForceDiscardEffectSO` + enum `ForceDiscardMode` | Avversario scarta carte: casuali (Gossip) o per tag (Politica, Bullismo) |
 | [Effects/EqualizeNotesEffectSO.cs](Effects/EqualizeNotesEffectSO.cs) | `EqualizeNotesEffectSO` | Alza il comandante più basso verso il più alto (Tutor) |

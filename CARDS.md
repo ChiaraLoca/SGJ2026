@@ -85,7 +85,7 @@
 | Metodo     | C    | 2  | Pianificazione            | +1 Nota; +1 Azione                        | Qualsiasi comandante |
 | Studio     | C    | 1  | Studio                    | +2 Note al comandante                     | Qualsiasi comandante |
 | Ripasso    | B    | 1  | Studio, Pianificazione    | +1 Nota per ogni carta nel cimitero       | Qualsiasi comandante |
-| Biblioteca | B    | 1  | Pianificazione, Estetica  | Pesca carte fino ad averne 5 in mano      | No target            |
+| Biblioteca | B    | 1  | Pianificazione, Estetica  | Pesca carte fino ad averne 4 in mano      | No target            |
 
 ---
 
@@ -130,7 +130,7 @@
 
 | Nome                     | Tag                          | Effetto                                                                                                   | Target                                              |
 |--------------------------|------------------------------|-----------------------------------------------------------------------------------------------------------|-----------------------------------------------------|
-| Chat GPT                 | Pianificazione, Ricerca      | Pesca 2 carte; +2 Note                                                                                    | Qualsiasi comandante                                |
+| Chat GPT                 | Pianificazione, Ricerca      | Pesca 2 carte; +2 azioni                                                                                    | Qualsiasi comandante                                |
 | Politica                 | Letteratura                  | L'avversario scarta dalla mano tutte le carte Pratica                                                     | No target                                           |
 | Approfondimento          | Ricerca                      | Pesca tutto il mazzo                                                                                      | No target                                           |
 | Rappresentante di Classe | Estetica                     | Scambia le Note tra un tuo comandante e uno avversario (entrambi a scelta)                                | 1 comandante avversario (a scelta) + 1 proprio (a scelta) |
