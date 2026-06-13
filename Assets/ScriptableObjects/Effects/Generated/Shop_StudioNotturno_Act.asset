@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.Effects.ExtraActionEffectSO
   _target: 0
   _doubleActions: 0
-  _actions: -1
+  _actions: -2

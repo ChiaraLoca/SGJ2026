@@ -22,6 +22,12 @@ namespace FourE.Network
         event Action<GameStateDTO> StateReceived;
 
         /// <summary>
+        /// Sollevato sull'host quando un client diventa pronto e chiede lo stato (resync di late-join).
+        /// L'host vi reagisce ri-broadcastando lo stato corrente. Inutilizzato nei trasporti locali.
+        /// </summary>
+        event Action ClientJoined;
+
+        /// <summary>
         /// Invia un intent all'host. Sull'host viene instradato direttamente alla validazione.
         /// </summary>
         /// <param name="intent">Intent da inviare.</param>

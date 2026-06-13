@@ -71,8 +71,8 @@ namespace FourE.Cards
         /// <returns>True se la carta ha quel tag.</returns>
         public bool HasTag(CardTag tag) => (_tags & tag) != 0;
 
-        /// <summary>True se almeno un effetto richiede la selezione di bersagli a runtime.</summary>
-        public bool RequiresTargetSelection
+        /// <summary>True se almeno un effetto richiede la selezione di un qualsiasi comandante (qualsiasi lato).</summary>
+        public bool RequiresAnyTargetSelection
         {
             get
             {
@@ -85,5 +85,40 @@ namespace FourE.Cards
                 return false;
             }
         }
+
+        /// <summary>True se almeno un effetto richiede la selezione di un comandante avversario.</summary>
+        public bool RequiresEnemyTargetSelection
+        {
+            get
+            {
+                if (_effects == null) return false;
+                foreach (CardEffectSO e in _effects)
+                {
+                    if (e != null && (e.Target == EffectTarget.SelectedEnemyCommanders
+                                      || e.Target == EffectTarget.SelectedOwnAndEnemy))
+                        return true;
+                }
+                return false;
+            }
+        }
+
+        /// <summary>True se almeno un effetto richiede la selezione di un comandante proprio.</summary>
+        public bool RequiresOwnTargetSelection
+        {
+            get
+            {
+                if (_effects == null) return false;
+                foreach (CardEffectSO e in _effects)
+                {
+                    if (e != null && (e.Target == EffectTarget.SelectedOwnCommanders
+                                      || e.Target == EffectTarget.SelectedOwnAndEnemy))
+                        return true;
+                }
+                return false;
+            }
+        }
+
+        /// <summary>True se la carta richiede la selezione di almeno un bersaglio a runtime.</summary>
+        public bool RequiresTargetSelection => RequiresAnyTargetSelection || RequiresEnemyTargetSelection || RequiresOwnTargetSelection;
     }
 }

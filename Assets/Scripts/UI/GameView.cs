@@ -52,7 +52,11 @@ namespace FourE.UI
 
         private readonly List<CardView> _spawnedHand = new();
         private readonly List<CardView> _spawnedShop = new();
+
+        // Stato della selezione bersaglio multi-step.
         private CardDataSO _pendingTargetCard;
+        private int _pendingEnemyActorNumber = -1;
+        private int _pendingEnemyCommanderIndex = -1;
 
         /// <summary>
         /// Si iscrive agli aggiornamenti di stato.
@@ -248,6 +252,7 @@ namespace FourE.UI
 
         /// <summary>
         /// Inoltra il gioco di una carta standard come intent di rete.
+        /// Se la carta richiede selezione bersaglio, avvia il flusso multi-step.
         /// </summary>
         /// <param name="card">Carta cliccata in mano.</param>
         private void OnPlayCardClicked(CardDataSO card)
@@ -315,42 +320,120 @@ namespace FourE.UI
         }
 
         /// <summary>
-        /// Entra in modalità selezione bersaglio: mostra l'overlay su tutti i comandanti.
+        /// Avvia la selezione bersaglio in base al tipo di scelta richiesto dalla carta:
+        /// solo nemici, solo propri, entrambi (sequenziale), o qualsiasi (tutti e 4).
         /// </summary>
         /// <param name="card">Carta in attesa di bersaglio.</param>
         private void EnterTargetSelectionMode(CardDataSO card)
         {
             _pendingTargetCard = card;
-            Action<int, int> onSelect = OnCommanderSelected;
-            _localCommander0?.SetSelectable(true, onSelect);
-            _localCommander1?.SetSelectable(true, onSelect);
-            _enemyCommander0?.SetSelectable(true, onSelect);
-            _enemyCommander1?.SetSelectable(true, onSelect);
+            _pendingEnemyActorNumber = -1;
+            _pendingEnemyCommanderIndex = -1;
+
+            if (card.RequiresEnemyTargetSelection)
+                ShowEnemySelection();
+            else if (card.RequiresAnyTargetSelection)
+                ShowAllSelection();
+            else
+                ShowOwnSelection();
+        }
+
+        /// <summary>Rende selezionabili tutti e 4 i comandanti (target: qualsiasi comandante).</summary>
+        private void ShowAllSelection()
+        {
+            _localCommander0?.SetSelectable(true, OnAnyCommanderSelected);
+            _localCommander1?.SetSelectable(true, OnAnyCommanderSelected);
+            _enemyCommander0?.SetSelectable(true, OnAnyCommanderSelected);
+            _enemyCommander1?.SetSelectable(true, OnAnyCommanderSelected);
         }
 
         /// <summary>
-        /// Riceve il bersaglio scelto, invia l'intent e termina la selezione.
+        /// Callback per selezione libera (qualsiasi comandante).
+        /// Invia l'intent con il bersaglio scelto e chiude la selezione.
         /// </summary>
-        /// <param name="actorNumber">Attore del comandante bersaglio.</param>
-        /// <param name="commanderIndex">Indice del comandante bersaglio.</param>
-        private void OnCommanderSelected(int actorNumber, int commanderIndex)
+        private void OnAnyCommanderSelected(int actorNumber, int commanderIndex)
         {
-            if (_pendingTargetCard == null)
-            {
-                return;
-            }
-
+            if (_pendingTargetCard == null) return;
             CardDataSO card = _pendingTargetCard;
             ExitTargetSelectionMode();
             _network.SubmitPlayCard(card, new[] { actorNumber }, new[] { commanderIndex });
         }
 
+        /// <summary>Attiva solo i comandanti avversari come selezionabili (step nemico).</summary>
+        private void ShowEnemySelection()
+        {
+            _localCommander0?.SetSelectable(false, null);
+            _localCommander1?.SetSelectable(false, null);
+            _enemyCommander0?.SetSelectable(true, OnEnemyCommanderSelected);
+            _enemyCommander1?.SetSelectable(true, OnEnemyCommanderSelected);
+        }
+
+        /// <summary>Attiva solo i comandanti propri come selezionabili (step proprio).</summary>
+        private void ShowOwnSelection()
+        {
+            _localCommander0?.SetSelectable(true, OnOwnCommanderSelected);
+            _localCommander1?.SetSelectable(true, OnOwnCommanderSelected);
+            _enemyCommander0?.SetSelectable(false, null);
+            _enemyCommander1?.SetSelectable(false, null);
+        }
+
         /// <summary>
-        /// Esce dalla modalità selezione e nasconde gli overlay comandante.
+        /// Callback del primo step: comandante avversario scelto.
+        /// Se la carta richiede anche un comandante proprio, avanza allo step due.
+        /// Altrimenti invia subito l'intent.
+        /// </summary>
+        private void OnEnemyCommanderSelected(int actorNumber, int commanderIndex)
+        {
+            if (_pendingTargetCard == null) return;
+
+            if (_pendingTargetCard.RequiresOwnTargetSelection)
+            {
+                _pendingEnemyActorNumber = actorNumber;
+                _pendingEnemyCommanderIndex = commanderIndex;
+                _enemyCommander0?.SetSelectable(false, null);
+                _enemyCommander1?.SetSelectable(false, null);
+                ShowOwnSelection();
+            }
+            else
+            {
+                CardDataSO card = _pendingTargetCard;
+                ExitTargetSelectionMode();
+                _network.SubmitPlayCard(card, new[] { actorNumber }, new[] { commanderIndex });
+            }
+        }
+
+        /// <summary>
+        /// Callback del secondo step (o unico step se solo selezione propria):
+        /// comandante proprio scelto. Invia l'intent con tutti i bersagli raccolti.
+        /// </summary>
+        private void OnOwnCommanderSelected(int actorNumber, int commanderIndex)
+        {
+            if (_pendingTargetCard == null) return;
+
+            CardDataSO card = _pendingTargetCard;
+            ExitTargetSelectionMode();
+
+            if (_pendingEnemyActorNumber >= 0)
+            {
+                // Invia nemico prima, poi proprio: GameContext li smista per lato.
+                _network.SubmitPlayCard(card,
+                    new[] { _pendingEnemyActorNumber, actorNumber },
+                    new[] { _pendingEnemyCommanderIndex, commanderIndex });
+            }
+            else
+            {
+                _network.SubmitPlayCard(card, new[] { actorNumber }, new[] { commanderIndex });
+            }
+        }
+
+        /// <summary>
+        /// Esce dalla modalità selezione e rimuove tutti gli overlay dai comandanti.
         /// </summary>
         private void ExitTargetSelectionMode()
         {
             _pendingTargetCard = null;
+            _pendingEnemyActorNumber = -1;
+            _pendingEnemyCommanderIndex = -1;
             _localCommander0?.SetSelectable(false, null);
             _localCommander1?.SetSelectable(false, null);
             _enemyCommander0?.SetSelectable(false, null);

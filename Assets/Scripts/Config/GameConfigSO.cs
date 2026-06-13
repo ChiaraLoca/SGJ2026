@@ -26,6 +26,7 @@ namespace FourE.Config
         [Header("Mano e Mazzo")]
         [SerializeField] private int _startingCardsPerCommander = 5;
         [SerializeField] private int _startingHandSize = 3;
+        [SerializeField] private int _turnStartDrawCount = 2;
 
         [Header("Shop")]
         [SerializeField] private int _shopPoolSize = 12;
@@ -52,8 +53,11 @@ namespace FourE.Config
         /// <summary>Carte di partenza legate a ciascun comandante.</summary>
         public int StartingCardsPerCommander => _startingCardsPerCommander;
 
-        /// <summary>Carte pescate da ciascun giocatore nella Fase DRAW.</summary>
+        /// <summary>Carte pescate da ciascun giocatore nella Fase DRAW (inizio round).</summary>
         public int StartingHandSize => _startingHandSize;
+
+        /// <summary>Carte pescate dal giocatore all'inizio di ogni turno durante la Fase PLAY.</summary>
+        public int TurnStartDrawCount => _turnStartDrawCount;
 
         /// <summary>Dimensione del pool shop personale di ogni giocatore.</summary>
         public int ShopPoolSize => _shopPoolSize;

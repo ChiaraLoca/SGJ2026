@@ -23,6 +23,7 @@ namespace FourE.Core
     public sealed class GameContext
     {
         private static readonly CommanderState[] EmptyTargets = new CommanderState[0];
+        private static readonly IReadOnlyList<CommanderState> EmptyList = new CommanderState[0];
 
         private readonly List<IGameChange> _pendingChanges = new();
 
@@ -46,10 +47,22 @@ namespace FourE.Core
         public GameStateManager State { get; }
 
         /// <summary>
-        /// Comandanti scelti a runtime dal giocatore, usati dal bersaglio
-        /// <see cref="EffectTarget.SelectedCommanders"/>. Vuoto se la carta non richiede scelta.
+        /// Tutti i comandanti scelti a runtime dal giocatore (lista completa, ordinata).
+        /// Vuoto se la carta non richiede scelta.
         /// </summary>
         public IReadOnlyList<CommanderState> SelectedTargets { get; }
+
+        /// <summary>
+        /// Sottoinsieme di <see cref="SelectedTargets"/> appartenenti al giocatore avversario.
+        /// Usato da <see cref="EffectTarget.SelectedEnemyCommanders"/> e <see cref="EffectTarget.SelectedOwnAndEnemy"/>.
+        /// </summary>
+        public IReadOnlyList<CommanderState> SelectedEnemyTargets { get; }
+
+        /// <summary>
+        /// Sottoinsieme di <see cref="SelectedTargets"/> appartenenti al giocatore attivo.
+        /// Usato da <see cref="EffectTarget.SelectedOwnCommanders"/> e <see cref="EffectTarget.SelectedOwnAndEnemy"/>.
+        /// </summary>
+        public IReadOnlyList<CommanderState> SelectedOwnTargets { get; }
 
         /// <summary>Modifiche registrate dagli effetti, in attesa di commit.</summary>
         public IReadOnlyList<IGameChange> PendingChanges => _pendingChanges;
@@ -83,6 +96,54 @@ namespace FourE.Core
             Config = config;
             SelectedTargets = selectedTargets ?? EmptyTargets;
             State = state;
+
+            // Divide i bersagli selezionati per lato (proprio vs avversario).
+            if (SelectedTargets.Count == 0)
+            {
+                SelectedOwnTargets = EmptyList;
+                SelectedEnemyTargets = EmptyList;
+            }
+            else
+            {
+                List<CommanderState> own = new();
+                List<CommanderState> enemy = new();
+                foreach (CommanderState c in SelectedTargets)
+                {
+                    if (IsCommanderOwned(c, activePlayer))
+                        own.Add(c);
+                    else
+                        enemy.Add(c);
+                }
+                SelectedOwnTargets = own;
+                SelectedEnemyTargets = enemy;
+            }
+        }
+
+        /// <summary>
+        /// Verifica se un comandante appartiene al giocatore indicato.
+        /// </summary>
+        private static bool IsCommanderOwned(CommanderState commander, PlayerState player)
+        {
+            foreach (CommanderState c in player.Commanders)
+            {
+                if (c == commander) return true;
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Restituisce il comandante del giocatore con la Note corrente più bassa.
+        /// In caso di parità restituisce il primo comandante (slot 0).
+        /// </summary>
+        private static CommanderState CommanderWithLowestNote(PlayerState player)
+        {
+            CommanderState lowest = player.Commanders[GameConstants.FirstCommanderIndex];
+            foreach (CommanderState c in player.Commanders)
+            {
+                if (c.CurrentNote < lowest.CurrentNote)
+                    lowest = c;
+            }
+            return lowest;
         }
 
         /// <summary>
@@ -157,6 +218,26 @@ namespace FourE.Core
                         yield return selected;
                     }
 
+                    break;
+                case EffectTarget.SelectedEnemyCommanders:
+                    foreach (CommanderState selected in SelectedEnemyTargets)
+                    {
+                        yield return selected;
+                    }
+
+                    break;
+                case EffectTarget.SelectedOwnCommanders:
+                    foreach (CommanderState selected in SelectedOwnTargets)
+                    {
+                        yield return selected;
+                    }
+
+                    break;
+                case EffectTarget.SelectedOwnAndEnemy:
+                    // Gestito direttamente dall'effetto concreto (es. SwapNotesEffectSO).
+                    break;
+                case EffectTarget.OwnLowestNoteCommander:
+                    yield return CommanderWithLowestNote(ActivePlayer);
                     break;
                 case EffectTarget.AffinityCommander:
                     yield return ActivePlayer.Commanders[AffinitySlot(SourceAffinity)];

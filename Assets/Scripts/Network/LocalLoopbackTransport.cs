@@ -21,6 +21,12 @@ namespace FourE.Network
         /// <inheritdoc />
         public event Action<GameStateDTO> StateReceived;
 
+        /// <inheritdoc />
+        // In loopback l'host è locale e non esistono client remoti: evento mai sollevato.
+#pragma warning disable 0067
+        public event Action ClientJoined;
+#pragma warning restore 0067
+
         /// <summary>
         /// Crea il trasporto loopback.
         /// </summary>

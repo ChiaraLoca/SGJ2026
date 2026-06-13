@@ -65,7 +65,10 @@ namespace FourE.Cards
         OwnDiscardWithTag,
 
         /// <summary>Carte con un tag specifico nel cimitero dell'avversario.</summary>
-        EnemyDiscardWithTag
+        EnemyDiscardWithTag,
+
+        /// <summary>Carte con un tag specifico nella somma dei cimiteri di entrambi i giocatori (Sabotaggio).</summary>
+        BothDiscardWithTag
     }
 
     /// <summary>
@@ -143,7 +146,25 @@ namespace FourE.Cards
         ActivePlayer,
 
         /// <summary>Il giocatore avversario.</summary>
-        InactivePlayer
+        InactivePlayer,
+
+        /// <summary>Comandante avversario scelto dal giocatore (es. Minaccia, Rissa enemy).</summary>
+        SelectedEnemyCommanders = 12,
+
+        /// <summary>Comandante proprio scelto dal giocatore (es. ChatGPT, Studio Notturno).</summary>
+        SelectedOwnCommanders = 13,
+
+        /// <summary>
+        /// Un comandante proprio + uno avversario, entrambi scelti (es. Rappresentante di Classe).
+        /// La logica di risoluzione è affidata all'effetto concreto tramite SelectedOwnTargets/SelectedEnemyTargets.
+        /// </summary>
+        SelectedOwnAndEnemy = 14,
+
+        /// <summary>
+        /// Il comandante del giocatore attivo con la Note più bassa al momento della risoluzione.
+        /// Risolto automaticamente senza input del giocatore (es. Test di Cooper).
+        /// </summary>
+        OwnLowestNoteCommander = 15
     }
 
     /// <summary>

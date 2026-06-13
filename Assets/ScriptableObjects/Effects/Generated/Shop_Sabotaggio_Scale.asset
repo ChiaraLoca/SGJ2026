@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Shop_Sabotaggio_Scale
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.Effects.ScalingEffectSO
   _target: 7
-  _countSource: 4
+  _countSource: 5
   _tagFilter: 1
   _notePerCount: -1
   _actionPerCount: 0
