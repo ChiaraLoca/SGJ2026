@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7d9e34e43b67144b93fb4b3705b7aef, type: 3}
   m_Name: EduF_Minaccia_Debuff
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.Effects.DebuffEffectSO
-  _target: 7
+  _target: 12
   _magnitude: 2
   _duration: 0
   _durationTurns: 1
