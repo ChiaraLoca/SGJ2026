@@ -11,7 +11,7 @@ Torna all'[indice generale](../INDEX.md).
 | [PhotonEventCodes.cs](PhotonEventCodes.cs) | `static PhotonEventCodes` | Costanti `byte` dei codici evento: intent bassi (`PlayCard`…`FinishShop`), broadcast alti (`StateSync`, `GameStart`, `GameOver`) |
 | [CardRegistry.cs](CardRegistry.cs) | `CardRegistry` | Mappa stabile id↔`CardDataSO` (gli SO non viaggiano in rete). `Build(content)`, `GetId()`, `GetCard()`, `ToIds()`, `NoCard = -1` |
 | [GameIntent.cs](GameIntent.cs) | `enum IntentType` + struct `GameIntent` | Comando serializzabile (Command). Factory: `PlayCard()`, `BuyCard()`, `PlayVerifica()`, `EndTurn()`, `FinishShop()`. Bersagli come coppie (attore, indice comandante) |
-| [GameStateDTO.cs](GameStateDTO.cs) | struct `GameStateDTO`, `PlayerDTO`, `CommanderDTO` | Snapshot completo e serializzabile: fase, round, attore attivo, azioni rimanenti, giocatori, esito e ultima carta giocata |
+| [GameStateDTO.cs](GameStateDTO.cs) | struct `GameStateDTO`, `PlayerDTO`, `CommanderDTO` | Snapshot completo e serializzabile: fase, round, attore attivo, azioni rimanenti, conteggi mazzo/scarti, giocatori, esito e ultima carta giocata |
 | [INetworkTransport.cs](INetworkTransport.cs) | interfaccia `INetworkTransport` | Seam di rete: `IsHost`, `LocalActorNumber`, `SendIntent()`, `BroadcastState()`, eventi `IntentReceived`/`StateReceived`/`ClientJoined` (resync late-join) |
 | [LocalLoopbackTransport.cs](LocalLoopbackTransport.cs) | `LocalLoopbackTransport` | Implementazione offline a giro chiuso (host locale, single-actor). Per test unitari e riferimento |
 | [HotseatTransport.cs](HotseatTransport.cs) | `HotseatTransport` | Hotseat locale: `LocalActorNumber` si aggiorna a `state.ActiveActorNumber` ad ogni broadcast, la UI segue il giocatore attivo |

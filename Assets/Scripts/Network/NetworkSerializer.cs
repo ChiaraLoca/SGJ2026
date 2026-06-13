@@ -119,6 +119,7 @@ namespace FourE.Network
             writer.Write(player.Credits);
             writer.Write(player.Notes);
             writer.Write(player.DeckCount);
+            writer.Write(player.DiscardCount);
             WriteIntArray(writer, player.HandCardIds);
             WriteIntArray(writer, player.ShopPoolCardIds);
 
@@ -143,6 +144,7 @@ namespace FourE.Network
                 Credits = reader.ReadInt32(),
                 Notes = reader.ReadInt32(),
                 DeckCount = reader.ReadInt32(),
+                DiscardCount = reader.ReadInt32(),
                 HandCardIds = ReadIntArray(reader),
                 ShopPoolCardIds = ReadIntArray(reader)
             };

@@ -57,6 +57,7 @@ namespace FourE.Network
                 Notes = player.TotalNotes,
                 HandCardIds = registry.ToIds(player.Hand),
                 DeckCount = player.Deck.Count,
+                DiscardCount = player.DiscardPile.Count,
                 ShopPoolCardIds = registry.ToIds(player.ShopPool),
                 Commanders = commanders
             };

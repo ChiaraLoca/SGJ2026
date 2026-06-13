@@ -36,6 +36,8 @@ namespace FourE.UI
         [Header("Contenitori")]
         [SerializeField] private Transform _handContainer;
         [SerializeField] private Transform _shopContainer;
+        [SerializeField] private int _handCardsBeforeOverlap = 4;
+        [SerializeField] private float _handDefaultSpacing = 8f;
 
         [Header("Etichette")]
         [SerializeField] private Text _phaseLabel;
@@ -44,6 +46,8 @@ namespace FourE.UI
         [SerializeField] private Text _creditsLabel;
         [SerializeField] private Text _enemyCreditsLabel;
         [SerializeField] private Text _notesLabel;
+        [SerializeField] private Text _deckCountLabel;
+        [SerializeField] private Text _discardCountLabel;
         [SerializeField] private Text _outcomeLabel;
 
         [Header("Comandanti locali")]
@@ -209,6 +213,16 @@ namespace FourE.UI
                 _notesLabel.text = $"Note: {local.Notes}";
             }
 
+            if (_deckCountLabel != null)
+            {
+                _deckCountLabel.text = $"MAZZO\n{local.DeckCount}";
+            }
+
+            if (_discardCountLabel != null)
+            {
+                _discardCountLabel.text = $"SCARTI\n{local.DiscardCount}";
+            }
+
             if (_outcomeLabel != null)
             {
                 _outcomeLabel.gameObject.SetActive(state.IsGameOver);
@@ -271,6 +285,41 @@ namespace FourE.UI
                 view.Bind(card, OnPlayCardClicked, playable, ShowCardPreview, HideCardPreview);
                 _spawnedHand.Add(view);
             }
+
+            UpdateHandSpacing();
+        }
+
+        /// <summary>
+        /// Riduce progressivamente lo spazio tra le carte quando la mano supera la capienza visiva.
+        /// </summary>
+        private void UpdateHandSpacing()
+        {
+            if (_handContainer is not RectTransform handRect ||
+                !_handContainer.TryGetComponent(out HorizontalLayoutGroup layout))
+            {
+                return;
+            }
+
+            int cardCount = _spawnedHand.Count;
+            if (cardCount <= _handCardsBeforeOverlap)
+            {
+                layout.spacing = _handDefaultSpacing;
+                return;
+            }
+
+            CardView firstCard = _spawnedHand[0];
+            if (firstCard == null || firstCard.transform is not RectTransform cardRect)
+            {
+                return;
+            }
+
+            float availableWidth = handRect.rect.width - layout.padding.horizontal;
+            float cardsWidth = cardRect.rect.width * cardCount;
+            int spacesCount = cardCount - GameConstants.IndexToCountOffset;
+            layout.spacing = Mathf.Min(
+                _handDefaultSpacing,
+                (availableWidth - cardsWidth) / spacesCount);
+            LayoutRebuilder.MarkLayoutForRebuild(handRect);
         }
 
         /// <summary>

@@ -47,6 +47,9 @@ namespace FourE.Network
         /// <summary>Numero di carte rimaste nel mazzo.</summary>
         public int DeckCount;
 
+        /// <summary>Numero di carte presenti nella pila degli scarti.</summary>
+        public int DiscardCount;
+
         /// <summary>Id delle carte disponibili nel pool shop.</summary>
         public int[] ShopPoolCardIds;
 
