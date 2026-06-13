@@ -16,6 +16,9 @@ MonoBehaviour:
   _description: 'Il secchione ripassa: +2 Note.'
   _cardType: 0
   _affinity: 0
+  _tags: 0
+  _artwork: {fileID: 21300000, guid: 94a0350bf687c9d4993b4c860f08944d, type: 3}
+  _tier: 0
   _shopCost: 0
   _minCreditsRequired: 0
   _effects:

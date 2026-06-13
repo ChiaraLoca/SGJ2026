@@ -29,5 +29,8 @@ namespace FourE.Config
 
         /// <summary>Numero del primo turno di un round (la Verifica non è giocabile in questo turno).</summary>
         public const int FirstRoundTurnNumber = 1;
+
+        /// <summary>Valore normalizzato usato per centrare gli elementi UI negli anchor del Canvas.</summary>
+        public const float UiCenterAnchor = 0.5f;
     }
 }

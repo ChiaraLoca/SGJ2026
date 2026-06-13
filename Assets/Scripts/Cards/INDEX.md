@@ -8,7 +8,7 @@ Torna all'[indice generale](../INDEX.md).
 | File | Tipo | Responsabilità / API chiave |
 |---|---|---|
 | [CardEnums.cs](CardEnums.cs) | enum `CardTag` (Flags), `CardTier`, `CountSource`, `CardType`, `CardAffinity`, `EffectTarget`, `EffectDuration` | Tutte le enumerazioni del dominio carte/effetti |
-| [CardDataSO.cs](CardDataSO.cs) | `CardDataSO : ScriptableObject` | Definizione immutabile di una carta: nome, descrizione, tipo, affinità, `Tags`, `Tier`, `ShopCost` (derivato dal config per tier), `MinCreditsRequired`, `Effects[]`, `IsVerifica`, `RequiresTargetSelection`, `HasTag()` |
+| [CardDataSO.cs](CardDataSO.cs) | `CardDataSO : ScriptableObject` | Definizione immutabile di una carta: nome, descrizione, artwork, tipo, affinità, `Tags`, `Tier`, `ShopCost` (derivato dal config per tier), `MinCreditsRequired`, `Effects[]`, `IsVerifica`, `RequiresTargetSelection`, `HasTag()` |
 | [CardEffectSO.cs](CardEffectSO.cs) | abstract `CardEffectSO : ScriptableObject` | Base Strategy di tutti gli effetti. `Target`, `Apply(GameContext)` puro (registra `IGameChange`) |
 | [CardConditionSO.cs](CardConditionSO.cs) | abstract `CardConditionSO : ScriptableObject` | Base delle condizioni. `IsMet(GameContext) → bool` |
 | [ActiveEffect.cs](ActiveEffect.cs) | `ActiveEffect` | Effetto a durata runtime su un comandante: `Magnitude`, `Duration`, `RemainingTurns`, `TickTurn()` |
@@ -33,6 +33,14 @@ Torna all'[indice generale](../INDEX.md).
 | [Effects/ShieldEffectSO.cs](Effects/ShieldEffectSO.cs) | `ShieldEffectSO` | Scudo che annulla il prossimo debuff (Dialogo) |
 | [Effects/ImmunityEffectSO.cs](Effects/ImmunityEffectSO.cs) | `ImmunityEffectSO` | Blocca il calo di Note fino al prossimo turno (Fidanzata) |
 | [Effects/BlockVerificaEffectSO.cs](Effects/BlockVerificaEffectSO.cs) | `BlockVerificaEffectSO` | Impedisce all'avversario di giocare la Verifica un turno (Sciopero) |
+
+### Editor/ (automazioni asset)
+
+Vedi [Editor/INDEX.md](Editor/INDEX.md).
+
+| File | Tipo | Responsabilità |
+|---|---|---|
+| [Editor/CardArtworkAutoAssigner.cs](Editor/CardArtworkAutoAssigner.cs) | `CardArtworkAutoAssigner : AssetPostprocessor` | Importa e collega automaticamente gli artwork da `Assets/cards` alle definizioni carta tramite nome |
 
 ### Conditions/ (condizioni concrete)
 

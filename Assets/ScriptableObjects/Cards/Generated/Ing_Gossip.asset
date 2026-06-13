@@ -17,6 +17,7 @@ MonoBehaviour:
   _cardType: 0
   _affinity: 0
   _tags: 33
+  _artwork: {fileID: 21300000, guid: 65c4d473923fcec4ca2edf35a8cafb32, type: 3}
   _tier: 1
   _shopCost: 0
   _minCreditsRequired: 0

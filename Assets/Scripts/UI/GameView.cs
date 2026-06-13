@@ -25,6 +25,7 @@ namespace FourE.UI
 
         [Header("Prefab")]
         [SerializeField] private CardView _cardPrefab;
+        [SerializeField] private float _cardPreviewScale = 2.4f;
 
         [Header("Contenitori")]
         [SerializeField] private Transform _handContainer;
@@ -52,6 +53,8 @@ namespace FourE.UI
 
         private readonly List<CardView> _spawnedHand = new();
         private readonly List<CardView> _spawnedShop = new();
+        private Canvas _canvas;
+        private CardView _cardPreview;
 
         // Stato della selezione bersaglio multi-step.
         private CardDataSO _pendingTargetCard;
@@ -63,6 +66,8 @@ namespace FourE.UI
         /// </summary>
         private void Awake()
         {
+            _canvas = GetComponentInParent<Canvas>();
+            _shopContainer?.gameObject.SetActive(false);
             EventBus.Subscribe<GameStateSyncedEvent>(OnStateSynced);
         }
 
@@ -93,6 +98,7 @@ namespace FourE.UI
         /// </summary>
         private void OnDestroy()
         {
+            HideCardPreview();
             EventBus.Unsubscribe<GameStateSyncedEvent>(OnStateSynced);
         }
 
@@ -201,7 +207,7 @@ namespace FourE.UI
                 }
 
                 CardView view = Instantiate(_cardPrefab, _handContainer);
-                view.Bind(card, OnPlayCardClicked, playable);
+                view.Bind(card, OnPlayCardClicked, playable, ShowCardPreview, HideCardPreview);
                 _spawnedHand.Add(view);
             }
         }
@@ -217,6 +223,13 @@ namespace FourE.UI
                 return;
             }
 
+            bool isShopVisible = phase == GamePhase.Shop;
+            _shopContainer.gameObject.SetActive(isShopVisible);
+            if (!isShopVisible)
+            {
+                return;
+            }
+
             foreach (int cardId in local.ShopPoolCardIds)
             {
                 CardDataSO card = _network.Registry.GetCard(cardId);
@@ -225,11 +238,56 @@ namespace FourE.UI
                     continue;
                 }
 
-                bool affordable = phase == GamePhase.Shop && local.Credits >= card.ShopCost;
+                bool affordable = local.Credits >= card.ShopCost;
                 CardView view = Instantiate(_cardPrefab, _shopContainer);
-                view.Bind(card, OnBuyCardClicked, affordable);
+                view.Bind(card, OnBuyCardClicked, affordable, ShowCardPreview, HideCardPreview);
                 _spawnedShop.Add(view);
             }
+        }
+
+        /// <summary>
+        /// Mostra una copia ingrandita e non interattiva della carta al centro del Canvas.
+        /// </summary>
+        /// <param name="card">Carta da mostrare in anteprima.</param>
+        private void ShowCardPreview(CardDataSO card)
+        {
+            HideCardPreview();
+            if (_cardPrefab == null || _canvas == null || card == null)
+            {
+                return;
+            }
+
+            _cardPreview = Instantiate(_cardPrefab, _canvas.transform);
+            _cardPreview.BindPreview(card);
+            _cardPreview.transform.SetAsLastSibling();
+
+            if (_cardPreview.transform is RectTransform previewTransform)
+            {
+                Vector2 centerAnchor = Vector2.one * GameConstants.UiCenterAnchor;
+                previewTransform.anchorMin = centerAnchor;
+                previewTransform.anchorMax = centerAnchor;
+                previewTransform.pivot = centerAnchor;
+                previewTransform.anchoredPosition = Vector2.zero;
+                previewTransform.localScale = Vector3.one * _cardPreviewScale;
+            }
+
+            CanvasGroup canvasGroup = _cardPreview.gameObject.AddComponent<CanvasGroup>();
+            canvasGroup.interactable = false;
+            canvasGroup.blocksRaycasts = false;
+        }
+
+        /// <summary>
+        /// Chiude l'anteprima carta attualmente visibile.
+        /// </summary>
+        private void HideCardPreview()
+        {
+            if (_cardPreview == null)
+            {
+                return;
+            }
+
+            Destroy(_cardPreview.gameObject);
+            _cardPreview = null;
         }
 
         /// <summary>

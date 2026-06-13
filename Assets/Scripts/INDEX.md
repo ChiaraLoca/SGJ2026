@@ -41,6 +41,7 @@ Indice generale del codice. Ogni cartella ha un proprio `INDEX.md` (sottoindice)
 | Menu iniziale (stesso telefono / online) | scena `Assets/Scenes/MainMenu.unity` + `UI/MainMenuController.cs` |
 | Connettersi online per codice stanza | `Network/OnlineLauncher.cs` (PUN2); App ID in `PhotonServerSettings.asset` |
 | Ridisegnare la UI sullo stato | `UI/GameView.cs` (ascolta `GameStateSyncedEvent`) |
+| Gestire musica/ambiente/SFX evento-driven | `UI/GameAudioController.cs` |
 | Valori di bilanciamento (round, mano, shop, conversione) | `Config/GameConfigSO.cs` |
 | Costanti strutturali (n. giocatori, comandanti, carte) | `Config/GameConstants.cs` |
 | Contenuti della partita (comandanti, carte, catalogo) | `Config/GameContentSO.cs` |
