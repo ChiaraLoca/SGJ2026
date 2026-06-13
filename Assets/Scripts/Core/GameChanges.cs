@@ -30,6 +30,12 @@ namespace FourE.Core
         {
             _target.ApplyInstantDelta(_delta);
             EventBus.Publish(new NoteChangedEvent(_target));
+
+            // Aumento istantaneo: notifica le passive reattive (Inglese).
+            if (_delta > 0)
+            {
+                EventBus.Publish(new NoteIncreasedEvent(_target, _delta));
+            }
         }
     }
 
@@ -100,6 +106,11 @@ namespace FourE.Core
                 CardDataSO card = _player.Deck[topIndex];
                 _player.Deck.RemoveAt(topIndex);
                 _player.Hand.Add(card);
+            }
+
+            if (drawable > 0)
+            {
+                EventBus.Publish(new CardsDrawnEvent(_player, drawable));
             }
         }
     }

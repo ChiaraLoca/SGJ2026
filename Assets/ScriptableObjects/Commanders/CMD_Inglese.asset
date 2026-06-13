@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: CMD_Inglese
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Commanders.CommanderDataSO
   _commanderName: Inglese
+  _kind: 2
   _baseNote: 5
   _linkedCards:
   - {fileID: 11400000, guid: d3ae9109a06f1e94283abf18290ce718, type: 2}
@@ -21,3 +22,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: acd6d68d70e6b79499ba276d3ab4a9d1, type: 2}
   - {fileID: 11400000, guid: a17a37eddd386034eb2ba2b45308da46, type: 2}
   _portrait: {fileID: 0}
+  _baseAbilityDescription: Quando aumenti la Nota di Inglese, +1 Nota all'altro tuo
+    comandante
+  _unlockConditionDescription: Avere 15 carte nel mazzo
+  _secondaryAbilityDescription: Le carte che aumentano la Nota di Inglese vengono copiate
+    sull'altro comandante

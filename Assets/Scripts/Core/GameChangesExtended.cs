@@ -431,6 +431,11 @@ namespace FourE.Core
                 player.Deck.RemoveAt(topIndex);
                 player.Hand.Add(card);
             }
+
+            if (drawable > 0)
+            {
+                EventBus.Publish(new CardsDrawnEvent(player, drawable));
+            }
         }
     }
 }

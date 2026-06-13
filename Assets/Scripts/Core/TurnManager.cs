@@ -80,6 +80,9 @@ namespace FourE.Core
             _cardsAllowedThisTurn = _state.GameConfig.GetCardsPlayablePerTurn(_state.CurrentRoundIndex);
             _turnInRound++;
 
+            // Le condizioni di sblocco della secondaria si controllano a inizio di ogni turno.
+            _state.Passives?.CheckSecondaryUnlocks(player, _state.CurrentRoundIndex);
+
             // L'immunità "fino al tuo prossimo turno" (Fidanzata) decade qui.
             foreach (CommanderState commander in player.Commanders)
             {
@@ -102,6 +105,11 @@ namespace FourE.Core
                 int topIndex = player.Deck.Count - 1;
                 player.Hand.Add(player.Deck[topIndex]);
                 player.Deck.RemoveAt(topIndex);
+            }
+
+            if (drawable > 0)
+            {
+                EventBus.Publish(new CardsDrawnEvent(player, drawable));
             }
         }
 
@@ -215,6 +223,9 @@ namespace FourE.Core
             // La Verifica giocata va nel cimitero: rientra nel mazzo alla Fase DRAW.
             player.Hand.Remove(verifica);
             player.DiscardPile.Add(verifica);
+
+            // Conteggio per la passiva base di Storia (+3 Note/round per ogni Verifica giocata).
+            player.IncrementVerificaPlayedCount();
 
             EventBus.Publish(new VerificaPlayedEvent(player));
             _phases.HandleVerifica(player);

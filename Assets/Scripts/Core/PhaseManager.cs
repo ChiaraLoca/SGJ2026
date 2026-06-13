@@ -63,6 +63,7 @@ namespace FourE.Core
         {
             EnterPhase(GamePhase.Play);
             _turns.BeginRound();
+            ApplyRoundStartPassives();
             _turns.StartTurn(firstPlayer);
         }
 
@@ -193,9 +194,19 @@ namespace FourE.Core
         {
             EnterPhase(GamePhase.Play);
             _turns.BeginRound();
+            ApplyRoundStartPassives();
             // L'apertura del round è decisa dal decider (lancio di moneta o mock nei test).
             PlayerState opener = _startingPlayerDecider.DecideStartingPlayer(_state.Player0, _state.Player1);
             _turns.StartTurn(opener);
+        }
+
+        /// <summary>
+        /// Applica le passive di inizio round a entrambi i giocatori (Note di Storia, pesca di Matematica).
+        /// </summary>
+        private void ApplyRoundStartPassives()
+        {
+            _state.Passives?.ApplyRoundStartPassives(_state.Player0);
+            _state.Passives?.ApplyRoundStartPassives(_state.Player1);
         }
 
         /// <summary>
