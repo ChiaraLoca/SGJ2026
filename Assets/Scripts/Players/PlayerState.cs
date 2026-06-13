@@ -24,6 +24,7 @@ namespace FourE.Players
         [SerializeField] private List<CardDataSO> _shopPool = new();
         [SerializeField] private CommanderState[] _commanders;
         [SerializeField] private bool _verificaBlocked;
+        [SerializeField] private bool _wikipediaInterceptActive;
 
         /// <summary>Numero attore Photon che identifica il giocatore.</summary>
         public int ActorNumber => _actorNumber;
@@ -51,6 +52,9 @@ namespace FourE.Players
 
         /// <summary>True se al giocatore è impedito giocare la Verifica nel turno corrente (Sciopero).</summary>
         public bool VerificaBlocked { get => _verificaBlocked; set => _verificaBlocked = value; }
+
+        /// <summary>True se è attivo uno scudo Wikipedia che intercetta la prossima carta dell'avversario.</summary>
+        public bool WikipediaInterceptActive { get => _wikipediaInterceptActive; set => _wikipediaInterceptActive = value; }
 
         /// <summary>
         /// Somma delle Note correnti dei due comandanti: punteggio temporaneo del round,

@@ -148,6 +148,15 @@ namespace FourE.Core
                 return false;
             }
 
+            // Controlla se lo scudo Wikipedia è attivo sull'avversario.
+            PlayerState opponent = _state.OpponentOf(player);
+            if (opponent != null && opponent.WikipediaInterceptActive)
+            {
+                // Intercetta la carta: aggiungila alla mano dell'avversario e disattiva lo scudo.
+                opponent.Hand.Add(card);
+                opponent.WikipediaInterceptActive = false;
+            }
+
             GameContext context = _state.BuildContext(selectedTargets);
             _resolver.Resolve(card, context);
 

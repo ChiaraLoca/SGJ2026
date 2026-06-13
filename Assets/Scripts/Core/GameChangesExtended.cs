@@ -387,6 +387,31 @@ namespace FourE.Core
     }
 
     /// <summary>
+    /// Attiva lo scudo di intercettazione Wikipedia: la prossima carta giocata dall'avversario
+    /// (esclusa la Verifica) verrà copiata nella mano del proprietario dello scudo.
+    /// </summary>
+    public sealed class ActivateWikipediaInterceptChange : IGameChange
+    {
+        private readonly PlayerState _targetPlayer;
+
+        /// <summary>Crea la modifica di attivazione dello scudo Wikipedia.</summary>
+        /// <param name="targetPlayer">Giocatore su cui attivare lo scudo (avversario di chi ha giocato Wikipedia).</param>
+        public ActivateWikipediaInterceptChange(PlayerState targetPlayer)
+        {
+            _targetPlayer = targetPlayer;
+        }
+
+        /// <inheritdoc/>
+        public void Apply()
+        {
+            if (_targetPlayer != null)
+            {
+                _targetPlayer.WikipediaInterceptActive = true;
+            }
+        }
+    }
+
+    /// <summary>
     /// Applica +2 Note al comandante del giocatore con la Note più bassa (Test di Cooper).
     /// Se dopo l'applicazione la sua nota è ≤ 3, la carta Test di Cooper ritorna in mano.
     /// </summary>

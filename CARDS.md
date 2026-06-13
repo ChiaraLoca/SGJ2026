@@ -74,7 +74,7 @@
 | Studio     | C    | 2  | Studio            | +2 Note al comandante                                                                            | Qualsiasi comandante                       |
 | Dialogo    | C    | 1  | Letteratura       | Annulla il prossimo debuff ricevuto                                                              | No target                                  |
 | Tutor      | B    | 1  | Estetica, Studio  | +4 Note al tuo comandante con Nota più bassa (tetto massimo: il valore del comandante più alto) | Automatico — tuo comandante con Nota più bassa |
-| Wikipedia  | B    | 1  | Estetica, Letteratura | La prossima carta giocata dall'avversario ti arriva in mano (esclusa la Verifica)           | No target                                  |
+| Wikipedia  | B    | 1  | Estetica, Letteratura | La prossima carta giocata dall'avversario (esclusa la Verifica) viene copiata e aggiunta immediatamente alla tua mano | No target                                  |
 
 ---
 
