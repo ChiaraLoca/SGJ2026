@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7fb7ee714fd77148b70645691386a44, type: 3}
+  m_Name: CMD_Marco
+  m_EditorClassIdentifier: Assembly-CSharp::FourE.Commanders.CommanderDataSO
+  _commanderName: Marco
+  _baseNote: 5
+  _linkedCards:
+  - {fileID: 11400000, guid: f315b7daafbdadb4a871bd652f7f1d88, type: 2}
+  - {fileID: 11400000, guid: 192bf6cf0539ef84f943b9064278f3e7, type: 2}
+  - {fileID: 11400000, guid: 9dc7b46c2700c5b429208b3a0d96c9c8, type: 2}
+  - {fileID: 11400000, guid: 4b4a6a19a751d9f4c93e5bd0ce145078, type: 2}
+  - {fileID: 11400000, guid: c77206c4f5ab44f4c87fa19a76089c64, type: 2}
+  _portrait: {fileID: 0}

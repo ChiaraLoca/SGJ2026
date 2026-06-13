@@ -1,4 +1,5 @@
 using UnityEngine;
+using FourE.Cards;
 
 namespace FourE.Config
 {
@@ -30,6 +31,11 @@ namespace FourE.Config
         [SerializeField] private int _shopPoolSize = 12;
         [SerializeField] private int _shopPurchasesPerRound = 2;
         [SerializeField] private int _shopRefreshSlots = 3;
+
+        [Header("Costi per Tier (Note)")]
+        [SerializeField] private int _tierCostC = 1;
+        [SerializeField] private int _tierCostB = 3;
+        [SerializeField] private int _tierCostA = 10;
 
         [Header("Conversione")]
         [SerializeField] private float _noteToCreditsMultiplier = 1f;
@@ -63,6 +69,21 @@ namespace FourE.Config
 
         /// <summary>Regola di spareggio dell'Esame Finale.</summary>
         public TiebreakRule TiebreakRule => _tiebreakRule;
+
+        /// <summary>
+        /// Restituisce il costo in Note di una fascia di carte.
+        /// </summary>
+        /// <param name="tier">Fascia di costo della carta.</param>
+        /// <returns>Costo in Note configurato per la fascia.</returns>
+        public int GetTierCost(CardTier tier)
+        {
+            return tier switch
+            {
+                CardTier.A => _tierCostA,
+                CardTier.B => _tierCostB,
+                _ => _tierCostC
+            };
+        }
 
         /// <summary>
         /// Restituisce il numero di carte giocabili per turno nel round indicato.

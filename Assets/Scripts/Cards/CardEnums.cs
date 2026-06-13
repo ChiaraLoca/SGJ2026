@@ -1,5 +1,73 @@
+using System;
+
 namespace FourE.Cards
 {
+    /// <summary>
+    /// Tag tematici di una carta. Combinabili (una carta può avere più tag).
+    /// Usati da effetti che contano o filtrano per tag (Sabotaggio, Politica, Iperka…).
+    /// </summary>
+    [Flags]
+    public enum CardTag
+    {
+        /// <summary>Nessun tag.</summary>
+        None = 0,
+
+        /// <summary>Pratica (E, I).</summary>
+        Pratica = 1 << 0,
+
+        /// <summary>Studio (S, M).</summary>
+        Studio = 1 << 1,
+
+        /// <summary>Estetica (S, E).</summary>
+        Estetica = 1 << 2,
+
+        /// <summary>Letteratura (S, I).</summary>
+        Letteratura = 1 << 3,
+
+        /// <summary>Pianificazione (M, E).</summary>
+        Pianificazione = 1 << 4,
+
+        /// <summary>Ricerca (M, I).</summary>
+        Ricerca = 1 << 5
+    }
+
+    /// <summary>
+    /// Fascia di costo di una carta nello shop. Il costo concreto è risolto dal
+    /// <see cref="FourE.Config.GameConfigSO"/>, così resta configurabile a runtime.
+    /// </summary>
+    public enum CardTier
+    {
+        /// <summary>Fascia economica (default 1 Nota).</summary>
+        C,
+
+        /// <summary>Fascia media (default 3 Note).</summary>
+        B,
+
+        /// <summary>Fascia alta (default 10 Note).</summary>
+        A
+    }
+
+    /// <summary>
+    /// Sorgente di conteggio per gli effetti che scalano in base a un insieme di carte.
+    /// </summary>
+    public enum CountSource
+    {
+        /// <summary>Carte nel cimitero (scarti) del giocatore attivo.</summary>
+        OwnDiscardPile,
+
+        /// <summary>Carte in mano al giocatore attivo.</summary>
+        OwnHand,
+
+        /// <summary>Tag distinti presenti nel cimitero del giocatore attivo.</summary>
+        OwnDiscardDistinctTags,
+
+        /// <summary>Carte con un tag specifico nel cimitero del giocatore attivo.</summary>
+        OwnDiscardWithTag,
+
+        /// <summary>Carte con un tag specifico nel cimitero dell'avversario.</summary>
+        EnemyDiscardWithTag
+    }
+
     /// <summary>
     /// Categoria della carta che ne determina il comportamento nel flusso di gioco.
     /// </summary>
@@ -59,6 +127,17 @@ namespace FourE.Cards
         /// Risolti dai bersagli passati al <c>GameContext</c> tramite l'intent di gioco.
         /// </summary>
         SelectedCommanders,
+
+        /// <summary>
+        /// Il comandante del giocatore attivo legato all'affinità della carta giocata
+        /// (Commander0 → slot 0, Commander1 → slot 1). Per le carte di mazzo auto-bersaglianti.
+        /// </summary>
+        AffinityCommander,
+
+        /// <summary>
+        /// L'altro comandante del giocatore attivo rispetto all'affinità della carta.
+        /// </summary>
+        AffinityOtherCommander,
 
         /// <summary>Il giocatore che sta giocando la carta.</summary>
         ActivePlayer,

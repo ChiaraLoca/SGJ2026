@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -51,6 +52,7 @@ namespace FourE.UI
 
         private readonly List<CardView> _spawnedHand = new();
         private readonly List<CardView> _spawnedShop = new();
+        private CardDataSO _pendingTargetCard;
 
         /// <summary>
         /// Si iscrive agli aggiornamenti di stato.
@@ -70,9 +72,10 @@ namespace FourE.UI
                 _endTurnButton.onClick.AddListener(_network.SubmitEndTurn);
             }
 
+            // Il bottone Verifica separato è disattivato: la carta Verifica compare in mano.
             if (_verificaButton != null)
             {
-                _verificaButton.onClick.AddListener(_network.SubmitPlayVerifica);
+                _verificaButton.gameObject.SetActive(false);
             }
 
             if (_finishShopButton != null)
@@ -132,7 +135,7 @@ namespace FourE.UI
 
             if (_notesLabel != null)
             {
-                _notesLabel.text = $"Note: {local.AvailableNotes}";
+                _notesLabel.text = $"Note: {local.Notes}";
             }
 
             if (_outcomeLabel != null)
@@ -170,7 +173,7 @@ namespace FourE.UI
             }
 
             CommanderDataSO definition = data != null && index < data.Count ? data[index] : null;
-            view.Bind(player.Commanders[index], definition);
+            view.Bind(player.Commanders[index], definition, player.ActorNumber, index);
         }
 
         /// <summary>
@@ -218,7 +221,7 @@ namespace FourE.UI
                     continue;
                 }
 
-                bool affordable = phase == GamePhase.Shop && local.AvailableNotes >= card.ShopCost;
+                bool affordable = phase == GamePhase.Shop && local.Credits >= card.ShopCost;
                 CardView view = Instantiate(_cardPrefab, _shopContainer);
                 view.Bind(card, OnBuyCardClicked, affordable);
                 _spawnedShop.Add(view);
@@ -237,11 +240,6 @@ namespace FourE.UI
                 _endTurnButton.interactable = inPlay;
             }
 
-            if (_verificaButton != null)
-            {
-                _verificaButton.interactable = inPlay && local.VerificaCardId != CardRegistry.NoCard;
-            }
-
             if (_finishShopButton != null)
             {
                 _finishShopButton.interactable = phase == GamePhase.Shop;
@@ -254,7 +252,17 @@ namespace FourE.UI
         /// <param name="card">Carta cliccata in mano.</param>
         private void OnPlayCardClicked(CardDataSO card)
         {
-            _network.SubmitPlayCard(card);
+            if (_pendingTargetCard != null)
+            {
+                return;
+            }
+
+            if (card.IsVerifica)
+                _network.SubmitPlayVerifica();
+            else if (card.RequiresTargetSelection)
+                EnterTargetSelectionMode(card);
+            else
+                _network.SubmitPlayCard(card);
         }
 
         /// <summary>
@@ -304,6 +312,49 @@ namespace FourE.UI
             }
 
             spawned.Clear();
+        }
+
+        /// <summary>
+        /// Entra in modalità selezione bersaglio: mostra l'overlay su tutti i comandanti.
+        /// </summary>
+        /// <param name="card">Carta in attesa di bersaglio.</param>
+        private void EnterTargetSelectionMode(CardDataSO card)
+        {
+            _pendingTargetCard = card;
+            Action<int, int> onSelect = OnCommanderSelected;
+            _localCommander0?.SetSelectable(true, onSelect);
+            _localCommander1?.SetSelectable(true, onSelect);
+            _enemyCommander0?.SetSelectable(true, onSelect);
+            _enemyCommander1?.SetSelectable(true, onSelect);
+        }
+
+        /// <summary>
+        /// Riceve il bersaglio scelto, invia l'intent e termina la selezione.
+        /// </summary>
+        /// <param name="actorNumber">Attore del comandante bersaglio.</param>
+        /// <param name="commanderIndex">Indice del comandante bersaglio.</param>
+        private void OnCommanderSelected(int actorNumber, int commanderIndex)
+        {
+            if (_pendingTargetCard == null)
+            {
+                return;
+            }
+
+            CardDataSO card = _pendingTargetCard;
+            ExitTargetSelectionMode();
+            _network.SubmitPlayCard(card, new[] { actorNumber }, new[] { commanderIndex });
+        }
+
+        /// <summary>
+        /// Esce dalla modalità selezione e nasconde gli overlay comandante.
+        /// </summary>
+        private void ExitTargetSelectionMode()
+        {
+            _pendingTargetCard = null;
+            _localCommander0?.SetSelectable(false, null);
+            _localCommander1?.SetSelectable(false, null);
+            _enemyCommander0?.SetSelectable(false, null);
+            _enemyCommander1?.SetSelectable(false, null);
         }
     }
 }

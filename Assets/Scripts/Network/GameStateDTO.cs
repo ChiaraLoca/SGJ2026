@@ -35,16 +35,13 @@ namespace FourE.Network
         /// <summary>Attore Photon del giocatore.</summary>
         public int ActorNumber;
 
-        /// <summary>Credits permanenti.</summary>
+        /// <summary>Crediti permanenti: valuta dello shop e criterio di vittoria.</summary>
         public int Credits;
 
-        /// <summary>Note ancora disponibili come valuta.</summary>
-        public int AvailableNotes;
+        /// <summary>Note correnti (punteggio temporaneo del round = somma dei comandanti).</summary>
+        public int Notes;
 
-        /// <summary>Note già spese nello shop nel round corrente.</summary>
-        public int SpentNotes;
-
-        /// <summary>Id delle carte in mano.</summary>
+        /// <summary>Id delle carte in mano (inclusa la Verifica, se pescata).</summary>
         public int[] HandCardIds;
 
         /// <summary>Numero di carte rimaste nel mazzo.</summary>
@@ -52,9 +49,6 @@ namespace FourE.Network
 
         /// <summary>Id delle carte disponibili nel pool shop.</summary>
         public int[] ShopPoolCardIds;
-
-        /// <summary>Id della carta Verifica, o <see cref="CardRegistry.NoCard"/> se già giocata.</summary>
-        public int VerificaCardId;
 
         /// <summary>Stato dei due comandanti.</summary>
         public CommanderDTO[] Commanders;

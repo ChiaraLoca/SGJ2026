@@ -9,8 +9,9 @@ namespace FourE.Shop
 {
     /// <summary>
     /// Gestisce gli acquisti dallo shop e il refresh del pool durante la Fase SHOP.
-    /// Il costo è pagato dalle Note totali del giocatore (le carte acquistate sono neutre).
+    /// Il costo è pagato in Crediti (valuta permanente); le carte acquistate sono neutre.
     /// </summary>
+    [System.Serializable]
     public sealed class ShopManager
     {
         private readonly GameStateManager _state;
@@ -47,12 +48,12 @@ namespace FourE.Shop
                 return false;
             }
 
-            if (player.AvailableNotes < card.ShopCost)
+            if (player.Credits < card.ShopCost)
             {
                 return false;
             }
 
-            player.SpendNotes(card.ShopCost);
+            player.SpendCredits(card.ShopCost);
             player.ShopPool.Remove(card);
             // La carta acquistata entra negli scarti: verrà rimischiata nel mazzo alla Fase DRAW.
             player.DiscardPile.Add(card);

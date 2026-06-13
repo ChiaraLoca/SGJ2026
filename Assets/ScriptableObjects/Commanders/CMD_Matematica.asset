@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7fb7ee714fd77148b70645691386a44, type: 3}
+  m_Name: CMD_Matematica
+  m_EditorClassIdentifier: Assembly-CSharp::FourE.Commanders.CommanderDataSO
+  _commanderName: Matematica
+  _baseNote: 5
+  _linkedCards:
+  - {fileID: 11400000, guid: d82fb9e3767902047bd1978428dcc211, type: 2}
+  - {fileID: 11400000, guid: d82fb9e3767902047bd1978428dcc211, type: 2}
+  - {fileID: 11400000, guid: 71dc780558c18f5438c4d71057636311, type: 2}
+  - {fileID: 11400000, guid: 6419bcf6a9e9e014f820440aa392742a, type: 2}
+  - {fileID: 11400000, guid: a588654f09fa82546972584f060130eb, type: 2}
+  _portrait: {fileID: 0}

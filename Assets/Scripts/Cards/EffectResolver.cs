@@ -22,6 +22,9 @@ namespace FourE.Cards
                 return;
             }
 
+            // Espone l'affinità della carta agli effetti che bersagliano il comandante legato.
+            context.SetSourceAffinity(card.Affinity);
+
             foreach (CardEffectSO effect in card.Effects)
             {
                 if (effect == null)

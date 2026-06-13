@@ -1,6 +1,9 @@
+using System;
 using System.Collections.Generic;
+using UnityEngine;
 using FourE.Cards;
 using FourE.Commanders;
+using FourE.Config;
 using FourE.Events;
 using FourE.Players;
 
@@ -10,17 +13,28 @@ namespace FourE.Core
     /// Gestisce i turni alternati della Fase PLAY: gioco carte, limite per turno,
     /// gioco della Verifica e passaggio del turno.
     /// </summary>
+    [Serializable]
     public sealed class TurnManager
     {
         private readonly GameStateManager _state;
         private readonly EffectResolver _resolver;
         private PhaseManager _phases;
 
+        [SerializeField] private int _cardsPlayedThisTurn;
+        [SerializeField] private int _cardsAllowedThisTurn;
+        [SerializeField] private int _turnInRound;
+
         /// <summary>Carte giocate nel turno corrente.</summary>
-        public int CardsPlayedThisTurn { get; private set; }
+        public int CardsPlayedThisTurn => _cardsPlayedThisTurn;
 
         /// <summary>Carte giocabili nel turno corrente, dal config in base al round.</summary>
-        public int CardsAllowedThisTurn { get; private set; }
+        public int CardsAllowedThisTurn => _cardsAllowedThisTurn;
+
+        /// <summary>Indice del turno all'interno del round corrente (1 = primo turno).</summary>
+        public int TurnInRound => _turnInRound;
+
+        /// <summary>True se la Verifica può essere giocata ora: non nel 1° turno del round.</summary>
+        public bool CanPlayVerificaThisTurn => _turnInRound > GameConstants.FirstRoundTurnNumber;
 
         /// <summary>
         /// Crea il gestore dei turni.
@@ -43,14 +57,51 @@ namespace FourE.Core
         }
 
         /// <summary>
+        /// Reimposta il contatore dei turni all'inizio di un nuovo round.
+        /// Da chiamare prima del primo <see cref="StartTurn"/> del round.
+        /// </summary>
+        public void BeginRound()
+        {
+            _turnInRound = 0;
+        }
+
+        /// <summary>
         /// Avvia il turno di un giocatore, impostandolo come attivo e azzerando i contatori.
         /// </summary>
         /// <param name="player">Giocatore di turno.</param>
         public void StartTurn(PlayerState player)
         {
             _state.SetActivePlayer(player);
-            CardsPlayedThisTurn = 0;
-            CardsAllowedThisTurn = _state.GameConfig.GetCardsPlayablePerTurn(_state.CurrentRoundIndex);
+            _cardsPlayedThisTurn = 0;
+            _cardsAllowedThisTurn = _state.GameConfig.GetCardsPlayablePerTurn(_state.CurrentRoundIndex);
+            _turnInRound++;
+
+            // L'immunità "fino al tuo prossimo turno" (Fidanzata) decade qui.
+            foreach (CommanderState commander in player.Commanders)
+            {
+                commander.SetNoteFloorLocked(false);
+            }
+        }
+
+        /// <summary>
+        /// Concede (o sottrae, se negativo) azioni giocabili nel turno corrente.
+        /// </summary>
+        /// <param name="amount">Azioni da aggiungere; negativo per ridurle.</param>
+        public void GrantExtraActions(int amount)
+        {
+            _cardsAllowedThisTurn += amount;
+        }
+
+        /// <summary>
+        /// Raddoppia le azioni ancora disponibili nel turno corrente (Copiare).
+        /// </summary>
+        public void DoubleRemainingActions()
+        {
+            int remaining = _cardsAllowedThisTurn - _cardsPlayedThisTurn;
+            if (remaining > 0)
+            {
+                _cardsAllowedThisTurn += remaining;
+            }
         }
 
         /// <summary>
@@ -73,7 +124,7 @@ namespace FourE.Core
                 return false;
             }
 
-            if (CardsPlayedThisTurn >= CardsAllowedThisTurn)
+            if (_cardsPlayedThisTurn >= _cardsAllowedThisTurn)
             {
                 return false;
             }
@@ -83,9 +134,9 @@ namespace FourE.Core
 
             player.Hand.Remove(card);
             player.DiscardPile.Add(card);
-            CardsPlayedThisTurn++;
+            _cardsPlayedThisTurn++;
 
-            if (CardsPlayedThisTurn >= CardsAllowedThisTurn)
+            if (_cardsPlayedThisTurn >= _cardsAllowedThisTurn)
             {
                 EndTurn(player);
             }
@@ -94,7 +145,8 @@ namespace FourE.Core
         }
 
         /// <summary>
-        /// Tenta di giocare la carta Verifica, chiudendo la Fase PLAY.
+        /// Tenta di giocare la carta Verifica dalla mano, chiudendo la Fase PLAY.
+        /// Vietata nel 1° turno del round, se bloccata (Sciopero) o se non in mano.
         /// </summary>
         /// <param name="player">Giocatore che gioca la Verifica.</param>
         /// <returns>True se la Verifica è stata giocata.</returns>
@@ -105,15 +157,42 @@ namespace FourE.Core
                 return false;
             }
 
-            if (player.VerificaCard == null)
+            if (player.VerificaBlocked || !CanPlayVerificaThisTurn)
             {
                 return false;
             }
 
-            player.VerificaCard = null;
+            CardDataSO verifica = FindVerificaInHand(player);
+            if (verifica == null)
+            {
+                return false;
+            }
+
+            // La Verifica giocata va nel cimitero: rientra nel mazzo alla Fase DRAW.
+            player.Hand.Remove(verifica);
+            player.DiscardPile.Add(verifica);
+
             EventBus.Publish(new VerificaPlayedEvent(player));
             _phases.HandleVerifica(player);
             return true;
+        }
+
+        /// <summary>
+        /// Cerca la carta Verifica nella mano del giocatore.
+        /// </summary>
+        /// <param name="player">Giocatore di cui ispezionare la mano.</param>
+        /// <returns>La carta Verifica, o null se assente.</returns>
+        private static CardDataSO FindVerificaInHand(PlayerState player)
+        {
+            foreach (CardDataSO card in player.Hand)
+            {
+                if (card != null && card.IsVerifica)
+                {
+                    return card;
+                }
+            }
+
+            return null;
         }
 
         /// <summary>
@@ -133,6 +212,9 @@ namespace FourE.Core
             {
                 commander.TickActiveEffects();
             }
+
+            // Il blocco Verifica (Sciopero) dura un solo turno: si libera a fine turno.
+            player.VerificaBlocked = false;
 
             EventBus.Publish(new TurnEndedEvent(player));
 

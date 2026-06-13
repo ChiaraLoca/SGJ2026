@@ -45,10 +45,15 @@ namespace FourE.Core
                 }
             }
 
+            // La Verifica è una carta normale del mazzo (5 + 5 + 1 Verifica).
+            if (verificaCard != null)
+            {
+                player.Deck.Add(verificaCard);
+            }
+
             CollectionUtils.Shuffle(player.Deck, rng);
             DrawInitialHand(player, config.StartingHandSize);
 
-            player.VerificaCard = verificaCard;
             player.ShopPool.AddRange(ShopPool.GeneratePool(shopCatalog, player.Credits, config.ShopPoolSize, rng));
 
             return player;

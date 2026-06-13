@@ -7,9 +7,10 @@ Torna all'[indice generale](../INDEX.md).
 
 | File | Tipo | Responsabilità / API chiave |
 |---|---|---|
-| [PlayerState.cs](PlayerState.cs) | `PlayerState` | Stato di un giocatore: `ActorNumber`, `Credits`, `Hand`/`Deck`/`DiscardPile`/`ShopPool`, `Commanders[]`, `VerificaCard`, `TotalNotes`, `AvailableNotes` (totale − spese), `AddCredits()`, `SpendNotes()`, `ResetSpentNotes()` |
+| [PlayerState.cs](PlayerState.cs) | `PlayerState` (`[Serializable]`) | Stato di un giocatore: `ActorNumber`, `Credits`, `Hand`/`Deck`/`DiscardPile`/`ShopPool`, `Commanders[]`, `VerificaBlocked` (Sciopero), `TotalNotes`, `AddCredits()`, `SpendCredits()`. Campi serializzati per ispezione runtime |
 
 ## Note
 
-- `AvailableNotes` è la valuta usata sia per lo [Shop](../Shop/INDEX.md) sia per la conversione in Credits ([Core/PhaseManager](../Core/INDEX.md)).
-- Costruito da `MatchSetup.BuildPlayer()`.
+- **Due valute distinte:** `TotalNotes` (Note, punteggio **temporaneo** dei comandanti, azzerato a ogni round, convertito in Crediti dalla Verifica) vs `Credits` (punteggio **permanente**, valuta dello [Shop](../Shop/INDEX.md) e criterio di vittoria).
+- La **Verifica è una carta normale nel mazzo** (5+5+1), non più uno slot dedicato. Pescata e giocata come le altre, identificata da `CardDataSO.IsVerifica`.
+- Costruito da `MatchSetup.BuildPlayer()` (aggiunge la Verifica al mazzo).

@@ -43,7 +43,7 @@ namespace FourE.Network
         private void Awake()
         {
             _registry = CardRegistry.Build(_gameState.Content);
-            _transport = new LocalLoopbackTransport(GameConstants.FirstCommanderIndex);
+            _transport = new HotseatTransport(GameConstants.FirstCommanderIndex);
             _transport.IntentReceived += OnIntentReceived;
             _transport.StateReceived += OnStateReceived;
             EventBus.Subscribe<GameOverEvent>(OnGameOver);

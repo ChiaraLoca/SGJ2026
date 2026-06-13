@@ -39,6 +39,13 @@ namespace FourE.Core
         public GameConfigSO Config { get; }
 
         /// <summary>
+        /// Stato di gioco autoritativo. Esposto agli effetti che devono agire oltre i
+        /// comandanti (azioni di turno, manipolazione mazzo/scarti, flag inter-turno).
+        /// Può essere null nei test che non costruiscono un GameStateManager.
+        /// </summary>
+        public GameStateManager State { get; }
+
+        /// <summary>
         /// Comandanti scelti a runtime dal giocatore, usati dal bersaglio
         /// <see cref="EffectTarget.SelectedCommanders"/>. Vuoto se la carta non richiede scelta.
         /// </summary>
@@ -48,6 +55,12 @@ namespace FourE.Core
         public IReadOnlyList<IGameChange> PendingChanges => _pendingChanges;
 
         /// <summary>
+        /// Affinità della carta in corso di risoluzione, impostata dal resolver.
+        /// Usata dai bersagli <see cref="EffectTarget.AffinityCommander"/> e affini.
+        /// </summary>
+        public CardAffinity SourceAffinity { get; private set; } = CardAffinity.Neutral;
+
+        /// <summary>
         /// Crea il contesto di risoluzione per una carta giocata.
         /// </summary>
         /// <param name="activePlayer">Giocatore attivo.</param>
@@ -55,18 +68,21 @@ namespace FourE.Core
         /// <param name="currentRoundIndex">Indice del round corrente.</param>
         /// <param name="config">Configurazione di gioco.</param>
         /// <param name="selectedTargets">Comandanti scelti a runtime, se la carta lo richiede.</param>
+        /// <param name="state">Stato di gioco autoritativo, per gli effetti che ne hanno bisogno.</param>
         public GameContext(
             PlayerState activePlayer,
             PlayerState inactivePlayer,
             int currentRoundIndex,
             GameConfigSO config,
-            IReadOnlyList<CommanderState> selectedTargets = null)
+            IReadOnlyList<CommanderState> selectedTargets = null,
+            GameStateManager state = null)
         {
             ActivePlayer = activePlayer;
             InactivePlayer = inactivePlayer;
             CurrentRoundIndex = currentRoundIndex;
             Config = config;
             SelectedTargets = selectedTargets ?? EmptyTargets;
+            State = state;
         }
 
         /// <summary>
@@ -76,6 +92,15 @@ namespace FourE.Core
         public void RegisterChange(IGameChange change)
         {
             _pendingChanges.Add(change);
+        }
+
+        /// <summary>
+        /// Imposta l'affinità della carta in risoluzione. Invocato dal resolver prima di applicare gli effetti.
+        /// </summary>
+        /// <param name="affinity">Affinità della carta giocata.</param>
+        public void SetSourceAffinity(CardAffinity affinity)
+        {
+            SourceAffinity = affinity;
         }
 
         /// <summary>
@@ -133,7 +158,25 @@ namespace FourE.Core
                     }
 
                     break;
+                case EffectTarget.AffinityCommander:
+                    yield return ActivePlayer.Commanders[AffinitySlot(SourceAffinity)];
+                    break;
+                case EffectTarget.AffinityOtherCommander:
+                    yield return ActivePlayer.Commanders[1 - AffinitySlot(SourceAffinity)];
+                    break;
             }
+        }
+
+        /// <summary>
+        /// Converte un'affinità nello slot del comandante corrispondente (default slot 0).
+        /// </summary>
+        /// <param name="affinity">Affinità della carta.</param>
+        /// <returns>Indice di slot del comandante (0 o 1).</returns>
+        private static int AffinitySlot(CardAffinity affinity)
+        {
+            return affinity == CardAffinity.Commander1
+                ? GameConstants.SecondCommanderIndex
+                : GameConstants.FirstCommanderIndex;
         }
 
         /// <summary>

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using FourE.Config;
 
 namespace FourE.Cards
 {
@@ -15,8 +16,11 @@ namespace FourE.Cards
         [SerializeField] private string _description;
         [SerializeField] private CardType _cardType = CardType.Standard;
         [SerializeField] private CardAffinity _affinity = CardAffinity.Neutral;
+        [SerializeField] private CardTag _tags = CardTag.None;
 
         [Header("Economia")]
+        [SerializeField] private CardTier _tier = CardTier.C;
+        [Tooltip("Costo esplicito di fallback, usato solo se il GameConfig non è attivo.")]
         [SerializeField] private int _shopCost;
         [SerializeField] private int _minCreditsRequired;
 
@@ -35,8 +39,19 @@ namespace FourE.Cards
         /// <summary>Affinità con un comandante del giocatore.</summary>
         public CardAffinity Affinity => _affinity;
 
-        /// <summary>Costo in Note pagato nello shop prima della conversione.</summary>
-        public int ShopCost => _shopCost;
+        /// <summary>Tag tematici della carta (combinabili).</summary>
+        public CardTag Tags => _tags;
+
+        /// <summary>Fascia di costo della carta.</summary>
+        public CardTier Tier => _tier;
+
+        /// <summary>
+        /// Costo in Note pagato nello shop. Risolto dal <see cref="GameConfigSO"/> attivo
+        /// in base al <see cref="Tier"/>; ricade su <c>_shopCost</c> se il config non è attivo.
+        /// </summary>
+        public int ShopCost => GameConfigSO.Instance != null
+            ? GameConfigSO.Instance.GetTierCost(_tier)
+            : _shopCost;
 
         /// <summary>Soglia minima di Credits per apparire nel pool shop.</summary>
         public int MinCreditsRequired => _minCreditsRequired;
@@ -46,5 +61,25 @@ namespace FourE.Cards
 
         /// <summary>True se la carta è una Verifica che chiude il round.</summary>
         public bool IsVerifica => _cardType == CardType.Verifica;
+
+        /// <summary>Verifica se la carta possiede il tag indicato.</summary>
+        /// <param name="tag">Tag da cercare.</param>
+        /// <returns>True se la carta ha quel tag.</returns>
+        public bool HasTag(CardTag tag) => (_tags & tag) != 0;
+
+        /// <summary>True se almeno un effetto richiede la selezione di bersagli a runtime.</summary>
+        public bool RequiresTargetSelection
+        {
+            get
+            {
+                if (_effects == null) return false;
+                foreach (CardEffectSO e in _effects)
+                {
+                    if (e != null && e.Target == EffectTarget.SelectedCommanders)
+                        return true;
+                }
+                return false;
+            }
+        }
     }
 }

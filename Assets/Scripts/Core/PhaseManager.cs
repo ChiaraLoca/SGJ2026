@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 using FourE.Cards;
 using FourE.Commanders;
 using FourE.Config;
@@ -13,6 +14,7 @@ namespace FourE.Core
     /// State machine della partita: orchestra le transizioni PLAY → VERIFICA → SHOP → DRAW
     /// e il passaggio al round successivo o all'Esame Finale.
     /// </summary>
+    [Serializable]
     public sealed class PhaseManager
     {
         private readonly GameStateManager _state;
@@ -20,11 +22,13 @@ namespace FourE.Core
         private readonly ShopManager _shop;
         private readonly RoundManager _rounds;
         private readonly IStartingPlayerDecider _startingPlayerDecider;
-        private readonly Random _rng;
+        private readonly System.Random _rng;
         private readonly HashSet<int> _shopFinished = new();
 
+        [SerializeField] private GamePhase _currentPhase = GamePhase.Setup;
+
         /// <summary>Fase corrente della partita.</summary>
-        public GamePhase CurrentPhase { get; private set; } = GamePhase.Setup;
+        public GamePhase CurrentPhase => _currentPhase;
 
         /// <summary>
         /// Crea il gestore delle fasi.
@@ -41,7 +45,7 @@ namespace FourE.Core
             ShopManager shop,
             RoundManager rounds,
             IStartingPlayerDecider startingPlayerDecider,
-            Random rng)
+            System.Random rng)
         {
             _state = state;
             _turns = turns;
@@ -58,17 +62,23 @@ namespace FourE.Core
         public void BeginMatch(PlayerState firstPlayer)
         {
             EnterPhase(GamePhase.Play);
+            _turns.BeginRound();
             _turns.StartTurn(firstPlayer);
         }
 
         /// <summary>
-        /// Gestisce il gioco della Verifica: passa per la fase VERIFICA ed entra nello SHOP.
+        /// Gestisce il gioco della Verifica: converte subito le Note in Crediti per entrambi
+        /// (così i Crediti sono spendibili nello shop) ed entra nella Fase SHOP.
         /// </summary>
         /// <param name="closer">Giocatore che ha chiuso il round.</param>
         public void HandleVerifica(PlayerState closer)
         {
-            // La fase VERIFICA è un passaggio di rivelazione: la UI legge le Note finali sull'evento.
             EnterPhase(GamePhase.Verifica);
+
+            // La Verifica trasforma le Note (temporanee) in Crediti (permanenti) per entrambi.
+            ConvertNotesToCredits(_state.Player0);
+            ConvertNotesToCredits(_state.Player1);
+
             EnterShop();
         }
 
@@ -79,7 +89,7 @@ namespace FourE.Core
         /// <param name="player">Giocatore che ha concluso lo shop.</param>
         public void FinishShop(PlayerState player)
         {
-            if (CurrentPhase != GamePhase.Shop)
+            if (_currentPhase != GamePhase.Shop)
             {
                 return;
             }
@@ -104,22 +114,19 @@ namespace FourE.Core
         }
 
         /// <summary>
-        /// Converte le Note in Credits, esegue la Fase DRAW per entrambi i giocatori
-        /// e avanza al round successivo o all'Esame Finale.
+        /// Conclude l'intervallo: esegue la Fase DRAW per entrambi (rimischia, pesca, azzera le Note a 5)
+        /// e avanza al round successivo o all'Esame Finale. La conversione Note→Crediti è già avvenuta
+        /// al gioco della Verifica.
         /// </summary>
         private void ConvertAndAdvance()
         {
             EnterPhase(GamePhase.Draw);
 
-            // 1) Conversione Note → Credits (prima del reset).
-            ConvertNotesToCredits(_state.Player0);
-            ConvertNotesToCredits(_state.Player1);
-
-            // 2) Fase DRAW: scarta, rimischia, pesca, reset Note ed effetti.
+            // Fase DRAW: scarta, rimischia, pesca, reset Note (a base) ed effetti.
             RunDrawPhase(_state.Player0);
             RunDrawPhase(_state.Player1);
 
-            // 3) Avanzamento round.
+            // Avanzamento round.
             _rounds.Advance();
 
             if (_rounds.IsFinalExamReached)
@@ -133,12 +140,12 @@ namespace FourE.Core
         }
 
         /// <summary>
-        /// Converte le Note disponibili di un giocatore in Credits permanenti.
+        /// Converte le Note correnti di un giocatore in Crediti permanenti.
         /// </summary>
         /// <param name="player">Giocatore di cui convertire le Note.</param>
         private void ConvertNotesToCredits(PlayerState player)
         {
-            int credits = (int)Math.Round(player.AvailableNotes * _state.GameConfig.NoteToCreditsMultiplier);
+            int credits = (int)Math.Round(player.TotalNotes * _state.GameConfig.NoteToCreditsMultiplier);
             player.AddCredits(credits);
         }
 
@@ -170,8 +177,6 @@ namespace FourE.Core
             {
                 commander.ResetForNewRound();
             }
-
-            player.ResetSpentNotes();
         }
 
         /// <summary>
@@ -180,6 +185,7 @@ namespace FourE.Core
         private void BeginNextRound()
         {
             EnterPhase(GamePhase.Play);
+            _turns.BeginRound();
             // L'apertura del round è decisa dal decider (lancio di moneta o mock nei test).
             PlayerState opener = _startingPlayerDecider.DecideStartingPlayer(_state.Player0, _state.Player1);
             _turns.StartTurn(opener);
@@ -227,7 +233,7 @@ namespace FourE.Core
         /// <param name="phase">Nuova fase.</param>
         private void EnterPhase(GamePhase phase)
         {
-            CurrentPhase = phase;
+            _currentPhase = phase;
             EventBus.Publish(new PhaseChangedEvent(phase));
         }
     }

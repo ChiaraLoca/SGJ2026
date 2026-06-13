@@ -26,5 +26,8 @@ namespace FourE.Config
 
         /// <summary>Indice dello slot del secondo comandante.</summary>
         public const int SecondCommanderIndex = 1;
+
+        /// <summary>Numero del primo turno di un round (la Verifica non è giocabile in questo turno).</summary>
+        public const int FirstRoundTurnNumber = 1;
     }
 }

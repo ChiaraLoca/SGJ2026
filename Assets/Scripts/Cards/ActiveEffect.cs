@@ -1,22 +1,31 @@
+using System;
+using UnityEngine;
+
 namespace FourE.Cards
 {
     /// <summary>
     /// Effetto con durata attivo su un comandante. Contribuisce alla Note corrente
     /// finché non scade (a turni) o viene rimosso al reset post-Verifica.
     /// </summary>
+    [Serializable]
     public sealed class ActiveEffect
     {
+        [SerializeField] private string _sourceCardName;
+        [SerializeField] private int _magnitude;
+        [SerializeField] private EffectDuration _duration;
+        [SerializeField] private int _remainingTurns;
+
         /// <summary>Nome della carta che ha generato l'effetto, per UI e log.</summary>
-        public string SourceCardName { get; }
+        public string SourceCardName => _sourceCardName;
 
         /// <summary>Entità della modifica alla Note, sempre positiva.</summary>
-        public int Magnitude { get; }
+        public int Magnitude => _magnitude;
 
         /// <summary>Tipo di durata dell'effetto.</summary>
-        public EffectDuration Duration { get; }
+        public EffectDuration Duration => _duration;
 
         /// <summary>Turni residui prima della rimozione (rilevante se Duration è Turns).</summary>
-        public int RemainingTurns { get; private set; }
+        public int RemainingTurns => _remainingTurns;
 
         /// <summary>
         /// Crea un nuovo effetto attivo.
@@ -27,10 +36,10 @@ namespace FourE.Cards
         /// <param name="durationTurns">Turni iniziali, usati solo se la durata è a turni.</param>
         public ActiveEffect(string sourceCardName, int magnitude, EffectDuration duration, int durationTurns)
         {
-            SourceCardName = sourceCardName;
-            Magnitude = magnitude;
-            Duration = duration;
-            RemainingTurns = durationTurns;
+            _sourceCardName = sourceCardName;
+            _magnitude = magnitude;
+            _duration = duration;
+            _remainingTurns = durationTurns;
         }
 
         /// <summary>
@@ -40,13 +49,13 @@ namespace FourE.Cards
         /// <returns>True se l'effetto è scaduto e va rimosso.</returns>
         public bool TickTurn()
         {
-            if (Duration != EffectDuration.Turns)
+            if (_duration != EffectDuration.Turns)
             {
                 return false;
             }
 
-            RemainingTurns--;
-            return RemainingTurns <= 0;
+            _remainingTurns--;
+            return _remainingTurns <= 0;
         }
     }
 }

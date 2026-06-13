@@ -7,8 +7,8 @@ Torna all'[indice generale](../INDEX.md).
 
 | File | Tipo | Responsabilità / API chiave |
 |---|---|---|
-| [CardEnums.cs](CardEnums.cs) | enum `CardType`, `CardAffinity`, `EffectTarget`, `EffectDuration` | Tutte le enumerazioni del dominio carte/effetti |
-| [CardDataSO.cs](CardDataSO.cs) | `CardDataSO : ScriptableObject` | Definizione immutabile di una carta: nome, descrizione, tipo, affinità, costo, `MinCreditsRequired`, `Effects[]`, `IsVerifica` |
+| [CardEnums.cs](CardEnums.cs) | enum `CardTag` (Flags), `CardTier`, `CountSource`, `CardType`, `CardAffinity`, `EffectTarget`, `EffectDuration` | Tutte le enumerazioni del dominio carte/effetti |
+| [CardDataSO.cs](CardDataSO.cs) | `CardDataSO : ScriptableObject` | Definizione immutabile di una carta: nome, descrizione, tipo, affinità, `Tags`, `Tier`, `ShopCost` (derivato dal config per tier), `MinCreditsRequired`, `Effects[]`, `IsVerifica`, `RequiresTargetSelection`, `HasTag()` |
 | [CardEffectSO.cs](CardEffectSO.cs) | abstract `CardEffectSO : ScriptableObject` | Base Strategy di tutti gli effetti. `Target`, `Apply(GameContext)` puro (registra `IGameChange`) |
 | [CardConditionSO.cs](CardConditionSO.cs) | abstract `CardConditionSO : ScriptableObject` | Base delle condizioni. `IsMet(GameContext) → bool` |
 | [ActiveEffect.cs](ActiveEffect.cs) | `ActiveEffect` | Effetto a durata runtime su un comandante: `Magnitude`, `Duration`, `RemainingTurns`, `TickTurn()` |
@@ -20,8 +20,17 @@ Torna all'[indice generale](../INDEX.md).
 |---|---|---|
 | [Effects/BuffEffectSO.cs](Effects/BuffEffectSO.cs) | `BuffEffectSO` | +Note al bersaglio (istantaneo o a durata) |
 | [Effects/DebuffEffectSO.cs](Effects/DebuffEffectSO.cs) | `DebuffEffectSO` | −Note al bersaglio (istantaneo o a durata) |
-| [Effects/DrawEffectSO.cs](Effects/DrawEffectSO.cs) | `DrawEffectSO` | Fa pescare N carte (default: giocatore attivo) |
+| [Effects/DrawEffectSO.cs](Effects/DrawEffectSO.cs) | `DrawEffectSO` + enum `DrawMode` | Pesca: conteggio fisso, fino a dimensione mano (Biblioteca), o intero mazzo (Approfondimento) |
 | [Effects/ConditionalEffectSO.cs](Effects/ConditionalEffectSO.cs) | `ConditionalEffectSO` | Applica un `_innerEffect` solo se `_condition.IsMet()` |
+| [Effects/ExtraActionEffectSO.cs](Effects/ExtraActionEffectSO.cs) | `ExtraActionEffectSO` | +/− azioni nel turno, o raddoppio (Metodo, Progetto, Copiare, Studio Notturno…) |
+| [Effects/ScalingEffectSO.cs](Effects/ScalingEffectSO.cs) | `ScalingEffectSO` | Note/azioni/pesca proporzionali a un `CountSource` (Ripasso, Riassunto, Iperka, Sabotaggio) |
+| [Effects/ForceDiscardEffectSO.cs](Effects/ForceDiscardEffectSO.cs) | `ForceDiscardEffectSO` + enum `ForceDiscardMode` | Avversario scarta carte: casuali (Gossip) o per tag (Politica, Bullismo) |
+| [Effects/EqualizeNotesEffectSO.cs](Effects/EqualizeNotesEffectSO.cs) | `EqualizeNotesEffectSO` | Alza il comandante più basso verso il più alto (Tutor) |
+| [Effects/SwapNotesEffectSO.cs](Effects/SwapNotesEffectSO.cs) | `SwapNotesEffectSO` | Scambia le Note tra 2 comandanti scelti (Rappresentante di Classe) |
+| [Effects/ReturnFromDiscardEffectSO.cs](Effects/ReturnFromDiscardEffectSO.cs) | `ReturnFromDiscardEffectSO` | Recupera carte dal cimitero in mano o in cima al mazzo (Schema, Compito a Casa) |
+| [Effects/ShieldEffectSO.cs](Effects/ShieldEffectSO.cs) | `ShieldEffectSO` | Scudo che annulla il prossimo debuff (Dialogo) |
+| [Effects/ImmunityEffectSO.cs](Effects/ImmunityEffectSO.cs) | `ImmunityEffectSO` | Blocca il calo di Note fino al prossimo turno (Fidanzata) |
+| [Effects/BlockVerificaEffectSO.cs](Effects/BlockVerificaEffectSO.cs) | `BlockVerificaEffectSO` | Impedisce all'avversario di giocare la Verifica un turno (Sciopero) |
 
 ### Conditions/ (condizioni concrete)
 

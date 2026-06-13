@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7fb7ee714fd77148b70645691386a44, type: 3}
+  m_Name: CMD_Inglese
+  m_EditorClassIdentifier: Assembly-CSharp::FourE.Commanders.CommanderDataSO
+  _commanderName: Inglese
+  _baseNote: 5
+  _linkedCards:
+  - {fileID: 11400000, guid: d3ae9109a06f1e94283abf18290ce718, type: 2}
+  - {fileID: 11400000, guid: d3ae9109a06f1e94283abf18290ce718, type: 2}
+  - {fileID: 11400000, guid: a93ccf29e52be894e8c45e17b5a148ba, type: 2}
+  - {fileID: 11400000, guid: acd6d68d70e6b79499ba276d3ab4a9d1, type: 2}
+  - {fileID: 11400000, guid: a17a37eddd386034eb2ba2b45308da46, type: 2}
+  _portrait: {fileID: 0}

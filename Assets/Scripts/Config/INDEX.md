@@ -7,7 +7,7 @@ Torna all'[indice generale](../INDEX.md).
 
 | File | Tipo | Responsabilità / API chiave |
 |---|---|---|
-| [GameConfigSO.cs](GameConfigSO.cs) | `GameConfigSO : ScriptableObject` + enum `TiebreakRule` | Valori di bilanciamento runtime: `MaxRounds`, `StartingHandSize`, `ShopPoolSize`, `ShopPurchasesPerRound`, `ShopRefreshSlots`, `NoteToCreditsMultiplier`, `GetCardsPlayablePerTurn(round)`, singleton `Instance` (via `RegisterAsActive()`) |
+| [GameConfigSO.cs](GameConfigSO.cs) | `GameConfigSO : ScriptableObject` + enum `TiebreakRule` | Valori di bilanciamento runtime: `MaxRounds`, `StartingHandSize`, `ShopPoolSize`, `ShopPurchasesPerRound`, `ShopRefreshSlots`, `NoteToCreditsMultiplier`, costi per tier `GetTierCost(tier)` (A/B/C), `GetCardsPlayablePerTurn(round)`, singleton `Instance` (via `RegisterAsActive()`) |
 | [GameConstants.cs](GameConstants.cs) | `static GameConstants` | Costanti **non** configurabili: `PlayersPerMatch`, `CommandersPerPlayer`, `StartingCardsPerCommander`, `CardsInStartingHand`, `FirstCommanderIndex`, `SecondCommanderIndex`, `RoundsBeforeFinalExam` |
 | [GameContentSO.cs](GameContentSO.cs) | `GameContentSO : ScriptableObject` | Archivio contenuti: `FirstPlayerCommanders`, `SecondPlayerCommanders`, `VerificaCard`, `ShopCatalog`. Riferito dal `GameStateManager` in Inspector |
 

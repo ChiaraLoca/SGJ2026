@@ -51,12 +51,10 @@ namespace FourE.Network
             {
                 ActorNumber = player.ActorNumber,
                 Credits = player.Credits,
-                AvailableNotes = player.AvailableNotes,
-                SpentNotes = player.SpentNotes,
+                Notes = player.TotalNotes,
                 HandCardIds = registry.ToIds(player.Hand),
                 DeckCount = player.Deck.Count,
                 ShopPoolCardIds = registry.ToIds(player.ShopPool),
-                VerificaCardId = registry.GetId(player.VerificaCard),
                 Commanders = commanders
             };
         }

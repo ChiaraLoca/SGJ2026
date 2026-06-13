@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34c818aa966839443bbf9b3ed3fd5d04, type: 3}
+  m_Name: Shop_Presentazione
+  m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
+  _cardName: Presentazione
+  _description: +1 carta; +1 Azione; -1 Nota.
+  _cardType: 0
+  _affinity: 2
+  _tags: 49
+  _tier: 1
+  _shopCost: 0
+  _minCreditsRequired: 0
+  _effects:
+  - {fileID: 11400000, guid: ba27b0ae4fdcc174780ca67c41ad782a, type: 2}
+  - {fileID: 11400000, guid: d9d860d44b07d3b42ace777a1b8016f7, type: 2}
+  - {fileID: 11400000, guid: 19da6d4ac270680499b57731ad1401be, type: 2}

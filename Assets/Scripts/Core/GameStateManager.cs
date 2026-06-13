@@ -24,10 +24,11 @@ namespace FourE.Core
         [Tooltip("Seme casuale fisso per partite deterministiche; 0 = casuale.")]
         [SerializeField] private int _randomSeed;
 
-        private RoundManager _rounds;
-        private TurnManager _turns;
-        private ShopManager _shop;
-        private PhaseManager _phases;
+        [Header("Debug Runtime")]
+        [SerializeField] private RoundManager _rounds;
+        [SerializeField] private TurnManager _turns;
+        [SerializeField] private ShopManager _shop;
+        [SerializeField] private PhaseManager _phases;
         private IStartingPlayerDecider _startingPlayerDecider;
         private System.Random _rng;
 
@@ -41,13 +42,13 @@ namespace FourE.Core
         public GameContentSO Content => _content;
 
         /// <summary>Stato del primo giocatore.</summary>
-        public PlayerState Player0 { get; private set; }
+        [field:SerializeField] public PlayerState Player0 { get; private set; }
 
         /// <summary>Stato del secondo giocatore.</summary>
-        public PlayerState Player1 { get; private set; }
+        [field:SerializeField] public PlayerState Player1 { get; private set; }
 
         /// <summary>Giocatore di turno corrente.</summary>
-        public PlayerState ActivePlayer { get; private set; }
+        [field: SerializeField] public PlayerState ActivePlayer { get; private set; }
 
         /// <summary>Avversario del giocatore di turno.</summary>
         public PlayerState InactivePlayer => ActivePlayer == Player0 ? Player1 : Player0;
@@ -141,7 +142,7 @@ namespace FourE.Core
         /// <returns>Contesto con lo stato corrente.</returns>
         public GameContext BuildContext(IReadOnlyList<CommanderState> selectedTargets = null)
         {
-            return new GameContext(ActivePlayer, InactivePlayer, CurrentRoundIndex, _gameConfig, selectedTargets);
+            return new GameContext(ActivePlayer, InactivePlayer, CurrentRoundIndex, _gameConfig, selectedTargets, this);
         }
 
         /// <summary>

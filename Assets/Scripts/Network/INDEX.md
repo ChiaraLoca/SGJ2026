@@ -13,7 +13,8 @@ Torna all'[indice generale](../INDEX.md).
 | [GameIntent.cs](GameIntent.cs) | `enum IntentType` + struct `GameIntent` | Comando serializzabile (Command). Factory: `PlayCard()`, `BuyCard()`, `PlayVerifica()`, `EndTurn()`, `FinishShop()`. Bersagli come coppie (attore, indice comandante) |
 | [GameStateDTO.cs](GameStateDTO.cs) | struct `GameStateDTO`, `PlayerDTO`, `CommanderDTO` | Snapshot completo e serializzabile (solo primitivi/array): fase, round, attore attivo, giocatori, esito |
 | [INetworkTransport.cs](INetworkTransport.cs) | interfaccia `INetworkTransport` | Seam di rete: `IsHost`, `LocalActorNumber`, `SendIntent()`, `BroadcastState()`, eventi `IntentReceived`/`StateReceived` |
-| [LocalLoopbackTransport.cs](LocalLoopbackTransport.cs) | `LocalLoopbackTransport` | Implementazione offline a giro chiuso (host locale, single-actor). Per test e single-screen |
+| [LocalLoopbackTransport.cs](LocalLoopbackTransport.cs) | `LocalLoopbackTransport` | Implementazione offline a giro chiuso (host locale, single-actor). Per test unitari e riferimento |
+| [HotseatTransport.cs](HotseatTransport.cs) | `HotseatTransport` | Hotseat locale: `LocalActorNumber` si aggiorna a `state.ActiveActorNumber` ad ogni broadcast, la UI segue il giocatore attivo |
 | [GameStateDtoBuilder.cs](GameStateDtoBuilder.cs) | `static GameStateDtoBuilder` | `Build(state, registry)`: costruisce il `GameStateDTO` dallo stato vivo |
 | [GameStateSyncedEvent.cs](GameStateSyncedEvent.cs) | struct `GameStateSyncedEvent` | Evento EventBus consumato dalla UI: `State`, `LocalActorNumber` |
 | [NetworkGameManager.cs](NetworkGameManager.cs) | `NetworkGameManager : MonoBehaviour` | Orchestratore. API UI `Submit*()`; host: `ProcessIntent()` (guard `IsHost`) → manager Core → `BroadcastState()`. `DefaultExecutionOrder(100)` |

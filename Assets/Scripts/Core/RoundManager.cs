@@ -1,3 +1,5 @@
+using System;
+using UnityEngine;
 using FourE.Config;
 using FourE.Events;
 
@@ -6,12 +8,15 @@ namespace FourE.Core
     /// <summary>
     /// Tiene il conto dei round e segnala quando si raggiunge l'Esame Finale.
     /// </summary>
+    [Serializable]
     public sealed class RoundManager
     {
         private readonly GameConfigSO _config;
 
+        [SerializeField] private int _currentRoundIndex;
+
         /// <summary>Indice del round corrente, 0-based.</summary>
-        public int CurrentRoundIndex { get; private set; }
+        public int CurrentRoundIndex => _currentRoundIndex;
 
         /// <summary>True quando tutti i round di Verifica sono stati giocati.</summary>
         public bool IsFinalExamReached => CurrentRoundIndex >= _config.MaxRounds;
@@ -31,7 +36,7 @@ namespace FourE.Core
         public void Advance()
         {
             EventBus.Publish(new RoundEndedEvent(CurrentRoundIndex));
-            CurrentRoundIndex++;
+            _currentRoundIndex++;
         }
     }
 }
