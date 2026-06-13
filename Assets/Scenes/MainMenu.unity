@@ -1481,6 +1481,7 @@ GameObject:
   - component: {fileID: 1343188509}
   - component: {fileID: 1343188508}
   - component: {fileID: 1343188511}
+  - component: {fileID: 1343188512}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -1582,6 +1583,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5b2072af5dced541a3829c0ff0f6137, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FourE.UI.SafeAreaController
+  _panel: {fileID: 381281128}
+--- !u!114 &1343188512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343188506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d5f667cf84cb084bb9e0b66fe41b074, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FourE.UI.SafeAreaController
   _panel: {fileID: 381281128}
@@ -1796,6 +1810,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FourE.UI.MainMenuController
   _launcher: {fileID: 1456677908}
   _gameSceneName: SampleUI
+  _selectionSceneName: CommanderSelect
   _modePanel: {fileID: 434766986}
   _roomPanel: {fileID: 602022144}
   _sameDeviceButton: {fileID: 196573425}

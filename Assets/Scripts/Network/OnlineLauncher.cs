@@ -21,8 +21,8 @@ namespace FourE.Network
         , IConnectionCallbacks, IMatchmakingCallbacks, IInRoomCallbacks
 #endif
     {
-        [Tooltip("Nome della scena di gioco da caricare quando la stanza è pronta.")]
-        [SerializeField] private string _gameSceneName = "SampleScene";
+        [Tooltip("Scena di selezione comandanti caricata (sincronizzata) quando la stanza è al completo.")]
+        [SerializeField] private string _selectionSceneName = "CommanderSelect";
 
         /// <summary>Numero di giocatori per stanza in un 1v1.</summary>
         private const byte MaxPlayersPerRoom = 2;
@@ -109,13 +109,13 @@ namespace FourE.Network
             }
         }
 
-        /// <summary>Se host e la stanza è al completo, carica la scena di gioco (sincronizzata).</summary>
+        /// <summary>Se host e la stanza è al completo, carica la selezione comandanti (sincronizzata).</summary>
         private void TryStartWhenRoomFull()
         {
             if (PhotonNetwork.IsMasterClient && PhotonNetwork.CurrentRoom.PlayerCount >= MaxPlayersPerRoom)
             {
-                Report("Avversario trovato. Avvio…");
-                PhotonNetwork.LoadLevel(_gameSceneName);
+                Report("Avversario trovato. Selezione comandanti…");
+                PhotonNetwork.LoadLevel(_selectionSceneName);
             }
         }
 
