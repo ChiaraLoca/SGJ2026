@@ -1,0 +1,224 @@
+using System.Collections.Generic;
+using UnityEngine;
+using FourE.Cards;
+using FourE.Commanders;
+using FourE.Config;
+using FourE.Core;
+using FourE.Events;
+using FourE.Players;
+
+namespace FourE.Network
+{
+    /// <summary>
+    /// Livello di rete host-authoritative. Riceve gli intent dal trasporto, li valida ed
+    /// esegue (solo l'host), quindi broadcasta lo stato aggiornato come <see cref="GameStateDTO"/>.
+    /// La UI invia intent tramite i metodi <c>Submit*</c> e si ridisegna sull'evento di sync.
+    /// Gira offline col <see cref="LocalLoopbackTransport"/>; Photon si innesta sostituendo solo
+    /// l'implementazione di <see cref="INetworkTransport"/>.
+    /// </summary>
+    [DefaultExecutionOrder(100)]
+    public sealed class NetworkGameManager : MonoBehaviour
+    {
+        [Tooltip("Stato di gioco autoritativo da cui leggere ed eseguire gli intent.")]
+        [SerializeField] private GameStateManager _gameState;
+
+        private INetworkTransport _transport;
+        private CardRegistry _registry;
+        private bool _gameOver;
+        private int _winnerActorNumber = GameOverEvent.NoWinner;
+        private bool _isDraw;
+
+        /// <summary>Trasporto di rete attivo (loopback offline o Photon).</summary>
+        public INetworkTransport Transport => _transport;
+
+        /// <summary>Registry id↔carta condiviso con la UI per risolvere i DTO.</summary>
+        public CardRegistry Registry => _registry;
+
+        /// <summary>Attore dell'istanza locale.</summary>
+        public int LocalActorNumber => _transport.LocalActorNumber;
+
+        /// <summary>
+        /// Costruisce registry e trasporto, registra le callback di rete e l'osservatore di esito.
+        /// </summary>
+        private void Awake()
+        {
+            _registry = CardRegistry.Build(_gameState.Content);
+            _transport = new LocalLoopbackTransport(GameConstants.FirstCommanderIndex);
+            _transport.IntentReceived += OnIntentReceived;
+            _transport.StateReceived += OnStateReceived;
+            EventBus.Subscribe<GameOverEvent>(OnGameOver);
+        }
+
+        /// <summary>
+        /// Broadcasta lo stato iniziale dopo che il GameStateManager ha avviato la partita
+        /// (garantito dall'ordine di esecuzione posticipato).
+        /// </summary>
+        private void Start()
+        {
+            BroadcastCurrentState();
+        }
+
+        /// <summary>
+        /// Disiscrive callback di rete ed EventBus al teardown.
+        /// </summary>
+        private void OnDestroy()
+        {
+            if (_transport != null)
+            {
+                _transport.IntentReceived -= OnIntentReceived;
+                _transport.StateReceived -= OnStateReceived;
+            }
+
+            EventBus.Unsubscribe<GameOverEvent>(OnGameOver);
+        }
+
+        /// <summary>
+        /// Invia un intent di gioco carta, con eventuali comandanti bersaglio (attore, indice).
+        /// </summary>
+        /// <param name="card">Carta da giocare.</param>
+        /// <param name="targetActorNumbers">Attori proprietari dei bersagli, o null.</param>
+        /// <param name="targetCommanderIndices">Indici dei comandanti bersaglio, o null.</param>
+        public void SubmitPlayCard(CardDataSO card, int[] targetActorNumbers = null, int[] targetCommanderIndices = null)
+        {
+            _transport.SendIntent(GameIntent.PlayCard(
+                LocalActorNumber, _registry.GetId(card), targetActorNumbers, targetCommanderIndices));
+        }
+
+        /// <summary>Invia un intent di acquisto carta dallo shop.</summary>
+        /// <param name="card">Carta da acquistare.</param>
+        public void SubmitBuyCard(CardDataSO card)
+        {
+            _transport.SendIntent(GameIntent.BuyCard(LocalActorNumber, _registry.GetId(card)));
+        }
+
+        /// <summary>Invia un intent di gioco della Verifica.</summary>
+        public void SubmitPlayVerifica()
+        {
+            _transport.SendIntent(GameIntent.PlayVerifica(LocalActorNumber));
+        }
+
+        /// <summary>Invia un intent di fine turno.</summary>
+        public void SubmitEndTurn()
+        {
+            _transport.SendIntent(GameIntent.EndTurn(LocalActorNumber));
+        }
+
+        /// <summary>Invia un intent di conclusione acquisti shop.</summary>
+        public void SubmitFinishShop()
+        {
+            _transport.SendIntent(GameIntent.FinishShop(LocalActorNumber));
+        }
+
+        /// <summary>
+        /// Memorizza l'esito della partita per includerlo nei broadcast successivi.
+        /// </summary>
+        /// <param name="outcome">Evento di fine partita.</param>
+        private void OnGameOver(GameOverEvent outcome)
+        {
+            _gameOver = true;
+            _winnerActorNumber = outcome.WinnerActorNumber;
+            _isDraw = outcome.IsDraw;
+        }
+
+        /// <summary>
+        /// Riceve un intent e, se l'istanza è host, lo esegue e broadcasta il nuovo stato.
+        /// </summary>
+        /// <param name="intent">Intent ricevuto dal trasporto.</param>
+        private void OnIntentReceived(GameIntent intent)
+        {
+            // Host-authoritative: solo l'host valida ed esegue.
+            if (!_transport.IsHost)
+            {
+                return;
+            }
+
+            ProcessIntent(intent);
+            BroadcastCurrentState();
+        }
+
+        /// <summary>
+        /// Inoltra lo stato ricevuto alla UI tramite l'EventBus.
+        /// </summary>
+        /// <param name="state">Stato ricevuto dal trasporto.</param>
+        private void OnStateReceived(GameStateDTO state)
+        {
+            EventBus.Publish(new GameStateSyncedEvent(state, _transport.LocalActorNumber));
+        }
+
+        /// <summary>
+        /// Costruisce e broadcasta lo snapshot corrente, completo dell'esito se la partita è finita.
+        /// </summary>
+        private void BroadcastCurrentState()
+        {
+            if (!_transport.IsHost)
+            {
+                return;
+            }
+
+            GameStateDTO dto = GameStateDtoBuilder.Build(_gameState, _registry);
+            dto.IsGameOver = _gameOver;
+            dto.WinnerActorNumber = _winnerActorNumber;
+            dto.IsDraw = _isDraw;
+            _transport.BroadcastState(dto);
+        }
+
+        /// <summary>
+        /// Valida ed esegue un intent instradandolo al manager competente.
+        /// </summary>
+        /// <param name="intent">Intent da eseguire.</param>
+        private void ProcessIntent(GameIntent intent)
+        {
+            PlayerState player = _gameState.GetPlayerByActor(intent.ActorNumber);
+            if (player == null)
+            {
+                return;
+            }
+
+            switch (intent.Type)
+            {
+                case IntentType.PlayCard:
+                    _gameState.Turns.TryPlayCard(player, _registry.GetCard(intent.CardId), ResolveTargets(intent));
+                    break;
+                case IntentType.BuyCard:
+                    _gameState.Shop.TryPurchase(player, _registry.GetCard(intent.CardId));
+                    break;
+                case IntentType.PlayVerifica:
+                    _gameState.Turns.TryPlayVerifica(player);
+                    break;
+                case IntentType.EndTurn:
+                    _gameState.Turns.EndTurn(player);
+                    break;
+                case IntentType.FinishShop:
+                    _gameState.Phases.FinishShop(player);
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// Risolve i bersagli selezionabili di un intent in comandanti concreti.
+        /// </summary>
+        /// <param name="intent">Intent contenente le coppie (attore, indice).</param>
+        /// <returns>Lista dei comandanti bersaglio, o null se assenti.</returns>
+        private IReadOnlyList<CommanderState> ResolveTargets(GameIntent intent)
+        {
+            int count = Mathf.Min(intent.TargetActorNumbers.Length, intent.TargetCommanderIndices.Length);
+            if (count == 0)
+            {
+                return null;
+            }
+
+            List<CommanderState> targets = new(count);
+            for (int i = 0; i < count; i++)
+            {
+                PlayerState owner = _gameState.GetPlayerByActor(intent.TargetActorNumbers[i]);
+                int index = intent.TargetCommanderIndices[i];
+                if (owner != null && index >= 0 && index < owner.Commanders.Length)
+                {
+                    targets.Add(owner.Commanders[index]);
+                }
+            }
+
+            return targets;
+        }
+    }
+}
