@@ -14,6 +14,7 @@ Torna all'[indice generale](../INDEX.md).
 | [GameAudioController.cs](GameAudioController.cs) | `GameAudioController : MonoBehaviour` | Controller persistente evento-driven: musica principale in loop, crowd per menu/selezione comandante, SFX su carta, Verifica, acquisto, Shop ed esito locale da `GameStateSyncedEvent`. Auto-bind clip in editor da `Assets/Audio/*` |
 | [GameView.cs](GameView.cs) | `GameView : MonoBehaviour` | HUD principale. Si ridisegna su `GameStateSyncedEvent`, mostra il mercato solo durante `Shop`, gestisce l'anteprima ingrandita su pressione prolungata e inoltra le azioni a `NetworkGameManager.Submit*()`. Gestisce la selezione bersaglio per carte `SelectedCommanders`. `DefaultExecutionOrder(200)` |
 | [MainMenuController.cs](MainMenuController.cs) | `MainMenuController : MonoBehaviour` | Menu iniziale (scena `MainMenu`). Sceglie tra **Stesso telefono** (hotseat → carica `SampleScene`) e **Online** (codice stanza → `OnlineLauncher`). Imposta `SessionConfig.Mode`/`RoomCode`; genera il codice stanza; pannelli modalità/stanza |
+| [SafeAreaController.cs](SafeAreaController.cs) | `SafeAreaController : MonoBehaviour` | Da collegare al Canvas principale di ogni scena. Adatta il pannello figlio `_panel` alla `Screen.safeArea` del dispositivo (notch, home bar, Dynamic Island). Si ricalcola automaticamente al cambio di orientamento. `DefaultExecutionOrder(-100)` |
 
 ## Note
 
