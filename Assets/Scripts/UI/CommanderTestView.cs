@@ -53,7 +53,7 @@ namespace FourE.UI
 
             if (_commanderNameText != null)
             {
-                _commanderNameText.text = _commander.CommanderData.CommanderName;
+                _commanderNameText.text = _commander.Data.CommanderName;
             }
 
             if (_notesText != null)

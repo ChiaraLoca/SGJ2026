@@ -157,6 +157,18 @@ namespace FourE.UI.Editor
             logText.fontSize = 14;
             logText.color = Color.white;
 
+            // Carica GameConfig e GameContent per la scena di test
+            var gameConfigPath = "Assets/ScriptableObjects/Config/GameConfig.asset";
+            var gameContentPath = "Assets/ScriptableObjects/Config/GameContent.asset";
+            var gameConfig = AssetDatabase.LoadAssetAtPath<FourE.Config.GameConfigSO>(gameConfigPath);
+            var gameContent = AssetDatabase.LoadAssetAtPath<FourE.Config.GameContentSO>(gameContentPath);
+
+            if (gameConfig == null || gameContent == null)
+            {
+                Debug.LogError("GameConfig o GameContent non trovati. Assicurati che gli asset esistano.");
+                return;
+            }
+
             // --- Manager
             var managerGO = new GameObject("EffectTestManager");
             managerGO.transform.SetParent(canvasGO.transform, false);

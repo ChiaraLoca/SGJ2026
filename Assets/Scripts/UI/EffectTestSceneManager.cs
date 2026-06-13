@@ -33,6 +33,14 @@ namespace FourE.UI
             _uiController = controller;
         }
 
+        /// <summary>
+        /// Ottiene il GameContent dal GameStateManager interno.
+        /// </summary>
+        public FourE.Config.GameContentSO GetGameContent()
+        {
+            return _gameStateManager?.Content;
+        }
+
         private void Awake()
         {
             SetupOfflineGameState();
@@ -52,13 +60,33 @@ namespace FourE.UI
             _gameStateManager.AutoStartOffline = false; // Non far partire la partita automaticamente
 
             var config = FourE.Config.GameConfigSO.Instance;
-            var content = FourE.Config.GameContentSO.Instance;
 
-            // Setup commander selections: usa il default da GameContent
-            var p0Cmds = content.FirstPlayerCommanders.Take(2).ToArray();
-            var p1Cmds = content.SecondPlayerCommanders.Take(2).ToArray();
+            // Carica il GameContent: se disponibile dalle dipendenze della scena, altrimenti cerca l'asset
+            FourE.Config.GameContentSO content = FindObjectOfType<FourE.Config.GameContentSO>();
+            if (content == null)
+            {
+                // Fallback: carica da Resources o cerca negli asset (utilizzare il path dell'asset noto)
+                content = Resources.Load<FourE.Config.GameContentSO>("GameContent");
+            }
 
-            _gameStateManager.SetCommanderSelections(p0Cmds, p1Cmds);
+            // Se ancora non trovato, log error
+            if (content == null)
+            {
+                Debug.LogError("GameContent non trovato! Assicurati che sia in una cartella Resources o nella scena.");
+                return;
+            }
+
+            // Assegna il content al GameStateManager
+            _gameStateManager.SetGameContent(content);
+
+            // Setup commander selections: converte da CommanderDataSO[] a CommanderKind[]
+            var p0CmdsData = content.FirstPlayerCommanders.Take(2).ToArray();
+            var p1CmdsData = content.SecondPlayerCommanders.Take(2).ToArray();
+
+            var p0Kinds = p0CmdsData.Select(c => c.Kind).ToArray();
+            var p1Kinds = p1CmdsData.Select(c => c.Kind).ToArray();
+
+            _gameStateManager.SetCommanderSelections(p0Kinds, p1Kinds);
 
             // Inizializza lo stato senza avviare la vera partita
             _gameStateManager.StartMatch();
@@ -184,8 +212,8 @@ namespace FourE.UI
 
             for (int i = 0; i < 2; i++)
             {
-                result.Add(($"Player 0 - {p0.Commanders[i].CommanderData.CommanderName}", 0, i));
-                result.Add(($"Player 1 - {p1.Commanders[i].CommanderData.CommanderName}", 1, i));
+                result.Add(($"Player 0 - {p0.Commanders[i].Data.CommanderName}", 0, i));
+                result.Add(($"Player 1 - {p1.Commanders[i].Data.CommanderName}", 1, i));
             }
 
             return result.ToArray();

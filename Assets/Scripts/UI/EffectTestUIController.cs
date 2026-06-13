@@ -87,10 +87,12 @@ namespace FourE.UI
         /// </summary>
         private void PopulateCardDropdown()
         {
-            if (_cardDropdown == null) return;
+            if (_cardDropdown == null || _manager == null) return;
 
             _cardList = new List<FourE.Cards.CardDataSO>();
-            var content = FourE.Config.GameContentSO.Instance;
+            var content = _manager.GetGameContent();
+
+            if (content == null) return;
 
             _cardDropdown.ClearOptions();
             var options = new List<Dropdown.OptionData>();

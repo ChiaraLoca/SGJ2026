@@ -42,6 +42,14 @@ namespace FourE.Core
         /// </summary>
         public bool AutoStartOffline { get => _autoStartOffline; set => _autoStartOffline = value; }
 
+        /// <summary>
+        /// Metodo pubblico per assegnare il GameContent al runtime (utile per test offline).
+        /// </summary>
+        public void SetGameContent(GameContentSO content)
+        {
+            _content = content;
+        }
+
         /// <summary>Istanza singleton accessibile dai sistemi che non si risolvono via Inspector.</summary>
         public static GameStateManager Instance { get; private set; }
 

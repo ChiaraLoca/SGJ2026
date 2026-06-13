@@ -16,6 +16,14 @@ namespace FourE.UI
         private Rect _lastSafeArea;
         private ScreenOrientation _lastOrientation;
 
+        /// <summary>
+        /// Metodo pubblico per assegnare il pannello da adattare (utile per setup editor).
+        /// </summary>
+        public void SetPanel(RectTransform panel)
+        {
+            _panel = panel;
+        }
+
         private void Awake()
         {
             Apply();
