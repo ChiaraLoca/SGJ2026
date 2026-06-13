@@ -28,6 +28,9 @@ namespace FourE.Network
         private int _winnerActorNumber = GameOverEvent.NoWinner;
         private bool _isDraw;
         private bool _stateReceived;
+        private int _playedCardSequence;
+        private int _lastPlayedCardId = CardRegistry.NoCard;
+        private int _lastPlayedActorNumber = -1;
 
 #if PHOTON_UNITY_NETWORKING
         /// <summary>Intervallo tra i tentativi di resync del client online (secondi).</summary>
@@ -60,6 +63,8 @@ namespace FourE.Network
             // Il boot è guidato qui (host avvia, client attende): niente auto-start dal GameStateManager.
             _gameState.AutoStartOffline = false;
             EventBus.Subscribe<GameOverEvent>(OnGameOver);
+            EventBus.Subscribe<CardPlayedEvent>(OnCardPlayed);
+            EventBus.Subscribe<VerificaPlayedEvent>(OnVerificaPlayed);
         }
 
         /// <summary>
@@ -141,6 +146,8 @@ namespace FourE.Network
             }
 
             EventBus.Unsubscribe<GameOverEvent>(OnGameOver);
+            EventBus.Unsubscribe<CardPlayedEvent>(OnCardPlayed);
+            EventBus.Unsubscribe<VerificaPlayedEvent>(OnVerificaPlayed);
         }
 
         /// <summary>
@@ -192,6 +199,42 @@ namespace FourE.Network
         }
 
         /// <summary>
+        /// Memorizza una carta standard appena risolta per il prossimo snapshot.
+        /// </summary>
+        /// <param name="evt">Evento carta giocata dall'host.</param>
+        private void OnCardPlayed(CardPlayedEvent evt)
+        {
+            RegisterPlayedCard(evt.Card, evt.Player.ActorNumber);
+        }
+
+        /// <summary>
+        /// Memorizza la Verifica appena giocata per il prossimo snapshot.
+        /// </summary>
+        /// <param name="evt">Evento Verifica giocata dall'host.</param>
+        private void OnVerificaPlayed(VerificaPlayedEvent evt)
+        {
+            RegisterPlayedCard(_gameState.Content.VerificaCard, evt.Player.ActorNumber);
+        }
+
+        /// <summary>
+        /// Aggiorna i metadati di presentazione dell'ultima carta giocata.
+        /// </summary>
+        /// <param name="card">Carta risolta.</param>
+        /// <param name="actorNumber">Attore che ha giocato la carta.</param>
+        private void RegisterPlayedCard(CardDataSO card, int actorNumber)
+        {
+            int cardId = _registry.GetId(card);
+            if (cardId == CardRegistry.NoCard)
+            {
+                return;
+            }
+
+            _playedCardSequence++;
+            _lastPlayedCardId = cardId;
+            _lastPlayedActorNumber = actorNumber;
+        }
+
+        /// <summary>
         /// Riceve un intent e, se l'istanza è host, lo esegue e broadcasta il nuovo stato.
         /// </summary>
         /// <param name="intent">Intent ricevuto dal trasporto.</param>
@@ -231,6 +274,9 @@ namespace FourE.Network
             dto.IsGameOver = _gameOver;
             dto.WinnerActorNumber = _winnerActorNumber;
             dto.IsDraw = _isDraw;
+            dto.PlayedCardSequence = _playedCardSequence;
+            dto.LastPlayedCardId = _lastPlayedCardId;
+            dto.LastPlayedActorNumber = _lastPlayedActorNumber;
             _transport.BroadcastState(dto);
         }
 

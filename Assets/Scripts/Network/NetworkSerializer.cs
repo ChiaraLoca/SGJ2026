@@ -63,6 +63,9 @@ namespace FourE.Network
             writer.Write(state.IsGameOver);
             writer.Write(state.WinnerActorNumber);
             writer.Write(state.IsDraw);
+            writer.Write(state.PlayedCardSequence);
+            writer.Write(state.LastPlayedCardId);
+            writer.Write(state.LastPlayedActorNumber);
 
             PlayerDTO[] players = state.Players ?? System.Array.Empty<PlayerDTO>();
             writer.Write(players.Length);
@@ -91,7 +94,10 @@ namespace FourE.Network
                 ActiveActorNumber = reader.ReadInt32(),
                 IsGameOver = reader.ReadBoolean(),
                 WinnerActorNumber = reader.ReadInt32(),
-                IsDraw = reader.ReadBoolean()
+                IsDraw = reader.ReadBoolean(),
+                PlayedCardSequence = reader.ReadInt32(),
+                LastPlayedCardId = reader.ReadInt32(),
+                LastPlayedActorNumber = reader.ReadInt32()
             };
 
             int playerCount = reader.ReadInt32();

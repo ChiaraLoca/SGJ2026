@@ -29,7 +29,9 @@ namespace FourE.Network
                     BuildPlayer(state.Player0, registry),
                     BuildPlayer(state.Player1, registry)
                 },
-                WinnerActorNumber = -1
+                WinnerActorNumber = -1,
+                LastPlayedCardId = CardRegistry.NoCard,
+                LastPlayedActorNumber = -1
             };
         }
 

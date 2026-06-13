@@ -27,6 +27,12 @@ namespace FourE.UI
         [SerializeField] private CardView _cardPrefab;
         [SerializeField] private float _cardPreviewScale = 2.4f;
 
+        [Header("Animazione carta giocata")]
+        [SerializeField] private float _playedCardScale = 2.4f;
+        [SerializeField] private float _playedCardMoveDuration = 0.4f;
+        [SerializeField] private float _playedCardHoldDuration = 2f;
+        [SerializeField] private float _playedCardFadeDuration = 0.35f;
+
         [Header("Contenitori")]
         [SerializeField] private Transform _handContainer;
         [SerializeField] private Transform _shopContainer;
@@ -55,6 +61,12 @@ namespace FourE.UI
         private readonly List<CardView> _spawnedShop = new();
         private Canvas _canvas;
         private CardView _cardPreview;
+        private CardPlayAnimationController _cardPlayAnimator;
+        private bool _hasObservedPlayedCardSequence;
+        private int _lastObservedPlayedCardSequence;
+        private int _previousLocalActorNumber = -1;
+        private bool _hasPendingLocalPlayStart;
+        private Vector2 _pendingLocalPlayStart;
 
         // Stato della selezione bersaglio multi-step.
         private CardDataSO _pendingTargetCard;
@@ -68,6 +80,14 @@ namespace FourE.UI
         {
             _canvas = GetComponentInParent<Canvas>();
             _shopContainer?.gameObject.SetActive(false);
+            _cardPlayAnimator = new CardPlayAnimationController(
+                this,
+                _canvas,
+                _cardPrefab,
+                _playedCardScale,
+                _playedCardMoveDuration,
+                _playedCardHoldDuration,
+                _playedCardFadeDuration);
             EventBus.Subscribe<GameStateSyncedEvent>(OnStateSynced);
         }
 
@@ -99,6 +119,7 @@ namespace FourE.UI
         private void OnDestroy()
         {
             HideCardPreview();
+            _cardPlayAnimator?.Dispose();
             EventBus.Unsubscribe<GameStateSyncedEvent>(OnStateSynced);
         }
 
@@ -121,6 +142,8 @@ namespace FourE.UI
             RenderHand(local, phase, isLocalTurn);
             RenderShop(local, phase);
             RenderButtons(phase, isLocalTurn, local);
+            AnimatePlayedCard(state);
+            _previousLocalActorNumber = sync.LocalActorNumber;
         }
 
         /// <summary>
@@ -320,6 +343,8 @@ namespace FourE.UI
                 return;
             }
 
+            CaptureLocalPlayStart(card);
+
             if (card.IsVerifica)
                 _network.SubmitPlayVerifica();
             else if (card.RequiresTargetSelection)
@@ -335,6 +360,107 @@ namespace FourE.UI
         private void OnBuyCardClicked(CardDataSO card)
         {
             _network.SubmitBuyCard(card);
+        }
+
+        /// <summary>
+        /// Rileva una nuova carta giocata nello snapshot e ne avvia l'animazione.
+        /// </summary>
+        /// <param name="state">Snapshot sincronizzato.</param>
+        private void AnimatePlayedCard(GameStateDTO state)
+        {
+            if (!_hasObservedPlayedCardSequence)
+            {
+                _hasObservedPlayedCardSequence = true;
+                _lastObservedPlayedCardSequence = state.PlayedCardSequence;
+                return;
+            }
+
+            if (state.PlayedCardSequence <= _lastObservedPlayedCardSequence)
+            {
+                return;
+            }
+
+            _lastObservedPlayedCardSequence = state.PlayedCardSequence;
+            CardDataSO card = _network.Registry.GetCard(state.LastPlayedCardId);
+            if (card == null)
+            {
+                return;
+            }
+
+            bool wasPlayedLocally = state.LastPlayedActorNumber == _previousLocalActorNumber;
+            Vector2 startPosition = wasPlayedLocally && _hasPendingLocalPlayStart
+                ? _pendingLocalPlayStart
+                : ResolveOpponentPlayStart();
+
+            _hasPendingLocalPlayStart = false;
+            _cardPlayAnimator?.Enqueue(card, startPosition);
+        }
+
+        /// <summary>
+        /// Memorizza la posizione della carta in mano prima dell'invio dell'intent.
+        /// </summary>
+        /// <param name="card">Carta che il giocatore sta tentando di giocare.</param>
+        private void CaptureLocalPlayStart(CardDataSO card)
+        {
+            foreach (CardView view in _spawnedHand)
+            {
+                if (view != null && view.Card == card)
+                {
+                    _pendingLocalPlayStart = WorldToCanvasPosition(view.transform.position);
+                    _hasPendingLocalPlayStart = true;
+                    return;
+                }
+            }
+
+            if (_handContainer != null)
+            {
+                _pendingLocalPlayStart = WorldToCanvasPosition(_handContainer.position);
+                _hasPendingLocalPlayStart = true;
+            }
+        }
+
+        /// <summary>
+        /// Calcola il punto di partenza della carta giocata dall'avversario.
+        /// </summary>
+        /// <returns>Posizione locale nel Canvas vicino alla zona avversaria.</returns>
+        private Vector2 ResolveOpponentPlayStart()
+        {
+            if (_enemyCommander0 != null && _enemyCommander1 != null)
+            {
+                Vector3 midpoint = (_enemyCommander0.transform.position + _enemyCommander1.transform.position) * 0.5f;
+                return WorldToCanvasPosition(midpoint);
+            }
+
+            Transform fallback = _enemyCommander0 != null
+                ? _enemyCommander0.transform
+                : _enemyCommander1 != null
+                    ? _enemyCommander1.transform
+                    : _handContainer;
+            return fallback != null ? WorldToCanvasPosition(fallback.position) : Vector2.zero;
+        }
+
+        /// <summary>
+        /// Converte una posizione mondo UI nelle coordinate locali del Canvas.
+        /// </summary>
+        /// <param name="worldPosition">Posizione mondo dell'elemento sorgente.</param>
+        /// <returns>Posizione locale rispetto al RectTransform del Canvas.</returns>
+        private Vector2 WorldToCanvasPosition(Vector3 worldPosition)
+        {
+            if (_canvas == null || _canvas.transform is not RectTransform canvasTransform)
+            {
+                return Vector2.zero;
+            }
+
+            Camera eventCamera = _canvas.renderMode == RenderMode.ScreenSpaceOverlay
+                ? null
+                : _canvas.worldCamera;
+            Vector2 screenPosition = RectTransformUtility.WorldToScreenPoint(eventCamera, worldPosition);
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                canvasTransform,
+                screenPosition,
+                eventCamera,
+                out Vector2 localPosition);
+            return localPosition;
         }
 
         /// <summary>
