@@ -29,9 +29,12 @@ namespace FourE.Core
         [SerializeField] private TurnManager _turns;
         [SerializeField] private ShopManager _shop;
         [SerializeField] private PhaseManager _phases;
+        private CommanderPassiveSystem _passives;
         private IStartingPlayerDecider _startingPlayerDecider;
         private System.Random _rng;
         private bool _matchStarted;
+        private CommanderKind[] _player0CommanderKinds;
+        private CommanderKind[] _player1CommanderKinds;
 
         /// <summary>
         /// Se la partita parte da sola in <c>Start</c>. Il livello di rete la disattiva per
@@ -75,6 +78,9 @@ namespace FourE.Core
         /// <summary>Gestore delle fasi.</summary>
         public PhaseManager Phases => _phases;
 
+        /// <summary>Sistema delle passive dei comandanti (solo host).</summary>
+        public CommanderPassiveSystem Passives => _passives;
+
         /// <summary>
         /// Inizializza il singleton, registra il config e prepara il generatore casuale.
         /// </summary>
@@ -113,6 +119,18 @@ namespace FourE.Core
 
             PlayerState first = _startingPlayerDecider.DecideStartingPlayer(Player0, Player1);
             _phases.BeginMatch(first);
+        }
+
+        /// <summary>
+        /// Imposta i comandanti scelti dai due giocatori prima dell'avvio della partita.
+        /// Da chiamare prima di <see cref="StartMatch"/>. Un array null usa i comandanti di default del contenuto.
+        /// </summary>
+        /// <param name="player0Commanders">Kind dei comandanti del primo giocatore, o null.</param>
+        /// <param name="player1Commanders">Kind dei comandanti del secondo giocatore, o null.</param>
+        public void SetCommanderSelections(CommanderKind[] player0Commanders, CommanderKind[] player1Commanders)
+        {
+            _player0CommanderKinds = player0Commanders;
+            _player1CommanderKinds = player1Commanders;
         }
 
         /// <summary>
@@ -166,7 +184,7 @@ namespace FourE.Core
         {
             Player0 = MatchSetup.BuildPlayer(
                 GameConstants.FirstCommanderIndex,
-                _content.FirstPlayerCommanders,
+                ResolveSelection(_player0CommanderKinds, _content.FirstPlayerCommanders),
                 _content.VerificaCard,
                 _content.ShopCatalog,
                 _gameConfig,
@@ -174,11 +192,42 @@ namespace FourE.Core
 
             Player1 = MatchSetup.BuildPlayer(
                 GameConstants.SecondCommanderIndex,
-                _content.SecondPlayerCommanders,
+                ResolveSelection(_player1CommanderKinds, _content.SecondPlayerCommanders),
                 _content.VerificaCard,
                 _content.ShopCatalog,
                 _gameConfig,
                 _rng);
+        }
+
+        /// <summary>
+        /// Converte i <see cref="CommanderKind"/> scelti nelle definizioni dal catalogo del contenuto.
+        /// Ricade sui comandanti di default se la selezione è assente o incompleta.
+        /// </summary>
+        /// <param name="kinds">Kind scelti dal giocatore, o null.</param>
+        /// <param name="fallback">Comandanti di default da usare se la selezione non è valida.</param>
+        /// <returns>Le definizioni dei comandanti da assegnare al giocatore.</returns>
+        private IReadOnlyList<CommanderDataSO> ResolveSelection(
+            CommanderKind[] kinds,
+            IReadOnlyList<CommanderDataSO> fallback)
+        {
+            if (kinds == null || kinds.Length < GameConstants.CommandersPerPlayer)
+            {
+                return fallback;
+            }
+
+            CommanderDataSO[] resolved = new CommanderDataSO[GameConstants.CommandersPerPlayer];
+            for (int i = 0; i < GameConstants.CommandersPerPlayer; i++)
+            {
+                CommanderDataSO data = _content.GetCommanderByKind(kinds[i]);
+                if (data == null)
+                {
+                    return fallback;
+                }
+
+                resolved[i] = data;
+            }
+
+            return resolved;
         }
 
         /// <summary>
@@ -192,6 +241,7 @@ namespace FourE.Core
             _startingPlayerDecider = new CoinFlipStartingPlayerDecider(_rng);
             _phases = new PhaseManager(this, _turns, _shop, _rounds, _startingPlayerDecider, _rng);
             _turns.SetPhaseManager(_phases);
+            _passives = new CommanderPassiveSystem(this);
         }
 
         /// <summary>
@@ -199,6 +249,9 @@ namespace FourE.Core
         /// </summary>
         private void OnDestroy()
         {
+            _passives?.Dispose();
+            _passives = null;
+
             if (Instance == this)
             {
                 Instance = null;

@@ -5,6 +5,28 @@ using FourE.Players;
 
 namespace FourE.Events
 {
+    /// <summary>
+    /// Pubblicato all'inizio della risoluzione di una carta standard, prima di applicarne gli effetti.
+    /// Consente alle passive reattive (es. Storia secondaria) di conoscere la carta sorgente.
+    /// </summary>
+    public readonly struct CardResolvingEvent
+    {
+        /// <summary>Carta in corso di risoluzione.</summary>
+        public CardDataSO Card { get; }
+
+        /// <summary>Giocatore che sta giocando la carta.</summary>
+        public PlayerState Player { get; }
+
+        /// <summary>Crea l'evento di carta in risoluzione.</summary>
+        /// <param name="card">Carta in risoluzione.</param>
+        /// <param name="player">Giocatore attivo.</param>
+        public CardResolvingEvent(CardDataSO card, PlayerState player)
+        {
+            Card = card;
+            Player = player;
+        }
+    }
+
     /// <summary>Pubblicato dopo che una carta standard è stata risolta.</summary>
     public readonly struct CardPlayedEvent
     {
@@ -110,6 +132,51 @@ namespace FourE.Events
         public NoteChangedEvent(CommanderState commander)
         {
             Commander = commander;
+        }
+    }
+
+    /// <summary>
+    /// Pubblicato quando la Note di un comandante aumenta per effetto istantaneo di una carta.
+    /// Usato dalle passive di Inglese (propagazione/copia dell'aumento all'altro comandante).
+    /// Non viene pubblicato per i bonus reattivi delle passive stesse, per evitare ricorsione.
+    /// </summary>
+    public readonly struct NoteIncreasedEvent
+    {
+        /// <summary>Comandante la cui Note è aumentata.</summary>
+        public CommanderState Commander { get; }
+
+        /// <summary>Entità dell'aumento (sempre positiva).</summary>
+        public int Amount { get; }
+
+        /// <summary>Crea l'evento di aumento Note.</summary>
+        /// <param name="commander">Comandante interessato.</param>
+        /// <param name="amount">Entità dell'aumento.</param>
+        public NoteIncreasedEvent(CommanderState commander, int amount)
+        {
+            Commander = commander;
+            Amount = amount;
+        }
+    }
+
+    /// <summary>
+    /// Pubblicato quando un giocatore pesca carte durante la Fase PLAY (inizio turno o effetto carta).
+    /// Usato dalla passiva secondaria di Matematica (+1 Nota per carta pescata).
+    /// </summary>
+    public readonly struct CardsDrawnEvent
+    {
+        /// <summary>Giocatore che ha pescato.</summary>
+        public PlayerState Player { get; }
+
+        /// <summary>Numero di carte effettivamente pescate.</summary>
+        public int Count { get; }
+
+        /// <summary>Crea l'evento di pesca.</summary>
+        /// <param name="player">Giocatore che pesca.</param>
+        /// <param name="count">Numero di carte pescate.</param>
+        public CardsDrawnEvent(PlayerState player, int count)
+        {
+            Player = player;
+            Count = count;
         }
     }
 

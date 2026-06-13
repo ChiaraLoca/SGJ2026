@@ -19,6 +19,7 @@ namespace FourE.Commanders
         [SerializeField] private List<ActiveEffect> _activeDebuffs = new();
         [SerializeField] private int _debuffShields;
         [SerializeField] private bool _noteFloorLocked;
+        [SerializeField] private bool _secondaryUnlocked;
 
         /// <summary>Definizione statica di origine del comandante.</summary>
         public CommanderDataSO Data => _data;
@@ -46,6 +47,12 @@ namespace FourE.Commanders
 
         /// <summary>True se la Note non può calare (immunità temporanea da Fidanzata).</summary>
         public bool IsNoteFloorLocked => _noteFloorLocked;
+
+        /// <summary>
+        /// True se l'abilità secondaria del comandante è stata sbloccata.
+        /// Lo sblocco è permanente per tutta la partita (non si azzera tra i round).
+        /// </summary>
+        public bool SecondaryUnlocked => _secondaryUnlocked;
 
         /// <summary>
         /// Note corrente effettiva: base + modifiche istantanee + buff attivi - debuff attivi.
@@ -131,6 +138,14 @@ namespace FourE.Commanders
         public void SetNoteFloorLocked(bool locked)
         {
             _noteFloorLocked = locked;
+        }
+
+        /// <summary>
+        /// Sblocca in modo permanente l'abilità secondaria del comandante.
+        /// </summary>
+        public void MarkSecondaryUnlocked()
+        {
+            _secondaryUnlocked = true;
         }
 
         /// <summary>

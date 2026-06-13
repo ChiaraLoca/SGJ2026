@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: CMD_Storia
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Commanders.CommanderDataSO
   _commanderName: Storia
+  _kind: 0
   _baseNote: 5
   _linkedCards:
   - {fileID: 11400000, guid: 6cf791fa18fbf4d41bd9d8c5294d1092, type: 2}
@@ -21,3 +22,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1d909355992235b478d06d93a2b3c8dc, type: 2}
   - {fileID: 11400000, guid: 0b74b118288ad2f4dafb8a9266c1451d, type: 2}
   _portrait: {fileID: 0}
+  _baseAbilityDescription: +3 Note all'inizio di ogni round per ogni Verifica giocata
+    nella partita
+  _unlockConditionDescription: Raggiungere 20 Crediti
+  _secondaryAbilityDescription: Raddoppia l'effetto di tutte le carte Studio giocate
+    su di lui

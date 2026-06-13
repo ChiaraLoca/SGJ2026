@@ -25,6 +25,7 @@ namespace FourE.Players
         [SerializeField] private CommanderState[] _commanders;
         [SerializeField] private bool _verificaBlocked;
         [SerializeField] private bool _wikipediaInterceptActive;
+        [SerializeField] private int _verificaPlayedCount;
 
         /// <summary>Numero attore Photon che identifica il giocatore.</summary>
         public int ActorNumber => _actorNumber;
@@ -55,6 +56,9 @@ namespace FourE.Players
 
         /// <summary>True se è attivo uno scudo Wikipedia che intercetta la prossima carta dell'avversario.</summary>
         public bool WikipediaInterceptActive { get => _wikipediaInterceptActive; set => _wikipediaInterceptActive = value; }
+
+        /// <summary>Numero di Verifiche giocate da questo giocatore nell'intera partita (passiva base Storia).</summary>
+        public int VerificaPlayedCount => _verificaPlayedCount;
 
         /// <summary>
         /// Somma delle Note correnti dei due comandanti: punteggio temporaneo del round,
@@ -94,6 +98,14 @@ namespace FourE.Players
             {
                 _credits = 0;
             }
+        }
+
+        /// <summary>
+        /// Incrementa il conteggio delle Verifiche giocate dal giocatore nella partita.
+        /// </summary>
+        public void IncrementVerificaPlayedCount()
+        {
+            _verificaPlayedCount++;
         }
     }
 }
