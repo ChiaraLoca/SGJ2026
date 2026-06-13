@@ -162,6 +162,19 @@ namespace FourE.Core
 
             player.Hand.Remove(card);
             player.DiscardPile.Add(card);
+
+            // Controlla se è una carta di Cooper e se il comandante più debole ha nota ≤ 3.
+            // Se sì, ritorna la carta in mano.
+            if (IsCooperCard(card))
+            {
+                CommanderState lowestCmd = CommanderWithLowestNote(player);
+                if (lowestCmd != null && lowestCmd.CurrentNote <= 3)
+                {
+                    player.DiscardPile.Remove(card);
+                    player.Hand.Add(card);
+                }
+            }
+
             _cardsPlayedThisTurn++;
 
             if (_cardsPlayedThisTurn >= _cardsAllowedThisTurn)
@@ -250,6 +263,31 @@ namespace FourE.Core
             {
                 StartTurn(_state.OpponentOf(player));
             }
+        }
+
+        /// <summary>
+        /// Verifica se una carta è Test di Cooper per il controllo del ritorno in mano.
+        /// </summary>
+        /// <param name="card">Carta da controllare.</param>
+        /// <returns>True se è Test di Cooper.</returns>
+        private static bool IsCooperCard(CardDataSO card)
+        {
+            return card != null && card.CardName == "Test di Cooper";
+        }
+
+        /// <summary>
+        /// Restituisce il comandante del giocatore con la Note corrente più bassa.
+        /// In caso di parità restituisce il primo comandante (slot 0).
+        /// </summary>
+        private static CommanderState CommanderWithLowestNote(PlayerState player)
+        {
+            CommanderState lowest = player.Commanders[GameConstants.FirstCommanderIndex];
+            foreach (CommanderState c in player.Commanders)
+            {
+                if (c.CurrentNote < lowest.CurrentNote)
+                    lowest = c;
+            }
+            return lowest;
         }
 
         /// <summary>

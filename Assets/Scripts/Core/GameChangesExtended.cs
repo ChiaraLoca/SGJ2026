@@ -412,58 +412,6 @@ namespace FourE.Core
     }
 
     /// <summary>
-    /// Applica +2 Note al comandante del giocatore con la Note più bassa (Test di Cooper).
-    /// Se dopo l'applicazione la sua nota è ≤ 3, la carta Test di Cooper ritorna in mano.
-    /// </summary>
-    public sealed class CooperBuffChange : IGameChange
-    {
-        private readonly CommanderState _target;
-        private readonly PlayerState _player;
-        private readonly CardDataSO _card;
-        private readonly int _magnitude;
-
-        /// <summary>Crea la modifica di buff con ritorno condizionato della carta.</summary>
-        /// <param name="target">Comandante bersaglio (deve essere il più debole del giocatore).</param>
-        /// <param name="player">Giocatore proprietario della carta.</param>
-        /// <param name="card">Carta che potrebbe tornare in mano.</param>
-        /// <param name="magnitude">Aumento di note da applicare.</param>
-        public CooperBuffChange(CommanderState target, PlayerState player, CardDataSO card, int magnitude)
-        {
-            _target = target;
-            _player = player;
-            _card = card;
-            _magnitude = magnitude;
-        }
-
-        /// <inheritdoc/>
-        public void Apply()
-        {
-            if (_target == null || _player == null)
-            {
-                return;
-            }
-
-            _target.ApplyInstantDelta(_magnitude);
-            EventBus.Publish(new NoteChangedEvent(_target));
-
-            // Se la nota del comandante è ora ≤ 3, ritorna la carta in mano
-            if (_target.CurrentNote <= 3)
-            {
-                if (_player.DiscardPile.Count > 0)
-                {
-                    int lastIndex = _player.DiscardPile.Count - 1;
-                    CardDataSO lastCard = _player.DiscardPile[lastIndex];
-                    if (lastCard == _card)
-                    {
-                        _player.DiscardPile.RemoveAt(lastIndex);
-                        _player.Hand.Add(_card);
-                    }
-                }
-            }
-        }
-    }
-
-    /// <summary>
     /// Operazioni condivise sul mazzo, usate da più modifiche di pesca.
     /// </summary>
     internal static class DeckOps
