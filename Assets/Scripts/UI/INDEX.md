@@ -8,7 +8,7 @@ Torna all'[indice generale](../INDEX.md).
 
 | File | Tipo | Responsabilità / API chiave |
 |---|---|---|
-| [CardView.cs](CardView.cs) | `CardView : MonoBehaviour` | Vista prefab di una carta: `Bind(card, onClick, interactable)`. Prefab in `Assets/Prefabs/UI/CardView.prefab` |
+| [CardView.cs](CardView.cs) | `CardView : MonoBehaviour` | Vista prefab di una carta: `Bind(card, onClick, interactable)` mostra l'artwork completo quando disponibile, altrimenti i placeholder testuali. Prefab in `Assets/Prefabs/UI/CardView.prefab` |
 | [CommanderView.cs](CommanderView.cs) | `CommanderView : MonoBehaviour` | Vista comandante: `Bind(CommanderDTO, CommanderDataSO, actorNumber, commanderIndex)` → nome, Note, ritratto, debuff. `SetSelectable(bool, Action<int,int>)` attiva/disattiva l'overlay di selezione bersaglio |
 | [GameAudioController.cs](GameAudioController.cs) | `GameAudioController : MonoBehaviour` | Controller persistente evento-driven: musica principale in loop, crowd per menu/selezione comandante, SFX su carta, Verifica, acquisto, Shop ed esito locale da `GameStateSyncedEvent`. Auto-bind clip in editor da `Assets/Audio/*` |
 | [GameView.cs](GameView.cs) | `GameView : MonoBehaviour` | HUD principale. Si ridisegna su `GameStateSyncedEvent`, istanzia le carte di mano/shop (inclusa Verifica), inoltra le azioni a `NetworkGameManager.Submit*()`. Gestisce la selezione bersaglio per carte `SelectedCommanders`. `DefaultExecutionOrder(200)` |

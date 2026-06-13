@@ -17,6 +17,7 @@ namespace FourE.Cards
         [SerializeField] private CardType _cardType = CardType.Standard;
         [SerializeField] private CardAffinity _affinity = CardAffinity.Neutral;
         [SerializeField] private CardTag _tags = CardTag.None;
+        [SerializeField] private Sprite _artwork;
 
         [Header("Economia")]
         [SerializeField] private CardTier _tier = CardTier.C;
@@ -41,6 +42,9 @@ namespace FourE.Cards
 
         /// <summary>Tag tematici della carta (combinabili).</summary>
         public CardTag Tags => _tags;
+
+        /// <summary>Immagine completa usata dalla vista della carta.</summary>
+        public Sprite Artwork => _artwork;
 
         /// <summary>Fascia di costo della carta.</summary>
         public CardTier Tier => _tier;

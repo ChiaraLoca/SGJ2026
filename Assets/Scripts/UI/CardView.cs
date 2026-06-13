@@ -14,6 +14,7 @@ namespace FourE.UI
         [SerializeField] private Text _nameLabel;
         [SerializeField] private Text _costLabel;
         [SerializeField] private Text _descriptionLabel;
+        [SerializeField] private Image _artworkImage;
         [SerializeField] private Button _button;
 
         private CardDataSO _card;
@@ -29,20 +30,30 @@ namespace FourE.UI
         {
             _card = card;
             _onClick = onClick;
+            bool hasArtwork = card.Artwork != null;
+
+            if (_artworkImage != null)
+            {
+                _artworkImage.sprite = card.Artwork;
+                _artworkImage.preserveAspect = hasArtwork;
+            }
 
             if (_nameLabel != null)
             {
                 _nameLabel.text = card.CardName;
+                _nameLabel.gameObject.SetActive(!hasArtwork);
             }
 
             if (_costLabel != null)
             {
                 _costLabel.text = card.ShopCost.ToString();
+                _costLabel.gameObject.SetActive(!hasArtwork);
             }
 
             if (_descriptionLabel != null)
             {
                 _descriptionLabel.text = card.Description;
+                _descriptionLabel.gameObject.SetActive(!hasArtwork);
             }
 
             if (_button != null)
