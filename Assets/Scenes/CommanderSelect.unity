@@ -1828,7 +1828,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1533937793}
-  - component: {fileID: 1533937792}
   - component: {fileID: 1533937794}
   m_Layer: 0
   m_Name: CommanderSelect
@@ -1837,33 +1836,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1533937792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1533937791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e1e867c475d8524eb09d4eadb022b60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FourE.UI.CommanderSelectController
-  _content: {fileID: 11400000, guid: ab94d01a7c5063d4ba727a5937db6885, type: 2}
-  _optionPrefab: {fileID: 313512640420875591, guid: bff76a59b705e054b87dfeb62d0393c9, type: 3}
-  _optionsContainer: {fileID: 1189441890}
-  _commanderCardCellSize: {x: 200, y: 300}
-  _detailPanel: {fileID: 606228933}
-  _detailNameLabel: {fileID: 1333693555}
-  _detailBaseAbilityLabel: {fileID: 2076839376}
-  _detailUnlockLabel: {fileID: 643397458}
-  _detailSecondaryAbilityLabel: {fileID: 497992506}
-  _selectCommanderButton: {fileID: 628239961}
-  _titleLabel: {fileID: 91404345}
-  _selectionLabel: {fileID: 779378808}
-  _confirmButton: {fileID: 1363955938}
-  _clearButton: {fileID: 1236960616}
-  _gameSceneName: SampleUI
 --- !u!4 &1533937793
 Transform:
   m_ObjectHideFlags: 0
@@ -1892,7 +1864,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FourE.UI.CommanderSelectController
   _content: {fileID: 11400000, guid: ab94d01a7c5063d4ba727a5937db6885, type: 2}
-  _optionPrefab: {fileID: 0}
+  _optionPrefab: {fileID: 313512640420875591, guid: d18eabef7c0f776479e82246f9009000, type: 3}
   _optionsContainer: {fileID: 1189441890}
   _commanderCardCellSize: {x: 200, y: 300}
   _detailPanel: {fileID: 606228933}

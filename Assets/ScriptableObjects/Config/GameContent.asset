@@ -12,6 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23864e306bed07b4c96aa4e4a03181cc, type: 3}
   m_Name: GameContent
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Config.GameContentSO
+  _commanderCatalog:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   _firstPlayerCommanders:
   - {fileID: 11400000, guid: d5c42251712d54f4db7cc3c880431ce6, type: 2}
   - {fileID: 11400000, guid: dda8a7a8fee79464d972d8ff078c252c, type: 2}
