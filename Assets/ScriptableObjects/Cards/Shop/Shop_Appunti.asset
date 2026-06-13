@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 34c818aa966839443bbf9b3ed3fd5d04, type: 3}
-  m_Name: Shop_Iperka
+  m_Name: Shop_Appunti
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
-  _cardName: Iperka
+  _cardName: Appunti
   _description: +1 Nota e +1 Azione per ogni Tag distinto nel cimitero.
   _cardType: 0
   _affinity: 2
   _tags: 16
+  _artwork: {fileID: 21300000, guid: 1b94728d26f51c547b8aa66b4c43c1bd, type: 3}
   _tier: 2
   _shopCost: 0
   _minCreditsRequired: 0

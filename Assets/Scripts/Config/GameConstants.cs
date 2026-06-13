@@ -35,5 +35,8 @@ namespace FourE.Config
 
         /// <summary>Scarto tra un indice zero-based e il conteggio corrispondente.</summary>
         public const int IndexToCountOffset = 1;
+
+        /// <summary>Indice che rappresenta il fondo del mazzo, la cui cima e l'ultimo elemento.</summary>
+        public const int DeckBottomIndex = 0;
     }
 }

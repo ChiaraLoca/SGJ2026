@@ -136,5 +136,5 @@
 | Rappresentante di Classe | Estetica                     | Scambia le Note tra un tuo comandante e uno avversario (entrambi a scelta)                                | 1 comandante avversario (a scelta) + 1 proprio (a scelta) |
 | Bullismo                 | Pratica                      | L'avversario scarta dalla mano tutte le carte Studio                                                      | No target                                           |
 | Studio Notturno          | Studio                       | +10 Note a un comandante; costa 2 azioni                                                                  | Qualsiasi comandante                                |
-| Iperka                   | Pianificazione               | +1 Nota e +1 Azione per ogni Tag distinto nel tuo cimitero                                                | Qualsiasi comandante                                |
+| Appunti                  | Pianificazione               | +1 Nota e +1 Azione per ogni Tag distinto nel tuo cimitero                                                | Qualsiasi comandante                                |
 | Occupazione              | Pratica, Estetica, Letteratura | Sposta la Verifica dell'avversario in fondo al suo mazzo                                                | No target                                           |

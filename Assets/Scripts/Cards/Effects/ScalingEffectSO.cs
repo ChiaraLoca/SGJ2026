@@ -7,7 +7,7 @@ namespace FourE.Cards.Effects
 {
     /// <summary>
     /// Effetto che scala in base a un conteggio di carte/tag: applica Note, azioni e pesca
-    /// proporzionali. Usato da Ripasso, Riassunto, Iperka e Sabotaggio.
+    /// proporzionali. Usato da Ripasso, Riassunto, Appunti e Sabotaggio.
     /// </summary>
     [CreateAssetMenu(fileName = "ScalingEffect", menuName = "4E/Effects/Scaling", order = 5)]
     public sealed class ScalingEffectSO : CardEffectSO

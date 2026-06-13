@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using FourE.Cards;
 using FourE.Commanders;
+using FourE.Config;
 using FourE.Events;
 using FourE.Players;
 
@@ -349,6 +350,57 @@ namespace FourE.Core
         public void Apply()
         {
             _player.VerificaBlocked = true;
+        }
+    }
+
+    /// <summary>
+    /// Sposta la carta Verifica di un giocatore in fondo al suo mazzo (Occupazione).
+    /// </summary>
+    public sealed class MoveVerificaToDeckBottomChange : IGameChange
+    {
+        private readonly PlayerState _player;
+
+        /// <summary>Crea la modifica che sposta la Verifica in fondo al mazzo.</summary>
+        /// <param name="player">Giocatore proprietario della Verifica.</param>
+        public MoveVerificaToDeckBottomChange(PlayerState player)
+        {
+            _player = player;
+        }
+
+        /// <inheritdoc/>
+        public void Apply()
+        {
+            if (_player == null)
+            {
+                return;
+            }
+
+            CardDataSO verifica = RemoveVerifica(_player.Hand)
+                ?? RemoveVerifica(_player.Deck)
+                ?? RemoveVerifica(_player.DiscardPile);
+
+            if (verifica != null)
+            {
+                _player.Deck.Insert(GameConstants.DeckBottomIndex, verifica);
+            }
+        }
+
+        /// <summary>Rimuove e restituisce la Verifica dalla raccolta indicata.</summary>
+        /// <param name="cards">Raccolta in cui cercare.</param>
+        /// <returns>La Verifica rimossa, oppure null se assente.</returns>
+        private static CardDataSO RemoveVerifica(List<CardDataSO> cards)
+        {
+            for (int i = 0; i < cards.Count; i++)
+            {
+                CardDataSO card = cards[i];
+                if (card != null && card.IsVerifica)
+                {
+                    cards.RemoveAt(i);
+                    return card;
+                }
+            }
+
+            return null;
         }
     }
 

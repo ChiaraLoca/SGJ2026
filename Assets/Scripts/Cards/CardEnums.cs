@@ -4,7 +4,7 @@ namespace FourE.Cards
 {
     /// <summary>
     /// Tag tematici di una carta. Combinabili (una carta può avere più tag).
-    /// Usati da effetti che contano o filtrano per tag (Sabotaggio, Politica, Iperka…).
+    /// Usati da effetti che contano o filtrano per tag (Sabotaggio, Politica, Appunti…).
     /// </summary>
     [Flags]
     public enum CardTag
