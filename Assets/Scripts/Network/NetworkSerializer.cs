@@ -60,6 +60,7 @@ namespace FourE.Network
             writer.Write(state.Phase);
             writer.Write(state.RoundIndex);
             writer.Write(state.ActiveActorNumber);
+            writer.Write(state.RemainingActions);
             writer.Write(state.IsGameOver);
             writer.Write(state.WinnerActorNumber);
             writer.Write(state.IsDraw);
@@ -92,6 +93,7 @@ namespace FourE.Network
                 Phase = reader.ReadInt32(),
                 RoundIndex = reader.ReadInt32(),
                 ActiveActorNumber = reader.ReadInt32(),
+                RemainingActions = reader.ReadInt32(),
                 IsGameOver = reader.ReadBoolean(),
                 WinnerActorNumber = reader.ReadInt32(),
                 IsDraw = reader.ReadBoolean(),

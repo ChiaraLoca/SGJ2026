@@ -40,7 +40,9 @@ namespace FourE.UI
         [Header("Etichette")]
         [SerializeField] private Text _phaseLabel;
         [SerializeField] private Text _turnLabel;
+        [SerializeField] private Text _remainingActionsLabel;
         [SerializeField] private Text _creditsLabel;
+        [SerializeField] private Text _enemyCreditsLabel;
         [SerializeField] private Text _notesLabel;
         [SerializeField] private Text _outcomeLabel;
 
@@ -67,6 +69,9 @@ namespace FourE.UI
         private int _previousLocalActorNumber = -1;
         private bool _hasPendingLocalPlayStart;
         private Vector2 _pendingLocalPlayStart;
+        private int _displayedEnemyCredits;
+        private int _enemyCreditsRoundIndex = -1;
+        private int _enemyCreditsLocalActorNumber = -1;
 
         // Stato della selezione bersaglio multi-step.
         private CardDataSO _pendingTargetCard;
@@ -137,7 +142,7 @@ namespace FourE.UI
             PlayerDTO enemy = state.Players[1 - localIndex];
             bool isLocalTurn = state.ActiveActorNumber == sync.LocalActorNumber;
 
-            RenderLabels(state, phase, local, isLocalTurn);
+            RenderLabels(state, phase, local, enemy, isLocalTurn, sync.LocalActorNumber);
             RenderCommanders(local, enemy, localIndex);
             RenderHand(local, phase, isLocalTurn);
             RenderShop(local, phase);
@@ -149,7 +154,13 @@ namespace FourE.UI
         /// <summary>
         /// Aggiorna le etichette testuali di fase, turno, credits, note ed esito.
         /// </summary>
-        private void RenderLabels(GameStateDTO state, GamePhase phase, PlayerDTO local, bool isLocalTurn)
+        private void RenderLabels(
+            GameStateDTO state,
+            GamePhase phase,
+            PlayerDTO local,
+            PlayerDTO enemy,
+            bool isLocalTurn,
+            int localActorNumber)
         {
             if (_phaseLabel != null)
             {
@@ -161,9 +172,36 @@ namespace FourE.UI
                 _turnLabel.text = isLocalTurn ? "Il tuo turno" : "Turno avversario";
             }
 
+            if (_remainingActionsLabel != null)
+            {
+                bool showRemainingActions = phase == GamePhase.Play && isLocalTurn;
+                _remainingActionsLabel.gameObject.SetActive(showRemainingActions);
+                if (showRemainingActions)
+                {
+                    _remainingActionsLabel.text = $"Azioni rimanenti: {state.RemainingActions}";
+                }
+            }
+
             if (_creditsLabel != null)
             {
                 _creditsLabel.text = $"Credits: {local.Credits}";
+            }
+
+            if (_enemyCreditsLabel != null)
+            {
+                bool shouldRefreshEnemyCredits =
+                    _enemyCreditsRoundIndex != state.RoundIndex ||
+                    _enemyCreditsLocalActorNumber != localActorNumber ||
+                    phase == GamePhase.FinalExam;
+
+                if (shouldRefreshEnemyCredits)
+                {
+                    _displayedEnemyCredits = enemy.Credits;
+                    _enemyCreditsRoundIndex = state.RoundIndex;
+                    _enemyCreditsLocalActorNumber = localActorNumber;
+                }
+
+                _enemyCreditsLabel.text = $"Credits avversario: {_displayedEnemyCredits}";
             }
 
             if (_notesLabel != null)
@@ -290,7 +328,7 @@ namespace FourE.UI
                 previewTransform.anchorMin = centerAnchor;
                 previewTransform.anchorMax = centerAnchor;
                 previewTransform.pivot = centerAnchor;
-                previewTransform.anchoredPosition = Vector2.zero;
+                previewTransform.anchoredPosition = new Vector2(0f, 80f);
                 previewTransform.localScale = Vector3.one * _cardPreviewScale;
             }
 

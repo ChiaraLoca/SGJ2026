@@ -24,6 +24,7 @@ namespace FourE.Network
                 Phase = (int)state.CurrentPhase,
                 RoundIndex = state.CurrentRoundIndex,
                 ActiveActorNumber = state.ActivePlayer?.ActorNumber ?? -1,
+                RemainingActions = state.Turns?.RemainingActions ?? 0,
                 Players = new[]
                 {
                     BuildPlayer(state.Player0, registry),

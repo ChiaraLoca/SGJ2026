@@ -9,9 +9,9 @@ Torna all'[indice generale](../INDEX.md).
 |---|---|---|
 | [GamePhase.cs](GamePhase.cs) | enum `GamePhase` | Fasi: `Setup`, `Play`, `Verifica`, `Shop`, `Draw`, `FinalExam` |
 | [GameStateManager.cs](GameStateManager.cs) | `GameStateManager : MonoBehaviour` (singleton) | Possiede `Player0`/`Player1`/`ActivePlayer`, riferimenti a config/content, costruisce i manager. `StartMatch()`, `BuildContext()`, `GetPlayerByActor()`, `OpponentOf()`. Auto-start offline opzionale |
-| [PhaseManager.cs](PhaseManager.cs) | `PhaseManager` | State machine: `BeginMatch()`, `HandleVerifica()` (converte Note→Crediti per entrambi, poi SHOP), `FinishShop()` → Fase DRAW (reset Note, pesca), avanzamento round, Esame Finale (`ResolveOutcome()`) |
-| [RoundManager.cs](RoundManager.cs) | `RoundManager` | Conteggio round: `CurrentRoundIndex`, `IsFinalExamReached`, `Advance()` (pubblica `RoundEndedEvent`) |
-| [TurnManager.cs](TurnManager.cs) | `TurnManager` | Fase PLAY: `BeginRound()` (azzera contatore turni), `StartTurn()` (azzera immunità, incrementa `TurnInRound`), `TryPlayCard()`, `TryPlayVerifica()` (cerca la Verifica in mano; vietata nel 1° turno o se bloccata da Sciopero), `EndTurn()`, `GrantExtraActions()`, `DoubleRemainingActions()`, `CanPlayVerificaThisTurn` |
+| [PhaseManager.cs](PhaseManager.cs) | `PhaseManager` | State machine: `BeginMatch()`, `HandleVerifica()` converte Note→Crediti e apre lo Shop salvo nell'ultimo round, `FinishShop()` → Draw, avanzamento round, Esame Finale (`ResolveOutcome()`) |
+| [RoundManager.cs](RoundManager.cs) | `RoundManager` | Conteggio round: `CurrentRoundIndex`, `IsLastPlayableRound`, `IsFinalExamReached`, `Advance()` (pubblica `RoundEndedEvent`) |
+| [TurnManager.cs](TurnManager.cs) | `TurnManager` | Fase PLAY: contatori `CardsPlayedThisTurn`, `CardsAllowedThisTurn`, `RemainingActions`; avvio/fine turno, gioco carte e Verifica, bonus/raddoppio azioni |
 | [MatchSetup.cs](MatchSetup.cs) | `static MatchSetup` | `BuildPlayer()`: crea comandanti, mazzo mischiato, mano iniziale, Verifica, pool shop |
 | [GameContext.cs](GameContext.cs) | `GameContext` + interfaccia `IGameChange` | Contesto di risoluzione: stato in lettura, `RegisterChange()`/`CommitChanges()`, `ResolveCommanders(target)`, `ResolvePlayer(target)`, `SelectedTargets`, `State` (seam verso `GameStateManager`) |
 | [GameChanges.cs](GameChanges.cs) | `InstantNoteChange`, `AddActiveEffectChange`, `DrawCardsChange` | Implementazioni base `IGameChange` (Command): mutano lo stato al commit e pubblicano `NoteChangedEvent` |

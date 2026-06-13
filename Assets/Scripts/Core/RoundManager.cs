@@ -21,6 +21,10 @@ namespace FourE.Core
         /// <summary>True quando tutti i round di Verifica sono stati giocati.</summary>
         public bool IsFinalExamReached => CurrentRoundIndex >= _config.MaxRounds;
 
+        /// <summary>True se il round corrente è l'ultimo prima dell'Esame Finale.</summary>
+        public bool IsLastPlayableRound =>
+            CurrentRoundIndex + GameConstants.IndexToCountOffset >= _config.MaxRounds;
+
         /// <summary>
         /// Crea il gestore dei round.
         /// </summary>
