@@ -17,6 +17,8 @@ namespace FourE.UI
         [SerializeField] private OnlineLauncher _launcher;
         [Tooltip("Scena di gioco caricata in modalità hotseat (l'online la carica via Photon).")]
         [SerializeField] private string _gameSceneName = "SampleScene";
+        [Tooltip("Scena di selezione comandanti caricata in hotseat prima della partita.")]
+        [SerializeField] private string _selectionSceneName = "CommanderSelect";
 
         [Header("Pannelli")]
         [SerializeField] private GameObject _modePanel;
@@ -78,12 +80,18 @@ namespace FourE.UI
             SetStatus(string.Empty);
         }
 
-        /// <summary>Avvia subito una partita hotseat sullo stesso dispositivo.</summary>
+        /// <summary>
+        /// Avvia una partita hotseat: prima la selezione comandanti, poi la scena di gioco.
+        /// </summary>
         private void OnSameDeviceClicked()
         {
             SessionConfig.Mode = NetworkMode.Hotseat;
             SessionConfig.RoomCode = string.Empty;
-            SceneManager.LoadScene(_gameSceneName);
+            // Azzera eventuali selezioni precedenti: si rifanno nella schermata di selezione.
+            SessionConfig.Player0Commanders = null;
+            SessionConfig.Player1Commanders = null;
+            string nextScene = string.IsNullOrEmpty(_selectionSceneName) ? _gameSceneName : _selectionSceneName;
+            SceneManager.LoadScene(nextScene);
         }
 
         /// <summary>Passa al pannello della stanza online.</summary>
