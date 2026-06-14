@@ -29,5 +29,8 @@ namespace FourE.Config
 
         /// <summary>Indice che rappresenta il fondo del mazzo, la cui cima e l'ultimo elemento.</summary>
         public const int DeckBottomIndex = 0;
+
+        /// <summary>Nota massima del comandante (dopo il buff) affinché Test di Cooper ritorni in mano.</summary>
+        public const int CooperReturnThreshold = 3;
     }
 }

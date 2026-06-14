@@ -169,9 +169,8 @@ namespace FourE.Core
                 opponent.WikipediaInterceptActive = false;
             }
 
-            // Cattura la nota PRE-buff del comandante più basso per il controllo Cooper.
+            // Identifica il comandante più basso prima della risoluzione (potrebbe cambiare dopo il buff).
             CommanderState cooperLowest = IsCooperCard(card) ? player.LowestNoteCommander() : null;
-            int cooperNoteBeforeBuff = cooperLowest?.CurrentNote ?? 0;
 
             GameContext context = _state.BuildContext(selectedTargets);
             _resolver.Resolve(card, context);
@@ -179,8 +178,9 @@ namespace FourE.Core
             player.Hand.Remove(card);
             player.DiscardPile.Add(card);
 
-            // Test di Cooper: la condizione ≤ 3 si verifica sulla nota PRIMA del buff.
-            if (cooperLowest != null && cooperNoteBeforeBuff <= 3)
+            // Test di Cooper: la condizione ≤ 3 si verifica sulla nota DOPO il buff.
+            // La carta torna in mano solo se il comandante è ancora debole dopo aver ricevuto il +2.
+            if (cooperLowest != null && cooperLowest.CurrentNote <= GameConstants.CooperReturnThreshold)
             {
                 player.DiscardPile.Remove(card);
                 player.Hand.Add(card);
