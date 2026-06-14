@@ -18,8 +18,10 @@ MonoBehaviour:
   _affinity: 2
   _tags: 0
   _artwork: {fileID: 21300000, guid: 10ead65fde9456e4c82201c7180fdfbb, type: 3}
-  _tier: 0
+  _tier: 1
   _shopCost: 3
   _minCreditsRequired: 0
   _effects:
   - {fileID: 11400000, guid: 3e465e9c219fd914da46fa0970b4c398, type: 2}
+  _actionCost: 1
+  _isCooper: 0

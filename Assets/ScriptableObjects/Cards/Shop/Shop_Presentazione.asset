@@ -18,10 +18,12 @@ MonoBehaviour:
   _affinity: 2
   _tags: 49
   _artwork: {fileID: 21300000, guid: 7177b6d4207122a4eaa24b4c19eaa544, type: 3}
-  _tier: 0
+  _tier: 1
   _shopCost: 0
   _minCreditsRequired: 0
   _effects:
   - {fileID: 11400000, guid: ba27b0ae4fdcc174780ca67c41ad782a, type: 2}
   - {fileID: 11400000, guid: d9d860d44b07d3b42ace777a1b8016f7, type: 2}
   - {fileID: 11400000, guid: 19da6d4ac270680499b57731ad1401be, type: 2}
+  _actionCost: 1
+  _isCooper: 0
