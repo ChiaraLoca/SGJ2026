@@ -25,6 +25,7 @@ namespace FourE.Network
                 RoundIndex = state.CurrentRoundIndex,
                 ActiveActorNumber = state.ActivePlayer?.ActorNumber ?? -1,
                 RemainingActions = state.Turns?.RemainingActions ?? 0,
+                CanPlayVerificaThisTurn = state.Turns?.CanPlayVerificaThisTurn ?? false,
                 Players = new[]
                 {
                     BuildPlayer(state.Player0, registry),
@@ -56,6 +57,7 @@ namespace FourE.Network
                 Credits = player.Credits,
                 Notes = player.TotalNotes,
                 HandCardIds = registry.ToIds(player.Hand),
+                VerificaBlocked = player.VerificaBlocked,
                 DeckCount = player.Deck.Count,
                 DiscardCount = player.DiscardPile.Count,
                 ShopPoolCardIds = registry.ToIds(player.ShopPool),

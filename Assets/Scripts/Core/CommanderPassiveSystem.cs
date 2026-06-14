@@ -15,9 +15,11 @@ namespace FourE.Core
     public sealed class CommanderPassiveSystem : IDisposable
     {
         private readonly GameStateManager _state;
+        private readonly EffectResolver _resolver;
 
-        // Carta in corso di risoluzione, usata dalla secondaria di Storia (raddoppio carte Studio).
+        // Carta e contesto in corso di risoluzione, usati dalla secondaria di Inglese (copia carta) e di Storia.
         private CardDataSO _resolvingCard;
+        private GameContext _resolvingContext;
 
         // Guardia di rientranza: i bonus reattivi mutano la Nota senza ripubblicare NoteIncreasedEvent,
         // ma la guardia protegge da eventuali cascate future.
@@ -27,9 +29,11 @@ namespace FourE.Core
         /// Crea il sistema e lo iscrive agli eventi reattivi.
         /// </summary>
         /// <param name="state">Stato di gioco autoritativo.</param>
-        public CommanderPassiveSystem(GameStateManager state)
+        /// <param name="resolver">Resolver degli effetti carta, usato dalla secondaria di Inglese.</param>
+        public CommanderPassiveSystem(GameStateManager state, EffectResolver resolver)
         {
             _state = state;
+            _resolver = resolver;
             EventBus.Subscribe<CardResolvingEvent>(OnCardResolving);
             EventBus.Subscribe<CardPlayedEvent>(OnCardPlayed);
             EventBus.Subscribe<NoteIncreasedEvent>(OnNoteIncreased);
@@ -80,7 +84,7 @@ namespace FourE.Core
                         ApplyNoteDirect(commander, notes);
                         break;
                     case CommanderKind.Matematica:
-                        DeckOps.DrawTopToHand(player, CommanderPassiveConstants.MateExtraCardsPerRound);
+                        DeckOps.DrawTopToHand(player, CommanderPassiveConstants.MateExtraCardsPerRound, publishEvent: false);
                         break;
                 }
             }
@@ -137,12 +141,13 @@ namespace FourE.Core
         // =====================================================================
 
         /// <summary>
-        /// Memorizza la carta in risoluzione per le passive che dipendono dalla carta sorgente.
+        /// Memorizza carta e contesto in risoluzione per le passive che dipendono dalla carta sorgente.
         /// </summary>
         /// <param name="evt">Evento di carta in risoluzione.</param>
         private void OnCardResolving(CardResolvingEvent evt)
         {
             _resolvingCard = evt.Card;
+            _resolvingContext = evt.Context;
         }
 
         /// <summary>
@@ -170,11 +175,28 @@ namespace FourE.Core
                 switch (commander.Data.Kind)
                 {
                     case CommanderKind.Inglese:
-                        // Base: +1 all'altro comandante. Secondaria: copia l'intero aumento.
-                        int bonus = commander.SecondaryUnlocked
-                            ? evt.Amount
-                            : CommanderPassiveConstants.IngleseBaseBonusToOther;
-                        ApplyNoteDirect(OtherCommanderOf(owner, commander), bonus);
+                        // Base: sempre +1 all'altro comandante.
+                        ApplyNoteDirect(OtherCommanderOf(owner, commander), CommanderPassiveConstants.IngleseBaseBonusToOther);
+
+                        // Secondaria (aggiuntiva alla base): copia l'intera carta sull'altro comandante.
+                        if (commander.SecondaryUnlocked
+                            && _resolvingCard != null
+                            && _resolvingContext != null)
+                        {
+                            CommanderState other = OtherCommanderOf(owner, commander);
+                            if (other != null)
+                            {
+                                GameContext mirror = new GameContext(
+                                    _resolvingContext.ActivePlayer,
+                                    _resolvingContext.InactivePlayer,
+                                    _resolvingContext.CurrentRoundIndex,
+                                    _resolvingContext.Config,
+                                    _resolvingContext.SelectedTargets,
+                                    _resolvingContext.State);
+                                mirror.SetCommanderRedirect(commander, other);
+                                _resolver.Resolve(_resolvingCard, mirror);
+                            }
+                        }
                         break;
                     case CommanderKind.Storia:
                         // Secondaria: raddoppia l'effetto delle carte con tag Studio giocate su di lui.
@@ -224,6 +246,7 @@ namespace FourE.Core
         private void OnCardPlayed(CardPlayedEvent evt)
         {
             _resolvingCard = null;
+            _resolvingContext = null;
 
             PlayerState player = evt.Player;
             PlayerState opponent = _state.OpponentOf(player);

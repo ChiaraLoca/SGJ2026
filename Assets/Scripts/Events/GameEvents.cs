@@ -7,7 +7,8 @@ namespace FourE.Events
 {
     /// <summary>
     /// Pubblicato all'inizio della risoluzione di una carta standard, prima di applicarne gli effetti.
-    /// Consente alle passive reattive (es. Storia secondaria) di conoscere la carta sorgente.
+    /// Consente alle passive reattive (es. Storia secondaria, Inglese secondaria) di conoscere
+    /// la carta sorgente e il contesto di risoluzione corrente.
     /// </summary>
     public readonly struct CardResolvingEvent
     {
@@ -17,13 +18,18 @@ namespace FourE.Events
         /// <summary>Giocatore che sta giocando la carta.</summary>
         public PlayerState Player { get; }
 
+        /// <summary>Contesto di risoluzione corrente.</summary>
+        public GameContext Context { get; }
+
         /// <summary>Crea l'evento di carta in risoluzione.</summary>
         /// <param name="card">Carta in risoluzione.</param>
         /// <param name="player">Giocatore attivo.</param>
-        public CardResolvingEvent(CardDataSO card, PlayerState player)
+        /// <param name="context">Contesto di risoluzione corrente.</param>
+        public CardResolvingEvent(CardDataSO card, PlayerState player, GameContext context)
         {
             Card = card;
             Player = player;
+            Context = context;
         }
     }
 

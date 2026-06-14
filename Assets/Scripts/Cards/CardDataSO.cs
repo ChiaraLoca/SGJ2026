@@ -27,6 +27,8 @@ namespace FourE.Cards
 
         [Header("Effetti")]
         [SerializeField] private CardEffectSO[] _effects;
+        [Tooltip("Azioni consumate dalla giocata (default 1). Studio Notturno = 2.")]
+        [SerializeField] private int _actionCost = 1;
 
         /// <summary>Nome visualizzato della carta.</summary>
         public string CardName => _cardName;
@@ -62,6 +64,9 @@ namespace FourE.Cards
 
         /// <summary>Effetti applicati in sequenza quando la carta viene giocata.</summary>
         public IReadOnlyList<CardEffectSO> Effects => _effects;
+
+        /// <summary>Azioni consumate dalla giocata (1 per default; Studio Notturno = 2).</summary>
+        public int ActionCost => _actionCost > 0 ? _actionCost : 1;
 
         /// <summary>True se la carta è una Verifica che chiude il round.</summary>
         public bool IsVerifica => _cardType == CardType.Verifica;

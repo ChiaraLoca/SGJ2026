@@ -42,6 +42,26 @@ namespace FourE.Core
         /// </summary>
         public bool AutoStartOffline { get => _autoStartOffline; set => _autoStartOffline = value; }
 
+        /// <summary>
+        /// Metodo pubblico per assegnare il GameContent al runtime (utile per test offline).
+        /// </summary>
+        public void SetGameContent(GameContentSO content)
+        {
+            _content = content;
+        }
+
+        /// <summary>
+        /// Inizializzazione offline: bypass dei campi [SerializeField] e Setup manuale per test.
+        /// Deve essere chiamato prima di StartMatch().
+        /// </summary>
+        public void InitializeOffline(GameConfigSO config)
+        {
+            Instance = this;
+            _gameConfig = config;
+            _gameConfig.RegisterAsActive();
+            _rng = _randomSeed != 0 ? new System.Random(_randomSeed) : new System.Random();
+        }
+
         /// <summary>Istanza singleton accessibile dai sistemi che non si risolvono via Inspector.</summary>
         public static GameStateManager Instance { get; private set; }
 
@@ -237,11 +257,12 @@ namespace FourE.Core
         {
             _rounds = new RoundManager(_gameConfig);
             _shop = new ShopManager(this, _rng);
-            _turns = new TurnManager(this, new EffectResolver());
+            EffectResolver resolver = new EffectResolver();
+            _turns = new TurnManager(this, resolver);
             _startingPlayerDecider = new CoinFlipStartingPlayerDecider(_rng);
             _phases = new PhaseManager(this, _turns, _shop, _rounds, _startingPlayerDecider, _rng);
             _turns.SetPhaseManager(_phases);
-            _passives = new CommanderPassiveSystem(this);
+            _passives = new CommanderPassiveSystem(this, resolver);
         }
 
         /// <summary>

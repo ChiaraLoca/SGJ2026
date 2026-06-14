@@ -61,6 +61,7 @@ namespace FourE.Network
             writer.Write(state.RoundIndex);
             writer.Write(state.ActiveActorNumber);
             writer.Write(state.RemainingActions);
+            writer.Write(state.CanPlayVerificaThisTurn);
             writer.Write(state.IsGameOver);
             writer.Write(state.WinnerActorNumber);
             writer.Write(state.IsDraw);
@@ -94,6 +95,7 @@ namespace FourE.Network
                 RoundIndex = reader.ReadInt32(),
                 ActiveActorNumber = reader.ReadInt32(),
                 RemainingActions = reader.ReadInt32(),
+                CanPlayVerificaThisTurn = reader.ReadBoolean(),
                 IsGameOver = reader.ReadBoolean(),
                 WinnerActorNumber = reader.ReadInt32(),
                 IsDraw = reader.ReadBoolean(),
@@ -118,6 +120,7 @@ namespace FourE.Network
             writer.Write(player.ActorNumber);
             writer.Write(player.Credits);
             writer.Write(player.Notes);
+            writer.Write(player.VerificaBlocked);
             writer.Write(player.DeckCount);
             writer.Write(player.DiscardCount);
             WriteIntArray(writer, player.HandCardIds);
@@ -143,6 +146,7 @@ namespace FourE.Network
                 ActorNumber = reader.ReadInt32(),
                 Credits = reader.ReadInt32(),
                 Notes = reader.ReadInt32(),
+                VerificaBlocked = reader.ReadBoolean(),
                 DeckCount = reader.ReadInt32(),
                 DiscardCount = reader.ReadInt32(),
                 HandCardIds = ReadIntArray(reader),

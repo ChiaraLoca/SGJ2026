@@ -26,8 +26,8 @@ namespace FourE.Cards
             context.Card = card;
             context.SetSourceAffinity(card.Affinity);
 
-            // Notifica le passive reattive prima di applicare gli effetti (es. Storia secondaria).
-            EventBus.Publish(new CardResolvingEvent(card, context.ActivePlayer));
+            // Notifica le passive reattive prima di applicare gli effetti (es. Storia/Inglese secondaria).
+            EventBus.Publish(new CardResolvingEvent(card, context.ActivePlayer, context));
 
             foreach (CardEffectSO effect in card.Effects)
             {

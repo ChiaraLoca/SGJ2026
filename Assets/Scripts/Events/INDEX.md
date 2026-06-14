@@ -14,7 +14,7 @@ Torna all'[indice generale](../INDEX.md).
 
 | Evento | Pubblicato quando | Payload |
 |---|---|---|
-| `CardResolvingEvent` | inizio risoluzione carta (prima degli effetti) | `Card`, `Player` — usato dalle passive che dipendono dalla carta sorgente (Storia secondaria) |
+| `CardResolvingEvent` | inizio risoluzione carta (prima degli effetti) | `Card`, `Player`, `Context` — usato dalle passive che dipendono dalla carta sorgente (Storia secondaria, Inglese secondaria copia carta) |
 | `CardPlayedEvent` | una carta standard è risolta | `Card`, `Player` |
 | `CardBoughtEvent` | acquisto shop | `Card`, `Player` |
 | `VerificaPlayedEvent` | giocata la Verifica | `Player` |

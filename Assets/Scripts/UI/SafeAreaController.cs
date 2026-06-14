@@ -13,9 +13,18 @@ namespace FourE.UI
         [Tooltip("Pannello figlio del Canvas da adattare alla safe area del dispositivo.")]
         [SerializeField] private RectTransform _panel;
 
+
+ private bool _isApplied;
         private Rect _lastSafeArea;
         private ScreenOrientation _lastOrientation;
-        private bool _isApplied;
+
+        /// <summary>
+        /// Metodo pubblico per assegnare il pannello da adattare (utile per setup editor).
+        /// </summary>
+        public void SetPanel(RectTransform panel)
+        {
+            _panel = panel;
+        }
 
         private void Start()
         {
