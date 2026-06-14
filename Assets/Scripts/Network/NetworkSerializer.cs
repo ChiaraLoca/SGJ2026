@@ -147,8 +147,6 @@ namespace FourE.Network
                 writer.Write(commander.HasDebuff);
                 writer.Write(commander.ActiveBuffCount);
                 writer.Write(commander.ActiveDebuffCount);
-                writer.Write(commander.Kind);
-                writer.Write(commander.SecondaryUnlocked);
             }
         }
 
