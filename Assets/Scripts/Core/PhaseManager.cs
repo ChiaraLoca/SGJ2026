@@ -102,7 +102,6 @@ namespace FourE.Core
                 return;
             }
 
-            _shop.RefreshPool(player);
             _shopFinished.Add(player.ActorNumber);
 
             if (_shopFinished.Count >= GameConstants.PlayersPerMatch)
@@ -185,6 +184,9 @@ namespace FourE.Core
             {
                 commander.ResetForNewRound();
             }
+
+            // Aggiorna il pool shop con i Credits appena guadagnati, pronto per il round successivo.
+            _shop.RefreshPool(player);
         }
 
         /// <summary>
