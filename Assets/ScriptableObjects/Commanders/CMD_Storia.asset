@@ -22,7 +22,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1d909355992235b478d06d93a2b3c8dc, type: 2}
   - {fileID: 11400000, guid: 0b74b118288ad2f4dafb8a9266c1451d, type: 2}
   _portrait: {fileID: 3935121537038007630, guid: 1675c3960b24fd14882a44a1b2242a60, type: 3}
-  _baseAbilityDescription: +3 Note all'inizio di ogni round per ogni Verifica giocata
+  _baseAbilityDescription: +3 Voti all'inizio di ogni round per ogni Verifica giocata
     nella partita
   _unlockConditionDescription: Raggiungere 20 Crediti
   _secondaryAbilityDescription: Raddoppia l'effetto di tutte le carte Studio giocate

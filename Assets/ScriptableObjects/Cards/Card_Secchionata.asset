@@ -13,10 +13,15 @@ MonoBehaviour:
   m_Name: Card_Secchionata
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
   _cardName: Secchionata
-  _description: 'Studio matto e disperatissimo: +3 Note a entrambi.'
+  _description: 'Studio matto e disperatissimo: +3 Voti a entrambi.'
   _cardType: 0
   _affinity: 2
+  _tags: 0
+  _artwork: {fileID: 0}
+  _tier: 0
   _shopCost: 3
   _minCreditsRequired: 0
   _effects:
   - {fileID: 11400000, guid: 4eaf27ec4689a6b448fdfc6aa9977884, type: 2}
+  _actionCost: 1
+  _isCooper: 0

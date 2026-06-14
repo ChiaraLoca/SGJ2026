@@ -13,10 +13,15 @@ MonoBehaviour:
   m_Name: Card_Gavettone
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
   _cardName: Gavettone
-  _description: 'Caos in aula: -1 Note ai nemici.'
+  _description: 'Caos in aula: -1 Voti ai nemici.'
   _cardType: 0
   _affinity: 2
+  _tags: 0
+  _artwork: {fileID: 0}
+  _tier: 0
   _shopCost: 0
   _minCreditsRequired: 0
   _effects:
   - {fileID: 11400000, guid: ba5f2fa87f6f61345bdac17e81f29bf2, type: 2}
+  _actionCost: 1
+  _isCooper: 0

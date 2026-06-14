@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EduF_Minaccia
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
   _cardName: Minaccia
-  _description: -2 Note a un comandante avversario.
+  _description: -2 Voti a un secchione avversario.
   _cardType: 0
   _affinity: 1
   _tags: 1
@@ -23,3 +23,5 @@ MonoBehaviour:
   _minCreditsRequired: 0
   _effects:
   - {fileID: 11400000, guid: c59623bee41590a43a947371b086330e, type: 2}
+  _actionCost: 1
+  _isCooper: 0

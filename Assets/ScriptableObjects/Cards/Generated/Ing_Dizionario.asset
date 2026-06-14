@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ing_Dizionario
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
   _cardName: Dizionario
-  _description: +1 Nota; pesca 1 carta.
+  _description: +1 Voto; pesca 1 carta.
   _cardType: 0
   _affinity: 0
   _tags: 32

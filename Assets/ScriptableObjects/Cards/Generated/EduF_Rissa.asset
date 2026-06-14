@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EduF_Rissa
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
   _cardName: Rissa
-  _description: -6 Note a un avversario; -4 a un tuo comandante.
+  _description: -6 Voti a un avversario; -4 a un tuo secchione.
   _cardType: 0
   _affinity: 1
   _tags: 5
@@ -24,3 +24,5 @@ MonoBehaviour:
   _effects:
   - {fileID: 11400000, guid: 206e652fd0bbe054baf8755400e43b55, type: 2}
   - {fileID: 11400000, guid: a6522272e5f20ea49bebbda88f73d6af, type: 2}
+  _actionCost: 1
+  _isCooper: 0

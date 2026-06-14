@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ing_Fidanzata
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
   _cardName: Fidanzata
-  _description: Le tue Note non calano fino al prossimo turno.
+  _description: I tuoi Voti non calano fino al prossimo turno.
   _cardType: 0
   _affinity: 0
   _tags: 9

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Shop_Progetto
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
   _cardName: Progetto
-  _description: +1 carta; +1 Azione; +1 Nota.
+  _description: +1 carta; +1 Azione; +1 Voto.
   _cardType: 0
   _affinity: 2
   _tags: 50
@@ -25,3 +25,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ad4bcb62772b55c438da6f8c50dec1be, type: 2}
   - {fileID: 11400000, guid: 0a1b554f20dce1d43991122667aca877, type: 2}
   - {fileID: 11400000, guid: eab74b98f3c46ee4fb9a3ac045cb9832, type: 2}
+  _actionCost: 1
+  _isCooper: 0

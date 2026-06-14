@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EduF_TestCooper
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
   _cardName: Test di Cooper
-  _description: +1 Azione; +2 Note al tuo comandante.
+  _description: +1 Azione; +2 Voti al tuo secchione.
   _cardType: 0
   _affinity: 1
   _tags: 20
@@ -21,8 +21,8 @@ MonoBehaviour:
   _tier: 1
   _shopCost: 0
   _minCreditsRequired: 0
-  _actionCost: 1
-  _isCooper: 1
   _effects:
   - {fileID: 11400000, guid: feac31e7179b9b34985ff1fa9096d4a1, type: 2}
   - {fileID: 11400000, guid: 68d66f6731326f84fa3ddc18a7656051, type: 2}
+  _actionCost: 1
+  _isCooper: 1

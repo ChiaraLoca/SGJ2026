@@ -22,8 +22,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: acd6d68d70e6b79499ba276d3ab4a9d1, type: 2}
   - {fileID: 11400000, guid: a17a37eddd386034eb2ba2b45308da46, type: 2}
   _portrait: {fileID: 981607260671651682, guid: f13a18aaca62a6045ab59edcbe3c933d, type: 3}
-  _baseAbilityDescription: Quando aumenti la Nota di Inglese, +1 Nota all'altro tuo
-    comandante
+  _baseAbilityDescription: Quando aumenti il Voto di Inglese, +1 Voto all'altro tuo
+    secchione
   _unlockConditionDescription: Avere 15 carte nel mazzo
-  _secondaryAbilityDescription: Le carte che aumentano la Nota di Inglese vengono copiate
-    sull'altro comandante
+  _secondaryAbilityDescription: Le carte che aumentano il Voto di Inglese vengono
+    copiate sull'altro secchione

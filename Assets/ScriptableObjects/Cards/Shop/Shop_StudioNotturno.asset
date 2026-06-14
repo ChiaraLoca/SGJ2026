@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Shop_StudioNotturno
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
   _cardName: Studio Notturno
-  _description: +10 Note a un comandante; costa 2 azioni (non giocabile con 1 sola).
+  _description: +10 Voti a un secchione; costa 2 azioni (non giocabile con 1 sola).
   _cardType: 0
   _affinity: 2
   _tags: 2
@@ -21,6 +21,7 @@ MonoBehaviour:
   _tier: 2
   _shopCost: 0
   _minCreditsRequired: 0
-  _actionCost: 2
   _effects:
   - {fileID: 11400000, guid: 110e67ce789ea554fb39644deec5aba5, type: 2}
+  _actionCost: 2
+  _isCooper: 0

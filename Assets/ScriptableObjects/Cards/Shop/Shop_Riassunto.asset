@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Shop_Riassunto
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
   _cardName: Riassunto
-  _description: +1 Nota per ogni carta in mano.
+  _description: +1 Voto per ogni carta in mano.
   _cardType: 0
   _affinity: 2
   _tags: 34
@@ -23,3 +23,5 @@ MonoBehaviour:
   _minCreditsRequired: 0
   _effects:
   - {fileID: 11400000, guid: 57d67a279dc97e743bacecd62027fa81, type: 2}
+  _actionCost: 1
+  _isCooper: 0
