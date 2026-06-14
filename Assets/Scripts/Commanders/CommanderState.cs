@@ -88,13 +88,29 @@ namespace FourE.Commanders
         /// <summary>
         /// Applica una modifica istantanea alla Note (positiva per buff, negativa per debuff).
         /// Un delta negativo è annullato da immunità o da uno scudo anti-debuff.
+        /// La Note non scende mai sotto zero: il delta è troncato se porterebbe CurrentNote negativa.
         /// </summary>
         /// <param name="delta">Variazione con segno.</param>
         public void ApplyInstantDelta(int delta)
         {
-            if (delta < 0 && AbsorbNegative())
+            if (delta < 0)
             {
-                return;
+                if (AbsorbNegative())
+                {
+                    return;
+                }
+
+                // Clamp: evita debito interno quando CurrentNote è già 0.
+                int allowed = -CurrentNote;
+                if (delta < allowed)
+                {
+                    delta = allowed;
+                }
+
+                if (delta == 0)
+                {
+                    return;
+                }
             }
 
             _instantNoteDelta += delta;
