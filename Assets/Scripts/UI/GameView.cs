@@ -56,7 +56,6 @@ namespace FourE.UI
         [SerializeField] private Text _notesLabel;
         [SerializeField] private Text _deckCountLabel;
         [SerializeField] private Text _discardCountLabel;
-        [SerializeField] private Text _outcomeLabel;
 
         [Header("Comandanti locali")]
         [SerializeField] private CommanderView _localCommander0;
@@ -71,8 +70,12 @@ namespace FourE.UI
         [SerializeField] private Button _verificaButton;
         [SerializeField] private Button _finishShopButton;
 
+        [Header("Esito partita")]
+        [SerializeField] private GameOutcomePanel _outcomePanelPrefab;
+
         private readonly List<CardView> _spawnedHand = new();
         private readonly List<CardView> _spawnedShop = new();
+        private GameOutcomePanel _outcomePanel;
         private Canvas _canvas;
         private CardView _cardPreview;
         private CommanderAbilityPopup _commanderAbilityPopup;
@@ -157,6 +160,29 @@ namespace FourE.UI
         }
 
         /// <summary>
+        /// Mostra il pannello di esito al termine della partita. Lo istanzia una sola volta.
+        /// </summary>
+        /// <param name="state">Snapshot di stato sincronizzato.</param>
+        /// <param name="localActorNumber">Numero di attore del giocatore locale.</param>
+        private void RenderOutcome(GameStateDTO state, int localActorNumber)
+        {
+            if (!state.IsGameOver || _outcomePanel != null)
+            {
+                return;
+            }
+
+            if (_outcomePanelPrefab == null || _canvas == null)
+            {
+                return;
+            }
+
+            bool isWin = !state.IsDraw && state.WinnerActorNumber == localActorNumber;
+            _outcomePanel = Instantiate(_outcomePanelPrefab, _canvas.transform);
+            _outcomePanel.transform.SetAsLastSibling();
+            _outcomePanel.Bind(isWin, state.IsDraw);
+        }
+
+        /// <summary>
         /// Ridisegna l'intera HUD a partire dallo stato ricevuto.
         /// </summary>
         /// <param name="sync">Evento di sincronizzazione con DTO e attore locale.</param>
@@ -180,6 +206,7 @@ namespace FourE.UI
             RenderHand(local, phase, isLocalTurn, verificaPlayable, state.RemainingActions);
             RenderShop(local, phase);
             RenderButtons(phase, isLocalTurn, local);
+            RenderOutcome(state, sync.LocalActorNumber);
             AnimatePlayedCard(state, sync.LocalActorNumber);
             AnimateDrawnCards(state, sync.LocalActorNumber);
             _previousLocalActorNumber = sync.LocalActorNumber;
@@ -253,14 +280,7 @@ namespace FourE.UI
                 _discardCountLabel.text = local.DiscardCount.ToString();
             }
 
-            if (_outcomeLabel != null)
-            {
-                _outcomeLabel.gameObject.SetActive(state.IsGameOver);
-                if (state.IsGameOver)
-                {
-                    _outcomeLabel.text = ResolveOutcomeText(state, local.ActorNumber);
-                }
-            }
+
         }
 
         /// <summary>
@@ -741,19 +761,6 @@ namespace FourE.UI
                 eventCamera,
                 out Vector2 localPosition);
             return localPosition;
-        }
-
-        /// <summary>
-        /// Compone il testo d'esito dal punto di vista del giocatore locale.
-        /// </summary>
-        private string ResolveOutcomeText(GameStateDTO state, int localActorNumber)
-        {
-            if (state.IsDraw)
-            {
-                return "Pareggio";
-            }
-
-            return state.WinnerActorNumber == localActorNumber ? "Hai vinto!" : "Hai perso";
         }
 
         /// <summary>
