@@ -23,7 +23,7 @@ Torna all'[indice generale](../INDEX.md).
 | [EffectTestSceneManager.cs](EffectTestSceneManager.cs) | `EffectTestSceneManager : MonoBehaviour` | Gestore della scena di test effetti offline. Crea 2 giocatori con 2 comandanti ciascuno; permette applicare effetti carte istantaneamente senza turni. Risolve effetti via `EffectResolver`. Scena: `Assets/Scenes/EffectTest.unity` |
 | [EffectTestUIController.cs](EffectTestUIController.cs) | `EffectTestUIController : MonoBehaviour` | UI per il test: dropdown carte/giocatore/bersaglio, toggle passive, bottoni Apply/Reset, log risultati. Comunica con `EffectTestSceneManager` |
 | [CommanderTestView.cs](CommanderTestView.cs) | `CommanderTestView : MonoBehaviour` | Vista di un comandante nel test: nome, Note, buff/debuff attivi, stato passiva secondaria. `SetCommander()` e `Refresh()` per aggiornamenti real-time |
-| [GameOutcomePanel.cs](GameOutcomePanel.cs) | `GameOutcomePanel : MonoBehaviour` | Pannello modale di fine partita: `Bind(isWin, isDraw)` imposta titolo ("VITTORIA!" / "SCONFITTA" / "PAREGGIO") e sottotitolo. Pulsante → `SceneManager.LoadScene("MainMenu")` + disconnect Photon. Prefab in `Assets/Prefabs/UI/GameOutcomePanel.prefab` |
+| [GameOutcomePanel.cs](GameOutcomePanel.cs) | `GameOutcomePanel : MonoBehaviour` | Pannello modale di fine partita: `Bind(isWin, isDraw)` imposta titolo ("VITTORIA!" / "SCONFITTA" / "PAREGGIO"), sottotitolo e immagine esito (`_victorySprite`/`_defeatSprite`/`_drawSprite` in `Assets/Art/Outcome/`). Pulsante → `SceneManager.LoadScene("MainMenu")` + disconnect Photon. Prefab in `Assets/Prefabs/UI/GameOutcomePanel.prefab` |
 
 ### Editor/ (automazioni scene, setup)
 

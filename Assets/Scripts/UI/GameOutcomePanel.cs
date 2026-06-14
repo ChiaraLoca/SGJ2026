@@ -15,10 +15,16 @@ namespace FourE.UI
         [SerializeField] private Text _subtitleLabel;
         [SerializeField] private Button _mainMenuButton;
 
+        [Header("Immagini esito")]
+        [SerializeField] private Image _outcomeImage;
+        [SerializeField] private Sprite _victorySprite;
+        [SerializeField] private Sprite _defeatSprite;
+        [SerializeField] private Sprite _drawSprite;
+
         private const string MainMenuScene = "MainMenu";
 
         /// <summary>
-        /// Popola il pannello con i testi dell'esito e registra l'azione del pulsante.
+        /// Popola il pannello con testi e immagine dell'esito e registra l'azione del pulsante.
         /// </summary>
         /// <param name="isWin">True se il giocatore locale ha vinto.</param>
         /// <param name="isDraw">True se la partita è terminata in pareggio.</param>
@@ -32,6 +38,13 @@ namespace FourE.UI
             if (_subtitleLabel != null)
             {
                 _subtitleLabel.text = isDraw ? "Alla prossima!" : isWin ? "Ottimo lavoro!" : "Peccato...";
+            }
+
+            if (_outcomeImage != null)
+            {
+                Sprite sprite = isDraw ? _drawSprite : isWin ? _victorySprite : _defeatSprite;
+                _outcomeImage.sprite = sprite;
+                _outcomeImage.gameObject.SetActive(sprite != null);
             }
 
             if (_mainMenuButton != null)

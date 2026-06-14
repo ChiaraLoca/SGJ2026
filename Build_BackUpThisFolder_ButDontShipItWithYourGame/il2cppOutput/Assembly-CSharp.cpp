@@ -2623,6 +2623,10 @@ struct GameOutcomePanel_t5FD7F1A7E4B1C48547666FBBEFDF48420B5C0125  : public Mono
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ____titleLabel;
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ____subtitleLabel;
 	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ____mainMenuButton;
+	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ____outcomeImage;
+	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ____victorySprite;
+	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ____defeatSprite;
+	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ____drawSprite;
 };
 struct GameStateManager_t7AA371565EA3CAF37B97C2CB741C0F36637C8AC3  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -17330,6 +17334,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameOutcomePanel_Bind_m78EECD56DFE9B30EB
 	bool V_0 = false;
 	bool V_1 = false;
 	bool V_2 = false;
+	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* V_3 = NULL;
+	bool V_4 = false;
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* G_B6_0 = NULL;
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* G_B2_0 = NULL;
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* G_B4_0 = NULL;
@@ -17346,8 +17352,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameOutcomePanel_Bind_m78EECD56DFE9B30EB
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* G_B13_1 = NULL;
 	String_t* G_B15_0 = NULL;
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* G_B15_1 = NULL;
+	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* G_B21_0 = NULL;
+	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* G_B23_0 = NULL;
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/GameOutcomePanel.cs:27>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/GameOutcomePanel.cs:33>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->____titleLabel;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -17360,7 +17368,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameOutcomePanel_Bind_m78EECD56DFE9B30EB
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/GameOutcomePanel.cs:29>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/GameOutcomePanel.cs:35>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_3 = __this->____titleLabel;
 		bool L_4 = ___1_isDraw;
 		if (L_4)
@@ -17412,7 +17420,7 @@ IL_0031:
 
 IL_0038:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/GameOutcomePanel.cs:32>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/GameOutcomePanel.cs:38>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_6 = __this->____subtitleLabel;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_7;
@@ -17425,7 +17433,7 @@ IL_0038:
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/GameOutcomePanel.cs:34>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/GameOutcomePanel.cs:40>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_9 = __this->____subtitleLabel;
 		bool L_10 = ___1_isDraw;
 		if (L_10)
@@ -17477,8 +17485,8 @@ IL_0068:
 
 IL_006f:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/GameOutcomePanel.cs:37>
-		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_12 = __this->____mainMenuButton;
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/GameOutcomePanel.cs:43>
+		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_12 = __this->____outcomeImage;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_13;
 		L_13 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_12, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -17486,31 +17494,105 @@ IL_006f:
 		bool L_14 = V_2;
 		if (!L_14)
 		{
-			goto IL_00af;
+			goto IL_00c3;
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/GameOutcomePanel.cs:39>
-		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_15 = __this->____mainMenuButton;
-		NullCheck(L_15);
-		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_16;
-		L_16 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C(L_15, NULL);
-		NullCheck(L_16);
-		UnityEventBase_RemoveAllListeners_m6E68297189537543B0C72FE38804646CA204D076(L_16, NULL);
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/GameOutcomePanel.cs:40>
-		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_17 = __this->____mainMenuButton;
-		NullCheck(L_17);
-		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_18;
-		L_18 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C(L_17, NULL);
-		UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* L_19 = (UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7*)il2cpp_codegen_object_new(UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var);
-		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_19, NULL, (intptr_t)((void*)GameOutcomePanel_GoToMainMenu_m2C02CF246BABF68ECFECDA39EC3515DA401D3787_RuntimeMethod_var), NULL);
-		NullCheck(L_18);
-		UnityEvent_AddListener_m8AA4287C16628486B41DA41CA5E7A856A706D302(L_18, L_19, NULL);
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/GameOutcomePanel.cs:45>
+		bool L_15 = ___1_isDraw;
+		if (L_15)
+		{
+			goto IL_0096;
+		}
+	}
+	{
+		bool L_16 = ___0_isWin;
+		if (L_16)
+		{
+			goto IL_008e;
+		}
+	}
+	{
+		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_17 = __this->____defeatSprite;
+		G_B21_0 = L_17;
+		goto IL_0094;
 	}
 
-IL_00af:
+IL_008e:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/GameOutcomePanel.cs:42>
+		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_18 = __this->____victorySprite;
+		G_B21_0 = L_18;
+	}
+
+IL_0094:
+	{
+		G_B23_0 = G_B21_0;
+		goto IL_009c;
+	}
+
+IL_0096:
+	{
+		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_19 = __this->____drawSprite;
+		G_B23_0 = L_19;
+	}
+
+IL_009c:
+	{
+		V_3 = G_B23_0;
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/GameOutcomePanel.cs:46>
+		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_20 = __this->____outcomeImage;
+		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_21 = V_3;
+		NullCheck(L_20);
+		Image_set_sprite_mC0C248340BA27AAEE56855A3FAFA0D8CA12956DE(L_20, L_21, NULL);
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/GameOutcomePanel.cs:47>
+		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_22 = __this->____outcomeImage;
+		NullCheck(L_22);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_23;
+		L_23 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_22, NULL);
+		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_24 = V_3;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_25;
+		L_25 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_24, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		NullCheck(L_23);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_23, L_25, NULL);
+	}
+
+IL_00c3:
+	{
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/GameOutcomePanel.cs:50>
+		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_26 = __this->____mainMenuButton;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_27;
+		L_27 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_26, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		V_4 = L_27;
+		bool L_28 = V_4;
+		if (!L_28)
+		{
+			goto IL_0105;
+		}
+	}
+	{
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/GameOutcomePanel.cs:52>
+		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_29 = __this->____mainMenuButton;
+		NullCheck(L_29);
+		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_30;
+		L_30 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C(L_29, NULL);
+		NullCheck(L_30);
+		UnityEventBase_RemoveAllListeners_m6E68297189537543B0C72FE38804646CA204D076(L_30, NULL);
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/GameOutcomePanel.cs:53>
+		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_31 = __this->____mainMenuButton;
+		NullCheck(L_31);
+		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_32;
+		L_32 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C(L_31, NULL);
+		UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* L_33 = (UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7*)il2cpp_codegen_object_new(UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var);
+		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_33, NULL, (intptr_t)((void*)GameOutcomePanel_GoToMainMenu_m2C02CF246BABF68ECFECDA39EC3515DA401D3787_RuntimeMethod_var), NULL);
+		NullCheck(L_32);
+		UnityEvent_AddListener_m8AA4287C16628486B41DA41CA5E7A856A706D302(L_32, L_33, NULL);
+	}
+
+IL_0105:
+	{
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/GameOutcomePanel.cs:55>
 		return;
 	}
 }
@@ -17527,7 +17609,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameOutcomePanel_GoToMainMenu_m2C02CF246
 	}
 	bool V_0 = false;
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/GameOutcomePanel.cs:50>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/GameOutcomePanel.cs:63>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		bool L_0;
 		L_0 = PhotonNetwork_get_IsConnected_mBEE4F9C1E740A9CB648145D889BED707AC75D5ED(NULL);
@@ -17539,20 +17621,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameOutcomePanel_GoToMainMenu_m2C02CF246
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/GameOutcomePanel.cs:52>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/GameOutcomePanel.cs:65>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		bool L_2;
 		L_2 = PhotonNetwork_LeaveRoom_m3BE228D128665941646C4D4A1D5529B944F49744((bool)1, NULL);
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/GameOutcomePanel.cs:53>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/GameOutcomePanel.cs:66>
 		PhotonNetwork_Disconnect_mD35F0E20EE21ADD3BE7787C3E26EBC27476EF734(NULL);
 	}
 
 IL_0019:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/GameOutcomePanel.cs:56>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/GameOutcomePanel.cs:69>
 		il2cpp_codegen_runtime_class_init_inline(SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
 		SceneManager_LoadScene_mBB3DBC1601A21F8F4E8A5D68FED30EA9412F218E(_stringLiteral000E6F488C4BFBAD929A9ED558662797D830E719, NULL);
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/GameOutcomePanel.cs:57>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/GameOutcomePanel.cs:70>
 		return;
 	}
 }
