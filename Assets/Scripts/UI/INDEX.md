@@ -8,7 +8,7 @@ Torna all'[indice generale](../INDEX.md).
 
 | File | Tipo | Responsabilità / API chiave |
 |---|---|---|
-| [CardView.cs](CardView.cs) | `CardView : MonoBehaviour` | Vista prefab di una carta: `Bind(...)` mostra l'artwork, il badge costo opzionale e distingue il tap dalla pressione prolungata; `BindPreview(card)` configura una copia ingrandita non interattiva. Prefab in `Assets/Prefabs/UI/CardView.prefab` |
+| [CardView.cs](CardView.cs) | `CardView : MonoBehaviour` | Vista prefab di una carta: root cliccabile con contenuti visuali sotto `CardMask` (`Image` + `Mask`, sprite `Assets/Cards/RoundedCard.png`); `Bind(...)` mostra artwork e costo, `BindPreview(card)` configura l'anteprima. Prefab in `Assets/Prefabs/UI/CardView.prefab` |
 | [CardPlayAnimationController.cs](CardPlayAnimationController.cs) | `CardPlayAnimationController` | Coda di presentazione delle carte giocate: movimento dalla zona del giocatore al centro, ingrandimento, permanenza e dissolvenza |
 | [CardDrawAnimationController.cs](CardDrawAnimationController.cs) | `CardDrawAnimationController` | Coda di presentazione delle carte pescate: movimento ad arco dall'icona mazzo alla posizione definitiva nella mano locale |
 | [TargetHitEffect.cs](TargetHitEffect.cs) | `TargetHitEffect : MonoBehaviour` | Effetto prefab-first a X rossa pulsante mostrato sui comandanti locali colpiti durante la presentazione di una carta avversaria |
