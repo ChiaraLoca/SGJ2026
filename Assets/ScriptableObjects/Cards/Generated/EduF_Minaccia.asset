@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EduF_Minaccia
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
   _cardName: Minaccia
-  _description: -2 Voti a un secchione avversario.
+  _description: -2 Voti a un secchione scelto (tuo o avversario).
   _cardType: 0
   _affinity: 1
   _tags: 1
