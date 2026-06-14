@@ -10,7 +10,6 @@ Library: C:\Users\chiar\Documents\MyProjects\Summer Game Jam 2026\SGJ2026\Temp\B
 --target-framework=NetFramework
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=C:\Users\chiar\Documents\MyProjects\Summer Game Jam 2026\SGJ2026\Temp\Burst
---debug=Full
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.4.10f1/Editor/Data/PlaybackEngines/AndroidPlayer
 --decode-folder=C:\Users\chiar\Documents\MyProjects\Summer Game Jam 2026\SGJ2026\Library\Burst
 --output=C:\Users\chiar\Documents\MyProjects\Summer Game Jam 2026\SGJ2026\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
@@ -129,7 +128,6 @@ Library: C:\Users\chiar\Documents\MyProjects\Summer Game Jam 2026\SGJ2026\Temp\B
 --float-mode=Fast
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=C:\Users\chiar\Documents\MyProjects\Summer Game Jam 2026\SGJ2026\Temp\Burst
---debug=Full
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.4.10f1/Editor/Data/PlaybackEngines/AndroidPlayer
 --decode-folder=C:\Users\chiar\Documents\MyProjects\Summer Game Jam 2026\SGJ2026\Library\Burst
 --output=C:\Users\chiar\Documents\MyProjects\Summer Game Jam 2026\SGJ2026\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
@@ -148,7 +146,6 @@ Library: C:\Users\chiar\Documents\MyProjects\Summer Game Jam 2026\SGJ2026\Temp\B
 --target-framework=NetFramework
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=C:\Users\chiar\Documents\MyProjects\Summer Game Jam 2026\SGJ2026\Temp\Burst
---debug=Full
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.4.10f1/Editor/Data/PlaybackEngines/AndroidPlayer
 --decode-folder=C:\Users\chiar\Documents\MyProjects\Summer Game Jam 2026\SGJ2026\Library\Burst
 --output=C:\Users\chiar\Documents\MyProjects\Summer Game Jam 2026\SGJ2026\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
