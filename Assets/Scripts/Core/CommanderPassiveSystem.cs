@@ -132,7 +132,7 @@ namespace FourE.Core
             {
                 CommanderKind.Storia => owner.Credits >= CommanderPassiveConstants.StoriaSecondaryUnlockCredits,
                 CommanderKind.Matematica => roundIndex >= CommanderPassiveConstants.MateSecondaryUnlockRoundIndex,
-                CommanderKind.Inglese => owner.Deck.Count >= CommanderPassiveConstants.IngleseSecondaryUnlockDeckSize,
+                CommanderKind.Inglese => (owner.Deck.Count + owner.Hand.Count) >= CommanderPassiveConstants.IngleseSecondaryUnlockDeckSize,
                 CommanderKind.EducazioneFisica => commander.CurrentNote <= CommanderPassiveConstants.EduFisicaSecondaryUnlockNote,
                 _ => false
             };
