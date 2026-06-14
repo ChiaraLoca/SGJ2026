@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Shop_Politica
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
   _cardName: Politica
-  _description: L'avversario scarta tutte le carte Pratica.
+  _description: L'avversario scarta dalla mano tutte le carte con il tag Pratica.
   _cardType: 0
   _affinity: 2
   _tags: 8

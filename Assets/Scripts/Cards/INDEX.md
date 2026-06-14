@@ -22,7 +22,8 @@ Torna all'[indice generale](../INDEX.md).
 | [Effects/DebuffEffectSO.cs](Effects/DebuffEffectSO.cs) | `DebuffEffectSO` | −Note al bersaglio (istantaneo o a durata) |
 | [Effects/DrawEffectSO.cs](Effects/DrawEffectSO.cs) | `DrawEffectSO` + enum `DrawMode` | Pesca: conteggio fisso, fino a dimensione mano (Biblioteca), o intero mazzo (Approfondimento) |
 | [Effects/ConditionalEffectSO.cs](Effects/ConditionalEffectSO.cs) | `ConditionalEffectSO` | Applica un `_innerEffect` solo se `_condition.IsMet()` |
-| [Effects/ExtraActionEffectSO.cs](Effects/ExtraActionEffectSO.cs) | `ExtraActionEffectSO` | +/− azioni nel turno, o raddoppio (Metodo, Progetto, Copiare, Studio Notturno…) |
+| [Effects/ExtraActionEffectSO.cs](Effects/ExtraActionEffectSO.cs) | `ExtraActionEffectSO` | +/− azioni nel turno, o raddoppio (Metodo, Progetto…) |
+| [Effects/CopyNextCardEffectSO.cs](Effects/CopyNextCardEffectSO.cs) | `CopyNextCardEffectSO` | Imposta il flag `_copyNextCardActive` su `TurnManager`: la prossima carta giocata in questo turno viene risolta una seconda volta (Copiare). Il flag decade a fine turno. |
 | [Effects/CooperBuffEffectSO.cs](Effects/CooperBuffEffectSO.cs) | `CooperBuffEffectSO` | Applica +2 Note al comandante più debole; se nota ≤ 3 dopo, ritorna in mano (Test di Cooper) |
 | [Effects/WikipediaEffectSO.cs](Effects/WikipediaEffectSO.cs) | `WikipediaEffectSO` | Attiva scudo di intercettazione: la prossima carta dell'avversario viene copiata in mano |
 | [Effects/ScalingEffectSO.cs](Effects/ScalingEffectSO.cs) | `ScalingEffectSO` | Note/azioni/pesca proporzionali a un `CountSource` (Ripasso, Riassunto, Appunti, Sabotaggio) |

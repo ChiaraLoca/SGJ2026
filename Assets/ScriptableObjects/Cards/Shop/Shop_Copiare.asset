@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Shop_Copiare
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
   _cardName: Copiare
-  _description: Raddoppia le azioni rimanenti.
+  _description: Riapplica l'effetto della prossima carta giocata in questo turno.
   _cardType: 0
   _affinity: 2
   _tags: 20
