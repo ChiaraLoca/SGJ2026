@@ -2199,7 +2199,7 @@ GameObject:
   - component: {fileID: 970136100}
   - component: {fileID: 970136099}
   m_Layer: 0
-  m_Name: VerificaButton
+  m_Name: CancelTargetSelectionButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2262,7 +2262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5, g: 0.35, b: 0.2, a: 1}
+  m_Color: {r: 0.55, g: 0.12, b: 0.12, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3370,7 +3370,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Verifica
+  m_Text: ANNULLA
 --- !u!222 &1849787735
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3454,7 +3454,7 @@ MonoBehaviour:
   _enemyCommander0: {fileID: 284201118}
   _enemyCommander1: {fileID: 79102663}
   _endTurnButton: {fileID: 1416130982}
-  _verificaButton: {fileID: 970136099}
+  _cancelTargetSelectionButton: {fileID: 970136099}
   _finishShopButton: {fileID: 971430669}
   _outcomePanelPrefab: {fileID: 300260561834793385, guid: d171b749b73004c47b5e4da96e0b8848, type: 3}
 --- !u!1 &1955834012

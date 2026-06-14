@@ -67,7 +67,7 @@ namespace FourE.UI
 
         [Header("Azioni")]
         [SerializeField] private Button _endTurnButton;
-        [SerializeField] private Button _verificaButton;
+        [SerializeField] private Button _cancelTargetSelectionButton;
         [SerializeField] private Button _finishShopButton;
 
         [Header("Esito partita")]
@@ -135,10 +135,11 @@ namespace FourE.UI
                 _endTurnButton.onClick.AddListener(_network.SubmitEndTurn);
             }
 
-            // Il bottone Verifica separato è disattivato: la carta Verifica compare in mano.
-            if (_verificaButton != null)
+            // Il pulsante appare solo mentre una carta attende la scelta dei bersagli.
+            if (_cancelTargetSelectionButton != null)
             {
-                _verificaButton.gameObject.SetActive(false);
+                _cancelTargetSelectionButton.onClick.AddListener(CancelTargetSelection);
+                _cancelTargetSelectionButton.gameObject.SetActive(false);
             }
 
             if (_finishShopButton != null)
@@ -195,6 +196,11 @@ namespace FourE.UI
             PlayerDTO local = state.Players[localIndex];
             PlayerDTO enemy = state.Players[1 - localIndex];
             bool isLocalTurn = state.ActiveActorNumber == sync.LocalActorNumber;
+
+            if (_pendingTargetCard != null && (phase != GamePhase.Play || !isLocalTurn))
+            {
+                ExitTargetSelectionMode();
+            }
 
             bool verificaPlayable = isLocalTurn
                 && phase == GamePhase.Play
@@ -790,6 +796,7 @@ namespace FourE.UI
             _pendingTargetCard = card;
             _pendingEnemyActorNumber = -1;
             _pendingEnemyCommanderIndex = -1;
+            _cancelTargetSelectionButton?.gameObject.SetActive(true);
 
             if (card.RequiresEnemyTargetSelection)
                 ShowEnemySelection();
@@ -897,10 +904,20 @@ namespace FourE.UI
             _pendingTargetCard = null;
             _pendingEnemyActorNumber = -1;
             _pendingEnemyCommanderIndex = -1;
+            _cancelTargetSelectionButton?.gameObject.SetActive(false);
             _localCommander0?.SetSelectable(false, null);
             _localCommander1?.SetSelectable(false, null);
             _enemyCommander0?.SetSelectable(false, null);
             _enemyCommander1?.SetSelectable(false, null);
+        }
+
+        /// <summary>
+        /// Annulla la carta in attesa di bersaglio senza inviare alcun intent.
+        /// </summary>
+        private void CancelTargetSelection()
+        {
+            _hasPendingLocalPlayStart = false;
+            ExitTargetSelectionMode();
         }
     }
 }
