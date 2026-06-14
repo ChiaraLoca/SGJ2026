@@ -8,7 +8,7 @@ Torna all'[indice generale](../INDEX.md).
 | File | Tipo | Responsabilità / API chiave |
 |---|---|---|
 | [CardEnums.cs](CardEnums.cs) | enum `CardTag` (Flags), `CardTier`, `CountSource`, `CardType`, `CardAffinity`, `EffectTarget`, `EffectDuration` | Tutte le enumerazioni del dominio carte/effetti |
-| [CardDataSO.cs](CardDataSO.cs) | `CardDataSO : ScriptableObject` | Definizione immutabile di una carta: nome, descrizione, artwork, tipo, affinità, `Tags`, `Tier`, `ShopCost` (derivato dal config per tier), `MinCreditsRequired`, `Effects[]`, `IsVerifica`, `RequiresTargetSelection`, `HasTag()` |
+| [CardDataSO.cs](CardDataSO.cs) | `CardDataSO : ScriptableObject` | Definizione immutabile di una carta: nome, descrizione, artwork, tipo, affinità, `Tags`, `Tier`, `ShopCost` (derivato dal config per tier), `MinCreditsRequired`, `Effects[]`, `ActionCost` (default 1; Studio Notturno = 2), `IsVerifica`, `IsCooper` (flag serializzato; usato da `TurnManager.IsCooperCard`), `RequiresTargetSelection`, `HasTag()` |
 | [CardEffectSO.cs](CardEffectSO.cs) | abstract `CardEffectSO : ScriptableObject` | Base Strategy di tutti gli effetti. `Target`, `Apply(GameContext)` puro (registra `IGameChange`) |
 | [CardConditionSO.cs](CardConditionSO.cs) | abstract `CardConditionSO : ScriptableObject` | Base delle condizioni. `IsMet(GameContext) → bool` |
 | [ActiveEffect.cs](ActiveEffect.cs) | `ActiveEffect` | Effetto a durata runtime su un comandante: `Magnitude`, `Duration`, `RemainingTurns`, `TickTurn()` |
@@ -22,7 +22,7 @@ Torna all'[indice generale](../INDEX.md).
 | [Effects/DebuffEffectSO.cs](Effects/DebuffEffectSO.cs) | `DebuffEffectSO` | −Note al bersaglio (istantaneo o a durata) |
 | [Effects/DrawEffectSO.cs](Effects/DrawEffectSO.cs) | `DrawEffectSO` + enum `DrawMode` | Pesca: conteggio fisso, fino a dimensione mano (Biblioteca), o intero mazzo (Approfondimento) |
 | [Effects/ConditionalEffectSO.cs](Effects/ConditionalEffectSO.cs) | `ConditionalEffectSO` | Applica un `_innerEffect` solo se `_condition.IsMet()` |
-| [Effects/ExtraActionEffectSO.cs](Effects/ExtraActionEffectSO.cs) | `ExtraActionEffectSO` | +/− azioni nel turno, o raddoppio (Metodo, Progetto…) |
+| [Effects/ExtraActionEffectSO.cs](Effects/ExtraActionEffectSO.cs) | `ExtraActionEffectSO` | +/− azioni nel turno (Metodo, Progetto, Presentazione, Sciopero, Studio Notturno…) |
 | [Effects/CopyNextCardEffectSO.cs](Effects/CopyNextCardEffectSO.cs) | `CopyNextCardEffectSO` | Imposta il flag `_copyNextCardActive` su `TurnManager`: la prossima carta giocata in questo turno viene risolta una seconda volta (Copiare). Il flag decade a fine turno. |
 | [Effects/CooperBuffEffectSO.cs](Effects/CooperBuffEffectSO.cs) | `CooperBuffEffectSO` | Applica +2 Note al comandante più debole; se nota ≤ 3 dopo, ritorna in mano (Test di Cooper) |
 | [Effects/WikipediaEffectSO.cs](Effects/WikipediaEffectSO.cs) | `WikipediaEffectSO` | Attiva scudo di intercettazione: la prossima carta dell'avversario viene copiata in mano |

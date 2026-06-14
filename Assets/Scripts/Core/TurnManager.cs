@@ -132,18 +132,6 @@ namespace FourE.Core
         }
 
         /// <summary>
-        /// Raddoppia le azioni ancora disponibili nel turno corrente (Copiare legacy — non più usato).
-        /// </summary>
-        public void DoubleRemainingActions()
-        {
-            int remaining = _cardsAllowedThisTurn - _cardsPlayedThisTurn;
-            if (remaining > 0)
-            {
-                _cardsAllowedThisTurn += remaining;
-            }
-        }
-
-        /// <summary>
         /// Tenta di giocare una carta standard dalla mano del giocatore attivo.
         /// Raggiunto il limite di carte, il turno termina automaticamente.
         /// </summary>
@@ -182,7 +170,7 @@ namespace FourE.Core
             }
 
             // Cattura la nota PRE-buff del comandante più basso per il controllo Cooper.
-            CommanderState cooperLowest = IsCooperCard(card) ? CommanderWithLowestNote(player) : null;
+            CommanderState cooperLowest = IsCooperCard(card) ? player.LowestNoteCommander() : null;
             int cooperNoteBeforeBuff = cooperLowest?.CurrentNote ?? 0;
 
             GameContext context = _state.BuildContext(selectedTargets);
@@ -307,22 +295,7 @@ namespace FourE.Core
         /// <returns>True se è Test di Cooper.</returns>
         private static bool IsCooperCard(CardDataSO card)
         {
-            return card != null && card.CardName == "Test di Cooper";
-        }
-
-        /// <summary>
-        /// Restituisce il comandante del giocatore con la Note corrente più bassa.
-        /// In caso di parità restituisce il primo comandante (slot 0).
-        /// </summary>
-        private static CommanderState CommanderWithLowestNote(PlayerState player)
-        {
-            CommanderState lowest = player.Commanders[GameConstants.FirstCommanderIndex];
-            foreach (CommanderState c in player.Commanders)
-            {
-                if (c.CurrentNote < lowest.CurrentNote)
-                    lowest = c;
-            }
-            return lowest;
+            return card != null && card.IsCooper;
         }
 
         /// <summary>

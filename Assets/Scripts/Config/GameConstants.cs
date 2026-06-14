@@ -12,15 +12,6 @@ namespace FourE.Config
         /// <summary>Numero di comandanti controllati da ogni giocatore.</summary>
         public const int CommandersPerPlayer = 2;
 
-        /// <summary>Carte di partenza legate a ciascun comandante.</summary>
-        public const int StartingCardsPerCommander = 5;
-
-        /// <summary>Carte totali nella mano iniziale di setup (2 comandanti × 5).</summary>
-        public const int CardsInStartingHand = CommandersPerPlayer * StartingCardsPerCommander;
-
-        /// <summary>Round di Verifica giocati prima dell'Esame Finale.</summary>
-        public const int RoundsBeforeFinalExam = 3;
-
         /// <summary>Indice dello slot del primo comandante.</summary>
         public const int FirstCommanderIndex = 0;
 

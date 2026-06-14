@@ -82,8 +82,8 @@ namespace FourE.Network
         {
             CardRegistry registry = new();
 
-            RegisterCommanderCards(registry, content.FirstPlayerCommanders);
-            RegisterCommanderCards(registry, content.SecondPlayerCommanders);
+            // Registra tutti i comandanti selezionabili (include i default come fallback).
+            RegisterCommanderCards(registry, content.CommanderCatalog);
             registry.Register(content.VerificaCard);
 
             foreach (CardDataSO card in content.ShopCatalog)

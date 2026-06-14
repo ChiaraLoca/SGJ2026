@@ -29,6 +29,8 @@ namespace FourE.Cards
         [SerializeField] private CardEffectSO[] _effects;
         [Tooltip("Azioni consumate dalla giocata (default 1). Studio Notturno = 2.")]
         [SerializeField] private int _actionCost = 1;
+        [Tooltip("True solo per Test di Cooper: la carta torna in mano se la nota era <= 3 prima del buff.")]
+        [SerializeField] private bool _isCooper;
 
         /// <summary>Nome visualizzato della carta.</summary>
         public string CardName => _cardName;
@@ -70,6 +72,9 @@ namespace FourE.Cards
 
         /// <summary>True se la carta è una Verifica che chiude il round.</summary>
         public bool IsVerifica => _cardType == CardType.Verifica;
+
+        /// <summary>True se la carta è il Test di Cooper (ritorno in mano condizionato alla nota).</summary>
+        public bool IsCooper => _isCooper;
 
         /// <summary>Verifica se la carta possiede il tag indicato.</summary>
         /// <param name="tag">Tag da cercare.</param>

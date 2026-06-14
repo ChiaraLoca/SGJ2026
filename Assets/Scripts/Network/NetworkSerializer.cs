@@ -130,6 +130,8 @@ namespace FourE.Network
             writer.Write(commanders.Length);
             foreach (CommanderDTO commander in commanders)
             {
+                writer.Write(commander.Kind);
+                writer.Write(commander.SecondaryUnlocked);
                 writer.Write(commander.BaseNote);
                 writer.Write(commander.CurrentNote);
                 writer.Write(commander.HasDebuff);
@@ -159,6 +161,8 @@ namespace FourE.Network
             {
                 player.Commanders[i] = new CommanderDTO
                 {
+                    Kind = reader.ReadInt32(),
+                    SecondaryUnlocked = reader.ReadBoolean(),
                     BaseNote = reader.ReadInt32(),
                     CurrentNote = reader.ReadInt32(),
                     HasDebuff = reader.ReadBoolean(),

@@ -7,7 +7,7 @@ Torna all'[indice generale](../INDEX.md).
 
 | File | Tipo | Responsabilità / API chiave |
 |---|---|---|
-| [PlayerState.cs](PlayerState.cs) | `PlayerState` (`[Serializable]`) | Stato di un giocatore: `ActorNumber`, `Credits`, `Hand`/`Deck`/`DiscardPile`/`ShopPool`, `Commanders[]`, `VerificaBlocked` (Sciopero), `WikipediaInterceptActive`, `VerificaPlayedCount` (+`IncrementVerificaPlayedCount()`, passiva base Storia), `TotalNotes`, `AddCredits()`, `SpendCredits()`. Campi serializzati per ispezione runtime |
+| [PlayerState.cs](PlayerState.cs) | `PlayerState` (`[Serializable]`) | Stato di un giocatore: `ActorNumber`, `Credits`, `Hand`/`Deck`/`DiscardPile`/`ShopPool`, `Commanders[]`, `VerificaBlocked` (Sciopero), `WikipediaInterceptActive`, `VerificaPlayedCount` (+`IncrementVerificaPlayedCount()`, passiva base Storia), `TotalNotes`, `AddCredits()`, `SpendCredits()`, `LowestNoteCommander()` (usato da TurnManager, GameContext e CooperBuffEffectSO). Campi serializzati per ispezione runtime |
 
 ## Note
 

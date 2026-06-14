@@ -24,7 +24,6 @@ namespace FourE.Config
         [SerializeField] private int[] _cardsPlayablePerTurn = { 2, 3, 4 };
 
         [Header("Mano e Mazzo")]
-        [SerializeField] private int _startingCardsPerCommander = 5;
         [SerializeField] private int _startingHandSize = 3;
         [SerializeField] private int _turnStartDrawCount = 2;
 
@@ -50,9 +49,6 @@ namespace FourE.Config
         /// <summary>Numero di round di Verifica prima dell'Esame Finale.</summary>
         public int MaxRounds => _maxRounds;
 
-        /// <summary>Carte di partenza legate a ciascun comandante.</summary>
-        public int StartingCardsPerCommander => _startingCardsPerCommander;
-
         /// <summary>Carte pescate da ciascun giocatore nella Fase DRAW (inizio round).</summary>
         public int StartingHandSize => _startingHandSize;
 
@@ -71,8 +67,9 @@ namespace FourE.Config
         /// <summary>Moltiplicatore di conversione da Note a Credits.</summary>
         public float NoteToCreditsMultiplier => _noteToCreditsMultiplier;
 
-        /// <summary>Regola di spareggio dell'Esame Finale.</summary>
+        /// <summary>Regola di spareggio dell'Esame Finale (non ancora applicata da PhaseManager).</summary>
         public TiebreakRule TiebreakRule => _tiebreakRule;
+
 
         /// <summary>
         /// Restituisce il costo in Note di una fascia di carte.
@@ -112,5 +109,16 @@ namespace FourE.Config
         {
             Instance = this;
         }
+
+#if UNITY_EDITOR
+        private void OnValidate()
+        {
+            if (_cardsPlayablePerTurn == null || _cardsPlayablePerTurn.Length == 0)
+                Debug.LogError($"[GameConfigSO] '{name}': _cardsPlayablePerTurn è vuoto — GetCardsPlayablePerTurn restituirà 0 e nessuna carta sarà giocabile.", this);
+
+            if (_maxRounds <= 0)
+                Debug.LogWarning($"[GameConfigSO] '{name}': _maxRounds deve essere > 0.", this);
+        }
+#endif
     }
 }

@@ -34,27 +34,6 @@ namespace FourE.Core
     }
 
     /// <summary>
-    /// Raddoppia le azioni ancora disponibili nel turno corrente (Copiare).
-    /// </summary>
-    public sealed class DoubleActionsChange : IGameChange
-    {
-        private readonly TurnManager _turns;
-
-        /// <summary>Crea la modifica di raddoppio azioni.</summary>
-        /// <param name="turns">Gestore dei turni su cui agire.</param>
-        public DoubleActionsChange(TurnManager turns)
-        {
-            _turns = turns;
-        }
-
-        /// <inheritdoc/>
-        public void Apply()
-        {
-            _turns?.DoubleRemainingActions();
-        }
-    }
-
-    /// <summary>
     /// Fa pescare a un giocatore fino a raggiungere una dimensione di mano (Biblioteca).
     /// </summary>
     public sealed class DrawToHandSizeChange : IGameChange
@@ -206,6 +185,7 @@ namespace FourE.Core
             {
                 lowest.ApplyInstantDelta(amount);
                 EventBus.Publish(new NoteChangedEvent(lowest));
+                EventBus.Publish(new NoteIncreasedEvent(lowest, amount));
             }
         }
     }
@@ -241,6 +221,9 @@ namespace FourE.Core
             _b.ApplyInstantDelta(noteA - noteB);
             EventBus.Publish(new NoteChangedEvent(_a));
             EventBus.Publish(new NoteChangedEvent(_b));
+            // Pubblica NoteIncreasedEvent per chi ha guadagnato Note (trigger passive Inglese/Storia).
+            if (noteB > noteA) EventBus.Publish(new NoteIncreasedEvent(_a, noteB - noteA));
+            if (noteA > noteB) EventBus.Publish(new NoteIncreasedEvent(_b, noteA - noteB));
         }
     }
 
@@ -428,40 +411,6 @@ namespace FourE.Core
             }
 
             return null;
-        }
-    }
-
-    /// <summary>
-    /// Ritorna una carta dalla risoluzione in mano al giocatore (Test di Cooper).
-    /// Rimuove la carta dall'ultimo posto nel cimitero e la aggiunge alla mano.
-    /// </summary>
-    public sealed class ReturnCardToHandChange : IGameChange
-    {
-        private readonly PlayerState _player;
-        private readonly CardDataSO _card;
-
-        /// <summary>Crea la modifica di ritorno della carta in mano.</summary>
-        /// <param name="player">Giocatore a cui ritornare la carta.</param>
-        /// <param name="card">Carta da ritornare in mano.</param>
-        public ReturnCardToHandChange(PlayerState player, CardDataSO card)
-        {
-            _player = player;
-            _card = card;
-        }
-
-        /// <inheritdoc/>
-        public void Apply()
-        {
-            if (_player?.DiscardPile != null && _player.DiscardPile.Count > 0)
-            {
-                int lastIndex = _player.DiscardPile.Count - 1;
-                CardDataSO lastCard = _player.DiscardPile[lastIndex];
-                if (lastCard == _card)
-                {
-                    _player.DiscardPile.RemoveAt(lastIndex);
-                    _player.Hand.Add(_card);
-                }
-            }
         }
     }
 

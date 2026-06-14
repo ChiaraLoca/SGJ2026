@@ -3,6 +3,7 @@ using UnityEngine;
 using FourE.Cards;
 using FourE.Commanders;
 using FourE.Config;
+using FourE.Events;
 using FourE.Players;
 using FourE.Shop;
 
@@ -103,9 +104,11 @@ namespace FourE.Core
 
         /// <summary>
         /// Inizializza il singleton, registra il config e prepara il generatore casuale.
+        /// Pulisce l'EventBus statico per garantire una slate pulita anche in caso di reload di scena.
         /// </summary>
         private void Awake()
         {
+            EventBus.Clear();
             Instance = this;
             _gameConfig.RegisterAsActive();
             _rng = _randomSeed != 0 ? new System.Random(_randomSeed) : new System.Random();

@@ -107,5 +107,20 @@ namespace FourE.Players
         {
             _verificaPlayedCount++;
         }
+
+        /// <summary>
+        /// Restituisce il comandante con la Note corrente più bassa.
+        /// In caso di parità restituisce il primo comandante (slot 0).
+        /// </summary>
+        public CommanderState LowestNoteCommander()
+        {
+            CommanderState lowest = _commanders[GameConstants.FirstCommanderIndex];
+            foreach (CommanderState c in _commanders)
+            {
+                if (c.CurrentNote < lowest.CurrentNote)
+                    lowest = c;
+            }
+            return lowest;
+        }
     }
 }

@@ -141,21 +141,6 @@ namespace FourE.Core
         }
 
         /// <summary>
-        /// Restituisce il comandante del giocatore con la Note corrente più bassa.
-        /// In caso di parità restituisce il primo comandante (slot 0).
-        /// </summary>
-        private static CommanderState CommanderWithLowestNote(PlayerState player)
-        {
-            CommanderState lowest = player.Commanders[GameConstants.FirstCommanderIndex];
-            foreach (CommanderState c in player.Commanders)
-            {
-                if (c.CurrentNote < lowest.CurrentNote)
-                    lowest = c;
-            }
-            return lowest;
-        }
-
-        /// <summary>
         /// Registra una modifica da applicare al commit. Gli effetti non mutano lo stato direttamente.
         /// </summary>
         /// <param name="change">Modifica da accodare.</param>
@@ -271,7 +256,7 @@ namespace FourE.Core
                     // Gestito direttamente dall'effetto concreto (es. SwapNotesEffectSO).
                     break;
                 case EffectTarget.OwnLowestNoteCommander:
-                    yield return CommanderWithLowestNote(ActivePlayer);
+                    yield return ActivePlayer.LowestNoteCommander();
                     break;
                 case EffectTarget.AffinityCommander:
                     yield return ActivePlayer.Commanders[AffinitySlot(SourceAffinity)];
