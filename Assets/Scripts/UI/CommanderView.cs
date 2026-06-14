@@ -19,6 +19,7 @@ namespace FourE.UI
         [SerializeField] private Image _portrait;
         [SerializeField] private GameObject _debuffIndicator;
         [SerializeField] private Button _selectButton;
+        [SerializeField] private Outline _secondaryUnlockedOutline;
         [SerializeField] private float _longPressDuration = 0.35f;
         [SerializeField] private float _unlockPulseDuration = 0.8f;
         [SerializeField] private float _unlockPulseScale = 1.18f;
@@ -76,6 +77,11 @@ namespace FourE.UI
             if (_debuffIndicator != null)
             {
                 _debuffIndicator.SetActive(snapshot.HasDebuff);
+            }
+
+            if (_secondaryUnlockedOutline != null)
+            {
+                _secondaryUnlockedOutline.enabled = snapshot.SecondaryUnlocked;
             }
         }
 

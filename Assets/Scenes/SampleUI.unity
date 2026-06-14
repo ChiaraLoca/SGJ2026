@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 79102665}
   - component: {fileID: 79102664}
   - component: {fileID: 79102663}
+  - component: {fileID: 910000000000000001}
   m_Layer: 0
   m_Name: EnemyCommander1
   m_TagString: Untagged
@@ -155,10 +156,26 @@ MonoBehaviour:
   _portrait: {fileID: 79102664}
   _debuffIndicator: {fileID: 0}
   _selectButton: {fileID: 491161401}
+  _secondaryUnlockedOutline: {fileID: 910000000000000001}
   _longPressDuration: 0.35
   _unlockPulseDuration: 0.8
   _unlockPulseScale: 1.18
   _unlockPulseColor: {r: 1, g: 0.86, b: 0.2, a: 1}
+--- !u!114 &910000000000000001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79102662}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
+  m_EffectColor: {r: 1, g: 0.78, b: 0.08, a: 1}
+  m_EffectDistance: {x: 6, y: 6}
+  m_UseGraphicAlpha: 0
 --- !u!114 &79102664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -509,6 +526,7 @@ GameObject:
   - component: {fileID: 284201120}
   - component: {fileID: 284201119}
   - component: {fileID: 284201118}
+  - component: {fileID: 910000000000000002}
   m_Layer: 0
   m_Name: EnemyCommander0
   m_TagString: Untagged
@@ -533,10 +551,26 @@ MonoBehaviour:
   _portrait: {fileID: 284201119}
   _debuffIndicator: {fileID: 0}
   _selectButton: {fileID: 895285032}
+  _secondaryUnlockedOutline: {fileID: 910000000000000002}
   _longPressDuration: 0.35
   _unlockPulseDuration: 0.8
   _unlockPulseScale: 1.18
   _unlockPulseColor: {r: 1, g: 0.86, b: 0.2, a: 1}
+--- !u!114 &910000000000000002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284201117}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
+  m_EffectColor: {r: 1, g: 0.78, b: 0.08, a: 1}
+  m_EffectDistance: {x: 6, y: 6}
+  m_UseGraphicAlpha: 0
 --- !u!114 &284201119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -901,6 +935,7 @@ GameObject:
   - component: {fileID: 464379198}
   - component: {fileID: 464379197}
   - component: {fileID: 464379196}
+  - component: {fileID: 910000000000000003}
   m_Layer: 0
   m_Name: LocalCommander1
   m_TagString: Untagged
@@ -925,10 +960,26 @@ MonoBehaviour:
   _portrait: {fileID: 464379197}
   _debuffIndicator: {fileID: 0}
   _selectButton: {fileID: 229434495}
+  _secondaryUnlockedOutline: {fileID: 910000000000000003}
   _longPressDuration: 0.35
   _unlockPulseDuration: 0.8
   _unlockPulseScale: 1.18
   _unlockPulseColor: {r: 1, g: 0.86, b: 0.2, a: 1}
+--- !u!114 &910000000000000003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464379195}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
+  m_EffectColor: {r: 1, g: 0.78, b: 0.08, a: 1}
+  m_EffectDistance: {x: 6, y: 6}
+  m_UseGraphicAlpha: 0
 --- !u!114 &464379197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2513,6 +2564,7 @@ GameObject:
   - component: {fileID: 1188403286}
   - component: {fileID: 1188403285}
   - component: {fileID: 1188403284}
+  - component: {fileID: 910000000000000004}
   m_Layer: 0
   m_Name: LocalCommander0
   m_TagString: Untagged
@@ -2537,10 +2589,26 @@ MonoBehaviour:
   _portrait: {fileID: 1188403285}
   _debuffIndicator: {fileID: 0}
   _selectButton: {fileID: 1955834013}
+  _secondaryUnlockedOutline: {fileID: 910000000000000004}
   _longPressDuration: 0.35
   _unlockPulseDuration: 0.8
   _unlockPulseScale: 1.18
   _unlockPulseColor: {r: 1, g: 0.86, b: 0.2, a: 1}
+--- !u!114 &910000000000000004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188403283}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
+  m_EffectColor: {r: 1, g: 0.78, b: 0.08, a: 1}
+  m_EffectDistance: {x: 6, y: 6}
+  m_UseGraphicAlpha: 0
 --- !u!114 &1188403285
 MonoBehaviour:
   m_ObjectHideFlags: 0
