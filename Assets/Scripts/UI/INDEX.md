@@ -8,8 +8,10 @@ Torna all'[indice generale](../INDEX.md).
 
 | File | Tipo | Responsabilità / API chiave |
 |---|---|---|
-| [CardView.cs](CardView.cs) | `CardView : MonoBehaviour` | Vista prefab di una carta: `Bind(...)` mostra l'artwork e distingue il tap dalla pressione prolungata; `BindPreview(card)` configura una copia ingrandita non interattiva. Prefab in `Assets/Prefabs/UI/CardView.prefab` |
+| [CardView.cs](CardView.cs) | `CardView : MonoBehaviour` | Vista prefab di una carta: `Bind(...)` mostra l'artwork, il badge costo opzionale e distingue il tap dalla pressione prolungata; `BindPreview(card)` configura una copia ingrandita non interattiva. Prefab in `Assets/Prefabs/UI/CardView.prefab` |
 | [CardPlayAnimationController.cs](CardPlayAnimationController.cs) | `CardPlayAnimationController` | Coda di presentazione delle carte giocate: movimento dalla zona del giocatore al centro, ingrandimento, permanenza e dissolvenza |
+| [CardDrawAnimationController.cs](CardDrawAnimationController.cs) | `CardDrawAnimationController` | Coda di presentazione delle carte pescate: movimento ad arco dall'icona mazzo alla posizione definitiva nella mano locale |
+| [TargetHitEffect.cs](TargetHitEffect.cs) | `TargetHitEffect : MonoBehaviour` | Effetto prefab-first a X rossa pulsante mostrato sui comandanti locali colpiti durante la presentazione di una carta avversaria |
 | [CommanderView.cs](CommanderView.cs) | `CommanderView : MonoBehaviour` | Vista comandante: `Bind(...)` → nome, Note, ritratto, debuff e callback di pressione prolungata. `PlaySecondaryUnlockEffect()` riproduce il pulse di sblocco; `SetSelectable(...)` gestisce l'overlay bersaglio |
 | [CommanderAbilityPopup.cs](CommanderAbilityPopup.cs) | `CommanderAbilityPopup : MonoBehaviour` | Riquadro mostrato tenendo premuto un comandante: passiva base, requisito, passiva secondaria e stato bloccata/sbloccata. Prefab in `Assets/Prefabs/UI/CommanderAbilityPopup.prefab` |
 | [GameAudioController.cs](GameAudioController.cs) | `GameAudioController : MonoBehaviour` | Controller persistente evento-driven: musica principale in loop, crowd per menu/selezione comandante, SFX su carta, Verifica, acquisto, Shop ed esito locale da `GameStateSyncedEvent`. Auto-bind clip in editor da `Assets/Audio/*` |
@@ -39,7 +41,8 @@ Torna all'[indice generale](../INDEX.md).
 - **Mercato**: `ShopContainer` e le sue carte sono attivi solo durante la fase `Shop`.
 - **Layout carte**: oltre quattro carte la mano riduce dinamicamente lo spacing per restare nel contenitore; lo Shop usa una griglia da quattro colonne.
 - **Mazzo e scarti**: due indicatori locali mostrano i conteggi aggiornati dallo snapshot di rete.
-- **Carta giocata**: ogni nuovo `PlayedCardSequence` ricevuto nel DTO anima la carta locale dalla mano e quella avversaria dalla zona alta del campo; le animazioni sono accodate.
+- **Carta giocata**: ogni nuovo `PlayedCardSequence` ricevuto nel DTO anima la carta locale dalla mano e quella avversaria dalla zona alta del campo; durante la permanenza al centro una X pulsa sui comandanti locali bersagliati.
+- **Pescata**: ogni nuovo `DrawSequence` locale anima le carte effettivamente pescate dall'indicatore del mazzo alla loro posizione nella mano.
 - **Crediti avversari**: il valore mostrato viene aggiornato all'inizio del round, al cambio prospettiva hotseat e all'Esame Finale.
 - **Azioni rimanenti**: il contatore è visibile esclusivamente al giocatore attivo durante la fase `Play`.
 - **Menu iniziale**: la scena `Assets/Scenes/MainMenu.unity` (prima in Build Settings) ospita `MainMenuController` + `OnlineLauncher`. "Stesso telefono" carica `CommanderSelectUI` in hotseat e poi la scena di gioco (`SampleUI`); "Online" connette via Photon per codice stanza, sincronizza `CommanderSelectUI` e infine carica `SampleUI`.

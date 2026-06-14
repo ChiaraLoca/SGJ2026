@@ -54,7 +54,7 @@ namespace FourE.Core
             CollectionUtils.Shuffle(player.Deck, rng);
             DrawInitialHand(player, config.StartingHandSize);
 
-            player.ShopPool.AddRange(ShopPool.GeneratePool(shopCatalog, player.Credits, config.ShopPoolSize, rng));
+            player.ShopPool.AddRange(ShopPool.GeneratePool(shopCatalog, player.Credits, config, rng));
 
             return player;
         }

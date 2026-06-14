@@ -26,6 +26,7 @@ namespace FourE.UI
         [Header("Prefab")]
         [SerializeField] private CardView _cardPrefab;
         [SerializeField] private CommanderAbilityPopup _commanderAbilityPopupPrefab;
+        [SerializeField] private TargetHitEffect _targetHitEffectPrefab;
         [SerializeField] private float _cardPreviewScale = 2.4f;
 
         [Header("Animazione carta giocata")]
@@ -33,6 +34,12 @@ namespace FourE.UI
         [SerializeField] private float _playedCardMoveDuration = 0.4f;
         [SerializeField] private float _playedCardHoldDuration = 2f;
         [SerializeField] private float _playedCardFadeDuration = 0.35f;
+
+        [Header("Animazione pescata")]
+        [SerializeField] private Transform _deckPileAnchor;
+        [SerializeField] private float _drawCardStartScale = 0.4f;
+        [SerializeField] private float _drawCardMoveDuration = 0.45f;
+        [SerializeField] private float _drawCardArcHeight = 90f;
 
         [Header("Contenitori")]
         [SerializeField] private Transform _handContainer;
@@ -70,10 +77,13 @@ namespace FourE.UI
         private CardView _cardPreview;
         private CommanderAbilityPopup _commanderAbilityPopup;
         private CardPlayAnimationController _cardPlayAnimator;
+        private CardDrawAnimationController _cardDrawAnimator;
         private readonly Dictionary<(int ActorNumber, int CommanderIndex), bool> _secondaryUnlockStates = new();
         private bool _hasRenderedCommanderUnlockStates;
         private bool _hasObservedPlayedCardSequence;
         private int _lastObservedPlayedCardSequence;
+        private bool _hasObservedDrawSequence;
+        private int _lastObservedDrawSequence;
         private int _previousLocalActorNumber = -1;
         private bool _hasPendingLocalPlayStart;
         private Vector2 _pendingLocalPlayStart;
@@ -97,10 +107,18 @@ namespace FourE.UI
                 this,
                 _canvas,
                 _cardPrefab,
+                _targetHitEffectPrefab,
                 _playedCardScale,
                 _playedCardMoveDuration,
                 _playedCardHoldDuration,
                 _playedCardFadeDuration);
+            _cardDrawAnimator = new CardDrawAnimationController(
+                this,
+                _canvas,
+                _cardPrefab,
+                _drawCardStartScale,
+                _drawCardMoveDuration,
+                _drawCardArcHeight);
             EventBus.Subscribe<GameStateSyncedEvent>(OnStateSynced);
         }
 
@@ -134,6 +152,7 @@ namespace FourE.UI
             HideCardPreview();
             HideCommanderAbilityPopup();
             _cardPlayAnimator?.Dispose();
+            _cardDrawAnimator?.Dispose();
             EventBus.Unsubscribe<GameStateSyncedEvent>(OnStateSynced);
         }
 
@@ -161,7 +180,8 @@ namespace FourE.UI
             RenderHand(local, phase, isLocalTurn, verificaPlayable);
             RenderShop(local, phase);
             RenderButtons(phase, isLocalTurn, local);
-            AnimatePlayedCard(state);
+            AnimatePlayedCard(state, sync.LocalActorNumber);
+            AnimateDrawnCards(state, sync.LocalActorNumber);
             _previousLocalActorNumber = sync.LocalActorNumber;
         }
 
@@ -346,7 +366,7 @@ namespace FourE.UI
                 // La Verifica ha una condizione aggiuntiva: non può essere giocata al 1° turno del round.
                 bool playable = card.IsVerifica ? verificaPlayable : turnPlayable;
                 CardView view = Instantiate(_cardPrefab, _handContainer);
-                view.Bind(card, OnPlayCardClicked, playable, ShowCardPreview, HideCardPreview);
+                view.Bind(card, OnPlayCardClicked, playable, false, ShowCardPreview, HideCardPreview);
                 _spawnedHand.Add(view);
             }
 
@@ -414,7 +434,7 @@ namespace FourE.UI
 
                 bool affordable = local.Credits >= card.ShopCost;
                 CardView view = Instantiate(_cardPrefab, _shopContainer);
-                view.Bind(card, OnBuyCardClicked, affordable, ShowCardPreview, HideCardPreview);
+                view.Bind(card, OnBuyCardClicked, affordable, true, ShowCardPreview, HideCardPreview);
                 _spawnedShop.Add(view);
             }
         }
@@ -517,7 +537,7 @@ namespace FourE.UI
         /// Rileva una nuova carta giocata nello snapshot e ne avvia l'animazione.
         /// </summary>
         /// <param name="state">Snapshot sincronizzato.</param>
-        private void AnimatePlayedCard(GameStateDTO state)
+        private void AnimatePlayedCard(GameStateDTO state, int localActorNumber)
         {
             if (!_hasObservedPlayedCardSequence)
             {
@@ -544,7 +564,113 @@ namespace FourE.UI
                 : ResolveOpponentPlayStart();
 
             _hasPendingLocalPlayStart = false;
-            _cardPlayAnimator?.Enqueue(card, startPosition);
+            RectTransform[] hostileTargets = ResolveHostilePlayedTargets(state, localActorNumber);
+            _cardPlayAnimator?.Enqueue(card, startPosition, hostileTargets);
+        }
+
+        /// <summary>
+        /// Rileva una nuova pescata locale e anima le carte dal mazzo alla mano.
+        /// </summary>
+        private void AnimateDrawnCards(GameStateDTO state, int localActorNumber)
+        {
+            if (!_hasObservedDrawSequence)
+            {
+                _hasObservedDrawSequence = true;
+                _lastObservedDrawSequence = state.DrawSequence;
+                return;
+            }
+
+            if (state.DrawSequence <= _lastObservedDrawSequence)
+            {
+                return;
+            }
+
+            _lastObservedDrawSequence = state.DrawSequence;
+            if (state.LastDrawActorNumber != localActorNumber ||
+                state.LastDrawnCardIds == null ||
+                state.LastDrawnCardIds.Length == 0)
+            {
+                return;
+            }
+
+            Vector2 startPosition = _deckPileAnchor != null
+                ? WorldToCanvasPosition(_deckPileAnchor.position)
+                : _handContainer != null
+                    ? WorldToCanvasPosition(_handContainer.position)
+                    : Vector2.zero;
+            HashSet<CardView> assignedViews = new();
+
+            foreach (int cardId in state.LastDrawnCardIds)
+            {
+                CardView targetView = FindUnassignedHandView(cardId, assignedViews);
+                CardDataSO card = _network.Registry.GetCard(cardId);
+                if (targetView == null || card == null)
+                {
+                    continue;
+                }
+
+                assignedViews.Add(targetView);
+                Vector2 endPosition = WorldToCanvasPosition(targetView.transform.position);
+                _cardDrawAnimator?.Enqueue(card, startPosition, endPosition, targetView);
+            }
+        }
+
+        /// <summary>
+        /// Trova nella mano una copia non ancora assegnata della carta pescata.
+        /// </summary>
+        private CardView FindUnassignedHandView(int cardId, HashSet<CardView> assignedViews)
+        {
+            for (int i = _spawnedHand.Count - 1; i >= 0; i--)
+            {
+                CardView view = _spawnedHand[i];
+                if (view != null &&
+                    !assignedViews.Contains(view) &&
+                    _network.Registry.GetId(view.Card) == cardId)
+                {
+                    return view;
+                }
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// Risolve le view dei comandanti avversari rispetto a chi ha giocato l'ultima carta.
+        /// </summary>
+        private RectTransform[] ResolveHostilePlayedTargets(GameStateDTO state, int localActorNumber)
+        {
+            if (state.LastPlayedTargetActorNumbers == null ||
+                state.LastPlayedTargetCommanderIndices == null)
+            {
+                return Array.Empty<RectTransform>();
+            }
+
+            List<RectTransform> targets = new();
+            int count = Mathf.Min(
+                state.LastPlayedTargetActorNumbers.Length,
+                state.LastPlayedTargetCommanderIndices.Length);
+            for (int i = 0; i < count; i++)
+            {
+                int targetActorNumber = state.LastPlayedTargetActorNumbers[i];
+                if (targetActorNumber == state.LastPlayedActorNumber)
+                {
+                    continue;
+                }
+
+                bool isLocalTarget = targetActorNumber == localActorNumber;
+                int commanderIndex = state.LastPlayedTargetCommanderIndices[i];
+                CommanderView view = commanderIndex == GameConstants.FirstCommanderIndex
+                    ? isLocalTarget ? _localCommander0 : _enemyCommander0
+                    : commanderIndex == GameConstants.SecondCommanderIndex
+                        ? isLocalTarget ? _localCommander1 : _enemyCommander1
+                        : null;
+                if (view != null && view.transform is RectTransform rectTransform && !targets.Contains(rectTransform))
+                {
+                    targets.Add(rectTransform);
+                }
+            }
+
+            return targets.ToArray();
         }
 
         /// <summary>

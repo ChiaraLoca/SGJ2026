@@ -8,7 +8,7 @@ Torna all'[indice generale](../INDEX.md).
 | File | Tipo | Responsabilità / API chiave |
 |---|---|---|
 | [ShopManager.cs](ShopManager.cs) | `ShopManager` | `TryPurchase(player, card)` (valida costo/limite/pool, paga in Note, pubblica `CardBoughtEvent`), `RefreshPool(player)`, `ResetPurchases()` |
-| [ShopPool.cs](ShopPool.cs) | `static ShopPool` | `GeneratePool(catalog, credits, size, rng)` (filtra per `MinCreditsRequired`, clampa alla size), `RefreshSlots(...)` (sostituisce N slot) |
+| [ShopPool.cs](ShopPool.cs) | `static ShopPool` | `GeneratePool(catalog, credits, config, rng)` e `RefreshSlots(...)`: filtrano per `MinCreditsRequired`, garantiscono le quote minime A/B/C configurate e riempiono casualmente gli slot restanti |
 
 ## Note
 

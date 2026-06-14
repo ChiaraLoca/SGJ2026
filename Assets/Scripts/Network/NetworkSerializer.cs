@@ -68,6 +68,11 @@ namespace FourE.Network
             writer.Write(state.PlayedCardSequence);
             writer.Write(state.LastPlayedCardId);
             writer.Write(state.LastPlayedActorNumber);
+            WriteIntArray(writer, state.LastPlayedTargetActorNumbers);
+            WriteIntArray(writer, state.LastPlayedTargetCommanderIndices);
+            writer.Write(state.DrawSequence);
+            writer.Write(state.LastDrawActorNumber);
+            WriteIntArray(writer, state.LastDrawnCardIds);
 
             PlayerDTO[] players = state.Players ?? System.Array.Empty<PlayerDTO>();
             writer.Write(players.Length);
@@ -101,7 +106,12 @@ namespace FourE.Network
                 IsDraw = reader.ReadBoolean(),
                 PlayedCardSequence = reader.ReadInt32(),
                 LastPlayedCardId = reader.ReadInt32(),
-                LastPlayedActorNumber = reader.ReadInt32()
+                LastPlayedActorNumber = reader.ReadInt32(),
+                LastPlayedTargetActorNumbers = ReadIntArray(reader),
+                LastPlayedTargetCommanderIndices = ReadIntArray(reader),
+                DrawSequence = reader.ReadInt32(),
+                LastDrawActorNumber = reader.ReadInt32(),
+                LastDrawnCardIds = ReadIntArray(reader)
             };
 
             int playerCount = reader.ReadInt32();
@@ -135,6 +145,8 @@ namespace FourE.Network
                 writer.Write(commander.HasDebuff);
                 writer.Write(commander.ActiveBuffCount);
                 writer.Write(commander.ActiveDebuffCount);
+                writer.Write(commander.Kind);
+                writer.Write(commander.SecondaryUnlocked);
             }
         }
 
@@ -163,7 +175,9 @@ namespace FourE.Network
                     CurrentNote = reader.ReadInt32(),
                     HasDebuff = reader.ReadBoolean(),
                     ActiveBuffCount = reader.ReadInt32(),
-                    ActiveDebuffCount = reader.ReadInt32()
+                    ActiveDebuffCount = reader.ReadInt32(),
+                    Kind = reader.ReadInt32(),
+                    SecondaryUnlocked = reader.ReadBoolean()
                 };
             }
 

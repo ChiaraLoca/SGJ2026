@@ -73,8 +73,7 @@ namespace FourE.Shop
                 player.ShopPool,
                 _state.Content.ShopCatalog,
                 player.Credits,
-                _state.GameConfig.ShopRefreshSlots,
-                _state.GameConfig.ShopPoolSize,
+                _state.GameConfig,
                 _rng);
         }
 

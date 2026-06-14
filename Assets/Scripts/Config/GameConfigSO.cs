@@ -29,9 +29,12 @@ namespace FourE.Config
         [SerializeField] private int _turnStartDrawCount = 2;
 
         [Header("Shop")]
-        [SerializeField] private int _shopPoolSize = 12;
+        [SerializeField] private int _shopPoolSize = 8;
         [SerializeField] private int _shopPurchasesPerRound = 2;
         [SerializeField] private int _shopRefreshSlots = 3;
+        [SerializeField] private int _shopTierCSlots = 3;
+        [SerializeField] private int _shopTierBSlots = 2;
+        [SerializeField] private int _shopTierASlots = 1;
 
         [Header("Costi per Tier (Note)")]
         [SerializeField] private int _tierCostC = 1;
@@ -67,6 +70,15 @@ namespace FourE.Config
 
         /// <summary>Slot del pool shop rinfrescati a ogni Fase SHOP.</summary>
         public int ShopRefreshSlots => _shopRefreshSlots;
+
+        /// <summary>Numero minimo di carte Tier C garantite nello shop.</summary>
+        public int ShopTierCSlots => _shopTierCSlots;
+
+        /// <summary>Numero minimo di carte Tier B garantite nello shop.</summary>
+        public int ShopTierBSlots => _shopTierBSlots;
+
+        /// <summary>Numero minimo di carte Tier A garantite nello shop.</summary>
+        public int ShopTierASlots => _shopTierASlots;
 
         /// <summary>Moltiplicatore di conversione da Note a Credits.</summary>
         public float NoteToCreditsMultiplier => _noteToCreditsMultiplier;

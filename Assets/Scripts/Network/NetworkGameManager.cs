@@ -31,6 +31,13 @@ namespace FourE.Network
         private int _playedCardSequence;
         private int _lastPlayedCardId = CardRegistry.NoCard;
         private int _lastPlayedActorNumber = -1;
+        private int[] _lastPlayedTargetActorNumbers = System.Array.Empty<int>();
+        private int[] _lastPlayedTargetCommanderIndices = System.Array.Empty<int>();
+        private int[] _pendingTargetActorNumbers = System.Array.Empty<int>();
+        private int[] _pendingTargetCommanderIndices = System.Array.Empty<int>();
+        private int _drawSequence;
+        private int _lastDrawActorNumber = -1;
+        private int[] _lastDrawnCardIds = System.Array.Empty<int>();
 
 #if PHOTON_UNITY_NETWORKING
         /// <summary>Intervallo tra i tentativi di resync del client online (secondi).</summary>
@@ -65,6 +72,7 @@ namespace FourE.Network
             EventBus.Subscribe<GameOverEvent>(OnGameOver);
             EventBus.Subscribe<CardPlayedEvent>(OnCardPlayed);
             EventBus.Subscribe<VerificaPlayedEvent>(OnVerificaPlayed);
+            EventBus.Subscribe<CardsDrawnEvent>(OnCardsDrawn);
         }
 
         /// <summary>
@@ -151,6 +159,7 @@ namespace FourE.Network
             EventBus.Unsubscribe<GameOverEvent>(OnGameOver);
             EventBus.Unsubscribe<CardPlayedEvent>(OnCardPlayed);
             EventBus.Unsubscribe<VerificaPlayedEvent>(OnVerificaPlayed);
+            EventBus.Unsubscribe<CardsDrawnEvent>(OnCardsDrawn);
         }
 
         /// <summary>
@@ -216,7 +225,27 @@ namespace FourE.Network
         /// <param name="evt">Evento Verifica giocata dall'host.</param>
         private void OnVerificaPlayed(VerificaPlayedEvent evt)
         {
+            ClearPendingTargets();
             RegisterPlayedCard(_gameState.Content.VerificaCard, evt.Player.ActorNumber);
+        }
+
+        /// <summary>
+        /// Memorizza le carte effettivamente pescate per animarle nel prossimo snapshot.
+        /// </summary>
+        /// <param name="evt">Evento di pesca pubblicato dalla logica autoritativa.</param>
+        private void OnCardsDrawn(CardsDrawnEvent evt)
+        {
+            int count = Mathf.Min(evt.Count, evt.Player.Hand.Count);
+            int startIndex = evt.Player.Hand.Count - count;
+            int[] cardIds = new int[count];
+            for (int i = 0; i < count; i++)
+            {
+                cardIds[i] = _registry.GetId(evt.Player.Hand[startIndex + i]);
+            }
+
+            _drawSequence++;
+            _lastDrawActorNumber = evt.Player.ActorNumber;
+            _lastDrawnCardIds = cardIds;
         }
 
         /// <summary>
@@ -235,6 +264,7 @@ namespace FourE.Network
             _playedCardSequence++;
             _lastPlayedCardId = cardId;
             _lastPlayedActorNumber = actorNumber;
+            ResolvePresentationTargets(card, actorNumber);
         }
 
         /// <summary>
@@ -280,6 +310,11 @@ namespace FourE.Network
             dto.PlayedCardSequence = _playedCardSequence;
             dto.LastPlayedCardId = _lastPlayedCardId;
             dto.LastPlayedActorNumber = _lastPlayedActorNumber;
+            dto.LastPlayedTargetActorNumbers = _lastPlayedTargetActorNumbers;
+            dto.LastPlayedTargetCommanderIndices = _lastPlayedTargetCommanderIndices;
+            dto.DrawSequence = _drawSequence;
+            dto.LastDrawActorNumber = _lastDrawActorNumber;
+            dto.LastDrawnCardIds = _lastDrawnCardIds;
             _transport.BroadcastState(dto);
         }
 
@@ -298,12 +333,16 @@ namespace FourE.Network
             switch (intent.Type)
             {
                 case IntentType.PlayCard:
+                    _pendingTargetActorNumbers = CloneArray(intent.TargetActorNumbers);
+                    _pendingTargetCommanderIndices = CloneArray(intent.TargetCommanderIndices);
                     _gameState.Turns.TryPlayCard(player, _registry.GetCard(intent.CardId), ResolveTargets(intent));
+                    ClearPendingTargets();
                     break;
                 case IntentType.BuyCard:
                     _gameState.Shop.TryPurchase(player, _registry.GetCard(intent.CardId));
                     break;
                 case IntentType.PlayVerifica:
+                    ClearPendingTargets();
                     _gameState.Turns.TryPlayVerifica(player);
                     break;
                 case IntentType.EndTurn:
@@ -313,6 +352,106 @@ namespace FourE.Network
                     _gameState.Phases.FinishShop(player);
                     break;
             }
+        }
+
+        /// <summary>
+        /// Costruisce l'elenco dei comandanti interessati dalla carta per il feedback UI.
+        /// </summary>
+        /// <param name="card">Carta appena risolta.</param>
+        /// <param name="actorNumber">Attore che ha giocato la carta.</param>
+        private void ResolvePresentationTargets(CardDataSO card, int actorNumber)
+        {
+            List<int> actors = new();
+            List<int> indices = new();
+
+            int selectedCount = Mathf.Min(
+                _pendingTargetActorNumbers.Length,
+                _pendingTargetCommanderIndices.Length);
+            for (int i = 0; i < selectedCount; i++)
+            {
+                AddPresentationTarget(
+                    actors,
+                    indices,
+                    _pendingTargetActorNumbers[i],
+                    _pendingTargetCommanderIndices[i]);
+            }
+
+            PlayerState sourcePlayer = _gameState.GetPlayerByActor(actorNumber);
+            PlayerState opponent = sourcePlayer == _gameState.Player0
+                ? _gameState.Player1
+                : sourcePlayer == _gameState.Player1
+                    ? _gameState.Player0
+                    : null;
+            if (opponent != null && card?.Effects != null)
+            {
+                foreach (CardEffectSO effect in card.Effects)
+                {
+                    if (effect == null)
+                    {
+                        continue;
+                    }
+
+                    switch (effect.Target)
+                    {
+                        case EffectTarget.EnemyCommander0:
+                            AddPresentationTarget(actors, indices, opponent.ActorNumber, GameConstants.FirstCommanderIndex);
+                            break;
+                        case EffectTarget.EnemyCommander1:
+                            AddPresentationTarget(actors, indices, opponent.ActorNumber, GameConstants.SecondCommanderIndex);
+                            break;
+                        case EffectTarget.AllEnemyCommanders:
+                        case EffectTarget.AllCommanders:
+                            AddPresentationTarget(actors, indices, opponent.ActorNumber, GameConstants.FirstCommanderIndex);
+                            AddPresentationTarget(actors, indices, opponent.ActorNumber, GameConstants.SecondCommanderIndex);
+                            break;
+                    }
+                }
+            }
+
+            _lastPlayedTargetActorNumbers = actors.ToArray();
+            _lastPlayedTargetCommanderIndices = indices.ToArray();
+        }
+
+        /// <summary>
+        /// Aggiunge una coppia bersaglio evitando duplicati.
+        /// </summary>
+        private static void AddPresentationTarget(
+            List<int> actors,
+            List<int> indices,
+            int actorNumber,
+            int commanderIndex)
+        {
+            for (int i = 0; i < actors.Count; i++)
+            {
+                if (actors[i] == actorNumber && indices[i] == commanderIndex)
+                {
+                    return;
+                }
+            }
+
+            actors.Add(actorNumber);
+            indices.Add(commanderIndex);
+        }
+
+        /// <summary>
+        /// Azzera i bersagli temporanei dell'intent appena processato.
+        /// </summary>
+        private void ClearPendingTargets()
+        {
+            _pendingTargetActorNumbers = System.Array.Empty<int>();
+            _pendingTargetCommanderIndices = System.Array.Empty<int>();
+        }
+
+        /// <summary>
+        /// Copia un array ricevuto dal trasporto per non conservarne il riferimento mutabile.
+        /// </summary>
+        /// <param name="source">Array sorgente, eventualmente null.</param>
+        /// <returns>Copia indipendente o array vuoto.</returns>
+        private static int[] CloneArray(int[] source)
+        {
+            return source == null || source.Length == 0
+                ? System.Array.Empty<int>()
+                : (int[])source.Clone();
         }
 
         /// <summary>

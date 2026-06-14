@@ -15,6 +15,7 @@ namespace FourE.UI
     {
         [SerializeField] private Text _nameLabel;
         [SerializeField] private Text _costLabel;
+        [SerializeField] private Image _costBadge;
         [SerializeField] private Text _descriptionLabel;
         [SerializeField] private Image _artworkImage;
         [SerializeField] private Button _button;
@@ -38,12 +39,14 @@ namespace FourE.UI
         /// <param name="card">Carta da rappresentare.</param>
         /// <param name="onClick">Callback invocata al tap breve.</param>
         /// <param name="interactable">Se il pulsante e cliccabile nello stato corrente.</param>
+        /// <param name="showShopCost">Se mostrare il badge con il costo della carta.</param>
         /// <param name="onPreviewStarted">Callback invocata quando la pressione diventa prolungata.</param>
         /// <param name="onPreviewEnded">Callback invocata al rilascio della pressione prolungata.</param>
         public void Bind(
             CardDataSO card,
             Action<CardDataSO> onClick,
             bool interactable,
+            bool showShopCost,
             Action<CardDataSO> onPreviewStarted,
             Action onPreviewEnded)
         {
@@ -52,7 +55,7 @@ namespace FourE.UI
             _onPreviewStarted = onPreviewStarted;
             _onPreviewEnded = onPreviewEnded;
             _suppressNextClick = false;
-            Populate(card);
+            Populate(card, showShopCost);
 
             if (_button != null)
             {
@@ -73,7 +76,7 @@ namespace FourE.UI
             _onClick = null;
             _onPreviewStarted = null;
             _onPreviewEnded = null;
-            Populate(card);
+            Populate(card, false);
 
             if (_button != null)
             {
@@ -141,7 +144,8 @@ namespace FourE.UI
         /// Aggiorna gli elementi visivi con i dati della carta.
         /// </summary>
         /// <param name="card">Carta da rappresentare.</param>
-        private void Populate(CardDataSO card)
+        /// <param name="showShopCost">Se mostrare il badge con il costo nello shop.</param>
+        private void Populate(CardDataSO card, bool showShopCost)
         {
             bool hasArtwork = card.Artwork != null;
 
@@ -160,7 +164,12 @@ namespace FourE.UI
             if (_costLabel != null)
             {
                 _costLabel.text = card.ShopCost.ToString();
-                _costLabel.gameObject.SetActive(!hasArtwork);
+                _costLabel.gameObject.SetActive(showShopCost || !hasArtwork);
+            }
+
+            if (_costBadge != null)
+            {
+                _costBadge.gameObject.SetActive(showShopCost);
             }
 
             if (_descriptionLabel != null)

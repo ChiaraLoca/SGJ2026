@@ -16,8 +16,11 @@ MonoBehaviour:
   _cardsPlayablePerTurn: 020000000200000002000000
   _startingCardsPerCommander: 5
   _startingHandSize: 3
-  _shopPoolSize: 12
+  _shopPoolSize: 8
   _shopPurchasesPerRound: 2
   _shopRefreshSlots: 3
+  _shopTierCSlots: 3
+  _shopTierBSlots: 2
+  _shopTierASlots: 1
   _noteToCreditsMultiplier: 1
   _tiebreakRule: 0

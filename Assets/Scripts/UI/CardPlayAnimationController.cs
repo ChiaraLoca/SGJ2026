@@ -14,6 +14,7 @@ namespace FourE.UI
         private readonly MonoBehaviour _owner;
         private readonly Canvas _canvas;
         private readonly CardView _cardPrefab;
+        private readonly TargetHitEffect _targetHitEffectPrefab;
         private readonly float _targetScale;
         private readonly float _moveDuration;
         private readonly float _holdDuration;
@@ -29,6 +30,7 @@ namespace FourE.UI
         /// <param name="owner">MonoBehaviour usato per eseguire le coroutine.</param>
         /// <param name="canvas">Canvas che ospita le carte animate.</param>
         /// <param name="cardPrefab">Prefab visuale della carta.</param>
+        /// <param name="targetHitEffectPrefab">Prefab della X mostrata sul comandante colpito.</param>
         /// <param name="targetScale">Scala della carta al centro del campo.</param>
         /// <param name="moveDuration">Durata del movimento verso il centro.</param>
         /// <param name="holdDuration">Durata della permanenza al centro.</param>
@@ -37,6 +39,7 @@ namespace FourE.UI
             MonoBehaviour owner,
             Canvas canvas,
             CardView cardPrefab,
+            TargetHitEffect targetHitEffectPrefab,
             float targetScale,
             float moveDuration,
             float holdDuration,
@@ -45,6 +48,7 @@ namespace FourE.UI
             _owner = owner;
             _canvas = canvas;
             _cardPrefab = cardPrefab;
+            _targetHitEffectPrefab = targetHitEffectPrefab;
             _targetScale = targetScale;
             _moveDuration = moveDuration;
             _holdDuration = holdDuration;
@@ -56,14 +60,15 @@ namespace FourE.UI
         /// </summary>
         /// <param name="card">Carta da mostrare.</param>
         /// <param name="startPosition">Posizione iniziale locale rispetto al Canvas.</param>
-        internal void Enqueue(CardDataSO card, Vector2 startPosition)
+        /// <param name="targets">Comandanti locali colpiti, se presenti.</param>
+        internal void Enqueue(CardDataSO card, Vector2 startPosition, RectTransform[] targets)
         {
             if (card == null || _canvas == null || _cardPrefab == null)
             {
                 return;
             }
 
-            _requests.Enqueue(new AnimationRequest(card, startPosition));
+            _requests.Enqueue(new AnimationRequest(card, startPosition, targets));
             if (_routine == null)
             {
                 _routine = _owner.StartCoroutine(PlayQueueRoutine());
@@ -129,11 +134,43 @@ namespace FourE.UI
             canvasGroup.alpha = 1f;
 
             yield return AnimateToCenterRoutine(cardTransform);
+            ShowTargetHitEffects(request.Targets);
             yield return new WaitForSecondsRealtime(_holdDuration);
             yield return FadeRoutine(canvasGroup);
 
             Object.Destroy(_activeCard.gameObject);
             _activeCard = null;
+        }
+
+        /// <summary>
+        /// Mostra la X sopra il comandante colpito per la permanenza della carta al centro.
+        /// </summary>
+        private void ShowTargetHitEffects(RectTransform[] targets)
+        {
+            if (targets == null || _targetHitEffectPrefab == null)
+            {
+                return;
+            }
+
+            foreach (RectTransform target in targets)
+            {
+                if (target == null)
+                {
+                    continue;
+                }
+
+                TargetHitEffect effect = Object.Instantiate(_targetHitEffectPrefab, target);
+                if (effect.transform is RectTransform effectTransform)
+                {
+                    effectTransform.anchorMin = Vector2.zero;
+                    effectTransform.anchorMax = Vector2.one;
+                    effectTransform.offsetMin = Vector2.zero;
+                    effectTransform.offsetMax = Vector2.zero;
+                }
+
+                effect.transform.SetAsLastSibling();
+                effect.Play(_holdDuration + _fadeDuration);
+            }
         }
 
         /// <summary>
@@ -191,15 +228,20 @@ namespace FourE.UI
             /// <summary>Posizione iniziale locale nel Canvas.</summary>
             internal Vector2 StartPosition { get; }
 
+            /// <summary>Comandanti locali colpiti dalla carta, se presenti.</summary>
+            internal RectTransform[] Targets { get; }
+
             /// <summary>
             /// Crea una richiesta di animazione.
             /// </summary>
             /// <param name="card">Carta da animare.</param>
             /// <param name="startPosition">Posizione iniziale locale nel Canvas.</param>
-            internal AnimationRequest(CardDataSO card, Vector2 startPosition)
+            /// <param name="targets">Comandanti locali colpiti, se presenti.</param>
+            internal AnimationRequest(CardDataSO card, Vector2 startPosition, RectTransform[] targets)
             {
                 Card = card;
                 StartPosition = startPosition;
+                Targets = targets;
             }
         }
     }
