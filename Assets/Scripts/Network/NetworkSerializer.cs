@@ -179,9 +179,7 @@ namespace FourE.Network
                     CurrentNote = reader.ReadInt32(),
                     HasDebuff = reader.ReadBoolean(),
                     ActiveBuffCount = reader.ReadInt32(),
-                    ActiveDebuffCount = reader.ReadInt32(),
-                    Kind = reader.ReadInt32(),
-                    SecondaryUnlocked = reader.ReadBoolean()
+                    ActiveDebuffCount = reader.ReadInt32()
                 };
             }
 
