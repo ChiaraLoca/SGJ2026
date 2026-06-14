@@ -45,6 +45,7 @@ namespace FourE.UI
         [SerializeField] private Text _detailSecondaryAbilityLabel;
         [SerializeField] private Button _selectCommanderButton;
         [SerializeField] private Text _selectCommanderButtonLabel;
+        [SerializeField] private Button _closeDetailButton;
 
         [Header("Etichette")]
         [SerializeField] private Text _titleLabel;
@@ -78,6 +79,7 @@ namespace FourE.UI
 
             if (_detailPanel != null) _detailPanel.SetActive(false);
             if (_selectCommanderButton != null) _selectCommanderButton.onClick.AddListener(OnSelectInspectedClicked);
+            if (_closeDetailButton != null) _closeDetailButton.onClick.AddListener(HideDetailPanel);
 
             BuildOptions();
 
@@ -159,9 +161,21 @@ namespace FourE.UI
             }
 
             if (_detailNameLabel != null) _detailNameLabel.text = data.CommanderName;
-            if (_detailBaseAbilityLabel != null) _detailBaseAbilityLabel.text = data.BaseAbilityDescription;
-            if (_detailUnlockLabel != null) _detailUnlockLabel.text = data.UnlockConditionDescription;
-            if (_detailSecondaryAbilityLabel != null) _detailSecondaryAbilityLabel.text = data.SecondaryAbilityDescription;
+            if (_detailBaseAbilityLabel != null)
+            {
+                _detailBaseAbilityLabel.text = $"ABILITA BASE\n{data.BaseAbilityDescription}";
+            }
+
+            if (_detailUnlockLabel != null)
+            {
+                _detailUnlockLabel.text = $"SBLOCCO\n{data.UnlockConditionDescription}";
+            }
+
+            if (_detailSecondaryAbilityLabel != null)
+            {
+                _detailSecondaryAbilityLabel.text = $"ABILITA SECONDARIA\n{data.SecondaryAbilityDescription}";
+            }
+
             RefreshSelectionButton();
         }
 
@@ -180,10 +194,24 @@ namespace FourE.UI
             {
                 _currentPicks.RemoveAt(selectedIndex);
                 RefreshSelectionUI();
+                HideDetailPanel();
                 return;
             }
 
             OnCommanderPicked(_inspectedKind);
+            HideDetailPanel();
+        }
+
+        /// <summary>
+        /// Chiude il popup di dettaglio e azzera il comandante ispezionato.
+        /// </summary>
+        private void HideDetailPanel()
+        {
+            _hasInspectedKind = false;
+            if (_detailPanel != null)
+            {
+                _detailPanel.SetActive(false);
+            }
         }
 
         /// <summary>
@@ -214,6 +242,7 @@ namespace FourE.UI
             }
 
             _currentPicks.Clear();
+            HideDetailPanel();
             RefreshSelectionUI();
         }
 
@@ -263,16 +292,15 @@ namespace FourE.UI
 
             bool isSelected = _hasInspectedKind && _currentPicks.Contains(_inspectedKind);
             bool hasAvailableSlot = _currentPicks.Count < GameConstants.CommandersPerPlayer;
-            _selectCommanderButton.interactable =
-                !_awaitingOthers &&
-                _hasInspectedKind &&
-                (isSelected || hasAvailableSlot);
+            _selectCommanderButton.interactable = !_awaitingOthers && _hasInspectedKind;
 
             if (_selectCommanderButtonLabel != null)
             {
                 _selectCommanderButtonLabel.text = isSelected
-                    ? "Deseleziona comandante"
-                    : "Seleziona comandante";
+                    ? "DESELEZIONA"
+                    : hasAvailableSlot
+                        ? "SELEZIONA"
+                        : "CHIUDI";
             }
         }
 
@@ -397,6 +425,7 @@ namespace FourE.UI
         private void EnterWaitingState()
         {
             _awaitingOthers = true;
+            HideDetailPanel();
             if (_confirmButton != null) _confirmButton.interactable = false;
             if (_clearButton != null) _clearButton.interactable = false;
             if (_titleLabel != null) _titleLabel.text = "In attesa dell'altro giocatore…";
