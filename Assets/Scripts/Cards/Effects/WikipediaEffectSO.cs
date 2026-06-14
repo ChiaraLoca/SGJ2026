@@ -13,13 +13,9 @@ namespace FourE.Cards.Effects
         /// <inheritdoc/>
         public override void Apply(GameContext context)
         {
-            if (context.InactivePlayer == null)
-            {
-                return;
-            }
-
-            // Attiva lo scudo di intercettazione sull'avversario.
-            context.RegisterChange(new ActivateWikipediaInterceptChange(context.InactivePlayer));
+            // Attiva lo scudo su chi ha giocato Wikipedia: quando l'avversario gioca la prossima carta,
+            // il TurnManager controlla opponent.WikipediaInterceptActive (= il giocatore attivo qui).
+            context.RegisterChange(new ActivateWikipediaInterceptChange(context.ActivePlayer));
         }
     }
 }

@@ -23,6 +23,7 @@ namespace FourE.Core
         [SerializeField] private int _cardsPlayedThisTurn;
         [SerializeField] private int _cardsAllowedThisTurn;
         [SerializeField] private int _turnInRound;
+        private bool _copyNextCardActive;
 
         /// <summary>Carte giocate nel turno corrente.</summary>
         public int CardsPlayedThisTurn => _cardsPlayedThisTurn;
@@ -123,7 +124,15 @@ namespace FourE.Core
         }
 
         /// <summary>
-        /// Raddoppia le azioni ancora disponibili nel turno corrente (Copiare).
+        /// Attiva il flag: la prossima carta giocata in questo turno verrà riapplicata (Copiare).
+        /// </summary>
+        public void ActivateCopyNextCard()
+        {
+            _copyNextCardActive = true;
+        }
+
+        /// <summary>
+        /// Raddoppia le azioni ancora disponibili nel turno corrente (Copiare legacy — non più usato).
         /// </summary>
         public void DoubleRemainingActions()
         {
@@ -154,10 +163,14 @@ namespace FourE.Core
                 return false;
             }
 
-            if (_cardsPlayedThisTurn >= _cardsAllowedThisTurn)
+            if (RemainingActions < card.ActionCost)
             {
                 return false;
             }
+
+            // Cattura e resetta il flag Copiare prima della risoluzione per evitare loop.
+            bool wasCopyActive = _copyNextCardActive;
+            _copyNextCardActive = false;
 
             // Controlla se lo scudo Wikipedia è attivo sull'avversario.
             PlayerState opponent = _state.OpponentOf(player);
@@ -168,25 +181,31 @@ namespace FourE.Core
                 opponent.WikipediaInterceptActive = false;
             }
 
+            // Cattura la nota PRE-buff del comandante più basso per il controllo Cooper.
+            CommanderState cooperLowest = IsCooperCard(card) ? CommanderWithLowestNote(player) : null;
+            int cooperNoteBeforeBuff = cooperLowest?.CurrentNote ?? 0;
+
             GameContext context = _state.BuildContext(selectedTargets);
             _resolver.Resolve(card, context);
 
             player.Hand.Remove(card);
             player.DiscardPile.Add(card);
 
-            // Controlla se è una carta di Cooper e se il comandante più debole ha nota ≤ 3.
-            // Se sì, ritorna la carta in mano.
-            if (IsCooperCard(card))
+            // Test di Cooper: la condizione ≤ 3 si verifica sulla nota PRIMA del buff.
+            if (cooperLowest != null && cooperNoteBeforeBuff <= 3)
             {
-                CommanderState lowestCmd = CommanderWithLowestNote(player);
-                if (lowestCmd != null && lowestCmd.CurrentNote <= 3)
-                {
-                    player.DiscardPile.Remove(card);
-                    player.Hand.Add(card);
-                }
+                player.DiscardPile.Remove(card);
+                player.Hand.Add(card);
             }
 
-            _cardsPlayedThisTurn++;
+            _cardsPlayedThisTurn += card.ActionCost;
+
+            // Copiare: se il flag era attivo, riapplica gli stessi effetti sull'altro contesto.
+            if (wasCopyActive)
+            {
+                GameContext copyContext = _state.BuildContext(selectedTargets);
+                _resolver.Resolve(card, copyContext);
+            }
 
             if (_cardsPlayedThisTurn >= _cardsAllowedThisTurn)
             {
@@ -270,6 +289,8 @@ namespace FourE.Core
 
             // Il blocco Verifica (Sciopero) dura un solo turno: si libera a fine turno.
             player.VerificaBlocked = false;
+            // Il flag Copiare decade se il turno termina prima di giocare un'altra carta.
+            _copyNextCardActive = false;
 
             EventBus.Publish(new TurnEndedEvent(player));
 

@@ -16,8 +16,8 @@ namespace FourE.Commanders
 
         // --- Matematica ---
 
-        /// <summary>Carte aggiuntive pescate da Matematica all'inizio di ogni round.</summary>
-        public const int MateExtraCardsPerRound = 3;
+        /// <summary>Carte aggiuntive con cui Matematica inizia ogni round (non contano come pescate).</summary>
+        public const int MateExtraCardsPerRound = 1;
 
         /// <summary>Note guadagnate dal comandante Matematica (secondaria) per ogni carta pescata.</summary>
         public const int MateNotePerDraw = 1;

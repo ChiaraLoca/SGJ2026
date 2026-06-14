@@ -27,6 +27,11 @@ namespace FourE.Core
 
         private readonly List<IGameChange> _pendingChanges = new();
 
+        // Redirect usato dalla secondaria di Inglese: ogni bersaglio uguale a _redirectFrom
+        // viene sostituito con _redirectTo durante ResolveCommanders.
+        private CommanderState _redirectFrom;
+        private CommanderState _redirectTo;
+
         /// <summary>Giocatore che sta giocando la carta.</summary>
         public PlayerState ActivePlayer { get; }
 
@@ -169,6 +174,19 @@ namespace FourE.Core
         }
 
         /// <summary>
+        /// Imposta un redirect di comandante: ogni volta che <see cref="ResolveCommanders"/> restituirebbe
+        /// <paramref name="from"/>, restituisce invece <paramref name="to"/>.
+        /// Usato dalla secondaria di Inglese per copiare la carta sull'altro comandante.
+        /// </summary>
+        /// <param name="from">Comandante da sostituire.</param>
+        /// <param name="to">Comandante sostituto.</param>
+        public void SetCommanderRedirect(CommanderState from, CommanderState to)
+        {
+            _redirectFrom = from;
+            _redirectTo = to;
+        }
+
+        /// <summary>
         /// Applica in sequenza e svuota tutte le modifiche accodate.
         /// </summary>
         public void CommitChanges()
@@ -182,11 +200,23 @@ namespace FourE.Core
         }
 
         /// <summary>
-        /// Risolve un bersaglio in uno o più comandanti.
+        /// Risolve un bersaglio in uno o più comandanti, applicando l'eventuale redirect impostato
+        /// da <see cref="SetCommanderRedirect"/> (usato dalla secondaria di Inglese).
         /// </summary>
         /// <param name="target">Bersaglio dell'effetto.</param>
         /// <returns>I comandanti colpiti; sequenza vuota se il bersaglio è un giocatore.</returns>
         public IEnumerable<CommanderState> ResolveCommanders(EffectTarget target)
+        {
+            foreach (CommanderState resolved in ResolveCommandersCore(target))
+            {
+                yield return (_redirectFrom != null && resolved == _redirectFrom) ? _redirectTo : resolved;
+            }
+        }
+
+        /// <summary>
+        /// Risoluzione interna senza redirect: usata da <see cref="ResolveCommanders"/>.
+        /// </summary>
+        private IEnumerable<CommanderState> ResolveCommandersCore(EffectTarget target)
         {
             switch (target)
             {

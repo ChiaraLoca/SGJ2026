@@ -101,7 +101,7 @@ namespace FourE.Core
     }
 
     /// <summary>
-    /// Fa scartare a un giocatore N carte casuali dalla mano (Gossip). La Verifica non è in mano.
+    /// Fa scartare a un giocatore N carte casuali dalla mano (Gossip), escludendo la Verifica.
     /// </summary>
     public sealed class ForceDiscardRandomChange : IGameChange
     {
@@ -120,12 +120,20 @@ namespace FourE.Core
         /// <inheritdoc/>
         public void Apply()
         {
-            int toDiscard = Math.Min(_count, _player.Hand.Count);
+            // La Verifica è immune allo scarto casuale per regola.
+            var pool = new List<CardDataSO>();
+            foreach (CardDataSO c in _player.Hand)
+            {
+                if (c != null && !c.IsVerifica) pool.Add(c);
+            }
+
+            int toDiscard = Math.Min(_count, pool.Count);
             for (int i = 0; i < toDiscard; i++)
             {
-                int index = UnityEngine.Random.Range(0, _player.Hand.Count);
-                CardDataSO card = _player.Hand[index];
-                _player.Hand.RemoveAt(index);
+                int index = UnityEngine.Random.Range(0, pool.Count);
+                CardDataSO card = pool[index];
+                pool.RemoveAt(index);
+                _player.Hand.Remove(card);
                 _player.DiscardPile.Add(card);
             }
         }
@@ -249,7 +257,7 @@ namespace FourE.Core
     }
 
     /// <summary>
-    /// Recupera N carte dal cimitero del giocatore (Schema, Compito a Casa).
+    /// Recupera N carte casuali dal cimitero del giocatore in mano o in cima al mazzo (Schema, Compito a Casa).
     /// </summary>
     public sealed class ReturnFromDiscardChange : IGameChange
     {
@@ -274,18 +282,15 @@ namespace FourE.Core
             int toReturn = Math.Min(_count, _player.DiscardPile.Count);
             for (int i = 0; i < toReturn; i++)
             {
-                int topIndex = _player.DiscardPile.Count - 1;
-                CardDataSO card = _player.DiscardPile[topIndex];
-                _player.DiscardPile.RemoveAt(topIndex);
+                // La carta recuperata è estratta a caso dal cimitero (non sempre l'ultima).
+                int randomIndex = UnityEngine.Random.Range(0, _player.DiscardPile.Count);
+                CardDataSO card = _player.DiscardPile[randomIndex];
+                _player.DiscardPile.RemoveAt(randomIndex);
 
                 if (_destination == ReturnDestination.Hand)
-                {
                     _player.Hand.Add(card);
-                }
                 else
-                {
                     _player.Deck.Add(card); // la cima del mazzo è l'ultimo elemento
-                }
             }
         }
     }
@@ -329,6 +334,28 @@ namespace FourE.Core
         public void Apply()
         {
             _target.SetNoteFloorLocked(true);
+        }
+    }
+
+    /// <summary>
+    /// Attiva il flag "copia prossima carta": il prossimo effetto giocato in questo turno
+    /// viene riapplicato una seconda volta (Copiare).
+    /// </summary>
+    public sealed class SetCopyNextCardChange : IGameChange
+    {
+        private readonly TurnManager _turns;
+
+        /// <summary>Crea la modifica di attivazione copia.</summary>
+        /// <param name="turns">Gestore dei turni su cui attivare il flag.</param>
+        public SetCopyNextCardChange(TurnManager turns)
+        {
+            _turns = turns;
+        }
+
+        /// <inheritdoc/>
+        public void Apply()
+        {
+            _turns?.ActivateCopyNextCard();
         }
     }
 
@@ -447,7 +474,7 @@ namespace FourE.Core
         private readonly PlayerState _targetPlayer;
 
         /// <summary>Crea la modifica di attivazione dello scudo Wikipedia.</summary>
-        /// <param name="targetPlayer">Giocatore su cui attivare lo scudo (avversario di chi ha giocato Wikipedia).</param>
+        /// <param name="targetPlayer">Giocatore su cui attivare lo scudo (chi ha giocato Wikipedia, non l'avversario).</param>
         public ActivateWikipediaInterceptChange(PlayerState targetPlayer)
         {
             _targetPlayer = targetPlayer;
@@ -473,7 +500,8 @@ namespace FourE.Core
         /// </summary>
         /// <param name="player">Giocatore che pesca.</param>
         /// <param name="count">Numero di carte da pescare (clampato al mazzo, minimo 0).</param>
-        internal static void DrawTopToHand(PlayerState player, int count)
+        /// <param name="publishEvent">Se false, non pubblica <see cref="CardsDrawnEvent"/> (carte non contano come pescate).</param>
+        internal static void DrawTopToHand(PlayerState player, int count, bool publishEvent = true)
         {
             int drawable = Math.Min(Math.Max(count, 0), player.Deck.Count);
             for (int i = 0; i < drawable; i++)
@@ -484,7 +512,7 @@ namespace FourE.Core
                 player.Hand.Add(card);
             }
 
-            if (drawable > 0)
+            if (drawable > 0 && publishEvent)
             {
                 EventBus.Publish(new CardsDrawnEvent(player, drawable));
             }
