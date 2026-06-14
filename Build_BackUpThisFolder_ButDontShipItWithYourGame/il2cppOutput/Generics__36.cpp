@@ -632,6 +632,7 @@ struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918;
 struct PlayableBindingU5BU5D_tC50C3F27A8E4246488F7A5998CAABAC4811A92CD;
 struct PlayerLoopSystemU5BU5D_t07C04E53AAC3CDA17603E8BA1B41D7E1AC083C6D;
 struct PropertyPathPartU5BU5D_t7994D542F14DDDDEABB1792C335C20149399AEBB;
+struct RectTransformU5BU5D_tD8879AA94435492C205ABBE1E530FFD24CE0393D;
 struct RendererU5BU5D_t32FDD782F67917B2291EA4FF242719877440A02A;
 struct ResourcePathU5BU5D_t1A52AE48020C3EB95CB879A811AA792F12F0EF26;
 struct ResourceReaderDataU5BU5D_tD3DA8E1C859E2182C4ACDCCD0D0047B8EE3CE9BF;
@@ -712,6 +713,7 @@ struct ShadowResolutionRequestU5BU5D_tC33A2E5E2712B8688E21C80BB2350155D029B334;
 struct MatchContextU5BU5D_t49C4E5DA5C1F9B06B211BE6F94AC6BD4D0ABCAE5;
 struct BlockU5BU5D_t7192599CBBD107501AEB8147B9AE3CB60CE05C67;
 struct PerCameraInstanceDataArraysU5BU5D_tC1E5C546E3F4CF5B3B8128B0525CBA2EFA2824BF;
+struct AnimationRequestU5BU5D_t8DEE7E2FF4008C7C42060DDF8AF62E8603E9ABA2;
 struct AnimationRequestU5BU5D_t13055CD7DE12DBEC70B6BB2BF5D6EEC6130386CC;
 struct PathArgumentsU5BU5D_t66D7B5E4F558D40FD2FAB1CAE076CBCAFDB8BFB2;
 struct PathArgumentsU5BU5D_t74345045B6C5E1F5C3EC538A7940638C7665171D;
@@ -783,6 +785,7 @@ struct BatchDrawCommandProcedural_t5780BD7745B5772AA54BA6E6021292F6A6553B86;
 struct BatchDrawCommandProceduralIndirect_t8417CDF3495237CD8C9204B3DADC6BA4A1488B50;
 struct BatchDrawRange_t736D745E918A629658B80A0F7D2D17DAFBA6172F;
 struct Byte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3;
+struct CanvasGroup_t048C1461B14628CFAEBE6E7353093ADB04EBC094;
 struct CardDataSO_tD219CDA2271352E4C1A7C43349DB3A565CBDD685;
 struct ComputeBuffer_t51EADA9015EBCC1B982C5584E9AB2734415A8233;
 struct EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8;
@@ -935,6 +938,7 @@ struct ShadowResolutionRequestU5BU5D_tC33A2E5E2712B8688E21C80BB2350155D029B334;
 struct MatchContextU5BU5D_t49C4E5DA5C1F9B06B211BE6F94AC6BD4D0ABCAE5;
 struct BlockU5BU5D_t7192599CBBD107501AEB8147B9AE3CB60CE05C67;
 struct PerCameraInstanceDataArraysU5BU5D_tC1E5C546E3F4CF5B3B8128B0525CBA2EFA2824BF;
+struct AnimationRequestU5BU5D_t8DEE7E2FF4008C7C42060DDF8AF62E8603E9ABA2;
 struct AnimationRequestU5BU5D_t13055CD7DE12DBEC70B6BB2BF5D6EEC6130386CC;
 struct PathArgumentsU5BU5D_t66D7B5E4F558D40FD2FAB1CAE076CBCAFDB8BFB2;
 struct PathArgumentsU5BU5D_t74345045B6C5E1F5C3EC538A7940638C7665171D;
@@ -1208,6 +1212,9 @@ struct EmptyArray_1_t9A66C3D221E5C42A330E3498945412BEBEA80163  : public RuntimeO
 {
 };
 struct EmptyArray_1_t0FCED557385F89ACC6CD7D793976225D630348FD  : public RuntimeObject
+{
+};
+struct EmptyArray_1_t3067936C6C9EA9E29C4ABFA7E743555B6916A50A  : public RuntimeObject
 {
 };
 struct EmptyArray_1_tF6FE39E741DF63A8C88BA846C0D561DE98FF7DB3  : public RuntimeObject
@@ -8649,20 +8656,44 @@ struct Allocation_tB22CAD44C5AF0C13B3D441F8B419C9BA1D19F70C
 	int32_t ___handle;
 	Block_tBD2149E220F819A66A4A0A18F237932ACD9011DE ___block;
 };
+struct AnimationRequest_t80DDB38CABC504D23757F4C66366D9B870269BB1 
+{
+	CardDataSO_tD219CDA2271352E4C1A7C43349DB3A565CBDD685* ___U3CCardU3Ek__BackingField;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___U3CStartPositionU3Ek__BackingField;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___U3CEndPositionU3Ek__BackingField;
+	CanvasGroup_t048C1461B14628CFAEBE6E7353093ADB04EBC094* ___U3CTargetGroupU3Ek__BackingField;
+};
+struct AnimationRequest_t80DDB38CABC504D23757F4C66366D9B870269BB1_marshaled_pinvoke
+{
+	CardDataSO_tD219CDA2271352E4C1A7C43349DB3A565CBDD685* ___U3CCardU3Ek__BackingField;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___U3CStartPositionU3Ek__BackingField;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___U3CEndPositionU3Ek__BackingField;
+	CanvasGroup_t048C1461B14628CFAEBE6E7353093ADB04EBC094* ___U3CTargetGroupU3Ek__BackingField;
+};
+struct AnimationRequest_t80DDB38CABC504D23757F4C66366D9B870269BB1_marshaled_com
+{
+	CardDataSO_tD219CDA2271352E4C1A7C43349DB3A565CBDD685* ___U3CCardU3Ek__BackingField;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___U3CStartPositionU3Ek__BackingField;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___U3CEndPositionU3Ek__BackingField;
+	CanvasGroup_t048C1461B14628CFAEBE6E7353093ADB04EBC094* ___U3CTargetGroupU3Ek__BackingField;
+};
 struct AnimationRequest_t44C2D046A6BCDECC569DEDFBE8A63EA35D6CC0CA 
 {
 	CardDataSO_tD219CDA2271352E4C1A7C43349DB3A565CBDD685* ___U3CCardU3Ek__BackingField;
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___U3CStartPositionU3Ek__BackingField;
+	RectTransformU5BU5D_tD8879AA94435492C205ABBE1E530FFD24CE0393D* ___U3CTargetsU3Ek__BackingField;
 };
 struct AnimationRequest_t44C2D046A6BCDECC569DEDFBE8A63EA35D6CC0CA_marshaled_pinvoke
 {
 	CardDataSO_tD219CDA2271352E4C1A7C43349DB3A565CBDD685* ___U3CCardU3Ek__BackingField;
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___U3CStartPositionU3Ek__BackingField;
+	RectTransformU5BU5D_tD8879AA94435492C205ABBE1E530FFD24CE0393D* ___U3CTargetsU3Ek__BackingField;
 };
 struct AnimationRequest_t44C2D046A6BCDECC569DEDFBE8A63EA35D6CC0CA_marshaled_com
 {
 	CardDataSO_tD219CDA2271352E4C1A7C43349DB3A565CBDD685* ___U3CCardU3Ek__BackingField;
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___U3CStartPositionU3Ek__BackingField;
+	RectTransformU5BU5D_tD8879AA94435492C205ABBE1E530FFD24CE0393D* ___U3CTargetsU3Ek__BackingField;
 };
 struct PolyType_t61D62010DE1E30694B2F823BDFBA120B776ABAD7 
 {
@@ -13735,6 +13766,10 @@ struct EmptyArray_1_t0FCED557385F89ACC6CD7D793976225D630348FD_StaticFields
 {
 	PerCameraInstanceDataArraysU5BU5D_tC1E5C546E3F4CF5B3B8128B0525CBA2EFA2824BF* ___Value;
 };
+struct EmptyArray_1_t3067936C6C9EA9E29C4ABFA7E743555B6916A50A_StaticFields
+{
+	AnimationRequestU5BU5D_t8DEE7E2FF4008C7C42060DDF8AF62E8603E9ABA2* ___Value;
+};
 struct EmptyArray_1_tF6FE39E741DF63A8C88BA846C0D561DE98FF7DB3_StaticFields
 {
 	AnimationRequestU5BU5D_t13055CD7DE12DBEC70B6BB2BF5D6EEC6130386CC* ___Value;
@@ -18702,6 +18737,46 @@ struct PerCameraInstanceDataArraysU5BU5D_tC1E5C546E3F4CF5B3B8128B0525CBA2EFA2824
 		m_Items[index] = value;
 	}
 };
+struct AnimationRequestU5BU5D_t8DEE7E2FF4008C7C42060DDF8AF62E8603E9ABA2  : public RuntimeArray
+{
+	ALIGN_FIELD (8) AnimationRequest_t80DDB38CABC504D23757F4C66366D9B870269BB1 m_Items[1];
+
+	inline AnimationRequest_t80DDB38CABC504D23757F4C66366D9B870269BB1 GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline AnimationRequest_t80DDB38CABC504D23757F4C66366D9B870269BB1* GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, AnimationRequest_t80DDB38CABC504D23757F4C66366D9B870269BB1 value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)&((m_Items + index)->___U3CCardU3Ek__BackingField), (void*)NULL);
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((m_Items + index)->___U3CTargetGroupU3Ek__BackingField), (void*)NULL);
+		#endif
+	}
+	inline AnimationRequest_t80DDB38CABC504D23757F4C66366D9B870269BB1 GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline AnimationRequest_t80DDB38CABC504D23757F4C66366D9B870269BB1* GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, AnimationRequest_t80DDB38CABC504D23757F4C66366D9B870269BB1 value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)&((m_Items + index)->___U3CCardU3Ek__BackingField), (void*)NULL);
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((m_Items + index)->___U3CTargetGroupU3Ek__BackingField), (void*)NULL);
+		#endif
+	}
+};
 struct AnimationRequestU5BU5D_t13055CD7DE12DBEC70B6BB2BF5D6EEC6130386CC  : public RuntimeArray
 {
 	ALIGN_FIELD (8) AnimationRequest_t44C2D046A6BCDECC569DEDFBE8A63EA35D6CC0CA m_Items[1];
@@ -18721,6 +18796,9 @@ struct AnimationRequestU5BU5D_t13055CD7DE12DBEC70B6BB2BF5D6EEC6130386CC  : publi
 		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
 		m_Items[index] = value;
 		Il2CppCodeGenWriteBarrier((void**)&((m_Items + index)->___U3CCardU3Ek__BackingField), (void*)NULL);
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((m_Items + index)->___U3CTargetsU3Ek__BackingField), (void*)NULL);
+		#endif
 	}
 	inline AnimationRequest_t44C2D046A6BCDECC569DEDFBE8A63EA35D6CC0CA GetAtUnchecked(il2cpp_array_size_t index) const
 	{
@@ -18734,6 +18812,9 @@ struct AnimationRequestU5BU5D_t13055CD7DE12DBEC70B6BB2BF5D6EEC6130386CC  : publi
 	{
 		m_Items[index] = value;
 		Il2CppCodeGenWriteBarrier((void**)&((m_Items + index)->___U3CCardU3Ek__BackingField), (void*)NULL);
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((m_Items + index)->___U3CTargetsU3Ek__BackingField), (void*)NULL);
+		#endif
 	}
 };
 struct PathArgumentsU5BU5D_t66D7B5E4F558D40FD2FAB1CAE076CBCAFDB8BFB2  : public RuntimeArray
@@ -27423,6 +27504,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmptyArray_1__cctor_m914B4D42BF0F6C434E6
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 // Method Definition Index: 3880
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmptyArray_1__cctor_m6D0DA6D5C6F81AF2CDC8942B980BE2C2E1A11174_gshared (const RuntimeMethod* method) 
+{
+	{
+		AnimationRequestU5BU5D_t8DEE7E2FF4008C7C42060DDF8AF62E8603E9ABA2* L_0 = (AnimationRequestU5BU5D_t8DEE7E2FF4008C7C42060DDF8AF62E8603E9ABA2*)(AnimationRequestU5BU5D_t8DEE7E2FF4008C7C42060DDF8AF62E8603E9ABA2*)SZArrayNew(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 0), (uint32_t)0);
+		((EmptyArray_1_t3067936C6C9EA9E29C4ABFA7E743555B6916A50A_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 3)))->___Value = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&((EmptyArray_1_t3067936C6C9EA9E29C4ABFA7E743555B6916A50A_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 3)))->___Value), (void*)L_0);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 3880
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmptyArray_1__cctor_m0B7E48FF72E52C7C8BCBB7730967AC455393F75B_gshared (const RuntimeMethod* method) 
 {
 	{
@@ -28574,7 +28673,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmptyArray_1__cctor_m68EB19912B146E2C1FE
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80974
+// Method Definition Index: 81021
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmptyEnumerable_1__cctor_m64517BDEC66366F475DF90F4C436CC9784BD4FE2_gshared (const RuntimeMethod* method) 
 {
 	{
@@ -28592,7 +28691,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmptyEnumerable_1__cctor_m64517BDEC66366
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80974
+// Method Definition Index: 81021
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmptyEnumerable_1__cctor_mA5F0D538BBD6AAB4CE33B937FB30179E88A17C53_gshared (const RuntimeMethod* method) 
 {
 	{
@@ -28610,7 +28709,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmptyEnumerable_1__cctor_mA5F0D538BBD6AA
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 80974
+// Method Definition Index: 81021
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmptyEnumerable_1__cctor_mF43E0A91F939568F94E076C5D37765945E3A175D_gshared (const RuntimeMethod* method) 
 {
 	{

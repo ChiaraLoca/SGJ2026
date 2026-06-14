@@ -1647,6 +1647,11 @@ struct GameStateDTO_tBE2493AAD5C304C37AC3FBB5E2405DCD803E1CDE
 	int32_t ___PlayedCardSequence;
 	int32_t ___LastPlayedCardId;
 	int32_t ___LastPlayedActorNumber;
+	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___LastPlayedTargetActorNumbers;
+	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___LastPlayedTargetCommanderIndices;
+	int32_t ___DrawSequence;
+	int32_t ___LastDrawActorNumber;
+	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___LastDrawnCardIds;
 };
 struct GameStateDTO_tBE2493AAD5C304C37AC3FBB5E2405DCD803E1CDE_marshaled_pinvoke
 {
@@ -1662,6 +1667,11 @@ struct GameStateDTO_tBE2493AAD5C304C37AC3FBB5E2405DCD803E1CDE_marshaled_pinvoke
 	int32_t ___PlayedCardSequence;
 	int32_t ___LastPlayedCardId;
 	int32_t ___LastPlayedActorNumber;
+	Il2CppSafeArray* ___LastPlayedTargetActorNumbers;
+	Il2CppSafeArray* ___LastPlayedTargetCommanderIndices;
+	int32_t ___DrawSequence;
+	int32_t ___LastDrawActorNumber;
+	Il2CppSafeArray* ___LastDrawnCardIds;
 };
 struct GameStateDTO_tBE2493AAD5C304C37AC3FBB5E2405DCD803E1CDE_marshaled_com
 {
@@ -1677,6 +1687,11 @@ struct GameStateDTO_tBE2493AAD5C304C37AC3FBB5E2405DCD803E1CDE_marshaled_com
 	int32_t ___PlayedCardSequence;
 	int32_t ___LastPlayedCardId;
 	int32_t ___LastPlayedActorNumber;
+	Il2CppSafeArray* ___LastPlayedTargetActorNumbers;
+	Il2CppSafeArray* ___LastPlayedTargetCommanderIndices;
+	int32_t ___DrawSequence;
+	int32_t ___LastDrawActorNumber;
+	Il2CppSafeArray* ___LastDrawnCardIds;
 };
 struct GeoPoolMeshChunk_t9B0F23B961DCDA4D5B63AB95F780203D0B7EC668 
 {

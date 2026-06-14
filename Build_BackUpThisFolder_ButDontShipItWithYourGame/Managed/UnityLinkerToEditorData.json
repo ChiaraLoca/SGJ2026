@@ -1964,7 +1964,8 @@
           {
             "name": "CanvasGroup",
             "scenes": [
-              "Assets/Scenes/MainMenu.unity"
+              "Assets/Scenes/MainMenu.unity",
+              "Assets/Scenes/SampleUI.unity"
             ],
             "dependencyType": 0,
             "icon": null
