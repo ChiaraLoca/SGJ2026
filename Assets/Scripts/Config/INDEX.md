@@ -8,8 +8,6 @@ Torna all'[indice generale](../INDEX.md).
 | File | Tipo | Responsabilità / API chiave |
 |---|---|---|
 | [GameConfigSO.cs](GameConfigSO.cs) | `GameConfigSO : ScriptableObject` + enum `TiebreakRule` | Valori di bilanciamento runtime: `MaxRounds`, `StartingHandSize`, `ShopPoolSize`, `ShopPurchasesPerRound`, `ShopRefreshSlots`, `NoteToCreditsMultiplier`, costi per tier `GetTierCost(tier)` (A/B/C), `GetCardsPlayablePerTurn(round)`, `TiebreakRule` (non ancora applicata), singleton `Instance` (via `RegisterAsActive()`). `OnValidate` editor segnala array azioni vuoto |
-| [GameConstants.cs](GameConstants.cs) | `static GameConstants` | Costanti **non** configurabili: giocatori/comandanti, indici slot/mazzo, conversione indice/conteggio, ancoraggio UI, soglia turno per Verifica |
-| [GameConfigSO.cs](GameConfigSO.cs) | `GameConfigSO : ScriptableObject` + enum `TiebreakRule` | Valori di bilanciamento runtime: `MaxRounds`, `StartingHandSize`, dimensione/refresh/quote tier dello shop, `NoteToCreditsMultiplier`, costi per tier `GetTierCost(tier)` (A/B/C), `GetCardsPlayablePerTurn(round)`, singleton `Instance` (via `RegisterAsActive()`) |
 | [GameConstants.cs](GameConstants.cs) | `static GameConstants` | Costanti **non** configurabili: giocatori/comandanti, setup mano, indici slot/mazzo, round, conversione indice/conteggio ed ancoraggio UI centrale |
 | [GameContentSO.cs](GameContentSO.cs) | `GameContentSO : ScriptableObject` | Archivio contenuti: `CommanderCatalog` (catalogo selezionabile con fallback sui comandanti default) + `GetCommanderByKind(kind)`, `FirstPlayerCommanders`/`SecondPlayerCommanders`, `VerificaCard`, `ShopCatalog`. Riferito dal `GameStateManager` in Inspector |
 
