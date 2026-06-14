@@ -24,6 +24,8 @@ namespace FourE.Core
         [SerializeField] private int _cardsAllowedThisTurn;
         [SerializeField] private int _turnInRound;
         private bool _copyNextCardActive;
+        // Guardia che impedisce la ricorsione infinita nel caso estremo in cui entrambi i giocatori abbiano 0 carte.
+        private bool _autoSkipActive;
 
         /// <summary>Carte giocate nel turno corrente.</summary>
         public int CardsPlayedThisTurn => _cardsPlayedThisTurn;
@@ -91,6 +93,15 @@ namespace FourE.Core
             }
 
             DrawTurnStartCards(player);
+
+            // Se la mano è rimasta vuota il giocatore non può fare nulla: passa il turno automaticamente.
+            // La guardia _autoSkipActive spezza il ciclo nel caso (raro) in cui entrambi i giocatori abbiano 0 carte.
+            if (player.Hand.Count == 0 && !_autoSkipActive && _state.CurrentPhase == GamePhase.Play)
+            {
+                _autoSkipActive = true;
+                EndTurn(player);
+                _autoSkipActive = false;
+            }
         }
 
         /// <summary>

@@ -17,7 +17,7 @@ MonoBehaviour:
   _startingHandSize: 2
   _turnStartDrawCount: 2
   _shopPoolSize: 8
-  _shopPurchasesPerRound: 2
+  _shopPurchasesPerRound: 100
   _shopRefreshSlots: 3
   _shopTierCSlots: 3
   _shopTierBSlots: 2
