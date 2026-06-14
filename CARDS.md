@@ -85,7 +85,7 @@
 | Metodo     | C    | 2  | Pianificazione            | +1 Nota; +1 Azione                        | Qualsiasi comandante |
 | Studio     | C    | 1  | Studio                    | +2 Note al comandante                     | Qualsiasi comandante |
 | Ripasso    | B    | 1  | Studio, Pianificazione    | +1 Nota per ogni carta nel cimitero       | Qualsiasi comandante |
-| Biblioteca | B    | 1  | Pianificazione, Estetica  | Pesca carte fino ad averne 4 in mano      | No target            |
+| Biblioteca | B    | 1  | Ricerca  | Pesca carte fino ad averne 4 in mano      | No target            |
 
 ---
 
@@ -123,7 +123,7 @@
 | Compito a Casa | Estetica                         | Metti 2 carte dal tuo cimitero in cima al mazzo                          | No target            |
 | Progetto       | Studio, Pianificazione, Ricerca  | +1 carta; +1 Azione; +1 Nota                                             | Qualsiasi comandante |
 | Presentazione  | Pratica, Pianificazione, Ricerca | +1 carta; +1 Azione; −1 Nota                                             | Qualsiasi comandante |
-| Copiare        | Pianificazione, Estetica         | Raddoppia le azioni rimanenti questo turno                               | No target            |
+| Copiare        | Pianificazione, Estetica         | Riapplica l'effetto della prossima carta giocata in questo turno         | No target            |
 | Sciopero       | Pianificazione, Pratica          | +1 Azione; l'avversario non può giocare la Verifica nel suo prossimo turno | No target          |
 
 ### Tier A (Costo: 10 Note)

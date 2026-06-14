@@ -14,10 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Config.GameConfigSO
   _maxRounds: 3
   _cardsPlayablePerTurn: 020000000200000002000000
-  _startingCardsPerCommander: 5
-  _startingHandSize: 3
-  _shopPoolSize: 12
+  _startingHandSize: 2
+  _turnStartDrawCount: 2
+  _shopPoolSize: 8
   _shopPurchasesPerRound: 2
   _shopRefreshSlots: 3
+  _tierCostC: 1
+  _tierCostB: 3
+  _tierCostA: 10
   _noteToCreditsMultiplier: 1
   _tiebreakRule: 0
