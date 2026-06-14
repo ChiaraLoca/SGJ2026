@@ -177,7 +177,7 @@ namespace FourE.UI
 
             RenderLabels(state, phase, local, enemy, isLocalTurn, sync.LocalActorNumber);
             RenderCommanders(local, enemy, localIndex);
-            RenderHand(local, phase, isLocalTurn, verificaPlayable);
+            RenderHand(local, phase, isLocalTurn, verificaPlayable, state.RemainingActions);
             RenderShop(local, phase);
             RenderButtons(phase, isLocalTurn, local);
             AnimatePlayedCard(state, sync.LocalActorNumber);
@@ -346,7 +346,7 @@ namespace FourE.UI
         /// <summary>
         /// Rigenera le carte in mano del giocatore locale come pulsanti giocabili.
         /// </summary>
-        private void RenderHand(PlayerDTO local, GamePhase phase, bool isLocalTurn, bool verificaPlayable)
+        private void RenderHand(PlayerDTO local, GamePhase phase, bool isLocalTurn, bool verificaPlayable, int remainingActions)
         {
             ClearSpawned(_spawnedHand);
             if (_cardPrefab == null || _handContainer == null)
@@ -363,8 +363,11 @@ namespace FourE.UI
                     continue;
                 }
 
-                // La Verifica ha una condizione aggiuntiva: non può essere giocata al 1° turno del round.
-                bool playable = card.IsVerifica ? verificaPlayable : turnPlayable;
+                // La Verifica ha una condizione aggiuntiva sul turno; le carte con ActionCost > 1
+                // (es. Studio Notturno) richiedono azioni sufficienti per essere giocabili.
+                bool playable = card.IsVerifica
+                    ? verificaPlayable
+                    : (turnPlayable && remainingActions >= card.ActionCost);
                 CardView view = Instantiate(_cardPrefab, _handContainer);
                 view.Bind(card, OnPlayCardClicked, playable, false, ShowCardPreview, HideCardPreview);
                 _spawnedHand.Add(view);
