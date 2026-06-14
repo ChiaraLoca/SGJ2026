@@ -1366,7 +1366,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 3.03891, y: 19.882812}
+  m_AnchoredPosition: {x: 3.0389404, y: 19.882812}
   m_SizeDelta: {x: -51.078, y: 377.02}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &524391579
@@ -3449,7 +3449,6 @@ MonoBehaviour:
   _notesLabel: {fileID: 1390216683}
   _deckCountLabel: {fileID: 2301000007}
   _discardCountLabel: {fileID: 2301000017}
-  _outcomeLabel: {fileID: 870629816}
   _localCommander0: {fileID: 1188403284}
   _localCommander1: {fileID: 464379196}
   _enemyCommander0: {fileID: 284201118}
@@ -3457,6 +3456,7 @@ MonoBehaviour:
   _endTurnButton: {fileID: 1416130982}
   _verificaButton: {fileID: 970136099}
   _finishShopButton: {fileID: 971430669}
+  _outcomePanelPrefab: {fileID: 300260561834793385, guid: d171b749b73004c47b5e4da96e0b8848, type: 3}
 --- !u!1 &1955834012
 GameObject:
   m_ObjectHideFlags: 0
