@@ -120,13 +120,43 @@ namespace FourE.Core
         }
 
         /// <summary>
+        /// Applica le passive che reagiscono alla giocata prima degli effetti e registra i tag della carta.
+        /// </summary>
+        /// <param name="player">Giocatore che sta giocando.</param>
+        /// <param name="card">Carta validata e pronta alla risoluzione.</param>
+        public void ApplyBeforeCardResolution(PlayerState player, CardDataSO card)
+        {
+            if (player == null || card == null)
+            {
+                return;
+            }
+
+            bool repeatsTag = (_state.Turns.TagsPlayedThisTurn & card.Tags) != CardTag.None;
+            PlayerState opponent = _state.OpponentOf(player);
+            if (repeatsTag && opponent?.Commanders != null)
+            {
+                foreach (CommanderState commander in opponent.Commanders)
+                {
+                    if (commander?.Data?.Kind == CommanderKind.Arte)
+                    {
+                        ApplyNoteDirect(
+                            HighestNoteCommander(player),
+                            -CommanderPassiveConstants.ArteRepeatedTagPenalty);
+                    }
+                }
+            }
+
+            _state.Turns.RegisterPlayedTags(card.Tags);
+        }
+
+        /// <summary>
         /// Valuta la condizione di sblocco della secondaria di un comandante.
         /// </summary>
         /// <param name="commander">Comandante da valutare.</param>
         /// <param name="owner">Giocatore proprietario.</param>
         /// <param name="roundIndex">Indice del round corrente.</param>
         /// <returns>True se la condizione è soddisfatta.</returns>
-        private static bool IsUnlockConditionMet(CommanderState commander, PlayerState owner, int roundIndex)
+        private bool IsUnlockConditionMet(CommanderState commander, PlayerState owner, int roundIndex)
         {
             return commander.Data.Kind switch
             {
@@ -134,8 +164,38 @@ namespace FourE.Core
                 CommanderKind.Matematica => roundIndex >= CommanderPassiveConstants.MateSecondaryUnlockRoundIndex,
                 CommanderKind.Inglese => (owner.Deck.Count + owner.Hand.Count) >= CommanderPassiveConstants.IngleseSecondaryUnlockDeckSize,
                 CommanderKind.EducazioneFisica => commander.CurrentNote <= CommanderPassiveConstants.EduFisicaSecondaryUnlockNote,
+                CommanderKind.Diritto => _state.ActivePlayer == owner
+                                         && _state.Turns.StandardCardsPlayedThisTurn
+                                         >= CommanderPassiveConstants.DirittoSecondaryUnlockCardsPlayed,
+                CommanderKind.Arte => CountDistinctDiscardTags(owner)
+                                      >= CommanderPassiveConstants.ArteSecondaryUnlockDistinctTags,
                 _ => false
             };
+        }
+
+        /// <summary>Conta i tag distinti presenti nel cimitero del giocatore.</summary>
+        /// <param name="player">Giocatore da controllare.</param>
+        /// <returns>Numero di tag distinti.</returns>
+        private static int CountDistinctDiscardTags(PlayerState player)
+        {
+            CardTag tags = CardTag.None;
+            foreach (CardDataSO card in player.DiscardPile)
+            {
+                if (card != null)
+                {
+                    tags |= card.Tags;
+                }
+            }
+
+            int count = 0;
+            int value = (int)tags;
+            while (value != 0)
+            {
+                count += value & 1;
+                value >>= 1;
+            }
+
+            return count;
         }
 
         // =====================================================================
@@ -300,17 +360,29 @@ namespace FourE.Core
                 return;
             }
 
-            // Condizione: meno carte in mano dell'avversario.
-            if (player.Hand.Count >= opponent.Hand.Count)
-            {
-                return;
-            }
-
             foreach (CommanderState commander in player.Commanders)
             {
-                if (commander?.Data != null && commander.Data.Kind == CommanderKind.EducazioneFisica)
+                if (commander?.Data == null)
+                {
+                    continue;
+                }
+
+                if (commander.Data.Kind == CommanderKind.EducazioneFisica
+                    && player.Hand.Count < opponent.Hand.Count)
                 {
                     ApplyNoteDirect(OtherCommanderOf(player, commander), CommanderPassiveConstants.EduFisicaTurnEndBonus);
+                }
+
+                if (commander.Data.Kind == CommanderKind.Diritto
+                    && _state.Turns.RemainingActions >= CommanderPassiveConstants.DirittoRequiredUnusedActions)
+                {
+                    ApplyNoteDirect(commander, CommanderPassiveConstants.DirittoTurnEndBonus);
+                    if (commander.SecondaryUnlocked)
+                    {
+                        ApplyNoteDirect(
+                            OtherCommanderOf(player, commander),
+                            CommanderPassiveConstants.DirittoSecondaryOtherBonus);
+                    }
                 }
             }
         }

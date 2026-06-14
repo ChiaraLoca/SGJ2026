@@ -11,6 +11,8 @@ Torna all'[indice generale](../INDEX.md).
 | [CommanderDataSO.cs](CommanderDataSO.cs) | `CommanderDataSO : ScriptableObject` | Definizione immutabile: `CommanderName`, `Kind`, `BaseNote`, `LinkedCards` (5 carte di partenza), `Portrait`, descrizioni passive per la UI di selezione (`BaseAbilityDescription`, `UnlockConditionDescription`, `SecondaryAbilityDescription`) |
 | [CommanderState.cs](CommanderState.cs) | `CommanderState` (`[Serializable]`) | Stato runtime: `CurrentNote` (derivata: base + delta istantaneo + buff − debuff, ≥0), `ApplyInstantDelta()`, `AddBuff()`/`AddDebuff()`, `AddDebuffShield()`, `SetNoteFloorLocked()`, `SecondaryUnlocked`/`MarkSecondaryUnlocked()` (sblocco permanente passiva secondaria), `TickActiveEffects()`, `ResetForNewRound()`, `HasActiveDebuff`, `DebuffShields`, `IsNoteFloorLocked` |
 | [CommanderPassiveConstants.cs](CommanderPassiveConstants.cs) | `static CommanderPassiveConstants` | Costanti di design delle passive (da CARDS.md): magnitudini (+3 Storia/Verifica, +3 carte Mate, +1 Inglese, ecc.) e soglie di sblocco (20 crediti, round 3, 15 carte mazzo, 0 note) |
+| Diritto / Andrew | `CommanderKind.Diritto` | Passive di fine turno basate sulle azioni inutilizzate; secondaria sbloccata dopo 6 carte giocate nello stesso turno |
+| Arte / Mary | `CommanderKind.Arte` | Penalizza la ripetizione di tag; si sblocca con 6 tag distinti nel cimitero e propaga i debuff |
 
 ## Note
 

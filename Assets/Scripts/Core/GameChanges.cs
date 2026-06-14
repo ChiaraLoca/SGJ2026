@@ -9,10 +9,16 @@ namespace FourE.Core
     /// <summary>
     /// Modifica istantanea alla Note di un comandante. Pubblica <see cref="NoteChangedEvent"/>.
     /// </summary>
-    public sealed class InstantNoteChange : IGameChange
+    public sealed class InstantNoteChange : IGameChange, IPositiveCommanderCardChange
     {
         private readonly CommanderState _target;
         private readonly int _delta;
+
+        /// <inheritdoc/>
+        CommanderState IPositiveCommanderCardChange.BeneficiaryCommander => _target;
+
+        /// <inheritdoc/>
+        bool IPositiveCommanderCardChange.IsPositiveBenefit => _delta > 0;
 
         /// <summary>
         /// Crea la modifica istantanea.
@@ -42,11 +48,17 @@ namespace FourE.Core
     /// <summary>
     /// Aggiunge un effetto a durata (buff o debuff) a un comandante.
     /// </summary>
-    public sealed class AddActiveEffectChange : IGameChange
+    public sealed class AddActiveEffectChange : IGameChange, IPositiveCommanderCardChange
     {
         private readonly CommanderState _target;
         private readonly ActiveEffect _effect;
         private readonly bool _isBuff;
+
+        /// <inheritdoc/>
+        CommanderState IPositiveCommanderCardChange.BeneficiaryCommander => _target;
+
+        /// <inheritdoc/>
+        bool IPositiveCommanderCardChange.IsPositiveBenefit => _isBuff && _effect.Magnitude > 0;
 
         /// <summary>
         /// Crea la modifica di aggiunta effetto a durata.
@@ -80,10 +92,13 @@ namespace FourE.Core
     /// <summary>
     /// Pesca un numero di carte dal mazzo di un giocatore alla sua mano.
     /// </summary>
-    public sealed class DrawCardsChange : IGameChange
+    public sealed class DrawCardsChange : IGameChange, IPositivePlayerCardChange
     {
         private readonly PlayerState _player;
         private readonly int _count;
+
+        /// <inheritdoc/>
+        PlayerState IPositivePlayerCardChange.BeneficiaryPlayer => _player;
 
         /// <summary>
         /// Crea la modifica di pesca.

@@ -17,7 +17,7 @@ namespace FourE.Cards.Effects
         /// <inheritdoc/>
         public override void Apply(GameContext context)
         {
-            foreach (CommanderState commander in context.ResolveCommanders(Target))
+            foreach (CommanderState commander in context.ResolveDebuffCommanders(Target))
             {
                 if (_duration == EffectDuration.Instant)
                 {

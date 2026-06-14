@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using FourE.Commanders;
 using FourE.Core;
@@ -36,7 +37,10 @@ namespace FourE.Cards.Effects
             if (_notePerCount != 0)
             {
                 int delta = _notePerCount * count;
-                foreach (CommanderState commander in context.ResolveCommanders(Target))
+                IEnumerable<CommanderState> commanders = _notePerCount < 0
+                    ? context.ResolveDebuffCommanders(Target)
+                    : context.ResolveCommanders(Target);
+                foreach (CommanderState commander in commanders)
                 {
                     context.RegisterChange(new InstantNoteChange(commander, delta));
                 }
@@ -71,8 +75,49 @@ namespace FourE.Cards.Effects
                 CountSource.OwnDiscardWithTag => CountWithTag(own),
                 CountSource.EnemyDiscardWithTag => CountWithTag(enemy),
                 CountSource.BothDiscardWithTag => CountWithTag(own) + CountWithTag(enemy),
+                CountSource.RemainingActionsAfterCurrentCard => RemainingActionsAfterCurrentCard(context),
+                CountSource.OwnHandDistinctTags => CountDistinctHandTags(context),
                 _ => 0
             };
+        }
+
+        /// <summary>
+        /// Conta i tag distinti nella mano dopo la giocata, escludendo la carta in risoluzione
+        /// che viene rimossa fisicamente dalla mano solo al termine del resolver.
+        /// </summary>
+        /// <param name="context">Contesto della carta in risoluzione.</param>
+        /// <returns>Numero di tag distinti delle carte rimaste in mano.</returns>
+        private static int CountDistinctHandTags(GameContext context)
+        {
+            CardTag union = CardTag.None;
+            bool skippedPlayedCard = false;
+            foreach (CardDataSO card in context.ActivePlayer.Hand)
+            {
+                if (!skippedPlayedCard && card == context.Card)
+                {
+                    skippedPlayedCard = true;
+                    continue;
+                }
+
+                if (card != null)
+                {
+                    union |= card.Tags;
+                }
+            }
+
+            return CountBits(union);
+        }
+
+        /// <summary>
+        /// Calcola le azioni residue dopo aver considerato il costo della carta corrente.
+        /// </summary>
+        /// <param name="context">Contesto della carta in risoluzione.</param>
+        /// <returns>Numero di azioni che resteranno disponibili, mai negativo.</returns>
+        private static int RemainingActionsAfterCurrentCard(GameContext context)
+        {
+            int remaining = context.State?.Turns?.RemainingActions ?? 0;
+            int actionCost = context.Card?.ActionCost ?? 0;
+            return Mathf.Max(0, remaining - actionCost);
         }
 
         /// <summary>
@@ -101,8 +146,18 @@ namespace FourE.Cards.Effects
         /// <returns>Numero di tag distinti.</returns>
         private static int CountDistinctTags(PlayerState player)
         {
+            return CountDistinctTags(player.DiscardPile);
+        }
+
+        /// <summary>
+        /// Conta i tag distinti presenti nella raccolta indicata.
+        /// </summary>
+        /// <param name="cards">Carte da analizzare.</param>
+        /// <returns>Numero di tag distinti.</returns>
+        private static int CountDistinctTags(IEnumerable<CardDataSO> cards)
+        {
             CardTag union = CardTag.None;
-            foreach (CardDataSO card in player.DiscardPile)
+            foreach (CardDataSO card in cards)
             {
                 if (card != null)
                 {
@@ -110,8 +165,14 @@ namespace FourE.Cards.Effects
                 }
             }
 
+            return CountBits(union);
+        }
+
+        /// <summary>Conta i bit attivi in un insieme di tag.</summary>
+        private static int CountBits(CardTag tags)
+        {
             int bits = 0;
-            int value = (int)union;
+            int value = (int)tags;
             while (value != 0)
             {
                 bits += value & 1;

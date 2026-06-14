@@ -25,6 +25,7 @@ namespace FourE.Players
         [SerializeField] private CommanderState[] _commanders;
         [SerializeField] private bool _verificaBlocked;
         [SerializeField] private bool _wikipediaInterceptActive;
+        [SerializeField] private bool _constitutionProtectionActive;
         [SerializeField] private int _verificaPlayedCount;
 
         /// <summary>Numero attore Photon che identifica il giocatore.</summary>
@@ -56,6 +57,16 @@ namespace FourE.Players
 
         /// <summary>True se è attivo uno scudo Wikipedia che intercetta la prossima carta dell'avversario.</summary>
         public bool WikipediaInterceptActive { get => _wikipediaInterceptActive; set => _wikipediaInterceptActive = value; }
+
+        /// <summary>
+        /// True se Costituzione annulla aumenti di Note e carte ottenuti dalle carte dell'avversario.
+        /// Decade all'inizio del prossimo turno del proprietario.
+        /// </summary>
+        public bool ConstitutionProtectionActive
+        {
+            get => _constitutionProtectionActive;
+            set => _constitutionProtectionActive = value;
+        }
 
         /// <summary>Numero di Verifiche giocate da questo giocatore nell'intera partita (passiva base Storia).</summary>
         public int VerificaPlayedCount => _verificaPlayedCount;

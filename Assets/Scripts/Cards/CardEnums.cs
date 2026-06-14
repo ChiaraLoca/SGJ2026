@@ -68,7 +68,13 @@ namespace FourE.Cards
         EnemyDiscardWithTag,
 
         /// <summary>Carte con un tag specifico nella somma dei cimiteri di entrambi i giocatori (Sabotaggio).</summary>
-        BothDiscardWithTag
+        BothDiscardWithTag,
+
+        /// <summary>Azioni che resteranno disponibili dopo il costo della carta in risoluzione.</summary>
+        RemainingActionsAfterCurrentCard,
+
+        /// <summary>Tag distinti presenti nella mano del giocatore attivo.</summary>
+        OwnHandDistinctTags
     }
 
     /// <summary>
@@ -164,7 +170,13 @@ namespace FourE.Cards
         /// Il comandante del giocatore attivo con la Note più bassa al momento della risoluzione.
         /// Risolto automaticamente senza input del giocatore (es. Test di Cooper).
         /// </summary>
-        OwnLowestNoteCommander = 15
+        OwnLowestNoteCommander = 15,
+
+        /// <summary>Primo comandante scelto in una selezione ordinata di due bersagli liberi.</summary>
+        SelectedFirstCommander = 16,
+
+        /// <summary>Secondo comandante scelto in una selezione ordinata di due bersagli liberi.</summary>
+        SelectedSecondCommander = 17
     }
 
     /// <summary>

@@ -36,10 +36,13 @@ namespace FourE.Core
     /// <summary>
     /// Fa pescare a un giocatore fino a raggiungere una dimensione di mano (Biblioteca).
     /// </summary>
-    public sealed class DrawToHandSizeChange : IGameChange
+    public sealed class DrawToHandSizeChange : IGameChange, IPositivePlayerCardChange
     {
         private readonly PlayerState _player;
         private readonly int _targetHandSize;
+
+        /// <inheritdoc/>
+        PlayerState IPositivePlayerCardChange.BeneficiaryPlayer => _player;
 
         /// <summary>Crea la modifica di pesca fino a dimensione mano.</summary>
         /// <param name="player">Giocatore che pesca.</param>
@@ -61,9 +64,12 @@ namespace FourE.Core
     /// <summary>
     /// Fa pescare a un giocatore l'intero mazzo (Approfondimento).
     /// </summary>
-    public sealed class DrawAllChange : IGameChange
+    public sealed class DrawAllChange : IGameChange, IPositivePlayerCardChange
     {
         private readonly PlayerState _player;
+
+        /// <inheritdoc/>
+        PlayerState IPositivePlayerCardChange.BeneficiaryPlayer => _player;
 
         /// <summary>Crea la modifica di pesca totale.</summary>
         /// <param name="player">Giocatore che pesca tutto il mazzo.</param>
@@ -153,10 +159,13 @@ namespace FourE.Core
     /// <summary>
     /// Alza la Note del comandante più basso del giocatore verso quella del più alto (Tutor).
     /// </summary>
-    public sealed class EqualizeNotesChange : IGameChange
+    public sealed class EqualizeNotesChange : IGameChange, IPositivePlayerCardChange
     {
         private readonly PlayerState _player;
         private readonly int _maxAmount;
+
+        /// <inheritdoc/>
+        PlayerState IPositivePlayerCardChange.BeneficiaryPlayer => _player;
 
         /// <summary>Crea la modifica di pareggiamento note.</summary>
         /// <param name="player">Giocatore proprietario dei comandanti.</param>
@@ -242,11 +251,14 @@ namespace FourE.Core
     /// <summary>
     /// Recupera N carte casuali dal cimitero del giocatore in mano o in cima al mazzo (Schema, Compito a Casa).
     /// </summary>
-    public sealed class ReturnFromDiscardChange : IGameChange
+    public sealed class ReturnFromDiscardChange : IGameChange, IPositivePlayerCardChange
     {
         private readonly PlayerState _player;
         private readonly int _count;
         private readonly ReturnDestination _destination;
+
+        /// <inheritdoc/>
+        PlayerState IPositivePlayerCardChange.BeneficiaryPlayer => _player;
 
         /// <summary>Crea la modifica di recupero dal cimitero.</summary>
         /// <param name="player">Giocatore proprietario del cimitero.</param>
@@ -435,6 +447,30 @@ namespace FourE.Core
             if (_targetPlayer != null)
             {
                 _targetPlayer.WikipediaInterceptActive = true;
+            }
+        }
+    }
+
+    /// <summary>
+    /// Attiva la protezione di Costituzione sul giocatore fino all'inizio del suo prossimo turno.
+    /// </summary>
+    public sealed class SetConstitutionProtectionChange : IGameChange
+    {
+        private readonly PlayerState _player;
+
+        /// <summary>Crea la modifica di attivazione della protezione.</summary>
+        /// <param name="player">Giocatore protetto.</param>
+        public SetConstitutionProtectionChange(PlayerState player)
+        {
+            _player = player;
+        }
+
+        /// <inheritdoc/>
+        public void Apply()
+        {
+            if (_player != null)
+            {
+                _player.ConstitutionProtectionActive = true;
             }
         }
     }
