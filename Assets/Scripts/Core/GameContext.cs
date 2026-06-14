@@ -17,6 +17,29 @@ namespace FourE.Core
     }
 
     /// <summary>
+    /// Contratto per una modifica carta che concede Note positive a un comandante.
+    /// Permette a Costituzione di annullarla prima del commit.
+    /// </summary>
+    public interface IPositiveCommanderCardChange
+    {
+        /// <summary>Comandante che riceverebbe il beneficio.</summary>
+        CommanderState BeneficiaryCommander { get; }
+
+        /// <summary>True se la modifica concede effettivamente Note positive.</summary>
+        bool IsPositiveBenefit { get; }
+    }
+
+    /// <summary>
+    /// Contratto per una modifica carta che concede carte a un giocatore.
+    /// Permette a Costituzione di annullarla prima del commit.
+    /// </summary>
+    public interface IPositivePlayerCardChange
+    {
+        /// <summary>Giocatore che riceverebbe le carte.</summary>
+        PlayerState BeneficiaryPlayer { get; }
+    }
+
+    /// <summary>
     /// Contesto passato a effetti e condizioni durante la risoluzione di una carta.
     /// Espone lo stato di gioco in lettura e raccoglie le modifiche da applicare al commit.
     /// </summary>
@@ -146,7 +169,35 @@ namespace FourE.Core
         /// <param name="change">Modifica da accodare.</param>
         public void RegisterChange(IGameChange change)
         {
+            if (ShouldSuppressForConstitution(change))
+            {
+                return;
+            }
+
             _pendingChanges.Add(change);
+        }
+
+        /// <summary>
+        /// Verifica se Costituzione annulla il beneficio generato dalla carta avversaria.
+        /// </summary>
+        /// <param name="change">Modifica proposta dall'effetto.</param>
+        /// <returns>True se la modifica non deve essere registrata.</returns>
+        private bool ShouldSuppressForConstitution(IGameChange change)
+        {
+            if (InactivePlayer?.ConstitutionProtectionActive != true)
+            {
+                return false;
+            }
+
+            if (change is IPositiveCommanderCardChange commanderChange
+                && commanderChange.IsPositiveBenefit
+                && IsCommanderOwned(commanderChange.BeneficiaryCommander, InactivePlayer))
+            {
+                return true;
+            }
+
+            return change is IPositivePlayerCardChange playerChange
+                   && playerChange.BeneficiaryPlayer == InactivePlayer;
         }
 
         /// <summary>
@@ -255,14 +306,26 @@ namespace FourE.Core
                 case EffectTarget.SelectedOwnAndEnemy:
                     // Gestito direttamente dall'effetto concreto (es. SwapNotesEffectSO).
                     break;
+                case EffectTarget.SelectedFirstCommander:
+                    if (SelectedTargets.Count > 0)
+                    {
+                        yield return SelectedTargets[0];
+                    }
+                    break;
+                case EffectTarget.SelectedSecondCommander:
+                    if (SelectedTargets.Count > 1)
+                    {
+                        yield return SelectedTargets[1];
+                    }
+                    break;
                 case EffectTarget.OwnLowestNoteCommander:
                     yield return ActivePlayer.LowestNoteCommander();
                     break;
                 case EffectTarget.AffinityCommander:
-                    yield return ActivePlayer.Commanders[AffinitySlot(SourceAffinity)];
+                    yield return ActivePlayer.Commanders[AffinitySlot()];
                     break;
                 case EffectTarget.AffinityOtherCommander:
-                    yield return ActivePlayer.Commanders[1 - AffinitySlot(SourceAffinity)];
+                    yield return ActivePlayer.Commanders[1 - AffinitySlot()];
                     break;
             }
         }
@@ -272,11 +335,89 @@ namespace FourE.Core
         /// </summary>
         /// <param name="affinity">Affinità della carta.</param>
         /// <returns>Indice di slot del comandante (0 o 1).</returns>
-        private static int AffinitySlot(CardAffinity affinity)
+        private int AffinitySlot()
         {
-            return affinity == CardAffinity.Commander1
+            if (Card != null && ActivePlayer?.Commanders != null)
+            {
+                for (int i = 0; i < ActivePlayer.Commanders.Length; i++)
+                {
+                    CommanderDataSO data = ActivePlayer.Commanders[i]?.Data;
+                    if (data != null && ContainsCard(data.LinkedCards, Card))
+                    {
+                        return i;
+                    }
+                }
+            }
+
+            return SourceAffinity == CardAffinity.Commander1
                 ? GameConstants.SecondCommanderIndex
                 : GameConstants.FirstCommanderIndex;
+        }
+
+        /// <summary>Verifica se una raccolta contiene la carta indicata.</summary>
+        private static bool ContainsCard(IReadOnlyList<CardDataSO> cards, CardDataSO card)
+        {
+            foreach (CardDataSO candidate in cards)
+            {
+                if (candidate == card)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        /// <summary>
+        /// Risolve i bersagli di un debuff e include l'altro comandante avversario
+        /// quando la secondaria di Arte è sbloccata.
+        /// </summary>
+        /// <param name="target">Bersaglio configurato dall'effetto.</param>
+        /// <returns>Comandanti da colpire senza duplicati.</returns>
+        public IEnumerable<CommanderState> ResolveDebuffCommanders(EffectTarget target)
+        {
+            HashSet<CommanderState> resolved = new();
+            bool spreadToOther = HasUnlockedArteCommander(ActivePlayer);
+
+            foreach (CommanderState commander in ResolveCommanders(target))
+            {
+                if (commander != null && resolved.Add(commander))
+                {
+                    yield return commander;
+                }
+
+                if (!spreadToOther || !IsCommanderOwned(commander, InactivePlayer))
+                {
+                    continue;
+                }
+
+                foreach (CommanderState enemyCommander in InactivePlayer.Commanders)
+                {
+                    if (enemyCommander != null && resolved.Add(enemyCommander))
+                    {
+                        yield return enemyCommander;
+                    }
+                }
+            }
+        }
+
+        /// <summary>Verifica se il giocatore possiede Arte con secondaria sbloccata.</summary>
+        private static bool HasUnlockedArteCommander(PlayerState player)
+        {
+            if (player?.Commanders == null)
+            {
+                return false;
+            }
+
+            foreach (CommanderState commander in player.Commanders)
+            {
+                if (commander?.Data?.Kind == CommanderKind.Arte && commander.SecondaryUnlocked)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         /// <summary>

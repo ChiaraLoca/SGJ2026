@@ -44,6 +44,24 @@
 | **Condizione Sblocco**  | Arrivare a 0 Note su questo comandante                                                        |
 | **Abilità Secondaria**  | Ogni volta che giochi un'azione, −1 Nota al comandante avversario con più Note                |
 
+### Diritto (D)
+
+| Campo                   | Valore                                                                                         |
+|-------------------------|-----------------------------------------------------------------------------------------------|
+| **Abilità Base**        | Alla fine di ogni tuo turno, +2 Note al comandante di Diritto se hai almeno una azione non usata |
+| **Condizione Sblocco**  | Avere giocato 6 carte in un tuo turno                                                        |
+| **Abilità Secondaria**  | Alla fine di ogni tuo turno, +2 Note al tuo secondo comandante (non quello di diritto) se hai almeno una azione non usata                |
+
+
+### Arte (A)
+
+| Campo                   | Valore                                                                                         |
+|-------------------------|-----------------------------------------------------------------------------------------------|
+| **Abilità Base**        | Se l'avversario gioca una carta con almeno un tag che è già stato giocato nel turno, -1 Nota al suo comandante con + Note |
+| **Condizione Sblocco**  | Avere nel cimitero carte con un totale di 6 tag diversi                                                        |
+| **Abilità Secondaria**  | Se una carta che giochi dovrebbe dare - Note ad un comandante avversario, le da anche all'altro                |
+
+
 ---
 
 ## Tag
@@ -109,6 +127,28 @@
 | Gossip     | B    | 1  | Ricerca, Pratica     | L'avversario scarta una carta a caso dalla mano (esclusa la Verifica)   | No target            |
 | Fidanzata  | B    | 1  | Letteratura, Pratica | Fino all'inizio del tuo prossimo turno, le Note dei tuoi comandanti non possono calare | No target |
 
+---
+
+## Mazzo Diritto
+
+| Nome       | Tier | Qt | Tag                  | Effetto                                                                  | Target               |
+|------------|------|----|----------------------|--------------------------------------------------------------------------|----------------------|
+| Obiezione! | C    | 2  | Pianificazione,Pratica              | -1 Nota; +1 Azione                                                 | Qualsiasi comandante |
+| Metodo    | C    | 1  | Pianificazione  | +1 Nota; +1 Azione | Qualsiasi comandante |
+| Codice Civile     | B    | 1  | Pianificazione    | +2 Note per ogni azione rimanente dopo aver giocato questa carta   | Qualsiasi Comandante            |
+---
+| Costituzione  | B    | 1  | Letteratura, Pratica | Fino all'inizio del tuo prossimo turno, annulla tutti i + Note e + Carte che  danno le carte giocate dal tuo avversario  | No target |
+
+---
+
+## Mazzo Arte
+
+| Nome       | Tier | Qt | Tag                  | Effetto                                                                  | Target               |
+|------------|------|----|----------------------|--------------------------------------------------------------------------|----------------------|
+| Teoria dei Colori | C    | 2  | Estetica,Ricerca              | +1 Nota a qualsiasi comandante, - 1 Nota a qualsiasi comandante | Qualsiasi comandante, qualsiasi comandante |
+| Dialogo    | C    | 1  | Letteratura       | Annulla il prossimo debuff ricevuto                                                              | No target                                  |
+| Proporzioni     | B    | 1  | Studio, Estetica    | +1 Voto per ogni tag diverso tra le carte nel tuo cimitero   | Qualsiasi Comandante            |
+| Dipinto  | B    | 1  | Pratica, Ricerca | Pesca una carta e -1 ad un comandante avversario per ogni tag diverso nella tua mano. costa 2 azioni           |
 ---
 
 ## Carte Shop

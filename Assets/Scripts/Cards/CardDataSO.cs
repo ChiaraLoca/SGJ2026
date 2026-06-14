@@ -89,7 +89,9 @@ namespace FourE.Cards
                 if (_effects == null) return false;
                 foreach (CardEffectSO e in _effects)
                 {
-                    if (e != null && e.Target == EffectTarget.SelectedCommanders)
+                    if (e != null && (e.Target == EffectTarget.SelectedCommanders
+                                      || e.Target == EffectTarget.SelectedFirstCommander
+                                      || e.Target == EffectTarget.SelectedSecondCommander))
                         return true;
                 }
                 return false;
@@ -130,5 +132,29 @@ namespace FourE.Cards
 
         /// <summary>True se la carta richiede la selezione di almeno un bersaglio a runtime.</summary>
         public bool RequiresTargetSelection => RequiresAnyTargetSelection || RequiresEnemyTargetSelection || RequiresOwnTargetSelection;
+
+        /// <summary>True se la carta richiede due bersagli liberi scelti in ordine.</summary>
+        public bool RequiresOrderedAnyTargetSelection
+        {
+            get
+            {
+                if (_effects == null)
+                {
+                    return false;
+                }
+
+                foreach (CardEffectSO effect in _effects)
+                {
+                    if (effect != null
+                        && (effect.Target == EffectTarget.SelectedFirstCommander
+                            || effect.Target == EffectTarget.SelectedSecondCommander))
+                    {
+                        return true;
+                    }
+                }
+
+                return false;
+            }
+        }
     }
 }

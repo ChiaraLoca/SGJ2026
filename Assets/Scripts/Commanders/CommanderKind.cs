@@ -15,6 +15,12 @@ namespace FourE.Commanders
         Inglese = 2,
 
         /// <summary>Educazione Fisica (E): passive legate al numero di carte in mano e alle azioni giocate.</summary>
-        EducazioneFisica = 3
+        EducazioneFisica = 3,
+
+        /// <summary>Diritto (D): passive legate alle azioni lasciate inutilizzate a fine turno.</summary>
+        Diritto = 4,
+
+        /// <summary>Arte (A): passive legate ai tag giocati e alla propagazione dei debuff.</summary>
+        Arte = 5
     }
 }

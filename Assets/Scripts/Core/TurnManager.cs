@@ -21,14 +21,19 @@ namespace FourE.Core
         private PhaseManager _phases;
 
         [SerializeField] private int _cardsPlayedThisTurn;
+        [SerializeField] private int _standardCardsPlayedThisTurn;
         [SerializeField] private int _cardsAllowedThisTurn;
         [SerializeField] private int _turnInRound;
+        [SerializeField] private CardTag _tagsPlayedThisTurn;
         private bool _copyNextCardActive;
         // Guardia che impedisce la ricorsione infinita nel caso estremo in cui entrambi i giocatori abbiano 0 carte.
         private bool _autoSkipActive;
 
-        /// <summary>Carte giocate nel turno corrente.</summary>
+        /// <summary>Azioni consumate dalle carte giocate nel turno corrente.</summary>
         public int CardsPlayedThisTurn => _cardsPlayedThisTurn;
+
+        /// <summary>Numero effettivo di carte standard giocate nel turno corrente.</summary>
+        public int StandardCardsPlayedThisTurn => _standardCardsPlayedThisTurn;
 
         /// <summary>Carte giocabili nel turno corrente, dal config in base al round.</summary>
         public int CardsAllowedThisTurn => _cardsAllowedThisTurn;
@@ -38,6 +43,9 @@ namespace FourE.Core
 
         /// <summary>Indice del turno all'interno del round corrente (1 = primo turno).</summary>
         public int TurnInRound => _turnInRound;
+
+        /// <summary>Unione dei tag delle carte già giocate nel turno corrente.</summary>
+        public CardTag TagsPlayedThisTurn => _tagsPlayedThisTurn;
 
         /// <summary>True se la Verifica può essere giocata ora: non nel 1° turno del round.</summary>
         public bool CanPlayVerificaThisTurn => _turnInRound > GameConstants.FirstRoundTurnNumber;
@@ -80,8 +88,13 @@ namespace FourE.Core
         {
             _state.SetActivePlayer(player);
             _cardsPlayedThisTurn = 0;
+            _standardCardsPlayedThisTurn = 0;
+            _tagsPlayedThisTurn = CardTag.None;
             _cardsAllowedThisTurn = _state.GameConfig.GetCardsPlayablePerTurn(_state.CurrentRoundIndex);
             _turnInRound++;
+
+            // Costituzione dura fino all'inizio del prossimo turno del proprietario.
+            player.ConstitutionProtectionActive = false;
 
             // Le condizioni di sblocco della secondaria si controllano a inizio di ogni turno.
             _state.Passives?.CheckSecondaryUnlocks(player, _state.CurrentRoundIndex);
@@ -142,6 +155,13 @@ namespace FourE.Core
             _copyNextCardActive = true;
         }
 
+        /// <summary>Registra i tag della carta appena giocata nel turno corrente.</summary>
+        /// <param name="tags">Tag da aggiungere all'unione del turno.</param>
+        public void RegisterPlayedTags(CardTag tags)
+        {
+            _tagsPlayedThisTurn |= tags;
+        }
+
         /// <summary>
         /// Tenta di giocare una carta standard dalla mano del giocatore attivo.
         /// Raggiunto il limite di carte, il turno termina automaticamente.
@@ -183,6 +203,8 @@ namespace FourE.Core
             // Identifica il comandante più basso prima della risoluzione (potrebbe cambiare dopo il buff).
             CommanderState cooperLowest = IsCooperCard(card) ? player.LowestNoteCommander() : null;
 
+            _state.Passives?.ApplyBeforeCardResolution(player, card);
+
             GameContext context = _state.BuildContext(selectedTargets);
             _resolver.Resolve(card, context);
 
@@ -198,6 +220,8 @@ namespace FourE.Core
             }
 
             _cardsPlayedThisTurn += card.ActionCost;
+            _standardCardsPlayedThisTurn++;
+            _state.Passives?.CheckSecondaryUnlocks(player, _state.CurrentRoundIndex);
 
             // Copiare: se il flag era attivo, riapplica gli stessi effetti sull'altro contesto.
             if (wasCopyActive)

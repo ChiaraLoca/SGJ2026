@@ -98,6 +98,8 @@ namespace FourE.UI
         private CardDataSO _pendingTargetCard;
         private int _pendingEnemyActorNumber = -1;
         private int _pendingEnemyCommanderIndex = -1;
+        private int _pendingFirstActorNumber = -1;
+        private int _pendingFirstCommanderIndex = -1;
 
         /// <summary>
         /// Si iscrive agli aggiornamenti di stato.
@@ -796,6 +798,8 @@ namespace FourE.UI
             _pendingTargetCard = card;
             _pendingEnemyActorNumber = -1;
             _pendingEnemyCommanderIndex = -1;
+            _pendingFirstActorNumber = -1;
+            _pendingFirstCommanderIndex = -1;
             _cancelTargetSelectionButton?.gameObject.SetActive(true);
 
             if (card.RequiresEnemyTargetSelection)
@@ -822,9 +826,31 @@ namespace FourE.UI
         private void OnAnyCommanderSelected(int actorNumber, int commanderIndex)
         {
             if (_pendingTargetCard == null) return;
+
+            if (_pendingTargetCard.RequiresOrderedAnyTargetSelection
+                && _pendingFirstActorNumber < 0)
+            {
+                _pendingFirstActorNumber = actorNumber;
+                _pendingFirstCommanderIndex = commanderIndex;
+                ShowAllSelection();
+                return;
+            }
+
             CardDataSO card = _pendingTargetCard;
+            int firstActor = _pendingFirstActorNumber;
+            int firstCommander = _pendingFirstCommanderIndex;
             ExitTargetSelectionMode();
-            _network.SubmitPlayCard(card, new[] { actorNumber }, new[] { commanderIndex });
+            if (firstActor >= 0)
+            {
+                _network.SubmitPlayCard(
+                    card,
+                    new[] { firstActor, actorNumber },
+                    new[] { firstCommander, commanderIndex });
+            }
+            else
+            {
+                _network.SubmitPlayCard(card, new[] { actorNumber }, new[] { commanderIndex });
+            }
         }
 
         /// <summary>Attiva solo i comandanti avversari come selezionabili (step nemico).</summary>
@@ -904,6 +930,8 @@ namespace FourE.UI
             _pendingTargetCard = null;
             _pendingEnemyActorNumber = -1;
             _pendingEnemyCommanderIndex = -1;
+            _pendingFirstActorNumber = -1;
+            _pendingFirstCommanderIndex = -1;
             _cancelTargetSelectionButton?.gameObject.SetActive(false);
             _localCommander0?.SetSelectable(false, null);
             _localCommander1?.SetSelectable(false, null);

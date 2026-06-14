@@ -38,6 +38,7 @@ Torna all'[indice generale](../INDEX.md).
 - Le carte (`CardView`) sono **istanziate** da prefab `[SerializeField]`; il resto della HUD è in scena (vedi memoria `project_scene_run_setup`).
 - **Verifica in mano**: la carta Verifica è renderizzata in `RenderHand` come le altre; click → `SubmitPlayVerifica()`. Il vecchio bottone separato è stato riutilizzato come annullamento della selezione bersagli.
 - **Selezione bersaglio**: carte con `RequiresTargetSelection=true` entrano in modalità selezione (overlay giallo sui CommanderView); il pulsante `ANNULLA` torna alla mano senza inviare intent, mentre il click sul comandante completa la scelta.
+- **Due bersagli liberi**: `RequiresOrderedAnyTargetSelection` raccoglie due comandanti in ordine per Teoria dei Colori.
 - **Abilità comandanti**: pressione prolungata sul ritratto apre il popup descrittivo; il passaggio `SecondaryUnlocked` da falso a vero produce un pulse dorato e mantiene una cornice dorata permanente sulla view corretta, visibile a entrambi i giocatori e anche al cambio di prospettiva hotseat.
 - **Anteprima carta**: pressione prolungata con touch o mouse mostra una copia ingrandita al centro del Canvas; il rilascio la chiude senza giocare/acquistare la carta.
 - **Mercato**: `ShopContainer` e le sue carte sono attivi solo durante la fase `Shop`.

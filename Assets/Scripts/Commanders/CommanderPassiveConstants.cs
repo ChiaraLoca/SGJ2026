@@ -43,5 +43,27 @@ namespace FourE.Commanders
 
         /// <summary>Soglia di Note che sblocca la secondaria di Educazione Fisica (arrivare a 0).</summary>
         public const int EduFisicaSecondaryUnlockNote = 0;
+
+        // --- Diritto ---
+
+        /// <summary>Azioni che devono restare inutilizzate per attivare le passive di fine turno.</summary>
+        public const int DirittoRequiredUnusedActions = 1;
+
+        /// <summary>Note aggiunte a Diritto a fine turno quando resta almeno un'azione.</summary>
+        public const int DirittoTurnEndBonus = 2;
+
+        /// <summary>Note aggiunte all'altro comandante dalla secondaria di Diritto.</summary>
+        public const int DirittoSecondaryOtherBonus = 2;
+
+        /// <summary>Carte da giocare in un singolo turno per sbloccare la secondaria di Diritto.</summary>
+        public const int DirittoSecondaryUnlockCardsPlayed = 6;
+
+        // --- Arte ---
+
+        /// <summary>Note sottratte quando una carta ripete almeno un tag già giocato nel turno.</summary>
+        public const int ArteRepeatedTagPenalty = 1;
+
+        /// <summary>Tag distinti richiesti nel cimitero per sbloccare la secondaria di Arte.</summary>
+        public const int ArteSecondaryUnlockDistinctTags = 6;
     }
 }

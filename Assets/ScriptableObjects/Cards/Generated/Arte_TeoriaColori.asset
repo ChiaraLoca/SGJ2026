@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34c818aa966839443bbf9b3ed3fd5d04, type: 3}
+  m_Name: Arte_TeoriaColori
+  m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
+  _cardName: Teoria dei Colori
+  _description: +1 Nota al primo comandante scelto; -1 Nota al secondo.
+  _cardType: 0
+  _affinity: 0
+  _tags: 36
+  _artwork: {fileID: 21300000, guid: 67df3e2cb11648b44a18bbb4221eb925, type: 3}
+  _tier: 0
+  _shopCost: 0
+  _minCreditsRequired: 0
+  _effects:
+  - {fileID: 11400000, guid: 014c88d823bd4304b5c365c5462253de, type: 2}
+  - {fileID: 11400000, guid: 8c02ea24628947c4b3c3fc8c26ce0c3f, type: 2}
+  _actionCost: 1
+  _isCooper: 0
