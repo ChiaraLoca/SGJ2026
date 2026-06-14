@@ -186,6 +186,12 @@ namespace FourE.UI
         {
             foreach (Graphic graphic in GetComponentsInChildren<Graphic>(true))
             {
+                // Il Graphic sul root serve solo a ricevere i raycast del Button.
+                if (graphic.transform == transform)
+                {
+                    continue;
+                }
+
                 Color color = graphic.color;
                 color.a = 1f;
                 graphic.color = color;
