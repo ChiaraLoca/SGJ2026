@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Storia_Studio
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
   _cardName: Studio
-  _description: +2 Note al comandante.
+  _description: +2 Voti al secchione.
   _cardType: 0
   _affinity: 0
   _tags: 2
@@ -23,3 +23,5 @@ MonoBehaviour:
   _minCreditsRequired: 0
   _effects:
   - {fileID: 11400000, guid: 28fbf729d540bd944afbdce6e35d338c, type: 2}
+  _actionCost: 1
+  _isCooper: 0

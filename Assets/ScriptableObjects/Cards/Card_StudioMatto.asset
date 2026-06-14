@@ -13,10 +13,15 @@ MonoBehaviour:
   m_Name: Card_StudioMatto
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
   _cardName: Studio Matto
-  _description: 'Sessione intensa: +2 Note.'
+  _description: 'Sessione intensa: +2 Voti.'
   _cardType: 0
   _affinity: 1
+  _tags: 0
+  _artwork: {fileID: 0}
+  _tier: 0
   _shopCost: 0
   _minCreditsRequired: 0
   _effects:
   - {fileID: 11400000, guid: ba552771249beda498d1d9463a4b1d12, type: 2}
+  _actionCost: 1
+  _isCooper: 0

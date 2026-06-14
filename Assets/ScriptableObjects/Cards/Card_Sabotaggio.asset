@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Card_Sabotaggio
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
   _cardName: Sabotaggio
-  _description: 'Sabota i rivali: -2 Note ai nemici.'
+  _description: 'Sabota i rivali: -2 Voti ai nemici.'
   _cardType: 0
   _affinity: 2
   _tags: 0

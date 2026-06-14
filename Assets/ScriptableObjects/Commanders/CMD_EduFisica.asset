@@ -22,8 +22,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3b987999da5dd7340b4835713f6144d5, type: 2}
   - {fileID: 11400000, guid: d146f65f8d599fb40b06b2726e4f9841, type: 2}
   _portrait: {fileID: -6203964725797616944, guid: b385f8e4e504fd149a81300303761375, type: 3}
-  _baseAbilityDescription: Alla fine di ogni tuo turno, +1 Nota all'altro tuo comandante
+  _baseAbilityDescription: Alla fine di ogni tuo turno, +1 Voto all'altro tuo secchione
     se hai meno carte in mano dell'avversario
-  _unlockConditionDescription: Arrivare a 0 Note su questo comandante
-  _secondaryAbilityDescription: Ogni volta che giochi un'azione, −1 Nota al comandante
-    avversario con più Note
+  _unlockConditionDescription: Arrivare a 0 Voti su questo secchione
+  _secondaryAbilityDescription: "Ogni volta che giochi un'azione, \u22121 Voto al
+    secchione avversario con pi\xF9 Voti"

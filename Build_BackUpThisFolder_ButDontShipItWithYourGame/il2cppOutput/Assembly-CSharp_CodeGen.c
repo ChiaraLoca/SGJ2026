@@ -108,6 +108,7 @@ extern void CommanderSelectController_BuildOptions_m7957048986464D2CBF25AB9220CF
 extern void CommanderSelectController_OnCommanderInspected_m9E87C445E5C0C26B27CD687924F007DE9299E396 (void);
 extern void CommanderSelectController_ShowDetailPanel_m6D68E208A51488B34E218DA92C656253B01304DD (void);
 extern void CommanderSelectController_OnSelectInspectedClicked_mFFC43E31CDEE0681407FA2D4FA2C95087E21D33A (void);
+extern void CommanderSelectController_HideDetailPanel_m34B47F6A57E67951F31F10E953E43914C2B57C13 (void);
 extern void CommanderSelectController_OnCommanderPicked_mD4C4CD0022280082F6F6C5767BBCB40955D0430B (void);
 extern void CommanderSelectController_ResetCurrentPicks_m201B166E8021F3A18852EC8DB5DF99BA34FBE5CF (void);
 extern void CommanderSelectController_RefreshSelectionUI_mF94579266E1567417481942B39BFEBCD48742716 (void);
@@ -880,7 +881,7 @@ extern void TextToggleIsOnTransition_OnValueChanged_m2130BC0EA8E9ACBE55A1DB8FBEF
 extern void TextToggleIsOnTransition_OnPointerEnter_m857EAEB61AD055B19C27B7DE5BBFD0CAEBF2C41D (void);
 extern void TextToggleIsOnTransition_OnPointerExit_m19C44B773913ECEB572F90DFC2ACB123E4D9E50F (void);
 extern void TextToggleIsOnTransition__ctor_mC67BFBF0D3B3D64CDCA7F3A72AD6A8789AF07BDC (void);
-static Il2CppMethodPointer s_methodPointers[891] = 
+static Il2CppMethodPointer s_methodPointers[892] = 
 {
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
@@ -983,6 +984,7 @@ static Il2CppMethodPointer s_methodPointers[891] =
 	CommanderSelectController_OnCommanderInspected_m9E87C445E5C0C26B27CD687924F007DE9299E396,
 	CommanderSelectController_ShowDetailPanel_m6D68E208A51488B34E218DA92C656253B01304DD,
 	CommanderSelectController_OnSelectInspectedClicked_mFFC43E31CDEE0681407FA2D4FA2C95087E21D33A,
+	CommanderSelectController_HideDetailPanel_m34B47F6A57E67951F31F10E953E43914C2B57C13,
 	CommanderSelectController_OnCommanderPicked_mD4C4CD0022280082F6F6C5767BBCB40955D0430B,
 	CommanderSelectController_ResetCurrentPicks_m201B166E8021F3A18852EC8DB5DF99BA34FBE5CF,
 	CommanderSelectController_RefreshSelectionUI_mF94579266E1567417481942B39BFEBCD48742716,
@@ -1832,46 +1834,46 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[47] =
 	{ 0x06000023, AnimationRequest_get_StartPosition_m363E53B9224517B42EB6A0990702EC9385A5B3B4_AdjustorThunk },
 	{ 0x06000024, AnimationRequest_get_Targets_m8C13E71DF7B9328CEE8B4B8F9CDEEFA4B1746895_AdjustorThunk },
 	{ 0x06000025, AnimationRequest__ctor_m2D0C47A87BD85B6160AA95E14D9A02D75F10C688_AdjustorThunk },
-	{ 0x06000139, GameIntent_get_Type_m042237E8755039CEE778CC8BDA7689CCAFE73071_AdjustorThunk },
-	{ 0x0600013A, GameIntent_get_ActorNumber_m69677902E7973E9538ABE9A4C3D51893B35B9299_AdjustorThunk },
-	{ 0x0600013B, GameIntent_get_CardId_mD7743CB286162157CFA79F4C4415DD5D79121236_AdjustorThunk },
-	{ 0x0600013C, GameIntent_get_TargetActorNumbers_m7E2A460FC8B185CFBD3FA7CCDF1B046B86D81758_AdjustorThunk },
-	{ 0x0600013D, GameIntent_get_TargetCommanderIndices_m56548B62810AE2776DA55729A15583417F3293BC_AdjustorThunk },
-	{ 0x0600013E, GameIntent__ctor_m82266B72E4D72418DBD452F90559C26F671D407A_AdjustorThunk },
-	{ 0x06000148, GameStateSyncedEvent_get_State_m70948EDCDB383AB3CBF2798F7FD7BDB3B0D322D4_AdjustorThunk },
-	{ 0x06000149, GameStateSyncedEvent_get_LocalActorNumber_m5B635F59FCB236EDF1B3918220CEC3AA9E4BECEE_AdjustorThunk },
-	{ 0x0600014A, GameStateSyncedEvent__ctor_m7F23A25F3DF4EF2AAE25D2DE7F61EDF00A4A9D64_AdjustorThunk },
-	{ 0x060001D4, CardResolvingEvent_get_Card_m563C6F0DBC94D687D6C4DEAC1B13FD937C2C6132_AdjustorThunk },
-	{ 0x060001D5, CardResolvingEvent_get_Player_mBE9235593EC952774C3B75C8A1AFC47EED246034_AdjustorThunk },
-	{ 0x060001D6, CardResolvingEvent_get_Context_m980FAB3E9B5740636E0EFDE0483996021394E8D2_AdjustorThunk },
-	{ 0x060001D7, CardResolvingEvent__ctor_m1A69825DA199E93445BF848D3576FD40FA3164D7_AdjustorThunk },
-	{ 0x060001D8, CardPlayedEvent_get_Card_m538C51F0523E139C1B03B6D3D4D04C50DEE9EA01_AdjustorThunk },
-	{ 0x060001D9, CardPlayedEvent_get_Player_m2A52562B640FFDBB9192CD770F8EEC6B966A3B10_AdjustorThunk },
-	{ 0x060001DA, CardPlayedEvent__ctor_m9E3281EB74118BA7868C5987D352F5A3D6187B3F_AdjustorThunk },
-	{ 0x060001DB, CardBoughtEvent_get_Card_m075C5046ED21188A618C8EA240DF5C8F4A1D3DA3_AdjustorThunk },
-	{ 0x060001DC, CardBoughtEvent_get_Player_m459492497741BE5AB4B63CA09D9D85501C855DCF_AdjustorThunk },
-	{ 0x060001DD, CardBoughtEvent__ctor_m4D63AD43BA71303004E79C65524BDC99DEC089D0_AdjustorThunk },
-	{ 0x060001DE, VerificaPlayedEvent_get_Player_mC293A074D6635A8001FBF94042AFB2CCC832307D_AdjustorThunk },
-	{ 0x060001DF, VerificaPlayedEvent__ctor_mC1A4E27EDB7612E53EB8205BBC7BBD8E50389C1D_AdjustorThunk },
-	{ 0x060001E0, TurnEndedEvent_get_Player_m3D09DEEF29A0123A2809F5828A1D005EAE379ED8_AdjustorThunk },
-	{ 0x060001E1, TurnEndedEvent__ctor_m7E83942D42D4BE591AF79AC64D73727A1C478572_AdjustorThunk },
-	{ 0x060001E2, RoundEndedEvent_get_RoundIndex_m77DDA2EDBA04EF1D97943D46459F901BAAD0B4DB_AdjustorThunk },
-	{ 0x060001E3, RoundEndedEvent__ctor_m80005712CC2B38FC4FF07B56B03C9FC0A66BBB58_AdjustorThunk },
-	{ 0x060001E4, PhaseChangedEvent_get_Phase_mB5CABC283545C7E6982A5C57BAA499FBBFB71C85_AdjustorThunk },
-	{ 0x060001E5, PhaseChangedEvent__ctor_m2B00936CE67552E08B3D613CC0BFC7E91E24A3DA_AdjustorThunk },
-	{ 0x060001E6, NoteChangedEvent_get_Commander_mBF56D9F961B97A64B2302EE3317A81B881D1F2C3_AdjustorThunk },
-	{ 0x060001E7, NoteChangedEvent__ctor_m0869DF92F5DCA8D8C9323FA9E240460FC8ACFC45_AdjustorThunk },
-	{ 0x060001E8, NoteIncreasedEvent_get_Commander_mDA183135BB0ADFE32A295F54F857DA6562C4E429_AdjustorThunk },
-	{ 0x060001E9, NoteIncreasedEvent_get_Amount_m0E92F5FF73897C86AAA6EF779DB070A207530378_AdjustorThunk },
-	{ 0x060001EA, NoteIncreasedEvent__ctor_m3567B5296B9E8FEE7B6B33392CD922348FC5A7ED_AdjustorThunk },
-	{ 0x060001EB, CardsDrawnEvent_get_Player_mBCD4F7DDD579B4440FABBAFBDE861B1CF80BC6D4_AdjustorThunk },
-	{ 0x060001EC, CardsDrawnEvent_get_Count_m7589EB581322A583F66FDA30686A9A5B7204C788_AdjustorThunk },
-	{ 0x060001ED, CardsDrawnEvent__ctor_m4A4D525C8E07C54161C3B8ABFDCDAD22C2AE8F5D_AdjustorThunk },
-	{ 0x060001EE, GameOverEvent_get_WinnerActorNumber_mFF5F89734E2CC44554E51F6F1C9EADAE80622D0C_AdjustorThunk },
-	{ 0x060001EF, GameOverEvent_get_IsDraw_mD609D955860B869B91C29741F1EF4767C1E605B7_AdjustorThunk },
-	{ 0x060001F0, GameOverEvent__ctor_m1FD3085A215AA5C2A7E05499D08822BE7C728AB7_AdjustorThunk },
+	{ 0x0600013A, GameIntent_get_Type_m042237E8755039CEE778CC8BDA7689CCAFE73071_AdjustorThunk },
+	{ 0x0600013B, GameIntent_get_ActorNumber_m69677902E7973E9538ABE9A4C3D51893B35B9299_AdjustorThunk },
+	{ 0x0600013C, GameIntent_get_CardId_mD7743CB286162157CFA79F4C4415DD5D79121236_AdjustorThunk },
+	{ 0x0600013D, GameIntent_get_TargetActorNumbers_m7E2A460FC8B185CFBD3FA7CCDF1B046B86D81758_AdjustorThunk },
+	{ 0x0600013E, GameIntent_get_TargetCommanderIndices_m56548B62810AE2776DA55729A15583417F3293BC_AdjustorThunk },
+	{ 0x0600013F, GameIntent__ctor_m82266B72E4D72418DBD452F90559C26F671D407A_AdjustorThunk },
+	{ 0x06000149, GameStateSyncedEvent_get_State_m70948EDCDB383AB3CBF2798F7FD7BDB3B0D322D4_AdjustorThunk },
+	{ 0x0600014A, GameStateSyncedEvent_get_LocalActorNumber_m5B635F59FCB236EDF1B3918220CEC3AA9E4BECEE_AdjustorThunk },
+	{ 0x0600014B, GameStateSyncedEvent__ctor_m7F23A25F3DF4EF2AAE25D2DE7F61EDF00A4A9D64_AdjustorThunk },
+	{ 0x060001D5, CardResolvingEvent_get_Card_m563C6F0DBC94D687D6C4DEAC1B13FD937C2C6132_AdjustorThunk },
+	{ 0x060001D6, CardResolvingEvent_get_Player_mBE9235593EC952774C3B75C8A1AFC47EED246034_AdjustorThunk },
+	{ 0x060001D7, CardResolvingEvent_get_Context_m980FAB3E9B5740636E0EFDE0483996021394E8D2_AdjustorThunk },
+	{ 0x060001D8, CardResolvingEvent__ctor_m1A69825DA199E93445BF848D3576FD40FA3164D7_AdjustorThunk },
+	{ 0x060001D9, CardPlayedEvent_get_Card_m538C51F0523E139C1B03B6D3D4D04C50DEE9EA01_AdjustorThunk },
+	{ 0x060001DA, CardPlayedEvent_get_Player_m2A52562B640FFDBB9192CD770F8EEC6B966A3B10_AdjustorThunk },
+	{ 0x060001DB, CardPlayedEvent__ctor_m9E3281EB74118BA7868C5987D352F5A3D6187B3F_AdjustorThunk },
+	{ 0x060001DC, CardBoughtEvent_get_Card_m075C5046ED21188A618C8EA240DF5C8F4A1D3DA3_AdjustorThunk },
+	{ 0x060001DD, CardBoughtEvent_get_Player_m459492497741BE5AB4B63CA09D9D85501C855DCF_AdjustorThunk },
+	{ 0x060001DE, CardBoughtEvent__ctor_m4D63AD43BA71303004E79C65524BDC99DEC089D0_AdjustorThunk },
+	{ 0x060001DF, VerificaPlayedEvent_get_Player_mC293A074D6635A8001FBF94042AFB2CCC832307D_AdjustorThunk },
+	{ 0x060001E0, VerificaPlayedEvent__ctor_mC1A4E27EDB7612E53EB8205BBC7BBD8E50389C1D_AdjustorThunk },
+	{ 0x060001E1, TurnEndedEvent_get_Player_m3D09DEEF29A0123A2809F5828A1D005EAE379ED8_AdjustorThunk },
+	{ 0x060001E2, TurnEndedEvent__ctor_m7E83942D42D4BE591AF79AC64D73727A1C478572_AdjustorThunk },
+	{ 0x060001E3, RoundEndedEvent_get_RoundIndex_m77DDA2EDBA04EF1D97943D46459F901BAAD0B4DB_AdjustorThunk },
+	{ 0x060001E4, RoundEndedEvent__ctor_m80005712CC2B38FC4FF07B56B03C9FC0A66BBB58_AdjustorThunk },
+	{ 0x060001E5, PhaseChangedEvent_get_Phase_mB5CABC283545C7E6982A5C57BAA499FBBFB71C85_AdjustorThunk },
+	{ 0x060001E6, PhaseChangedEvent__ctor_m2B00936CE67552E08B3D613CC0BFC7E91E24A3DA_AdjustorThunk },
+	{ 0x060001E7, NoteChangedEvent_get_Commander_mBF56D9F961B97A64B2302EE3317A81B881D1F2C3_AdjustorThunk },
+	{ 0x060001E8, NoteChangedEvent__ctor_m0869DF92F5DCA8D8C9323FA9E240460FC8ACFC45_AdjustorThunk },
+	{ 0x060001E9, NoteIncreasedEvent_get_Commander_mDA183135BB0ADFE32A295F54F857DA6562C4E429_AdjustorThunk },
+	{ 0x060001EA, NoteIncreasedEvent_get_Amount_m0E92F5FF73897C86AAA6EF779DB070A207530378_AdjustorThunk },
+	{ 0x060001EB, NoteIncreasedEvent__ctor_m3567B5296B9E8FEE7B6B33392CD922348FC5A7ED_AdjustorThunk },
+	{ 0x060001EC, CardsDrawnEvent_get_Player_mBCD4F7DDD579B4440FABBAFBDE861B1CF80BC6D4_AdjustorThunk },
+	{ 0x060001ED, CardsDrawnEvent_get_Count_m7589EB581322A583F66FDA30686A9A5B7204C788_AdjustorThunk },
+	{ 0x060001EE, CardsDrawnEvent__ctor_m4A4D525C8E07C54161C3B8ABFDCDAD22C2AE8F5D_AdjustorThunk },
+	{ 0x060001EF, GameOverEvent_get_WinnerActorNumber_mFF5F89734E2CC44554E51F6F1C9EADAE80622D0C_AdjustorThunk },
+	{ 0x060001F0, GameOverEvent_get_IsDraw_mD609D955860B869B91C29741F1EF4767C1E605B7_AdjustorThunk },
+	{ 0x060001F1, GameOverEvent__ctor_m1FD3085A215AA5C2A7E05499D08822BE7C728AB7_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[891] = 
+static const int32_t s_InvokerIndices[892] = 
 {
 	31423,
 	17894,
@@ -1973,6 +1975,7 @@ static const int32_t s_InvokerIndices[891] =
 	17894,
 	13177,
 	13246,
+	17894,
 	17894,
 	13177,
 	17894,
@@ -2767,10 +2770,10 @@ static const int32_t s_InvokerIndices[891] =
 };
 static const Il2CppTokenRangePair s_rgctxIndices[4] = 
 {
-	{ 0x060001CF, { 0, 2 } },
-	{ 0x060001D0, { 2, 2 } },
-	{ 0x060001D1, { 4, 4 } },
-	{ 0x060001F3, { 8, 6 } },
+	{ 0x060001D0, { 0, 2 } },
+	{ 0x060001D1, { 2, 2 } },
+	{ 0x060001D2, { 4, 4 } },
+	{ 0x060001F4, { 8, 6 } },
 };
 extern const uint32_t g_rgctx_T_t00C270DA43FFFFB448415E9418852B38A52E7FCA;
 extern const uint32_t g_rgctx_Action_1_t10F536BFD5457D331A44C3605207596B196F5F43;
@@ -2807,7 +2810,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	891,
+	892,
 	s_methodPointers,
 	47,
 	s_adjustorThunks,

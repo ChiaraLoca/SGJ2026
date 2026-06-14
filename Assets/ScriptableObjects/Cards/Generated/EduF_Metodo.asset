@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EduF_Metodo
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
   _cardName: Metodo
-  _description: +1 Nota; +1 Azione.
+  _description: +1 Voto; +1 Azione.
   _cardType: 0
   _affinity: 1
   _tags: 16

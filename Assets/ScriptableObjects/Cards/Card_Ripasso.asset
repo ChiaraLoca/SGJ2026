@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Card_Ripasso
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
   _cardName: Ripasso
-  _description: 'Il secchione ripassa: +2 Note.'
+  _description: 'Il secchione ripassa: +2 Voti.'
   _cardType: 0
   _affinity: 0
   _tags: 0
@@ -23,3 +23,5 @@ MonoBehaviour:
   _minCreditsRequired: 0
   _effects:
   - {fileID: 11400000, guid: b3266194f70e12c4dafb57a3d609928a, type: 2}
+  _actionCost: 1
+  _isCooper: 0

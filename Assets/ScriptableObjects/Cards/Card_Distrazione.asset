@@ -13,10 +13,15 @@ MonoBehaviour:
   m_Name: Card_Distrazione
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
   _cardName: Distrazione
-  _description: 'Distrai un avversario: -2 Note.'
+  _description: 'Distrai un avversario: -2 Voti.'
   _cardType: 0
   _affinity: 2
+  _tags: 0
+  _artwork: {fileID: 0}
+  _tier: 0
   _shopCost: 0
   _minCreditsRequired: 0
   _effects:
   - {fileID: 11400000, guid: 86c628b40fe61d14783a84bdf3b2823b, type: 2}
+  _actionCost: 1
+  _isCooper: 0

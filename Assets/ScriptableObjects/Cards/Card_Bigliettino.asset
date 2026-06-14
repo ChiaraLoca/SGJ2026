@@ -13,10 +13,15 @@ MonoBehaviour:
   m_Name: Card_Bigliettino
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
   _cardName: Bigliettino
-  _description: 'Aiutino per tutti: +1 Note a entrambi.'
+  _description: 'Aiutino per tutti: +1 Voti a entrambi.'
   _cardType: 0
   _affinity: 2
+  _tags: 0
+  _artwork: {fileID: 0}
+  _tier: 0
   _shopCost: 0
   _minCreditsRequired: 0
   _effects:
   - {fileID: 11400000, guid: bc4e18aceefa4594a8b3655755951486, type: 2}
+  _actionCost: 1
+  _isCooper: 0

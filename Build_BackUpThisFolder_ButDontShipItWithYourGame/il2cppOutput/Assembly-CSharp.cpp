@@ -468,7 +468,9 @@ IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5
 IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____D0566AC5858C39B6C150C3954235E8EC8C02BF9544EC6FD6320F51138ADAE71F_FieldInfo_var;
 IL2CPP_EXTERN_C String_t* _stringLiteral000E6F488C4BFBAD929A9ED558662797D830E719;
 IL2CPP_EXTERN_C String_t* _stringLiteral00B28FF06B788B9B67C6B259800F404F9F3761FD;
+IL2CPP_EXTERN_C String_t* _stringLiteral082D1842996957DBAB8D4D09F17F04F28CB64FA3;
 IL2CPP_EXTERN_C String_t* _stringLiteral08D3AC38E45ED5C3E3CB03CC955F3CD547744E4A;
+IL2CPP_EXTERN_C String_t* _stringLiteral0A787A2339D37C0BDAC2357A955586419105CD45;
 IL2CPP_EXTERN_C String_t* _stringLiteral0B52E240C4E4EF5DF47A28DDC4ADC723345D9E59;
 IL2CPP_EXTERN_C String_t* _stringLiteral0C94AB561A88F9F0E831287AF189A9DC1833DC1C;
 IL2CPP_EXTERN_C String_t* _stringLiteral15D4E5E109A9441DFC0FDF2493925BCB0B7A7EB5;
@@ -476,6 +478,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral1FBF0F833F1E6C3BF4CF607851C1A5750CBB0AD4
 IL2CPP_EXTERN_C String_t* _stringLiteral236BF010ACD684FA1AD12C24B31F81A7C5E84013;
 IL2CPP_EXTERN_C String_t* _stringLiteral2EFC21EC5A268853C454A639503863D878FD97F0;
 IL2CPP_EXTERN_C String_t* _stringLiteral30988A9FF1271A3CEDDD5AE9A122FD3C177791F2;
+IL2CPP_EXTERN_C String_t* _stringLiteral30E6B3A203975D177E0F499AF6C4FB533176E263;
 IL2CPP_EXTERN_C String_t* _stringLiteral31D0610676E720E851B8EC68CCD4A5C13F59B584;
 IL2CPP_EXTERN_C String_t* _stringLiteral37A52CB86C07A23C9DFF57E3ACE5FFB7BFC3C927;
 IL2CPP_EXTERN_C String_t* _stringLiteral3BC46844559C995B0BB054341011F8973140C3E1;
@@ -492,21 +495,22 @@ IL2CPP_EXTERN_C String_t* _stringLiteral62389F3B2B74CC48012F1EC64E4159BABB324824
 IL2CPP_EXTERN_C String_t* _stringLiteral63BA442BA9B1C005F8F639ABD44FE77383D6ADEE;
 IL2CPP_EXTERN_C String_t* _stringLiteral6F5FDC84C3D06880B30D187A664B6BB37F84A5F1;
 IL2CPP_EXTERN_C String_t* _stringLiteral758733BDBED83CBFF4F635AC26CA92AAE477F75D;
+IL2CPP_EXTERN_C String_t* _stringLiteral775097DCC4920B3822F1176FA90AC72682C6139C;
 IL2CPP_EXTERN_C String_t* _stringLiteral797D6769970A24C0146E1C88193CBA62E7E0A2AC;
 IL2CPP_EXTERN_C String_t* _stringLiteral7C27DF7B7E40FADCB17ABABCD9DEB7DF47849B0A;
 IL2CPP_EXTERN_C String_t* _stringLiteral7ED84CF52DA50602DD20875B10541D78598C059E;
+IL2CPP_EXTERN_C String_t* _stringLiteral81E70AEB9505F3A76A18F944263CB61FB10CDDF0;
 IL2CPP_EXTERN_C String_t* _stringLiteral8454B6FB781FC073BE1A7285222AE6949237BFB3;
 IL2CPP_EXTERN_C String_t* _stringLiteral855FED6E03442FBB3AF914FFBFA9DA82813817A1;
 IL2CPP_EXTERN_C String_t* _stringLiteral88D8A64228124C97D3184A6423E599550E440683;
 IL2CPP_EXTERN_C String_t* _stringLiteral892EBF0BABDBC3FC4116616EEDEAF754E2A7E4C6;
 IL2CPP_EXTERN_C String_t* _stringLiteral9CDF4F240D59D6F812FF8EBD8E8FB7F2D21FB457;
-IL2CPP_EXTERN_C String_t* _stringLiteralAB6BED4A49B921CDCDC37D9FBB418FBA0CCF99C4;
 IL2CPP_EXTERN_C String_t* _stringLiteralAB98FAF367D8D8104EA150019B551036E5A7E550;
 IL2CPP_EXTERN_C String_t* _stringLiteralB07909492F2CDE29FFE1645DFB9FB7DCBD71296A;
+IL2CPP_EXTERN_C String_t* _stringLiteralB6D86A6C1411DB096253F935E1863E7064918297;
 IL2CPP_EXTERN_C String_t* _stringLiteralB904513A3DF421D86230D475FBBE326CD8067AA1;
 IL2CPP_EXTERN_C String_t* _stringLiteralC0CCAB0A54E41EC0DCB3C5FD50B30FB126019179;
 IL2CPP_EXTERN_C String_t* _stringLiteralC458865C4CF7B6B199B3F1B5CD1FC22ECC12780B;
-IL2CPP_EXTERN_C String_t* _stringLiteralC912EB819971D5F952DED12B1AF7420FB11F9DC7;
 IL2CPP_EXTERN_C String_t* _stringLiteralCE1B4C15CD20B59BD9666DDE4A3B6CE0D86204A0;
 IL2CPP_EXTERN_C String_t* _stringLiteralCEB89610B245D236D42A28A69D74294A8AFB210F;
 IL2CPP_EXTERN_C String_t* _stringLiteralD15624F194EF22F4A1419F43DEE009E7FDB62819;
@@ -531,6 +535,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* Array_Exists_TisString_t_m019EA1E1E7FD82A0F
 IL2CPP_EXTERN_C const RuntimeMethod* CardView_HandleClick_m17C754A478E8FD5BC7C337D8B5EB704760C0C191_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* CollectionUtils_Shuffle_TisCardDataSO_tD219CDA2271352E4C1A7C43349DB3A565CBDD685_mCADDB6023B2A37A6CC39BC4E8538750D89A39911_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* CommanderOptionView_U3CConfigureInspectButtonU3Eb__7_0_m057254F873F88AC37BE91535B2D2935E1401D9D0_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* CommanderSelectController_HideDetailPanel_m34B47F6A57E67951F31F10E953E43914C2B57C13_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* CommanderSelectController_OnCommanderInspected_m9E87C445E5C0C26B27CD687924F007DE9299E396_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* CommanderSelectController_OnConfirmClicked_m9030A511B8A0AE215726385D70DB65235508C99F_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* CommanderSelectController_OnSelectInspectedClicked_mFFC43E31CDEE0681407FA2D4FA2C95087E21D33A_RuntimeMethod_var;
@@ -2529,6 +2534,7 @@ struct CommanderSelectController_t85DA0C4E5AC855E5EE626E54240B752042CFBC2A  : pu
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ____detailSecondaryAbilityLabel;
 	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ____selectCommanderButton;
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ____selectCommanderButtonLabel;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ____closeDetailButton;
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ____titleLabel;
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ____selectionLabel;
 	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ____confirmButton;
@@ -4185,6 +4191,7 @@ inline void List_1_RemoveAt_m859098201365CAC31B3217C1BF2347AC00FE7F9B (List_1_tD
 	((  void (*) (List_1_tD683110370AC27A86E788072D1CFB6FCA9CA35DA*, int32_t, const RuntimeMethod*))List_1_RemoveAt_mA0D34DB4A9D4C8FECCD3278530CEEB3147A19D54_gshared)(__this, ___0_index, method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_RefreshSelectionUI_mF94579266E1567417481942B39BFEBCD48742716 (CommanderSelectController_t85DA0C4E5AC855E5EE626E54240B752042CFBC2A* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_HideDetailPanel_m34B47F6A57E67951F31F10E953E43914C2B57C13 (CommanderSelectController_t85DA0C4E5AC855E5EE626E54240B752042CFBC2A* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_OnCommanderPicked_mD4C4CD0022280082F6F6C5767BBCB40955D0430B (CommanderSelectController_t85DA0C4E5AC855E5EE626E54240B752042CFBC2A* __this, int32_t ___0_kind, const RuntimeMethod* method) ;
 inline int32_t List_1_get_Count_m5AA7CEC339140605936B38B8DB7D4973CF4E3B7F_inline (List_1_tD683110370AC27A86E788072D1CFB6FCA9CA35DA* __this, const RuntimeMethod* method)
 {
@@ -9434,6 +9441,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_Start_m2EBBA05
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&CommanderSelectController_HideDetailPanel_m34B47F6A57E67951F31F10E953E43914C2B57C13_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&CommanderSelectController_OnConfirmClicked_m9030A511B8A0AE215726385D70DB65235508C99F_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&CommanderSelectController_OnSelectInspectedClicked_mFFC43E31CDEE0681407FA2D4FA2C95087E21D33A_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&CommanderSelectController_ResetCurrentPicks_m201B166E8021F3A18852EC8DB5DF99BA34FBE5CF_RuntimeMethod_var);
@@ -9447,13 +9455,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_Start_m2EBBA05
 	bool V_2 = false;
 	bool V_3 = false;
 	bool V_4 = false;
+	bool V_5 = false;
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:77>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:78>
 		il2cpp_codegen_runtime_class_init_inline(SessionConfig_t6EE12879AEFF13A1B76A216929BCDBC2B628477F_il2cpp_TypeInfo_var);
 		int32_t L_0;
 		L_0 = SessionConfig_get_Mode_m4FCD30AEF85AAA6AEAE155B35DFBA5BF0E070C10_inline(NULL);
 		__this->____online = (bool)((((int32_t)L_0) == ((int32_t)1))? 1 : 0);
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:79>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:80>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = __this->____detailPanel;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_2;
@@ -9466,7 +9475,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_Start_m2EBBA05
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:79>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:80>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = __this->____detailPanel;
 		NullCheck(L_4);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_4, (bool)0, NULL);
@@ -9474,7 +9483,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_Start_m2EBBA05
 
 IL_002c:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:80>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:81>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_5 = __this->____selectCommanderButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_6;
@@ -9487,7 +9496,7 @@ IL_002c:
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:80>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:81>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_8 = __this->____selectCommanderButton;
 		NullCheck(L_8);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_9;
@@ -9501,9 +9510,7 @@ IL_002c:
 IL_0059:
 	{
 		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:82>
-		CommanderSelectController_BuildOptions_m7957048986464D2CBF25AB9220CFA05AAA84C235(__this, NULL);
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:84>
-		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_11 = __this->____confirmButton;
+		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_11 = __this->____closeDetailButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_12;
 		L_12 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_11, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -9511,25 +9518,27 @@ IL_0059:
 		bool L_13 = V_2;
 		if (!L_13)
 		{
-			goto IL_008d;
+			goto IL_0086;
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:84>
-		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_14 = __this->____confirmButton;
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:82>
+		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_14 = __this->____closeDetailButton;
 		NullCheck(L_14);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_15;
 		L_15 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C(L_14, NULL);
 		UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* L_16 = (UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7*)il2cpp_codegen_object_new(UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var);
-		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_16, __this, (intptr_t)((void*)CommanderSelectController_OnConfirmClicked_m9030A511B8A0AE215726385D70DB65235508C99F_RuntimeMethod_var), NULL);
+		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_16, __this, (intptr_t)((void*)CommanderSelectController_HideDetailPanel_m34B47F6A57E67951F31F10E953E43914C2B57C13_RuntimeMethod_var), NULL);
 		NullCheck(L_15);
 		UnityEvent_AddListener_m8AA4287C16628486B41DA41CA5E7A856A706D302(L_15, L_16, NULL);
 	}
 
-IL_008d:
+IL_0086:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:85>
-		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_17 = __this->____clearButton;
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:84>
+		CommanderSelectController_BuildOptions_m7957048986464D2CBF25AB9220CFA05AAA84C235(__this, NULL);
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:86>
+		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_17 = __this->____confirmButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_18;
 		L_18 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_17, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -9541,13 +9550,13 @@ IL_008d:
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:85>
-		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_20 = __this->____clearButton;
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:86>
+		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_20 = __this->____confirmButton;
 		NullCheck(L_20);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_21;
 		L_21 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C(L_20, NULL);
 		UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* L_22 = (UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7*)il2cpp_codegen_object_new(UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var);
-		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_22, __this, (intptr_t)((void*)CommanderSelectController_ResetCurrentPicks_m201B166E8021F3A18852EC8DB5DF99BA34FBE5CF_RuntimeMethod_var), NULL);
+		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_22, __this, (intptr_t)((void*)CommanderSelectController_OnConfirmClicked_m9030A511B8A0AE215726385D70DB65235508C99F_RuntimeMethod_var), NULL);
 		NullCheck(L_21);
 		UnityEvent_AddListener_m8AA4287C16628486B41DA41CA5E7A856A706D302(L_21, L_22, NULL);
 	}
@@ -9555,29 +9564,55 @@ IL_008d:
 IL_00ba:
 	{
 		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:87>
-		bool L_23 = __this->____online;
-		V_4 = L_23;
-		bool L_24 = V_4;
-		if (!L_24)
+		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_23 = __this->____clearButton;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_24;
+		L_24 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_23, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		V_4 = L_24;
+		bool L_25 = V_4;
+		if (!L_25)
 		{
-			goto IL_00d1;
+			goto IL_00e9;
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:89>
-		CommanderSelectController_BeginOnlineSelection_mADE235CD0706DFB9326F1EC492152EBA0CE87F01(__this, NULL);
-		goto IL_00db;
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:87>
+		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_26 = __this->____clearButton;
+		NullCheck(L_26);
+		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_27;
+		L_27 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C(L_26, NULL);
+		UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* L_28 = (UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7*)il2cpp_codegen_object_new(UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var);
+		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_28, __this, (intptr_t)((void*)CommanderSelectController_ResetCurrentPicks_m201B166E8021F3A18852EC8DB5DF99BA34FBE5CF_RuntimeMethod_var), NULL);
+		NullCheck(L_27);
+		UnityEvent_AddListener_m8AA4287C16628486B41DA41CA5E7A856A706D302(L_27, L_28, NULL);
 	}
 
-IL_00d1:
+IL_00e9:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:93>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:89>
+		bool L_29 = __this->____online;
+		V_5 = L_29;
+		bool L_30 = V_5;
+		if (!L_30)
+		{
+			goto IL_0100;
+		}
+	}
+	{
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:91>
+		CommanderSelectController_BeginOnlineSelection_mADE235CD0706DFB9326F1EC492152EBA0CE87F01(__this, NULL);
+		goto IL_010a;
+	}
+
+IL_0100:
+	{
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:95>
 		CommanderSelectController_BeginPlayerStep_mBDAAA53DE65A6ECA35DF5FC923F2BA0F8AF64DE9(__this, 0, NULL);
 	}
 
-IL_00db:
+IL_010a:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:95>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:97>
 		return;
 	}
 }
@@ -9608,7 +9643,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_BuildOptions_m
 	bool V_6 = false;
 	int32_t G_B4_0 = 0;
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:103>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:105>
 		CommanderOptionView_tAE2C81E343EEB80468ED6CD464102535EF5A36B9* L_0 = __this->____optionPrefab;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -9652,13 +9687,13 @@ IL_002c:
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:105>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:107>
 		goto IL_00d1;
 	}
 
 IL_0036:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:108>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:110>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_7 = __this->____optionsContainer;
 		NullCheck(L_7);
 		bool L_8;
@@ -9671,7 +9706,7 @@ IL_0036:
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:110>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:112>
 		GridLayoutGroup_tEE9C68F88C13E6BD716BBD356D008ACFB63F1940* L_10 = V_0;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_11 = __this->____commanderCardCellSize;
 		NullCheck(L_10);
@@ -9680,7 +9715,7 @@ IL_0036:
 
 IL_0056:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:113>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:115>
 		GameContentSO_t8EAAA4407579420AD79BBCDA4E965C2C1E663F3B* L_12 = __this->____content;
 		NullCheck(L_12);
 		RuntimeObject* L_13;
@@ -9723,13 +9758,13 @@ IL_00d0:
 
 IL_006a_1:
 			{
-				//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:113>
+				//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:115>
 				RuntimeObject* L_17 = V_3;
 				NullCheck(L_17);
 				CommanderDataSO_t309CF78E6491C0920DE1127748C07E0F9CF23181* L_18;
 				L_18 = InterfaceFuncInvoker0< CommanderDataSO_t309CF78E6491C0920DE1127748C07E0F9CF23181* >::Invoke(0, IEnumerator_1_t37B8F6257E32365561FA0975C815D5D44A0C0514_il2cpp_TypeInfo_var, L_17);
 				V_4 = L_18;
-				//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:115>
+				//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:117>
 				CommanderDataSO_t309CF78E6491C0920DE1127748C07E0F9CF23181* L_19 = V_4;
 				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 				bool L_20;
@@ -9742,27 +9777,27 @@ IL_006a_1:
 				}
 			}
 			{
-				//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:117>
+				//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:119>
 				goto IL_00bc_1;
 			}
 
 IL_0084_1:
 			{
-				//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:120>
+				//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:122>
 				CommanderOptionView_tAE2C81E343EEB80468ED6CD464102535EF5A36B9* L_22 = __this->____optionPrefab;
 				Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_23 = __this->____optionsContainer;
 				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 				CommanderOptionView_tAE2C81E343EEB80468ED6CD464102535EF5A36B9* L_24;
 				L_24 = Object_Instantiate_TisCommanderOptionView_tAE2C81E343EEB80468ED6CD464102535EF5A36B9_m290C383E824A480A6F5439EC6F6CC577AFBD4995(L_22, L_23, Object_Instantiate_TisCommanderOptionView_tAE2C81E343EEB80468ED6CD464102535EF5A36B9_m290C383E824A480A6F5439EC6F6CC577AFBD4995_RuntimeMethod_var);
 				V_5 = L_24;
-				//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:121>
+				//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:123>
 				CommanderOptionView_tAE2C81E343EEB80468ED6CD464102535EF5A36B9* L_25 = V_5;
 				CommanderDataSO_t309CF78E6491C0920DE1127748C07E0F9CF23181* L_26 = V_4;
 				Action_1_t87B901B45AF72F423363F75B322495A0369351AB* L_27 = (Action_1_t87B901B45AF72F423363F75B322495A0369351AB*)il2cpp_codegen_object_new(Action_1_t87B901B45AF72F423363F75B322495A0369351AB_il2cpp_TypeInfo_var);
 				Action_1__ctor_m0DF3BABE794A5B60EBB6690D9950AEF12CE4DEA8(L_27, __this, (intptr_t)((void*)CommanderSelectController_OnCommanderInspected_m9E87C445E5C0C26B27CD687924F007DE9299E396_RuntimeMethod_var), NULL);
 				NullCheck(L_25);
 				CommanderOptionView_Bind_mAADF430AC2DEF0582045FB94ED72A2258B2085A9(L_25, L_26, L_27, NULL);
-				//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:122>
+				//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:124>
 				List_1_tFEAFA495AD3C7FC9A6347E266384EB81020F05C7* L_28 = __this->____options;
 				CommanderOptionView_tAE2C81E343EEB80468ED6CD464102535EF5A36B9* L_29 = V_5;
 				NullCheck(L_28);
@@ -9771,7 +9806,7 @@ IL_0084_1:
 
 IL_00bc_1:
 			{
-				//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:113>
+				//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:115>
 				RuntimeObject* L_30 = V_3;
 				NullCheck(L_30);
 				bool L_31;
@@ -9793,7 +9828,7 @@ IL_00bc_1:
 
 IL_00d1:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:124>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:126>
 		return;
 	}
 }
@@ -9803,7 +9838,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_OnCommanderIns
 	CommanderDataSO_t309CF78E6491C0920DE1127748C07E0F9CF23181* V_0 = NULL;
 	bool V_1 = false;
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:133>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:135>
 		bool L_0 = __this->____awaitingOthers;
 		V_1 = L_0;
 		bool L_1 = V_1;
@@ -9813,32 +9848,32 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_OnCommanderIns
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:135>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:137>
 		goto IL_0031;
 	}
 
 IL_000e:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:138>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:140>
 		int32_t L_2 = ___0_kind;
 		__this->____inspectedKind = L_2;
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:139>
-		__this->____hasInspectedKind = (bool)1;
 		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:141>
+		__this->____hasInspectedKind = (bool)1;
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:143>
 		GameContentSO_t8EAAA4407579420AD79BBCDA4E965C2C1E663F3B* L_3 = __this->____content;
 		int32_t L_4 = ___0_kind;
 		NullCheck(L_3);
 		CommanderDataSO_t309CF78E6491C0920DE1127748C07E0F9CF23181* L_5;
 		L_5 = GameContentSO_GetCommanderByKind_mDA90182BA036AC46D49196F8A639238CC8CEC7ED(L_3, L_4, NULL);
 		V_0 = L_5;
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:142>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:144>
 		CommanderDataSO_t309CF78E6491C0920DE1127748C07E0F9CF23181* L_6 = V_0;
 		CommanderSelectController_ShowDetailPanel_m6D68E208A51488B34E218DA92C656253B01304DD(__this, L_6, NULL);
 	}
 
 IL_0031:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:143>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:145>
 		return;
 	}
 }
@@ -9849,6 +9884,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_ShowDetailPane
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral0A787A2339D37C0BDAC2357A955586419105CD45);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral775097DCC4920B3822F1176FA90AC72682C6139C);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral81E70AEB9505F3A76A18F944263CB61FB10CDDF0);
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;
@@ -9858,7 +9896,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_ShowDetailPane
 	bool V_4 = false;
 	bool V_5 = false;
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:151>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:153>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->____detailPanel;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -9871,7 +9909,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_ShowDetailPane
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:153>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:155>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->____detailPanel;
 		CommanderDataSO_t309CF78E6491C0920DE1127748C07E0F9CF23181* L_4 = ___0_data;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -9883,7 +9921,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_ShowDetailPane
 
 IL_0026:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:156>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:158>
 		CommanderDataSO_t309CF78E6491C0920DE1127748C07E0F9CF23181* L_6 = ___0_data;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_7;
@@ -9896,13 +9934,13 @@ IL_0026:
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:158>
-		goto IL_00ca;
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:160>
+		goto IL_00ee;
 	}
 
 IL_0037:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:161>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:163>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_9 = __this->____detailNameLabel;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_10;
@@ -9915,7 +9953,7 @@ IL_0037:
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:161>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:163>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_12 = __this->____detailNameLabel;
 		CommanderDataSO_t309CF78E6491C0920DE1127748C07E0F9CF23181* L_13 = ___0_data;
 		NullCheck(L_13);
@@ -9927,7 +9965,7 @@ IL_0037:
 
 IL_0059:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:162>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:164>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_15 = __this->____detailBaseAbilityLabel;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_16;
@@ -9936,79 +9974,85 @@ IL_0059:
 		bool L_17 = V_3;
 		if (!L_17)
 		{
-			goto IL_007b;
+			goto IL_0087;
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:162>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:166>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_18 = __this->____detailBaseAbilityLabel;
 		CommanderDataSO_t309CF78E6491C0920DE1127748C07E0F9CF23181* L_19 = ___0_data;
 		NullCheck(L_19);
 		String_t* L_20;
 		L_20 = CommanderDataSO_get_BaseAbilityDescription_m19BA1E74C603A99DC6C7081E059D23394C5EFCAF_inline(L_19, NULL);
+		String_t* L_21;
+		L_21 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral81E70AEB9505F3A76A18F944263CB61FB10CDDF0, L_20, NULL);
 		NullCheck(L_18);
-		VirtualActionInvoker1< String_t* >::Invoke(75, L_18, L_20);
+		VirtualActionInvoker1< String_t* >::Invoke(75, L_18, L_21);
 	}
 
-IL_007b:
+IL_0087:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:163>
-		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_21 = __this->____detailUnlockLabel;
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:169>
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_22 = __this->____detailUnlockLabel;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_22;
-		L_22 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_21, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		V_4 = L_22;
-		bool L_23 = V_4;
-		if (!L_23)
+		bool L_23;
+		L_23 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_22, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		V_4 = L_23;
+		bool L_24 = V_4;
+		if (!L_24)
 		{
-			goto IL_009f;
+			goto IL_00b7;
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:163>
-		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_24 = __this->____detailUnlockLabel;
-		CommanderDataSO_t309CF78E6491C0920DE1127748C07E0F9CF23181* L_25 = ___0_data;
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:171>
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_25 = __this->____detailUnlockLabel;
+		CommanderDataSO_t309CF78E6491C0920DE1127748C07E0F9CF23181* L_26 = ___0_data;
+		NullCheck(L_26);
+		String_t* L_27;
+		L_27 = CommanderDataSO_get_UnlockConditionDescription_m7338A6212A5EAA25D7E692CB0AF87B14E9E09949_inline(L_26, NULL);
+		String_t* L_28;
+		L_28 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral775097DCC4920B3822F1176FA90AC72682C6139C, L_27, NULL);
 		NullCheck(L_25);
-		String_t* L_26;
-		L_26 = CommanderDataSO_get_UnlockConditionDescription_m7338A6212A5EAA25D7E692CB0AF87B14E9E09949_inline(L_25, NULL);
-		NullCheck(L_24);
-		VirtualActionInvoker1< String_t* >::Invoke(75, L_24, L_26);
+		VirtualActionInvoker1< String_t* >::Invoke(75, L_25, L_28);
 	}
 
-IL_009f:
+IL_00b7:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:164>
-		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_27 = __this->____detailSecondaryAbilityLabel;
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:174>
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_29 = __this->____detailSecondaryAbilityLabel;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_28;
-		L_28 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_27, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		V_5 = L_28;
-		bool L_29 = V_5;
-		if (!L_29)
+		bool L_30;
+		L_30 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_29, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		V_5 = L_30;
+		bool L_31 = V_5;
+		if (!L_31)
 		{
-			goto IL_00c3;
+			goto IL_00e7;
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:164>
-		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_30 = __this->____detailSecondaryAbilityLabel;
-		CommanderDataSO_t309CF78E6491C0920DE1127748C07E0F9CF23181* L_31 = ___0_data;
-		NullCheck(L_31);
-		String_t* L_32;
-		L_32 = CommanderDataSO_get_SecondaryAbilityDescription_m4B4A10D0354AA4F1E710200E2917F84DC4B09806_inline(L_31, NULL);
-		NullCheck(L_30);
-		VirtualActionInvoker1< String_t* >::Invoke(75, L_30, L_32);
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:176>
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_32 = __this->____detailSecondaryAbilityLabel;
+		CommanderDataSO_t309CF78E6491C0920DE1127748C07E0F9CF23181* L_33 = ___0_data;
+		NullCheck(L_33);
+		String_t* L_34;
+		L_34 = CommanderDataSO_get_SecondaryAbilityDescription_m4B4A10D0354AA4F1E710200E2917F84DC4B09806_inline(L_33, NULL);
+		String_t* L_35;
+		L_35 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral0A787A2339D37C0BDAC2357A955586419105CD45, L_34, NULL);
+		NullCheck(L_32);
+		VirtualActionInvoker1< String_t* >::Invoke(75, L_32, L_35);
 	}
 
-IL_00c3:
+IL_00e7:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:165>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:179>
 		CommanderSelectController_RefreshSelectionButton_m28B8EFE32B7D778B851F9F2A4B132C1EFE5CDF2C(__this, NULL);
 	}
 
-IL_00ca:
+IL_00ee:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:166>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:180>
 		return;
 	}
 }
@@ -10027,7 +10071,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_OnSelectInspec
 	bool V_2 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:173>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:187>
 		bool L_0 = __this->____hasInspectedKind;
 		if (!L_0)
 		{
@@ -10055,54 +10099,96 @@ IL_0012:
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:175>
-		goto IL_005a;
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:189>
+		goto IL_0068;
 	}
 
 IL_0019:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:178>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:192>
 		List_1_tD683110370AC27A86E788072D1CFB6FCA9CA35DA* L_3 = __this->____currentPicks;
 		int32_t L_4 = __this->____inspectedKind;
 		NullCheck(L_3);
 		int32_t L_5;
 		L_5 = List_1_IndexOf_m1E918ED5B7D3554EAFB6E614C8936464CD338F76(L_3, L_4, List_1_IndexOf_m1E918ED5B7D3554EAFB6E614C8936464CD338F76_RuntimeMethod_var);
 		V_0 = L_5;
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:179>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:193>
 		int32_t L_6 = V_0;
 		V_2 = (bool)((((int32_t)((((int32_t)L_6) < ((int32_t)0))? 1 : 0)) == ((int32_t)0))? 1 : 0);
 		bool L_7 = V_2;
 		if (!L_7)
 		{
-			goto IL_004d;
+			goto IL_0054;
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:181>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:195>
 		List_1_tD683110370AC27A86E788072D1CFB6FCA9CA35DA* L_8 = __this->____currentPicks;
 		int32_t L_9 = V_0;
 		NullCheck(L_8);
 		List_1_RemoveAt_m859098201365CAC31B3217C1BF2347AC00FE7F9B(L_8, L_9, List_1_RemoveAt_m859098201365CAC31B3217C1BF2347AC00FE7F9B_RuntimeMethod_var);
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:182>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:196>
 		CommanderSelectController_RefreshSelectionUI_mF94579266E1567417481942B39BFEBCD48742716(__this, NULL);
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:183>
-		goto IL_005a;
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:197>
+		CommanderSelectController_HideDetailPanel_m34B47F6A57E67951F31F10E953E43914C2B57C13(__this, NULL);
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:198>
+		goto IL_0068;
 	}
 
-IL_004d:
+IL_0054:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:186>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:201>
 		int32_t L_10 = __this->____inspectedKind;
 		CommanderSelectController_OnCommanderPicked_mD4C4CD0022280082F6F6C5767BBCB40955D0430B(__this, L_10, NULL);
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:202>
+		CommanderSelectController_HideDetailPanel_m34B47F6A57E67951F31F10E953E43914C2B57C13(__this, NULL);
 	}
 
-IL_005a:
+IL_0068:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:187>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:203>
 		return;
 	}
 }
 // Method Definition Index: 74021
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_HideDetailPanel_m34B47F6A57E67951F31F10E953E43914C2B57C13 (CommanderSelectController_t85DA0C4E5AC855E5EE626E54240B752042CFBC2A* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	{
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:210>
+		__this->____hasInspectedKind = (bool)0;
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:211>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->____detailPanel;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		V_0 = L_1;
+		bool L_2 = V_0;
+		if (!L_2)
+		{
+			goto IL_0027;
+		}
+	}
+	{
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:213>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->____detailPanel;
+		NullCheck(L_3);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_3, (bool)0, NULL);
+	}
+
+IL_0027:
+	{
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:215>
+		return;
+	}
+}
+// Method Definition Index: 74022
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_OnCommanderPicked_mD4C4CD0022280082F6F6C5767BBCB40955D0430B (CommanderSelectController_t85DA0C4E5AC855E5EE626E54240B752042CFBC2A* __this, int32_t ___0_kind, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10116,9 +10202,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_OnCommanderPic
 	bool V_0 = false;
 	int32_t G_B4_0 = 0;
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:195>
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:196>
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:197>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:223>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:224>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:225>
 		bool L_0 = __this->____awaitingOthers;
 		if (L_0)
 		{
@@ -10160,28 +10246,28 @@ IL_0026:
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:199>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:227>
 		goto IL_0041;
 	}
 
 IL_002d:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:202>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:230>
 		List_1_tD683110370AC27A86E788072D1CFB6FCA9CA35DA* L_7 = __this->____currentPicks;
 		int32_t L_8 = ___0_kind;
 		NullCheck(L_7);
 		List_1_Add_mE42A910DC708A0311CF117A7AEB3500CC481E0D6_inline(L_7, L_8, List_1_Add_mE42A910DC708A0311CF117A7AEB3500CC481E0D6_RuntimeMethod_var);
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:203>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:231>
 		CommanderSelectController_RefreshSelectionUI_mF94579266E1567417481942B39BFEBCD48742716(__this, NULL);
 	}
 
 IL_0041:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:204>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:232>
 		return;
 	}
 }
-// Method Definition Index: 74022
+// Method Definition Index: 74023
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_ResetCurrentPicks_m201B166E8021F3A18852EC8DB5DF99BA34FBE5CF (CommanderSelectController_t85DA0C4E5AC855E5EE626E54240B752042CFBC2A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10192,7 +10278,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_ResetCurrentPi
 	}
 	bool V_0 = false;
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:211>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:239>
 		bool L_0 = __this->____awaitingOthers;
 		V_0 = L_0;
 		bool L_1 = V_0;
@@ -10202,27 +10288,29 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_ResetCurrentPi
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:213>
-		goto IL_0021;
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:241>
+		goto IL_0028;
 	}
 
 IL_000e:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:216>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:244>
 		List_1_tD683110370AC27A86E788072D1CFB6FCA9CA35DA* L_2 = __this->____currentPicks;
 		NullCheck(L_2);
 		List_1_Clear_m3BACE1383094990B8B8FFCF109FF57805D101ED3_inline(L_2, List_1_Clear_m3BACE1383094990B8B8FFCF109FF57805D101ED3_RuntimeMethod_var);
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:217>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:245>
+		CommanderSelectController_HideDetailPanel_m34B47F6A57E67951F31F10E953E43914C2B57C13(__this, NULL);
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:246>
 		CommanderSelectController_RefreshSelectionUI_mF94579266E1567417481942B39BFEBCD48742716(__this, NULL);
 	}
 
-IL_0021:
+IL_0028:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:218>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:247>
 		return;
 	}
 }
-// Method Definition Index: 74023
+// Method Definition Index: 74024
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_RefreshSelectionUI_mF94579266E1567417481942B39BFEBCD48742716 (CommanderSelectController_t85DA0C4E5AC855E5EE626E54240B752042CFBC2A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10260,7 +10348,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_RefreshSelecti
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* G_B4_1 = NULL;
 	int32_t G_B16_0 = 0;
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:225>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:254>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->____selectionLabel;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -10273,9 +10361,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_RefreshSelecti
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:227>
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:228>
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:229>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:256>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:257>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:258>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_3 = __this->____selectionLabel;
 		List_1_tD683110370AC27A86E788072D1CFB6FCA9CA35DA* L_4 = __this->____currentPicks;
 		NullCheck(L_4);
@@ -10312,7 +10400,7 @@ IL_003c:
 
 IL_0043:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:232>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:261>
 		List_1_tFEAFA495AD3C7FC9A6347E266384EB81020F05C7* L_8 = __this->____options;
 		NullCheck(L_8);
 		Enumerator_t489952B1A747CAFD19D351F1970BBB93946FEA42 L_9;
@@ -10337,11 +10425,11 @@ FINALLY_006f:
 
 IL_0052_1:
 			{
-				//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:232>
+				//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:261>
 				CommanderOptionView_tAE2C81E343EEB80468ED6CD464102535EF5A36B9* L_10;
 				L_10 = Enumerator_get_Current_m3728A090131C236B84D61F9D06A7C7C37DB4344A_inline((&V_1), Enumerator_get_Current_m3728A090131C236B84D61F9D06A7C7C37DB4344A_RuntimeMethod_var);
 				V_2 = L_10;
-				//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:234>
+				//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:263>
 				CommanderOptionView_tAE2C81E343EEB80468ED6CD464102535EF5A36B9* L_11 = V_2;
 				NullCheck(L_11);
 				CommanderOptionView_SetSelected_mFB79F468F195BC857FF515486663E1D44FD96420(L_11, (bool)0, NULL);
@@ -10349,7 +10437,7 @@ IL_0052_1:
 
 IL_0064_1:
 			{
-				//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:232>
+				//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:261>
 				bool L_12;
 				L_12 = Enumerator_MoveNext_mCEBAA5AA7092DF9F2E323D92808194C00ACC850D((&V_1), Enumerator_MoveNext_mCEBAA5AA7092DF9F2E323D92808194C00ACC850D_RuntimeMethod_var);
 				if (L_12)
@@ -10369,7 +10457,7 @@ IL_0064_1:
 
 IL_007e:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:237>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:266>
 		List_1_tD683110370AC27A86E788072D1CFB6FCA9CA35DA* L_13 = __this->____currentPicks;
 		NullCheck(L_13);
 		Enumerator_tCAA35972105F2ABC2618BDEEF90D388B464EB23B L_14;
@@ -10394,16 +10482,16 @@ FINALLY_00e0:
 
 IL_008d_1:
 			{
-				//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:237>
+				//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:266>
 				int32_t L_15;
 				L_15 = Enumerator_get_Current_mDA7FC002C2CF313A05E98AC6D1087DEB9B26E686_inline((&V_3), Enumerator_get_Current_mDA7FC002C2CF313A05E98AC6D1087DEB9B26E686_RuntimeMethod_var);
 				V_4 = L_15;
-				//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:239>
+				//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:268>
 				int32_t L_16 = V_4;
 				int32_t L_17;
 				L_17 = CommanderSelectController_IndexOfKind_m25BE9C29B0708F4736E59537DFCD426169B9928C(__this, L_16, NULL);
 				V_5 = L_17;
-				//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:240>
+				//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:269>
 				int32_t L_18 = V_5;
 				if ((((int32_t)L_18) < ((int32_t)0)))
 				{
@@ -10435,7 +10523,7 @@ IL_00b8_1:
 				}
 			}
 			{
-				//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:242>
+				//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:271>
 				List_1_tFEAFA495AD3C7FC9A6347E266384EB81020F05C7* L_23 = __this->____options;
 				int32_t L_24 = V_5;
 				NullCheck(L_23);
@@ -10451,7 +10539,7 @@ IL_00d4_1:
 
 IL_00d5_1:
 			{
-				//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:237>
+				//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:266>
 				bool L_26;
 				L_26 = Enumerator_MoveNext_m0E41D8816E539E111037634FA6612520BB30E757((&V_3), Enumerator_MoveNext_m0E41D8816E539E111037634FA6612520BB30E757_RuntimeMethod_var);
 				if (L_26)
@@ -10471,7 +10559,7 @@ IL_00d5_1:
 
 IL_00ef:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:246>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:275>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_27 = __this->____confirmButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_28;
@@ -10484,7 +10572,7 @@ IL_00ef:
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:248>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:277>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_30 = __this->____confirmButton;
 		List_1_tD683110370AC27A86E788072D1CFB6FCA9CA35DA* L_31 = __this->____currentPicks;
 		NullCheck(L_31);
@@ -10496,13 +10584,13 @@ IL_00ef:
 
 IL_011d:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:251>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:280>
 		CommanderSelectController_RefreshSelectionButton_m28B8EFE32B7D778B851F9F2A4B132C1EFE5CDF2C(__this, NULL);
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:252>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:281>
 		return;
 	}
 }
-// Method Definition Index: 74024
+// Method Definition Index: 74025
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_RefreshSelectionButton_m28B8EFE32B7D778B851F9F2A4B132C1EFE5CDF2C (CommanderSelectController_t85DA0C4E5AC855E5EE626E54240B752042CFBC2A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10511,8 +10599,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_RefreshSelecti
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Contains_m778D9B546A976D3561304E1DEE796F95191FA114_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_m5AA7CEC339140605936B38B8DB7D4973CF4E3B7F_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralAB6BED4A49B921CDCDC37D9FBB418FBA0CCF99C4);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralC912EB819971D5F952DED12B1AF7420FB11F9DC7);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral082D1842996957DBAB8D4D09F17F04F28CB64FA3);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral30E6B3A203975D177E0F499AF6C4FB533176E263);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralB6D86A6C1411DB096253F935E1863E7064918297);
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;
@@ -10520,17 +10609,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_RefreshSelecti
 	bool V_2 = false;
 	bool V_3 = false;
 	int32_t G_B5_0 = 0;
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* G_B8_0 = NULL;
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* G_B6_0 = NULL;
 	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* G_B7_0 = NULL;
-	int32_t G_B9_0 = 0;
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* G_B9_1 = NULL;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* G_B6_0 = NULL;
+	int32_t G_B8_0 = 0;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* G_B8_1 = NULL;
+	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* G_B14_0 = NULL;
+	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* G_B10_0 = NULL;
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* G_B12_0 = NULL;
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* G_B11_0 = NULL;
 	String_t* G_B13_0 = NULL;
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* G_B13_1 = NULL;
+	String_t* G_B15_0 = NULL;
+	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* G_B15_1 = NULL;
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:259>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:288>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_0 = __this->____selectCommanderButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -10539,21 +10631,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_RefreshSelecti
 		bool L_2 = V_2;
 		if (!L_2)
 		{
-			goto IL_0014;
+			goto IL_0017;
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:261>
-		goto IL_008f;
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:290>
+		goto IL_0097;
 	}
 
-IL_0014:
+IL_0017:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:264>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:293>
 		bool L_3 = __this->____hasInspectedKind;
 		if (!L_3)
 		{
-			goto IL_002f;
+			goto IL_0032;
 		}
 	}
 	{
@@ -10563,113 +10655,124 @@ IL_0014:
 		bool L_6;
 		L_6 = List_1_Contains_m778D9B546A976D3561304E1DEE796F95191FA114(L_4, L_5, List_1_Contains_m778D9B546A976D3561304E1DEE796F95191FA114_RuntimeMethod_var);
 		G_B5_0 = ((int32_t)(L_6));
-		goto IL_0030;
+		goto IL_0033;
 	}
 
-IL_002f:
+IL_0032:
 	{
 		G_B5_0 = 0;
 	}
 
-IL_0030:
+IL_0033:
 	{
 		V_0 = (bool)G_B5_0;
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:265>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:294>
 		List_1_tD683110370AC27A86E788072D1CFB6FCA9CA35DA* L_7 = __this->____currentPicks;
 		NullCheck(L_7);
 		int32_t L_8;
 		L_8 = List_1_get_Count_m5AA7CEC339140605936B38B8DB7D4973CF4E3B7F_inline(L_7, List_1_get_Count_m5AA7CEC339140605936B38B8DB7D4973CF4E3B7F_RuntimeMethod_var);
 		V_1 = (bool)((((int32_t)L_8) < ((int32_t)2))? 1 : 0);
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:266>
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:267>
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:268>
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:269>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:295>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_9 = __this->____selectCommanderButton;
 		bool L_10 = __this->____awaitingOthers;
 		if (L_10)
 		{
-			G_B8_0 = L_9;
-			goto IL_005b;
+			G_B7_0 = L_9;
+			goto IL_0059;
 		}
 		G_B6_0 = L_9;
 	}
 	{
 		bool L_11 = __this->____hasInspectedKind;
-		if (!L_11)
-		{
-			G_B8_0 = G_B6_0;
-			goto IL_005b;
-		}
-		G_B7_0 = G_B6_0;
-	}
-	{
-		bool L_12 = V_0;
-		bool L_13 = V_1;
-		G_B9_0 = ((int32_t)((int32_t)L_12|(int32_t)L_13));
-		G_B9_1 = G_B7_0;
-		goto IL_005c;
+		G_B8_0 = ((int32_t)(L_11));
+		G_B8_1 = G_B6_0;
+		goto IL_005a;
 	}
 
-IL_005b:
+IL_0059:
 	{
-		G_B9_0 = 0;
-		G_B9_1 = G_B8_0;
+		G_B8_0 = 0;
+		G_B8_1 = G_B7_0;
 	}
 
-IL_005c:
+IL_005a:
 	{
-		NullCheck(G_B9_1);
-		Selectable_set_interactable_m8DD581C1AD99B2EFA8B3EE9AF69EDDF26688B492(G_B9_1, (bool)G_B9_0, NULL);
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:271>
-		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_14 = __this->____selectCommanderButtonLabel;
+		NullCheck(G_B8_1);
+		Selectable_set_interactable_m8DD581C1AD99B2EFA8B3EE9AF69EDDF26688B492(G_B8_1, (bool)G_B8_0, NULL);
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:297>
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_12 = __this->____selectCommanderButtonLabel;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_15;
-		L_15 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_14, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		V_3 = L_15;
-		bool L_16 = V_3;
-		if (!L_16)
+		bool L_13;
+		L_13 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_12, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		V_3 = L_13;
+		bool L_14 = V_3;
+		if (!L_14)
 		{
-			goto IL_008f;
+			goto IL_0097;
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:273>
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:274>
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:275>
-		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_17 = __this->____selectCommanderButtonLabel;
-		bool L_18 = V_0;
-		if (L_18)
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:299>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:300>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:301>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:302>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:303>
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_15 = __this->____selectCommanderButtonLabel;
+		bool L_16 = V_0;
+		if (L_16)
 		{
-			G_B12_0 = L_17;
-			goto IL_0083;
+			G_B14_0 = L_15;
+			goto IL_008b;
 		}
-		G_B11_0 = L_17;
+		G_B10_0 = L_15;
 	}
 	{
-		G_B13_0 = _stringLiteralAB6BED4A49B921CDCDC37D9FBB418FBA0CCF99C4;
+		bool L_17 = V_1;
+		if (L_17)
+		{
+			G_B12_0 = G_B10_0;
+			goto IL_0084;
+		}
+		G_B11_0 = G_B10_0;
+	}
+	{
+		G_B13_0 = _stringLiteral30E6B3A203975D177E0F499AF6C4FB533176E263;
 		G_B13_1 = G_B11_0;
-		goto IL_0088;
+		goto IL_0089;
 	}
 
-IL_0083:
+IL_0084:
 	{
-		G_B13_0 = _stringLiteralC912EB819971D5F952DED12B1AF7420FB11F9DC7;
+		G_B13_0 = _stringLiteralB6D86A6C1411DB096253F935E1863E7064918297;
 		G_B13_1 = G_B12_0;
 	}
 
-IL_0088:
+IL_0089:
 	{
-		NullCheck(G_B13_1);
-		VirtualActionInvoker1< String_t* >::Invoke(75, G_B13_1, G_B13_0);
+		G_B15_0 = G_B13_0;
+		G_B15_1 = G_B13_1;
+		goto IL_0090;
 	}
 
-IL_008f:
+IL_008b:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:277>
+		G_B15_0 = _stringLiteral082D1842996957DBAB8D4D09F17F04F28CB64FA3;
+		G_B15_1 = G_B14_0;
+	}
+
+IL_0090:
+	{
+		NullCheck(G_B15_1);
+		VirtualActionInvoker1< String_t* >::Invoke(75, G_B15_1, G_B15_0);
+	}
+
+IL_0097:
+	{
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:305>
 		return;
 	}
 }
-// Method Definition Index: 74025
+// Method Definition Index: 74026
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_OnConfirmClicked_m9030A511B8A0AE215726385D70DB65235508C99F (CommanderSelectController_t85DA0C4E5AC855E5EE626E54240B752042CFBC2A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10682,7 +10785,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_OnConfirmClick
 	bool V_1 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:285>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:313>
 		bool L_0 = __this->____awaitingOthers;
 		if (L_0)
 		{
@@ -10713,13 +10816,13 @@ IL_001d:
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:287>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:315>
 		goto IL_0042;
 	}
 
 IL_0024:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:290>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:318>
 		bool L_4 = __this->____online;
 		V_1 = L_4;
 		bool L_5 = V_1;
@@ -10729,24 +10832,24 @@ IL_0024:
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:292>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:320>
 		CommanderSelectController_ConfirmOnline_m909988661A26DB0FF5871C6AFD5C49CC9259D3A1(__this, NULL);
 		goto IL_0042;
 	}
 
 IL_0039:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:296>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:324>
 		CommanderSelectController_ConfirmHotseat_m6B30867C2EE88B170029C3E797702C0E52408786(__this, NULL);
 	}
 
 IL_0042:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:298>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:326>
 		return;
 	}
 }
-// Method Definition Index: 74026
+// Method Definition Index: 74027
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_BeginPlayerStep_mBDAAA53DE65A6ECA35DF5FC923F2BA0F8AF64DE9 (CommanderSelectController_t85DA0C4E5AC855E5EE626E54240B752042CFBC2A* __this, int32_t ___0_playerStep, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10759,12 +10862,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_BeginPlayerSte
 	bool V_0 = false;
 	int32_t V_1 = 0;
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:310>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:338>
 		int32_t L_0 = ___0_playerStep;
 		__this->____currentPlayerStep = L_0;
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:311>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:339>
 		CommanderSelectController_ResetCurrentPicks_m201B166E8021F3A18852EC8DB5DF99BA34FBE5CF(__this, NULL);
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:313>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:341>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_1 = __this->____titleLabel;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_2;
@@ -10777,10 +10880,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_BeginPlayerSte
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:315>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:343>
 		int32_t L_4 = ___0_playerStep;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_4, 1));
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:316>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:344>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_5 = __this->____titleLabel;
 		int32_t L_6 = V_1;
 		int32_t L_7 = L_6;
@@ -10795,11 +10898,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_BeginPlayerSte
 
 IL_0047:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:318>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:346>
 		return;
 	}
 }
-// Method Definition Index: 74027
+// Method Definition Index: 74028
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_ConfirmHotseat_m6B30867C2EE88B170029C3E797702C0E52408786 (CommanderSelectController_t85DA0C4E5AC855E5EE626E54240B752042CFBC2A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10812,17 +10915,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_ConfirmHotseat
 	int32_t V_0 = 0;
 	bool V_1 = false;
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:325>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:353>
 		int32_t L_0 = __this->____currentPlayerStep;
 		List_1_tD683110370AC27A86E788072D1CFB6FCA9CA35DA* L_1 = __this->____currentPicks;
 		NullCheck(L_1);
 		CommanderKindU5BU5D_tA1C4074E644CC24E2D2573F822CE1B967C72689B* L_2;
 		L_2 = List_1_ToArray_m7DCEB43F706918D2F6FF03660D3D2E453977F6F6(L_1, List_1_ToArray_m7DCEB43F706918D2F6FF03660D3D2E453977F6F6_RuntimeMethod_var);
 		CommanderSelectController_StorePicks_m30276470B86876E862CC210E11D24A11880F5304(L_0, L_2, NULL);
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:327>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:355>
 		int32_t L_3 = __this->____currentPlayerStep;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_3, 1));
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:328>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:356>
 		int32_t L_4 = V_0;
 		V_1 = (bool)((((int32_t)L_4) < ((int32_t)2))? 1 : 0);
 		bool L_5 = V_1;
@@ -10832,7 +10935,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_ConfirmHotseat
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:330>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:358>
 		int32_t L_6 = V_0;
 		CommanderSelectController_BeginPlayerStep_mBDAAA53DE65A6ECA35DF5FC923F2BA0F8AF64DE9(__this, L_6, NULL);
 		goto IL_0043;
@@ -10840,7 +10943,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_ConfirmHotseat
 
 IL_0035:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:334>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:362>
 		String_t* L_7 = __this->____gameSceneName;
 		il2cpp_codegen_runtime_class_init_inline(SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
 		SceneManager_LoadScene_mBB3DBC1601A21F8F4E8A5D68FED30EA9412F218E(L_7, NULL);
@@ -10848,11 +10951,11 @@ IL_0035:
 
 IL_0043:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:336>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:364>
 		return;
 	}
 }
-// Method Definition Index: 74028
+// Method Definition Index: 74029
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_StorePicks_m30276470B86876E862CC210E11D24A11880F5304 (int32_t ___0_playerStep, CommanderKindU5BU5D_tA1C4074E644CC24E2D2573F822CE1B967C72689B* ___1_picks, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10863,7 +10966,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_StorePicks_m30
 	}
 	bool V_0 = false;
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:345>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:373>
 		int32_t L_0 = ___0_playerStep;
 		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
 		bool L_1 = V_0;
@@ -10873,7 +10976,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_StorePicks_m30
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:347>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:375>
 		CommanderKindU5BU5D_tA1C4074E644CC24E2D2573F822CE1B967C72689B* L_2 = ___1_picks;
 		il2cpp_codegen_runtime_class_init_inline(SessionConfig_t6EE12879AEFF13A1B76A216929BCDBC2B628477F_il2cpp_TypeInfo_var);
 		SessionConfig_set_Player0Commanders_m4754B3E991441630A62BC8F178043C12985EC4B5_inline(L_2, NULL);
@@ -10882,7 +10985,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_StorePicks_m30
 
 IL_0014:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:351>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:379>
 		CommanderKindU5BU5D_tA1C4074E644CC24E2D2573F822CE1B967C72689B* L_3 = ___1_picks;
 		il2cpp_codegen_runtime_class_init_inline(SessionConfig_t6EE12879AEFF13A1B76A216929BCDBC2B628477F_il2cpp_TypeInfo_var);
 		SessionConfig_set_Player1Commanders_m0B650CF0A4F4991B4DB7A9C7EDBE1C4A16A90009_inline(L_3, NULL);
@@ -10890,11 +10993,11 @@ IL_0014:
 
 IL_001d:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:353>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:381>
 		return;
 	}
 }
-// Method Definition Index: 74029
+// Method Definition Index: 74030
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_BeginOnlineSelection_mADE235CD0706DFB9326F1EC492152EBA0CE87F01 (CommanderSelectController_t85DA0C4E5AC855E5EE626E54240B752042CFBC2A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10907,9 +11010,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_BeginOnlineSel
 	}
 	bool V_0 = false;
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:364>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:392>
 		CommanderSelectController_ResetCurrentPicks_m201B166E8021F3A18852EC8DB5DF99BA34FBE5CF(__this, NULL);
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:365>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:393>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->____titleLabel;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -10922,7 +11025,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_BeginOnlineSel
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:367>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:395>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_3 = __this->____titleLabel;
 		int32_t L_4 = 2;
 		RuntimeObject* L_5 = Box(il2cpp_defaults.int32_class, &L_4);
@@ -10934,14 +11037,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_BeginOnlineSel
 
 IL_0036:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:371>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:399>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		PhotonNetwork_AddCallbackTarget_m484BD3273273426AE5B66E8599405D2501079E58(__this, NULL);
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:373>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:401>
 		return;
 	}
 }
-// Method Definition Index: 74030
+// Method Definition Index: 74031
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_ConfirmOnline_m909988661A26DB0FF5871C6AFD5C49CC9259D3A1 (CommanderSelectController_t85DA0C4E5AC855E5EE626E54240B752042CFBC2A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10956,12 +11059,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_ConfirmOnline_
 	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* V_0 = NULL;
 	Hashtable_tD626399B3ADFD501225241D7366103F35472542A* V_1 = NULL;
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:381>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:409>
 		List_1_tD683110370AC27A86E788072D1CFB6FCA9CA35DA* L_0 = __this->____currentPicks;
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_1;
 		L_1 = CommanderSelectController_EncodeKinds_mF232DAC5EB2F9CC3511AD8989979952FE50C2201(L_0, NULL);
 		V_0 = L_1;
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:382>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:410>
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_2 = (Hashtable_tD626399B3ADFD501225241D7366103F35472542A*)il2cpp_codegen_object_new(Hashtable_tD626399B3ADFD501225241D7366103F35472542A_il2cpp_TypeInfo_var);
 		Hashtable__ctor_m1C4D2BF84624173510D714545C1FBB92ADEFC624(L_2, NULL);
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_3 = L_2;
@@ -10969,7 +11072,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_ConfirmOnline_
 		NullCheck(L_3);
 		Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1(L_3, _stringLiteral855FED6E03442FBB3AF914FFBFA9DA82813817A1, (RuntimeObject*)L_4, Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1_RuntimeMethod_var);
 		V_1 = L_3;
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:383>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:411>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_5;
 		L_5 = PhotonNetwork_get_LocalPlayer_mEA3335FEF4E4B55C1EFAC8AFA8D5F7E3D7FBE4DC(NULL);
@@ -10977,15 +11080,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_ConfirmOnline_
 		NullCheck(L_5);
 		bool L_7;
 		L_7 = Player_SetCustomProperties_mACE0A943F112829C5E9E91BC5FC8050FF9E4EECA(L_5, L_6, (Hashtable_tD626399B3ADFD501225241D7366103F35472542A*)NULL, (WebFlags_tFD3605BF6E5F1A42F1D0D6F0DA9A8B32CF7B27CA*)NULL, NULL);
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:385>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:413>
 		CommanderSelectController_EnterWaitingState_m73EFF2E29AB509C3831BD03CABB0815EF9ADC266(__this, NULL);
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:386>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:414>
 		CommanderSelectController_TryHostStartMatch_m608D85E849AD567BDD985EA85444276446378B4D(__this, NULL);
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:392>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:420>
 		return;
 	}
 }
-// Method Definition Index: 74031
+// Method Definition Index: 74032
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_EnterWaitingState_m73EFF2E29AB509C3831BD03CABB0815EF9ADC266 (CommanderSelectController_t85DA0C4E5AC855E5EE626E54240B752042CFBC2A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10999,9 +11102,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_EnterWaitingSt
 	bool V_1 = false;
 	bool V_2 = false;
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:399>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:427>
 		__this->____awaitingOthers = (bool)1;
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:400>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:428>
+		CommanderSelectController_HideDetailPanel_m34B47F6A57E67951F31F10E953E43914C2B57C13(__this, NULL);
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:429>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_0 = __this->____confirmButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -11010,19 +11115,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_EnterWaitingSt
 		bool L_2 = V_0;
 		if (!L_2)
 		{
-			goto IL_0025;
+			goto IL_002c;
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:400>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:429>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_3 = __this->____confirmButton;
 		NullCheck(L_3);
 		Selectable_set_interactable_m8DD581C1AD99B2EFA8B3EE9AF69EDDF26688B492(L_3, (bool)0, NULL);
 	}
 
-IL_0025:
+IL_002c:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:401>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:430>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_4 = __this->____clearButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_5;
@@ -11031,19 +11136,19 @@ IL_0025:
 		bool L_6 = V_1;
 		if (!L_6)
 		{
-			goto IL_0042;
+			goto IL_0049;
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:401>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:430>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_7 = __this->____clearButton;
 		NullCheck(L_7);
 		Selectable_set_interactable_m8DD581C1AD99B2EFA8B3EE9AF69EDDF26688B492(L_7, (bool)0, NULL);
 	}
 
-IL_0042:
+IL_0049:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:402>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:431>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_8 = __this->____titleLabel;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_9;
@@ -11052,25 +11157,25 @@ IL_0042:
 		bool L_10 = V_2;
 		if (!L_10)
 		{
-			goto IL_0063;
+			goto IL_006a;
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:402>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:431>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_11 = __this->____titleLabel;
 		NullCheck(L_11);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_11, _stringLiteralD3CD9EC6A6075B0BBBEE94A855B66B2BCE892068);
 	}
 
-IL_0063:
+IL_006a:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:403>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:432>
 		CommanderSelectController_RefreshSelectionButton_m28B8EFE32B7D778B851F9F2A4B132C1EFE5CDF2C(__this, NULL);
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:404>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:433>
 		return;
 	}
 }
-// Method Definition Index: 74032
+// Method Definition Index: 74033
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_TryHostStartMatch_m608D85E849AD567BDD985EA85444276446378B4D (CommanderSelectController_t85DA0C4E5AC855E5EE626E54240B752042CFBC2A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11096,7 +11201,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_TryHostStartMa
 	int32_t G_B3_0 = 0;
 	int32_t G_B16_0 = 0;
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:413>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:442>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		bool L_0;
 		L_0 = PhotonNetwork_get_IsMasterClient_mD04046028C484F06D77A1C36C64FFAC285C2DF9C(NULL);
@@ -11128,17 +11233,17 @@ IL_0013:
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:415>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:444>
 		goto IL_00ba;
 	}
 
 IL_001d:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:418>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:447>
 		V_0 = (CommanderKindU5BU5D_tA1C4074E644CC24E2D2573F822CE1B967C72689B*)NULL;
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:419>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:448>
 		V_1 = (CommanderKindU5BU5D_tA1C4074E644CC24E2D2573F822CE1B967C72689B*)NULL;
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:421>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:450>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		PlayerU5BU5D_t04E1460375559A2DB32E4B90230BCE7DDAC0E572* L_3;
 		L_3 = PhotonNetwork_get_PlayerList_mD2A2D36659BCEF35EBE2E6B4909F4439D191AE39(NULL);
@@ -11149,14 +11254,14 @@ IL_001d:
 
 IL_002d:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:421>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:450>
 		PlayerU5BU5D_t04E1460375559A2DB32E4B90230BCE7DDAC0E572* L_4 = V_3;
 		int32_t L_5 = V_4;
 		NullCheck(L_4);
 		int32_t L_6 = L_5;
 		Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_7 = (L_4)->GetAt(static_cast<il2cpp_array_size_t>(L_6));
 		V_5 = L_7;
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:424>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:453>
 		Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_8 = V_5;
 		NullCheck(L_8);
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_9;
@@ -11174,18 +11279,18 @@ IL_002d:
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:426>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:455>
 		goto IL_00ba;
 	}
 
 IL_005d:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:429>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:458>
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_13 = V_6;
 		CommanderKindU5BU5D_tA1C4074E644CC24E2D2573F822CE1B967C72689B* L_14;
 		L_14 = CommanderSelectController_DecodeKinds_mE510315A31B5462E187FE2EB9D435713EC7735E4(L_13, NULL);
 		V_7 = L_14;
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:430>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:459>
 		Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_15 = V_5;
 		NullCheck(L_15);
 		bool L_16;
@@ -11198,7 +11303,7 @@ IL_005d:
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:432>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:461>
 		CommanderKindU5BU5D_tA1C4074E644CC24E2D2573F822CE1B967C72689B* L_18 = V_7;
 		V_0 = L_18;
 		goto IL_007f;
@@ -11206,7 +11311,7 @@ IL_005d:
 
 IL_007a:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:436>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:465>
 		CommanderKindU5BU5D_tA1C4074E644CC24E2D2573F822CE1B967C72689B* L_19 = V_7;
 		V_1 = L_19;
 	}
@@ -11219,7 +11324,7 @@ IL_007f:
 
 IL_0086:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:421>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:450>
 		int32_t L_21 = V_4;
 		PlayerU5BU5D_t04E1460375559A2DB32E4B90230BCE7DDAC0E572* L_22 = V_3;
 		NullCheck(L_22);
@@ -11229,7 +11334,7 @@ IL_0086:
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:440>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:469>
 		CommanderKindU5BU5D_tA1C4074E644CC24E2D2573F822CE1B967C72689B* L_23 = V_0;
 		if (!L_23)
 		{
@@ -11257,20 +11362,20 @@ IL_0097:
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:442>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:471>
 		goto IL_00ba;
 	}
 
 IL_00a0:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:446>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:475>
 		CommanderKindU5BU5D_tA1C4074E644CC24E2D2573F822CE1B967C72689B* L_26 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(SessionConfig_t6EE12879AEFF13A1B76A216929BCDBC2B628477F_il2cpp_TypeInfo_var);
 		SessionConfig_set_Player0Commanders_m4754B3E991441630A62BC8F178043C12985EC4B5_inline(L_26, NULL);
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:447>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:476>
 		CommanderKindU5BU5D_tA1C4074E644CC24E2D2573F822CE1B967C72689B* L_27 = V_1;
 		SessionConfig_set_Player1Commanders_m0B650CF0A4F4991B4DB7A9C7EDBE1C4A16A90009_inline(L_27, NULL);
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:449>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:478>
 		String_t* L_28 = __this->____gameSceneName;
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		PhotonNetwork_LoadLevel_m71D2B6098A6F1CBFB37EE1E4CBE28B11149C8A38(L_28, NULL);
@@ -11278,11 +11383,11 @@ IL_00a0:
 
 IL_00ba:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:450>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:479>
 		return;
 	}
 }
-// Method Definition Index: 74033
+// Method Definition Index: 74034
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_OnDisable_m6985F0ADF51F3644E4773A93A0E88A8800B815C9 (CommanderSelectController_t85DA0C4E5AC855E5EE626E54240B752042CFBC2A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11292,14 +11397,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_OnDisable_m698
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:455>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:484>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		PhotonNetwork_RemoveCallbackTarget_m7CE5AF22A90F9E3886919CE540D10089A01C46AB(__this, NULL);
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:456>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:485>
 		return;
 	}
 }
-// Method Definition Index: 74034
+// Method Definition Index: 74035
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_OnPlayerPropertiesUpdate_m5571527FA89D7A8FDFDC6C8A034C1D218920C3C6 (CommanderSelectController_t85DA0C4E5AC855E5EE626E54240B752042CFBC2A* __this, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___0_targetPlayer, Hashtable_tD626399B3ADFD501225241D7366103F35472542A* ___1_changedProps, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11312,7 +11417,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_OnPlayerProper
 	bool V_0 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:461>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:490>
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_0 = ___1_changedProps;
 		if (!L_0)
 		{
@@ -11343,49 +11448,49 @@ IL_0012:
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:463>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:492>
 		CommanderSelectController_TryHostStartMatch_m608D85E849AD567BDD985EA85444276446378B4D(__this, NULL);
 	}
 
 IL_001f:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:465>
-		return;
-	}
-}
-// Method Definition Index: 74035
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_OnPlayerEnteredRoom_mA601F3CD533E0A5C230F32F9A532087386EAFC62 (CommanderSelectController_t85DA0C4E5AC855E5EE626E54240B752042CFBC2A* __this, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___0_newPlayer, const RuntimeMethod* method) 
-{
-	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:468>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:494>
 		return;
 	}
 }
 // Method Definition Index: 74036
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_OnPlayerLeftRoom_m17855133F54F6AD345CDCD92CAF9FF6A6D027071 (CommanderSelectController_t85DA0C4E5AC855E5EE626E54240B752042CFBC2A* __this, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___0_otherPlayer, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_OnPlayerEnteredRoom_mA601F3CD533E0A5C230F32F9A532087386EAFC62 (CommanderSelectController_t85DA0C4E5AC855E5EE626E54240B752042CFBC2A* __this, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___0_newPlayer, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:470>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:497>
 		return;
 	}
 }
 // Method Definition Index: 74037
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_OnRoomPropertiesUpdate_m9F7B351B18565F4745CD3767BB42A1CBE2EC8E33 (CommanderSelectController_t85DA0C4E5AC855E5EE626E54240B752042CFBC2A* __this, Hashtable_tD626399B3ADFD501225241D7366103F35472542A* ___0_propertiesThatChanged, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_OnPlayerLeftRoom_m17855133F54F6AD345CDCD92CAF9FF6A6D027071 (CommanderSelectController_t85DA0C4E5AC855E5EE626E54240B752042CFBC2A* __this, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___0_otherPlayer, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:472>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:499>
 		return;
 	}
 }
 // Method Definition Index: 74038
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_OnMasterClientSwitched_m999B55F5E9920D0EB74CAECEC43DE7A831F84448 (CommanderSelectController_t85DA0C4E5AC855E5EE626E54240B752042CFBC2A* __this, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___0_newMasterClient, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_OnRoomPropertiesUpdate_m9F7B351B18565F4745CD3767BB42A1CBE2EC8E33 (CommanderSelectController_t85DA0C4E5AC855E5EE626E54240B752042CFBC2A* __this, Hashtable_tD626399B3ADFD501225241D7366103F35472542A* ___0_propertiesThatChanged, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:474>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:501>
 		return;
 	}
 }
 // Method Definition Index: 74039
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController_OnMasterClientSwitched_m999B55F5E9920D0EB74CAECEC43DE7A831F84448 (CommanderSelectController_t85DA0C4E5AC855E5EE626E54240B752042CFBC2A* __this, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___0_newMasterClient, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:503>
+		return;
+	}
+}
+// Method Definition Index: 74040
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* CommanderSelectController_EncodeKinds_mF232DAC5EB2F9CC3511AD8989979952FE50C2201 (List_1_tD683110370AC27A86E788072D1CFB6FCA9CA35DA* ___0_kinds, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11401,21 +11506,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Int32U5BU5D_t19C97395396A72ECAF310612F0760F16
 	bool V_2 = false;
 	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* V_3 = NULL;
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:479>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:508>
 		List_1_tD683110370AC27A86E788072D1CFB6FCA9CA35DA* L_0 = ___0_kinds;
 		NullCheck(L_0);
 		int32_t L_1;
 		L_1 = List_1_get_Count_m5AA7CEC339140605936B38B8DB7D4973CF4E3B7F_inline(L_0, List_1_get_Count_m5AA7CEC339140605936B38B8DB7D4973CF4E3B7F_RuntimeMethod_var);
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_2 = (Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C*)(Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C*)SZArrayNew(Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C_il2cpp_TypeInfo_var, (uint32_t)L_1);
 		V_0 = L_2;
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:480>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:509>
 		V_1 = 0;
 		goto IL_0021;
 	}
 
 IL_0011:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:482>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:511>
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_3 = V_0;
 		int32_t L_4 = V_1;
 		List_1_tD683110370AC27A86E788072D1CFB6FCA9CA35DA* L_5 = ___0_kinds;
@@ -11425,14 +11530,14 @@ IL_0011:
 		L_7 = List_1_get_Item_m03A2ADC83430BA360D1F65077B51CC2107DF93EF(L_5, L_6, List_1_get_Item_m03A2ADC83430BA360D1F65077B51CC2107DF93EF_RuntimeMethod_var);
 		NullCheck(L_3);
 		(L_3)->SetAt(static_cast<il2cpp_array_size_t>(L_4), (int32_t)L_7);
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:480>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:509>
 		int32_t L_8 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_8, 1));
 	}
 
 IL_0021:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:480>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:509>
 		int32_t L_9 = V_1;
 		List_1_tD683110370AC27A86E788072D1CFB6FCA9CA35DA* L_10 = ___0_kinds;
 		NullCheck(L_10);
@@ -11446,7 +11551,7 @@ IL_0021:
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:485>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:514>
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_13 = V_0;
 		V_3 = L_13;
 		goto IL_0032;
@@ -11454,12 +11559,12 @@ IL_0021:
 
 IL_0032:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:486>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:515>
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_14 = V_3;
 		return L_14;
 	}
 }
-// Method Definition Index: 74040
+// Method Definition Index: 74041
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CommanderKindU5BU5D_tA1C4074E644CC24E2D2573F822CE1B967C72689B* CommanderSelectController_DecodeKinds_mE510315A31B5462E187FE2EB9D435713EC7735E4 (Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___0_encoded, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11473,19 +11578,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CommanderKindU5BU5D_tA1C4074E644CC24E2D2573F8
 	bool V_2 = false;
 	CommanderKindU5BU5D_tA1C4074E644CC24E2D2573F822CE1B967C72689B* V_3 = NULL;
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:491>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:520>
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_0 = ___0_encoded;
 		NullCheck(L_0);
 		CommanderKindU5BU5D_tA1C4074E644CC24E2D2573F822CE1B967C72689B* L_1 = (CommanderKindU5BU5D_tA1C4074E644CC24E2D2573F822CE1B967C72689B*)(CommanderKindU5BU5D_tA1C4074E644CC24E2D2573F822CE1B967C72689B*)SZArrayNew(CommanderKindU5BU5D_tA1C4074E644CC24E2D2573F822CE1B967C72689B_il2cpp_TypeInfo_var, (uint32_t)((int32_t)(((RuntimeArray*)L_0)->max_length)));
 		V_0 = L_1;
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:492>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:521>
 		V_1 = 0;
 		goto IL_001a;
 	}
 
 IL_000e:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:494>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:523>
 		CommanderKindU5BU5D_tA1C4074E644CC24E2D2573F822CE1B967C72689B* L_2 = V_0;
 		int32_t L_3 = V_1;
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_4 = ___0_encoded;
@@ -11495,14 +11600,14 @@ IL_000e:
 		int32_t L_7 = (L_4)->GetAt(static_cast<il2cpp_array_size_t>(L_6));
 		NullCheck(L_2);
 		(L_2)->SetAt(static_cast<il2cpp_array_size_t>(L_3), (int32_t)L_7);
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:492>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:521>
 		int32_t L_8 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_8, 1));
 	}
 
 IL_001a:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:492>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:521>
 		int32_t L_9 = V_1;
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_10 = ___0_encoded;
 		NullCheck(L_10);
@@ -11514,7 +11619,7 @@ IL_001a:
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:497>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:526>
 		CommanderKindU5BU5D_tA1C4074E644CC24E2D2573F822CE1B967C72689B* L_12 = V_0;
 		V_3 = L_12;
 		goto IL_0028;
@@ -11522,12 +11627,12 @@ IL_001a:
 
 IL_0028:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:498>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:527>
 		CommanderKindU5BU5D_tA1C4074E644CC24E2D2573F822CE1B967C72689B* L_13 = V_3;
 		return L_13;
 	}
 }
-// Method Definition Index: 74041
+// Method Definition Index: 74042
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* CommanderSelectController_DescribePicks_mE317D0109F960C1DA09893EC9B23E75164968DE8 (CommanderSelectController_t85DA0C4E5AC855E5EE626E54240B752042CFBC2A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11555,21 +11660,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* CommanderSelectController_DescribeP
 	int32_t G_B4_1 = 0;
 	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B4_2 = NULL;
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:511>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:540>
 		List_1_tD683110370AC27A86E788072D1CFB6FCA9CA35DA* L_0 = __this->____currentPicks;
 		NullCheck(L_0);
 		int32_t L_1;
 		L_1 = List_1_get_Count_m5AA7CEC339140605936B38B8DB7D4973CF4E3B7F_inline(L_0, List_1_get_Count_m5AA7CEC339140605936B38B8DB7D4973CF4E3B7F_RuntimeMethod_var);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_2 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)L_1);
 		V_0 = L_2;
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:512>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:541>
 		V_1 = 0;
 		goto IL_0062;
 	}
 
 IL_0016:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:514>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:543>
 		GameContentSO_t8EAAA4407579420AD79BBCDA4E965C2C1E663F3B* L_3 = __this->____content;
 		List_1_tD683110370AC27A86E788072D1CFB6FCA9CA35DA* L_4 = __this->____currentPicks;
 		int32_t L_5 = V_1;
@@ -11580,7 +11685,7 @@ IL_0016:
 		CommanderDataSO_t309CF78E6491C0920DE1127748C07E0F9CF23181* L_7;
 		L_7 = GameContentSO_GetCommanderByKind_mDA90182BA036AC46D49196F8A639238CC8CEC7ED(L_3, L_6, NULL);
 		V_2 = L_7;
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:515>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:544>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_8 = V_0;
 		int32_t L_9 = V_1;
 		CommanderDataSO_t309CF78E6491C0920DE1127748C07E0F9CF23181* L_10 = V_2;
@@ -11627,14 +11732,14 @@ IL_005c:
 	{
 		NullCheck(G_B4_2);
 		(G_B4_2)->SetAt(static_cast<il2cpp_array_size_t>(G_B4_1), (String_t*)G_B4_0);
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:512>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:541>
 		int32_t L_19 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_19, 1));
 	}
 
 IL_0062:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:512>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:541>
 		int32_t L_20 = V_1;
 		List_1_tD683110370AC27A86E788072D1CFB6FCA9CA35DA* L_21 = __this->____currentPicks;
 		NullCheck(L_21);
@@ -11648,7 +11753,7 @@ IL_0062:
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:518>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:547>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_24 = V_0;
 		String_t* L_25;
 		L_25 = String_Join_m557B6B554B87C1742FA0B128500073B421ED0BFD(_stringLiteral758733BDBED83CBFF4F635AC26CA92AAE477F75D, L_24, NULL);
@@ -11658,12 +11763,12 @@ IL_0062:
 
 IL_0085:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:519>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:548>
 		String_t* L_26 = V_5;
 		return L_26;
 	}
 }
-// Method Definition Index: 74042
+// Method Definition Index: 74043
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t CommanderSelectController_IndexOfKind_m25BE9C29B0708F4736E59537DFCD426169B9928C (CommanderSelectController_t85DA0C4E5AC855E5EE626E54240B752042CFBC2A* __this, int32_t ___0_kind, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11681,20 +11786,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t CommanderSelectController_IndexOfKind
 	bool V_4 = false;
 	int32_t G_B4_0 = 0;
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:528>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:557>
 		GameContentSO_t8EAAA4407579420AD79BBCDA4E965C2C1E663F3B* L_0 = __this->____content;
 		NullCheck(L_0);
 		RuntimeObject* L_1;
 		L_1 = GameContentSO_get_CommanderCatalog_m81B46D520863D03F6277BABC80AADA0E4AD7386A(L_0, NULL);
 		V_0 = L_1;
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:529>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:558>
 		V_1 = 0;
 		goto IL_0041;
 	}
 
 IL_0011:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:531>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:560>
 		RuntimeObject* L_2 = V_0;
 		int32_t L_3 = V_1;
 		NullCheck(L_2);
@@ -11737,7 +11842,7 @@ IL_0033:
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:533>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:562>
 		int32_t L_12 = V_1;
 		V_3 = L_12;
 		goto IL_0054;
@@ -11745,14 +11850,14 @@ IL_0033:
 
 IL_003c:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:529>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:558>
 		int32_t L_13 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_13, 1));
 	}
 
 IL_0041:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:529>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:558>
 		int32_t L_14 = V_1;
 		RuntimeObject* L_15 = V_0;
 		NullCheck(L_15);
@@ -11766,19 +11871,19 @@ IL_0041:
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:537>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:566>
 		V_3 = (-1);
 		goto IL_0054;
 	}
 
 IL_0054:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:538>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:567>
 		int32_t L_18 = V_3;
 		return L_18;
 	}
 }
-// Method Definition Index: 74043
+// Method Definition Index: 74044
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController__ctor_m0305900251EEDA4794F6D85525B347B32EE5E1C6 (CommanderSelectController_t85DA0C4E5AC855E5EE626E54240B752042CFBC2A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11797,15 +11902,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController__ctor_m0305900
 		memset((&L_0), 0, sizeof(L_0));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_0), (200.0f), (300.0f), NULL);
 		__this->____commanderCardCellSize = L_0;
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:59>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:60>
 		__this->____gameSceneName = _stringLiteralEF4B034018E01A7366FF5E1C9A58014B1B5DCE53;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->____gameSceneName), (void*)_stringLiteralEF4B034018E01A7366FF5E1C9A58014B1B5DCE53);
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:64>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:65>
 		List_1_tFEAFA495AD3C7FC9A6347E266384EB81020F05C7* L_1 = (List_1_tFEAFA495AD3C7FC9A6347E266384EB81020F05C7*)il2cpp_codegen_object_new(List_1_tFEAFA495AD3C7FC9A6347E266384EB81020F05C7_il2cpp_TypeInfo_var);
 		List_1__ctor_m3CAE3930EA984AB2833F1B8C0204EEEB4BDA7CBD(L_1, List_1__ctor_m3CAE3930EA984AB2833F1B8C0204EEEB4BDA7CBD_RuntimeMethod_var);
 		__this->____options = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->____options), (void*)L_1);
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:65>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/UI/CommanderSelectController.cs:66>
 		List_1_tD683110370AC27A86E788072D1CFB6FCA9CA35DA* L_2 = (List_1_tD683110370AC27A86E788072D1CFB6FCA9CA35DA*)il2cpp_codegen_object_new(List_1_tD683110370AC27A86E788072D1CFB6FCA9CA35DA_il2cpp_TypeInfo_var);
 		List_1__ctor_m713628A33AB865E0FF39B72C118B03A7552F785A(L_2, List_1__ctor_m713628A33AB865E0FF39B72C118B03A7552F785A_RuntimeMethod_var);
 		__this->____currentPicks = L_2;
@@ -11822,7 +11927,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderSelectController__ctor_m0305900
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 74044
+// Method Definition Index: 74045
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderTestView_SetTextReferences_m4E1C9EC1C8B4D9D456C2A70427CC35ACB9F49C83 (CommanderTestView_t48AA38CC7D10A283CDED1AA3C05EEFE221274D36* __this, Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___0_commanderNameText, Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___1_notesText, Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___2_debuffText, Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___3_buffText, Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___4_secondaryStatusText, const RuntimeMethod* method) 
 {
 	{
@@ -11850,7 +11955,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderTestView_SetTextReferences_m4E1
 		return;
 	}
 }
-// Method Definition Index: 74045
+// Method Definition Index: 74046
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderTestView_SetCommander_m2EB5D3EDA1B22A371FCC68759BDD39B163EE69CC (CommanderTestView_t48AA38CC7D10A283CDED1AA3C05EEFE221274D36* __this, CommanderState_t15AF29069DD311AE4D15FA546F962155343067C9* ___0_commander, const RuntimeMethod* method) 
 {
 	{
@@ -11864,7 +11969,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderTestView_SetCommander_m2EB5D3ED
 		return;
 	}
 }
-// Method Definition Index: 74046
+// Method Definition Index: 74047
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderTestView_Refresh_m7178749CE7E7BD6412AE3E8E26522B0FACBDF634 (CommanderTestView_t48AA38CC7D10A283CDED1AA3C05EEFE221274D36* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12357,7 +12462,7 @@ IL_02ae:
 		return;
 	}
 }
-// Method Definition Index: 74047
+// Method Definition Index: 74048
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderTestView__ctor_m5C0AC8BD2D5F0B37BF16E8015E972CD085412E7A (CommanderTestView_t48AA38CC7D10A283CDED1AA3C05EEFE221274D36* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12373,7 +12478,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderTestView__ctor_m5C0AC8BD2D5F0B3
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 74048
+// Method Definition Index: 74049
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderView_Bind_m851054DC0B6069BC1C53FD21E102484F2B5597D9 (CommanderView_tE3FD474E7B95F6CB7EE207DB11B371FFEEDAA399* __this, CommanderDTO_tA3908D353E851704B198E61840E6D1D47D2BA6E6 ___0_snapshot, CommanderDataSO_t309CF78E6491C0920DE1127748C07E0F9CF23181* ___1_data, int32_t ___2_actorNumber, int32_t ___3_commanderIndex, Action_2_t5276C415B09F1DA0DD6A8023C37695ED1E9E0F3E* ___4_onPreviewStarted, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___5_onPreviewEnded, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12591,7 +12696,7 @@ IL_0115:
 		return;
 	}
 }
-// Method Definition Index: 74049
+// Method Definition Index: 74050
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderView_OnPointerDown_m1B7F06D4340FC02F9B9297CDA4A37EE26623F37E (CommanderView_tE3FD474E7B95F6CB7EE207DB11B371FFEEDAA399* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_eventData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12657,7 +12762,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 74050
+// Method Definition Index: 74051
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderView_OnPointerUp_m43C1D9D928922493A38EF9A191E6A9069E914366 (CommanderView_tE3FD474E7B95F6CB7EE207DB11B371FFEEDAA399* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_eventData, const RuntimeMethod* method) 
 {
 	{
@@ -12669,7 +12774,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderView_OnPointerUp_m43C1D9D928922
 		return;
 	}
 }
-// Method Definition Index: 74051
+// Method Definition Index: 74052
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderView_OnPointerExit_mDC199AF2AC5E98CDD8BDFEF313714D45D2C7D77E (CommanderView_tE3FD474E7B95F6CB7EE207DB11B371FFEEDAA399* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_eventData, const RuntimeMethod* method) 
 {
 	{
@@ -12681,7 +12786,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderView_OnPointerExit_mDC199AF2AC5
 		return;
 	}
 }
-// Method Definition Index: 74052
+// Method Definition Index: 74053
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderView_PlaySecondaryUnlockEffect_m26F350CCEAA62D5A50F8E3736BB9AB49EBBDF176 (CommanderView_tE3FD474E7B95F6CB7EE207DB11B371FFEEDAA399* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -12714,7 +12819,7 @@ IL_001d:
 		return;
 	}
 }
-// Method Definition Index: 74053
+// Method Definition Index: 74054
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderView_SetSelectable_mC22D2CF2CDE4688DDAD2025A583A809EE0D74084 (CommanderView_tE3FD474E7B95F6CB7EE207DB11B371FFEEDAA399* __this, bool ___0_active, Action_2_tD7438462601D3939500ED67463331FE00CFFBDB8* ___1_onSelected, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12841,7 +12946,7 @@ IL_009b:
 		return;
 	}
 }
-// Method Definition Index: 74054
+// Method Definition Index: 74055
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderView_OnDisable_mCF0D0C61810DC8DBAEC28AF9C080513586102641 (CommanderView_tE3FD474E7B95F6CB7EE207DB11B371FFEEDAA399* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -12881,7 +12986,7 @@ IL_0032:
 		return;
 	}
 }
-// Method Definition Index: 74055
+// Method Definition Index: 74056
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* CommanderView_LongPressRoutine_m182581BC3BC926655F7C5AB0614BF17E906B51B5 (CommanderView_tE3FD474E7B95F6CB7EE207DB11B371FFEEDAA399* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12900,7 +13005,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* CommanderView_LongPressRoutine
 		return L_1;
 	}
 }
-// Method Definition Index: 74056
+// Method Definition Index: 74057
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderView_StopLongPressRoutine_mF54B1B4CC6FE75F5889F4806CAF5543D9421A833 (CommanderView_tE3FD474E7B95F6CB7EE207DB11B371FFEEDAA399* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -12935,7 +13040,7 @@ IL_0025:
 		return;
 	}
 }
-// Method Definition Index: 74057
+// Method Definition Index: 74058
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderView_EndPreview_m1EC5B5E8AA2F5F0B9CC9FAFD09273A385D0F4836 (CommanderView_tE3FD474E7B95F6CB7EE207DB11B371FFEEDAA399* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -12986,7 +13091,7 @@ IL_002a:
 		return;
 	}
 }
-// Method Definition Index: 74058
+// Method Definition Index: 74059
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* CommanderView_SecondaryUnlockEffectRoutine_m27B5446154B665E38DC5A091C377836064BCBF19 (CommanderView_tE3FD474E7B95F6CB7EE207DB11B371FFEEDAA399* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13005,7 +13110,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* CommanderView_SecondaryUnlockE
 		return L_1;
 	}
 }
-// Method Definition Index: 74059
+// Method Definition Index: 74060
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderView__ctor_m5915133E13B20F17969348050DF4875A6F48004C (CommanderView_tE3FD474E7B95F6CB7EE207DB11B371FFEEDAA399* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13032,7 +13137,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommanderView__ctor_m5915133E13B20F17969
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 74060
+// Method Definition Index: 74061
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass24_0__ctor_mA0A763FAD84E0441A061F48FF34D4465F9A1B93E (U3CU3Ec__DisplayClass24_0_t4331930EF19CB40C40AA3973E1113EEB879D37C8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13048,7 +13153,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass24_0__ctor_mA0A763F
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 74061
+// Method Definition Index: 74062
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass24_1__ctor_m517C57FBE59567AB28702B5911BB8870BCD1B0E4 (U3CU3Ec__DisplayClass24_1_t1DE6BE569DF3C763AFD3BD5BDDDBE15559F95E9C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13056,7 +13161,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass24_1__ctor_m517C57F
 		return;
 	}
 }
-// Method Definition Index: 74062
+// Method Definition Index: 74063
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass24_1_U3CSetSelectableU3Eb__0_m42621968D66B185A9913D37B9D302CD63ED7FA56 (U3CU3Ec__DisplayClass24_1_t1DE6BE569DF3C763AFD3BD5BDDDBE15559F95E9C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13079,7 +13184,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass24_1_U3CSetSelectab
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 74063
+// Method Definition Index: 74064
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLongPressRoutineU3Ed__26__ctor_mB4A5DD37598BE60D64570BF944AFD0FA00F5F75F (U3CLongPressRoutineU3Ed__26_tEAC1B6670CE646B15AE3AD01D9D4538521CBDAE3* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -13089,14 +13194,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLongPressRoutineU3Ed__26__ctor_mB4A5D
 		return;
 	}
 }
-// Method Definition Index: 74064
+// Method Definition Index: 74065
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLongPressRoutineU3Ed__26_System_IDisposable_Dispose_mBC2A15DDE3CC64943CC64D056A667E0FC1DF54CA (U3CLongPressRoutineU3Ed__26_tEAC1B6670CE646B15AE3AD01D9D4538521CBDAE3* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 74065
+// Method Definition Index: 74066
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CLongPressRoutineU3Ed__26_MoveNext_m283F9B7837A78463DCDF9D975EA965C14B161874 (U3CLongPressRoutineU3Ed__26_tEAC1B6670CE646B15AE3AD01D9D4538521CBDAE3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13209,7 +13314,7 @@ IL_008b:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 74066
+// Method Definition Index: 74067
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLongPressRoutineU3Ed__26_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mA7A39C6A71B926ABC2F3CA5BEF8EC48A03087218 (U3CLongPressRoutineU3Ed__26_tEAC1B6670CE646B15AE3AD01D9D4538521CBDAE3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13217,7 +13322,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLongPressRoutineU3Ed__26_Sy
 		return L_0;
 	}
 }
-// Method Definition Index: 74067
+// Method Definition Index: 74068
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLongPressRoutineU3Ed__26_System_Collections_IEnumerator_Reset_m06953D70BF4DD92D6929C5203744D8391F6F1714 (U3CLongPressRoutineU3Ed__26_tEAC1B6670CE646B15AE3AD01D9D4538521CBDAE3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13226,7 +13331,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLongPressRoutineU3Ed__26_System_Colle
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CLongPressRoutineU3Ed__26_System_Collections_IEnumerator_Reset_m06953D70BF4DD92D6929C5203744D8391F6F1714_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 74068
+// Method Definition Index: 74069
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLongPressRoutineU3Ed__26_System_Collections_IEnumerator_get_Current_mBD7BA28C3DB046F778D3924465EBB096351F478C (U3CLongPressRoutineU3Ed__26_tEAC1B6670CE646B15AE3AD01D9D4538521CBDAE3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13242,7 +13347,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLongPressRoutineU3Ed__26_Sy
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 74069
+// Method Definition Index: 74070
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSecondaryUnlockEffectRoutineU3Ed__29__ctor_m702F912AEEC4CCCD7B14E23BEB0FE7736F03D215 (U3CSecondaryUnlockEffectRoutineU3Ed__29_tF0B38CF2BFCC45D32D6D78E5F43A45FE544F9C04* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -13252,14 +13357,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSecondaryUnlockEffectRoutineU3Ed__29_
 		return;
 	}
 }
-// Method Definition Index: 74070
+// Method Definition Index: 74071
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSecondaryUnlockEffectRoutineU3Ed__29_System_IDisposable_Dispose_mCF2447B780A893DE01DCDC5CA368A9539CC9F23E (U3CSecondaryUnlockEffectRoutineU3Ed__29_tF0B38CF2BFCC45D32D6D78E5F43A45FE544F9C04* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 74071
+// Method Definition Index: 74072
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CSecondaryUnlockEffectRoutineU3Ed__29_MoveNext_m90BCFF458A336716F21751146885B6DD0B331E64 (U3CSecondaryUnlockEffectRoutineU3Ed__29_tF0B38CF2BFCC45D32D6D78E5F43A45FE544F9C04* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13510,7 +13615,7 @@ IL_01b2:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 74072
+// Method Definition Index: 74073
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSecondaryUnlockEffectRoutineU3Ed__29_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m5A4558C3EDEC613C33D98856CC80565B249E218A (U3CSecondaryUnlockEffectRoutineU3Ed__29_tF0B38CF2BFCC45D32D6D78E5F43A45FE544F9C04* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13518,7 +13623,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSecondaryUnlockEffectRoutin
 		return L_0;
 	}
 }
-// Method Definition Index: 74073
+// Method Definition Index: 74074
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSecondaryUnlockEffectRoutineU3Ed__29_System_Collections_IEnumerator_Reset_m30DDF8185243078F5A2CEDF9F4F261DD68D72095 (U3CSecondaryUnlockEffectRoutineU3Ed__29_tF0B38CF2BFCC45D32D6D78E5F43A45FE544F9C04* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13527,7 +13632,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSecondaryUnlockEffectRoutineU3Ed__29_
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CSecondaryUnlockEffectRoutineU3Ed__29_System_Collections_IEnumerator_Reset_m30DDF8185243078F5A2CEDF9F4F261DD68D72095_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 74074
+// Method Definition Index: 74075
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSecondaryUnlockEffectRoutineU3Ed__29_System_Collections_IEnumerator_get_Current_mF00A1DA01D71A9B8EE4DC2F596F6E68DA1426C59 (U3CSecondaryUnlockEffectRoutineU3Ed__29_tF0B38CF2BFCC45D32D6D78E5F43A45FE544F9C04* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13543,7 +13648,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSecondaryUnlockEffectRoutin
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 74075
+// Method Definition Index: 74076
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EffectTestSceneManager_SetCommanderViews_m003B57EAA016B33BE110CBA58D7AADCF0132AE02 (EffectTestSceneManager_t006650B3C505E8A60327DF2828036B0F029BB555* __this, CommanderTestViewU5BU5D_tFECF34D96FE49D0285A6417AA0037DE41DD39072* ___0_views, const RuntimeMethod* method) 
 {
 	{
@@ -13555,7 +13660,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EffectTestSceneManager_SetCommanderViews
 		return;
 	}
 }
-// Method Definition Index: 74076
+// Method Definition Index: 74077
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EffectTestSceneManager_SetUIController_m51B03CD7BABDC992F19AC8EEA9022F7DE90646A8 (EffectTestSceneManager_t006650B3C505E8A60327DF2828036B0F029BB555* __this, EffectTestUIController_tBE6C82C1A154670B157C1868C12B6408E2F13BDD* ___0_controller, const RuntimeMethod* method) 
 {
 	{
@@ -13567,7 +13672,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EffectTestSceneManager_SetUIController_m
 		return;
 	}
 }
-// Method Definition Index: 74077
+// Method Definition Index: 74078
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameContentSO_t8EAAA4407579420AD79BBCDA4E965C2C1E663F3B* EffectTestSceneManager_GetGameContent_m890425AADDD2FD95AF05FA4C36F532E40D760FB3 (EffectTestSceneManager_t006650B3C505E8A60327DF2828036B0F029BB555* __this, const RuntimeMethod* method) 
 {
 	GameContentSO_t8EAAA4407579420AD79BBCDA4E965C2C1E663F3B* V_0 = NULL;
@@ -13611,7 +13716,7 @@ IL_0016:
 		return L_3;
 	}
 }
-// Method Definition Index: 74078
+// Method Definition Index: 74079
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EffectTestSceneManager_Awake_m238C4B2635E661052AC0950968467A3FBEA24488 (EffectTestSceneManager_t006650B3C505E8A60327DF2828036B0F029BB555* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13649,7 +13754,7 @@ IL_0027:
 		return;
 	}
 }
-// Method Definition Index: 74079
+// Method Definition Index: 74080
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EffectTestSceneManager_SetupOfflineGameState_m474ECB0901B06B50B97EB16A733345B2A8077F00 (EffectTestSceneManager_t006650B3C505E8A60327DF2828036B0F029BB555* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14008,7 +14113,7 @@ IL_01f8:
 		return;
 	}
 }
-// Method Definition Index: 74080
+// Method Definition Index: 74081
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EffectTestSceneManager_ResolveEffect_m3649285AAE003046A27091CB2F4CC27B74929E14 (EffectTestSceneManager_t006650B3C505E8A60327DF2828036B0F029BB555* __this, CardDataSO_tD219CDA2271352E4C1A7C43349DB3A565CBDD685* ___0_card, int32_t ___1_activePlayerIndex, int32_t ___2_targetCommanderIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14155,7 +14260,7 @@ IL_008e:
 		return;
 	}
 }
-// Method Definition Index: 74081
+// Method Definition Index: 74082
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EffectTestSceneManager_ResolveEffectOnOpponent_m24BD8506FE22793CE55EBA93C4823D053763D0EB (EffectTestSceneManager_t006650B3C505E8A60327DF2828036B0F029BB555* __this, CardDataSO_tD219CDA2271352E4C1A7C43349DB3A565CBDD685* ___0_card, int32_t ___1_activePlayerIndex, int32_t ___2_targetCommanderIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14302,7 +14407,7 @@ IL_008e:
 		return;
 	}
 }
-// Method Definition Index: 74082
+// Method Definition Index: 74083
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EffectTestSceneManager_SetPassivesEnabled_mF33AD722BB5D2E13924F9C271865B876A1E456D4 (EffectTestSceneManager_t006650B3C505E8A60327DF2828036B0F029BB555* __this, bool ___0_enabled, const RuntimeMethod* method) 
 {
 	{
@@ -14313,7 +14418,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EffectTestSceneManager_SetPassivesEnable
 		return;
 	}
 }
-// Method Definition Index: 74083
+// Method Definition Index: 74084
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EffectTestSceneManager_ResetGameState_mD1DAAA8268CBADD0372EC9B4AD31BF7ABF96224F (EffectTestSceneManager_t006650B3C505E8A60327DF2828036B0F029BB555* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14356,7 +14461,7 @@ IL_0024:
 		return;
 	}
 }
-// Method Definition Index: 74084
+// Method Definition Index: 74085
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EffectTestSceneManager_RefreshAllViews_m5A8B82B73A8CBA5DA3B8A5D867E58794818A27AD (EffectTestSceneManager_t006650B3C505E8A60327DF2828036B0F029BB555* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14427,7 +14532,7 @@ IL_002b:
 		return;
 	}
 }
-// Method Definition Index: 74085
+// Method Definition Index: 74086
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ValueTuple_3U5BU5D_t951EFF7E9D4D9B84DEA788765F18DD524001B167* EffectTestSceneManager_GetAllCommanders_mA42B7D8323F7DDAEE8A0B6C6AC73104CB8D6F08E (EffectTestSceneManager_t006650B3C505E8A60327DF2828036B0F029BB555* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14553,7 +14658,7 @@ IL_0091:
 		return L_32;
 	}
 }
-// Method Definition Index: 74086
+// Method Definition Index: 74087
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EffectTestSceneManager__ctor_m8B0885D0CCEC849444E7828288C52214632E24DA (EffectTestSceneManager_t006650B3C505E8A60327DF2828036B0F029BB555* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14581,7 +14686,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EffectTestSceneManager__ctor_m8B0885D0CC
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 74087
+// Method Definition Index: 74088
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_mF99AAFCFC23CCE2583640FDB54A220DEDC88DB3F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14598,7 +14703,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_mF99AAFCFC23CCE2583640FDB
 		return;
 	}
 }
-// Method Definition Index: 74088
+// Method Definition Index: 74089
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_mC2B905C61D337DE82E0793B723502928F852FDD8 (U3CU3Ec_tC7B40FE9DE4A12A59E6838837888B7EB4B22BAE8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -14606,7 +14711,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_mC2B905C61D337DE82E0793B72
 		return;
 	}
 }
-// Method Definition Index: 74089
+// Method Definition Index: 74090
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t U3CU3Ec_U3CSetupOfflineGameStateU3Eb__9_0_mFAE630EFCDEE2EAA82D83791B3C4B82C11BFC40C (U3CU3Ec_tC7B40FE9DE4A12A59E6838837888B7EB4B22BAE8* __this, CommanderDataSO_t309CF78E6491C0920DE1127748C07E0F9CF23181* ___0_c, const RuntimeMethod* method) 
 {
 	{
@@ -14618,7 +14723,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t U3CU3Ec_U3CSetupOfflineGameStateU3Eb_
 		return L_1;
 	}
 }
-// Method Definition Index: 74090
+// Method Definition Index: 74091
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t U3CU3Ec_U3CSetupOfflineGameStateU3Eb__9_1_m6C5AC4FDFC0666B26C7CFCC7C009C127CE01D248 (U3CU3Ec_tC7B40FE9DE4A12A59E6838837888B7EB4B22BAE8* __this, CommanderDataSO_t309CF78E6491C0920DE1127748C07E0F9CF23181* ___0_c, const RuntimeMethod* method) 
 {
 	{
@@ -14638,7 +14743,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t U3CU3Ec_U3CSetupOfflineGameStateU3Eb_
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 74091
+// Method Definition Index: 74092
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EffectTestUIController_Start_m1DE9B481BF7641F0AEA4A6AEB7BDB5E30D7A3F52 (EffectTestUIController_tBE6C82C1A154670B157C1868C12B6408E2F13BDD* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14828,7 +14933,7 @@ IL_012c:
 		return;
 	}
 }
-// Method Definition Index: 74092
+// Method Definition Index: 74093
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EffectTestUIController_SetUIReferences_m26E66A1A642C5B066D9DE236BE766F3DAB9CDF0B (EffectTestUIController_tBE6C82C1A154670B157C1868C12B6408E2F13BDD* __this, Dropdown_t54C0BDC1441E058BE37E796F68886671C270EF89* ___0_cardDropdown, Dropdown_t54C0BDC1441E058BE37E796F68886671C270EF89* ___1_playerDropdown, Dropdown_t54C0BDC1441E058BE37E796F68886671C270EF89* ___2_targetDropdown, Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* ___3_passivesToggle, Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___4_applyButton, Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___5_resetButton, Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___6_logText, const RuntimeMethod* method) 
 {
 	{
@@ -14864,7 +14969,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EffectTestUIController_SetUIReferences_m
 		return;
 	}
 }
-// Method Definition Index: 74093
+// Method Definition Index: 74094
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EffectTestUIController_SetManager_mEE30E312C632C4AA043EFFD47630993691CB7220 (EffectTestUIController_tBE6C82C1A154670B157C1868C12B6408E2F13BDD* __this, EffectTestSceneManager_t006650B3C505E8A60327DF2828036B0F029BB555* ___0_manager, const RuntimeMethod* method) 
 {
 	{
@@ -14882,7 +14987,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EffectTestUIController_SetManager_mEE30E
 		return;
 	}
 }
-// Method Definition Index: 74094
+// Method Definition Index: 74095
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EffectTestUIController_PopulateCardDropdown_m92BD9AB8C2251C0AC42F9A56DD6F4A1122CA8A27 (EffectTestUIController_tBE6C82C1A154670B157C1868C12B6408E2F13BDD* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15176,7 +15281,7 @@ IL_0130:
 		return;
 	}
 }
-// Method Definition Index: 74095
+// Method Definition Index: 74096
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EffectTestUIController_PopulatePlayerDropdown_mFA067B04008B1EEEA4CBBD19C16046D4FC786593 (EffectTestUIController_tBE6C82C1A154670B157C1868C12B6408E2F13BDD* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15248,7 +15353,7 @@ IL_0054:
 		return;
 	}
 }
-// Method Definition Index: 74096
+// Method Definition Index: 74097
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EffectTestUIController_PopulateTargetDropdown_m6380D588DE63F75E941C391CEB4EB61E80222D2C (EffectTestUIController_tBE6C82C1A154670B157C1868C12B6408E2F13BDD* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15376,7 +15481,7 @@ IL_0083:
 		return;
 	}
 }
-// Method Definition Index: 74097
+// Method Definition Index: 74098
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EffectTestUIController_OnCardChanged_m16F94D746D14B2F1DC772465B4436C5FE1BE255C (EffectTestUIController_tBE6C82C1A154670B157C1868C12B6408E2F13BDD* __this, int32_t ___0_index, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15461,7 +15566,7 @@ IL_004a:
 		return;
 	}
 }
-// Method Definition Index: 74098
+// Method Definition Index: 74099
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EffectTestUIController_OnPlayerChanged_mF0269D3E5F0AE631D0571162B431353AD93716D0 (EffectTestUIController_tBE6C82C1A154670B157C1868C12B6408E2F13BDD* __this, int32_t ___0_index, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15503,7 +15608,7 @@ IL_002f:
 		return;
 	}
 }
-// Method Definition Index: 74099
+// Method Definition Index: 74100
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EffectTestUIController_OnTargetChanged_mE060199E844F244ED68BE1EB186B7E19B8369360 (EffectTestUIController_tBE6C82C1A154670B157C1868C12B6408E2F13BDD* __this, int32_t ___0_index, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15554,7 +15659,7 @@ IL_003f:
 		return;
 	}
 }
-// Method Definition Index: 74100
+// Method Definition Index: 74101
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EffectTestUIController_OnPassivesToggled_m432C84AAA675962D1B7F561DE9C6B419C8B465A3 (EffectTestUIController_tBE6C82C1A154670B157C1868C12B6408E2F13BDD* __this, bool ___0_enabled, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15651,7 +15756,7 @@ IL_0057:
 		return;
 	}
 }
-// Method Definition Index: 74101
+// Method Definition Index: 74102
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EffectTestUIController_OnApplyClicked_m90DB768F3B0620AC9A14EFE65AB113269D8EDA11 (EffectTestUIController_tBE6C82C1A154670B157C1868C12B6408E2F13BDD* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15852,7 +15957,7 @@ IL_012d:
 		return;
 	}
 }
-// Method Definition Index: 74102
+// Method Definition Index: 74103
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EffectTestUIController_OnResetClicked_mFB707FFA746C86DCE96BB485C47E294F7F3E6195 (EffectTestUIController_tBE6C82C1A154670B157C1868C12B6408E2F13BDD* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15891,7 +15996,7 @@ IL_002b:
 		return;
 	}
 }
-// Method Definition Index: 74103
+// Method Definition Index: 74104
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EffectTestUIController_LogMessage_m02499395D0F8BD32E2A81E845AF76C96CFBEC2E3 (EffectTestUIController_tBE6C82C1A154670B157C1868C12B6408E2F13BDD* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15936,7 +16041,7 @@ IL_0020:
 		return;
 	}
 }
-// Method Definition Index: 74104
+// Method Definition Index: 74105
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EffectTestUIController_OnDestroy_m66207F7EC8F18133DD69F669DD9EBD2735FA0724 (EffectTestUIController_tBE6C82C1A154670B157C1868C12B6408E2F13BDD* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16122,7 +16227,7 @@ IL_0113:
 		return;
 	}
 }
-// Method Definition Index: 74105
+// Method Definition Index: 74106
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EffectTestUIController__ctor_mB92FB5254445BCD5C36681D91E8F6A61DD53292E (EffectTestUIController_tBE6C82C1A154670B157C1868C12B6408E2F13BDD* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16138,7 +16243,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EffectTestUIController__ctor_mB92FB52544
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 74106
+// Method Definition Index: 74107
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameAudioController_t070E94E0F7F6D8254C8ABB777E9109BE5B9C9C1A* GameAudioController_get_Instance_m852A294F47CD0F037B4409BC924C9E5950600669 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16153,7 +16258,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameAudioController_t070E94E0F7F6D8254C8ABB77
 		return L_0;
 	}
 }
-// Method Definition Index: 74107
+// Method Definition Index: 74108
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameAudioController_set_Instance_mB45A48EAC7DCB3FA266FFE63B4529689FEF028B4 (GameAudioController_t070E94E0F7F6D8254C8ABB777E9109BE5B9C9C1A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16170,7 +16275,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameAudioController_set_Instance_mB45A48
 		return;
 	}
 }
-// Method Definition Index: 74108
+// Method Definition Index: 74109
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameAudioController_Awake_m43760B97B65B492E902D22B14CDEF1958A54449B (GameAudioController_t070E94E0F7F6D8254C8ABB777E9109BE5B9C9C1A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16248,7 +16353,7 @@ IL_0050:
 		return;
 	}
 }
-// Method Definition Index: 74109
+// Method Definition Index: 74110
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameAudioController_OnEnable_mF69132E8C32EAB40A4516915883BA90E39039B5C (GameAudioController_t070E94E0F7F6D8254C8ABB777E9109BE5B9C9C1A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16332,7 +16437,7 @@ IL_0092:
 		return;
 	}
 }
-// Method Definition Index: 74110
+// Method Definition Index: 74111
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameAudioController_OnDisable_m2C182B641DE8C33F84B688253C342CFD1FB1FB6E (GameAudioController_t070E94E0F7F6D8254C8ABB777E9109BE5B9C9C1A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16390,7 +16495,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameAudioController_OnDisable_m2C182B641
 		return;
 	}
 }
-// Method Definition Index: 74111
+// Method Definition Index: 74112
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameAudioController_EnterMainMenuAudioContext_m0167CD4C9B9534D91B0967C07C9DC5B694373F95 (GameAudioController_t070E94E0F7F6D8254C8ABB777E9109BE5B9C9C1A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16406,7 +16511,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameAudioController_EnterMainMenuAudioCo
 		return;
 	}
 }
-// Method Definition Index: 74112
+// Method Definition Index: 74113
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameAudioController_EnterCommanderSelectionAudioContext_m6E40E660E38BD4DFDB3BDBC8337478A5FA920A72 (GameAudioController_t070E94E0F7F6D8254C8ABB777E9109BE5B9C9C1A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16422,7 +16527,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameAudioController_EnterCommanderSelect
 		return;
 	}
 }
-// Method Definition Index: 74113
+// Method Definition Index: 74114
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameAudioController_EnterMatchAudioContext_m399B484684481B459E0C79523E2DED504C17DE1F (GameAudioController_t070E94E0F7F6D8254C8ABB777E9109BE5B9C9C1A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16437,7 +16542,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameAudioController_EnterMatchAudioConte
 		return;
 	}
 }
-// Method Definition Index: 74114
+// Method Definition Index: 74115
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameAudioController_OnGameStateSynced_m3B27EC1679690620967022524D8041749CC121D6 (GameAudioController_t070E94E0F7F6D8254C8ABB777E9109BE5B9C9C1A* __this, GameStateSyncedEvent_t22C0B6932B495AE2E678058160445670FE8ED70E ___0_sync, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -16550,7 +16655,7 @@ IL_0071:
 		return;
 	}
 }
-// Method Definition Index: 74115
+// Method Definition Index: 74116
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameAudioController_OnCardPlayed_mC9025B1B27B424611B6F2AEA6B307D39180A289D (GameAudioController_t070E94E0F7F6D8254C8ABB777E9109BE5B9C9C1A* __this, CardPlayedEvent_t2130E4DE020597F35519DB317C06A15110A9FC97 ___0_evt, const RuntimeMethod* method) 
 {
 	{
@@ -16561,7 +16666,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameAudioController_OnCardPlayed_mC9025B
 		return;
 	}
 }
-// Method Definition Index: 74116
+// Method Definition Index: 74117
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameAudioController_OnVerificaPlayed_m36D24E006C36E1BE6F1E14F7831D5AEB9C6ECF19 (GameAudioController_t070E94E0F7F6D8254C8ABB777E9109BE5B9C9C1A* __this, VerificaPlayedEvent_t7C3173601E5D7E27A3052E4422D9A7A51ACE13A9 ___0_evt, const RuntimeMethod* method) 
 {
 	{
@@ -16572,7 +16677,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameAudioController_OnVerificaPlayed_m36
 		return;
 	}
 }
-// Method Definition Index: 74117
+// Method Definition Index: 74118
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameAudioController_OnCardBought_mFEFDA3A54F6EAE6363D1B8C129AC1732501F275C (GameAudioController_t070E94E0F7F6D8254C8ABB777E9109BE5B9C9C1A* __this, CardBoughtEvent_t07CAB01784B6C260B652DF904C9E603C043AFACD ___0_evt, const RuntimeMethod* method) 
 {
 	{
@@ -16583,7 +16688,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameAudioController_OnCardBought_mFEFDA3
 		return;
 	}
 }
-// Method Definition Index: 74118
+// Method Definition Index: 74119
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameAudioController_OnPhaseChanged_m930FC4163C8BD0136872606937F4A4F0E2091B47 (GameAudioController_t070E94E0F7F6D8254C8ABB777E9109BE5B9C9C1A* __this, PhaseChangedEvent_tEFA26D6E51638C16E55ED415408A38072C6138E3 ___0_evt, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -16610,7 +16715,7 @@ IL_001e:
 		return;
 	}
 }
-// Method Definition Index: 74119
+// Method Definition Index: 74120
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameAudioController_OnSceneLoaded_m6D5748D2C4BE12F2836A830083E5BEE865AE9DBE (GameAudioController_t070E94E0F7F6D8254C8ABB777E9109BE5B9C9C1A* __this, Scene_tA1DC762B79745EB5140F054C884855B922318356 ___0_scene, int32_t ___1_mode, const RuntimeMethod* method) 
 {
 	{
@@ -16621,7 +16726,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameAudioController_OnSceneLoaded_m6D574
 		return;
 	}
 }
-// Method Definition Index: 74120
+// Method Definition Index: 74121
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameAudioController_UpdateCrowdForScene_m5AA0B0AC624DFDF10CEABEF9E252379B46276A10 (GameAudioController_t070E94E0F7F6D8254C8ABB777E9109BE5B9C9C1A* __this, Scene_tA1DC762B79745EB5140F054C884855B922318356 ___0_scene, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16723,7 +16828,7 @@ IL_0063:
 		return;
 	}
 }
-// Method Definition Index: 74121
+// Method Definition Index: 74122
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameAudioController_EnsureAudioSources_m8515693EB4881684A6B5AF174C989A89E1B9BE64 (GameAudioController_t070E94E0F7F6D8254C8ABB777E9109BE5B9C9C1A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16816,7 +16921,7 @@ IL_006a:
 		return;
 	}
 }
-// Method Definition Index: 74122
+// Method Definition Index: 74123
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameAudioController_ConfigureSources_m14F00519853F41431DC495ADF26434D4132E7F61 (GameAudioController_t070E94E0F7F6D8254C8ABB777E9109BE5B9C9C1A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16860,7 +16965,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameAudioController_ConfigureSources_m14
 		return;
 	}
 }
-// Method Definition Index: 74123
+// Method Definition Index: 74124
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameAudioController_PlayLoop_m511536E8E328FCA87EE3D630B89DD3954734B982 (AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___0_source, AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___1_clip, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16975,7 +17080,7 @@ IL_0048:
 		return;
 	}
 }
-// Method Definition Index: 74124
+// Method Definition Index: 74125
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameAudioController_StopLoop_m079B3A6C16D71C53422B25BB5FB7AA70D9CC6448 (AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___0_source, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17039,7 +17144,7 @@ IL_0024:
 		return;
 	}
 }
-// Method Definition Index: 74125
+// Method Definition Index: 74126
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameAudioController_PlaySfx_m63AA4FB5AA32CCDD03BB9A87563BCE20B67FB283 (GameAudioController_t070E94E0F7F6D8254C8ABB777E9109BE5B9C9C1A* __this, AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___0_clip, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17104,7 +17209,7 @@ IL_002d:
 		return;
 	}
 }
-// Method Definition Index: 74126
+// Method Definition Index: 74127
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameAudioController_OnDestroy_m32FA0EE263FEEE2C35FFDC03FABA5DD533B99163 (GameAudioController_t070E94E0F7F6D8254C8ABB777E9109BE5B9C9C1A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17139,7 +17244,7 @@ IL_0019:
 		return;
 	}
 }
-// Method Definition Index: 74127
+// Method Definition Index: 74128
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameAudioController__ctor_m22B4C41C25F08B3E809450A19A22D95D57B87BC4 (GameAudioController_t070E94E0F7F6D8254C8ABB777E9109BE5B9C9C1A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17175,7 +17280,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameAudioController__ctor_m22B4C41C25F08
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 74128
+// Method Definition Index: 74129
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass32_0__ctor_m2851D8B7E83391A7C388C1BCDDD526F24933EFDE (U3CU3Ec__DisplayClass32_0_tF468A869052FA4D158F3E7409256C9659B211000* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17183,7 +17288,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass32_0__ctor_m2851D8B
 		return;
 	}
 }
-// Method Definition Index: 74129
+// Method Definition Index: 74130
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass32_0_U3CUpdateCrowdForSceneU3Eb__0_m0D582D670D28039CFF7A36B9C72301BBA3721DC8 (U3CU3Ec__DisplayClass32_0_tF468A869052FA4D158F3E7409256C9659B211000* __this, String_t* ___0_sceneName, const RuntimeMethod* method) 
 {
 	{
@@ -17205,7 +17310,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass32_0_U3CUpdateCrowd
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 74130
+// Method Definition Index: 74131
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameOutcomePanel_Bind_m78EECD56DFE9B30EB73A0D4109976577C114BDAE (GameOutcomePanel_t5FD7F1A7E4B1C48547666FBBEFDF48420B5C0125* __this, bool ___0_isWin, bool ___1_isDraw, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17409,7 +17514,7 @@ IL_00af:
 		return;
 	}
 }
-// Method Definition Index: 74131
+// Method Definition Index: 74132
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameOutcomePanel_GoToMainMenu_m2C02CF246BABF68ECFECDA39EC3515DA401D3787 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17451,7 +17556,7 @@ IL_0019:
 		return;
 	}
 }
-// Method Definition Index: 74132
+// Method Definition Index: 74133
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameOutcomePanel__ctor_m9C127606138BF4A506B27D721BDC901D56DD79E0 (GameOutcomePanel_t5FD7F1A7E4B1C48547666FBBEFDF48420B5C0125* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17467,7 +17572,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameOutcomePanel__ctor_m9C127606138BF4A5
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 74133
+// Method Definition Index: 74134
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView_Awake_m2B35840214FF7A203EDC931165851EFC93E3D1BE (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17560,7 +17665,7 @@ IL_0025:
 		return;
 	}
 }
-// Method Definition Index: 74134
+// Method Definition Index: 74135
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView_Start_mE65A9286D711E701DC9E5E8FB5432A651431141E (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17668,7 +17773,7 @@ IL_00aa:
 		return;
 	}
 }
-// Method Definition Index: 74135
+// Method Definition Index: 74136
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView_OnDestroy_mBD815C45713088E45B4FD2DA850A4998E61E1A15 (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17742,7 +17847,7 @@ IL_0033:
 		return;
 	}
 }
-// Method Definition Index: 74136
+// Method Definition Index: 74137
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView_RenderOutcome_m35BBF648394582B13FE1A7E67E8F7DB6126C2C0D (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, GameStateDTO_tBE2493AAD5C304C37AC3FBB5E2405DCD803E1CDE ___0_state, int32_t ___1_localActorNumber, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17894,7 +17999,7 @@ IL_0098:
 		return;
 	}
 }
-// Method Definition Index: 74137
+// Method Definition Index: 74138
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView_OnStateSynced_m59BC1F9ACC996EE2B6B6F1B87C5A525C088220E8 (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, GameStateSyncedEvent_t22C0B6932B495AE2E678058160445670FE8ED70E ___0_sync, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18123,7 +18228,7 @@ IL_00a5:
 		return;
 	}
 }
-// Method Definition Index: 74138
+// Method Definition Index: 74139
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView_RenderLabels_mEF2E116BA924B2B097AABC24055927DD95DEC310 (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, GameStateDTO_tBE2493AAD5C304C37AC3FBB5E2405DCD803E1CDE ___0_state, int32_t ___1_phase, PlayerDTO_t7AF6A0F5A0C28B0B7408A558A9BE0202CCAB0874 ___2_local, PlayerDTO_t7AF6A0F5A0C28B0B7408A558A9BE0202CCAB0874 ___3_enemy, bool ___4_isLocalTurn, int32_t ___5_localActorNumber, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18453,7 +18558,7 @@ IL_01ce:
 		return;
 	}
 }
-// Method Definition Index: 74139
+// Method Definition Index: 74140
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView_RenderCommanders_m44663B6C2180510DE13313B7C70A1CDCBDDDCF6C (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, PlayerDTO_t7AF6A0F5A0C28B0B7408A558A9BE0202CCAB0874 ___0_local, PlayerDTO_t7AF6A0F5A0C28B0B7408A558A9BE0202CCAB0874 ___1_enemy, int32_t ___2_localIndex, const RuntimeMethod* method) 
 {
 	{
@@ -18479,7 +18584,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView_RenderCommanders_m44663B6C21805
 		return;
 	}
 }
-// Method Definition Index: 74140
+// Method Definition Index: 74141
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView_BindCommander_mF42D3F43E4D485AE205D83626634D3C88D976153 (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, CommanderView_tE3FD474E7B95F6CB7EE207DB11B371FFEEDAA399* ___0_view, PlayerDTO_t7AF6A0F5A0C28B0B7408A558A9BE0202CCAB0874 ___1_player, int32_t ___2_index, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18671,7 +18776,7 @@ IL_00cc:
 		return;
 	}
 }
-// Method Definition Index: 74141
+// Method Definition Index: 74142
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView_ShowCommanderAbilityPopup_m1197C087387CEBD58CA8D71322127A49C50DAE84 (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, CommanderDataSO_t309CF78E6491C0920DE1127748C07E0F9CF23181* ___0_data, bool ___1_secondaryUnlocked, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18775,7 +18880,7 @@ IL_0082:
 		return;
 	}
 }
-// Method Definition Index: 74142
+// Method Definition Index: 74143
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView_HideCommanderAbilityPopup_m6F405356E21E8731951C437A90D19C7F9D202080 (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18823,7 +18928,7 @@ IL_002c:
 		return;
 	}
 }
-// Method Definition Index: 74143
+// Method Definition Index: 74144
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView_RenderHand_m80BEE7B7F1193728379217D29A6568F18B1469A8 (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, PlayerDTO_t7AF6A0F5A0C28B0B7408A558A9BE0202CCAB0874 ___0_local, int32_t ___1_phase, bool ___2_isLocalTurn, bool ___3_verificaPlayable, int32_t ___4_remainingActions, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19048,7 +19153,7 @@ IL_0100:
 		return;
 	}
 }
-// Method Definition Index: 74144
+// Method Definition Index: 74145
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView_UpdateHandSpacing_mB7B03BCE23AE4AA7BF2C3AE06F4802257DBBB38F (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19249,7 +19354,7 @@ IL_00f1:
 		return;
 	}
 }
-// Method Definition Index: 74145
+// Method Definition Index: 74146
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView_RenderShop_m9BC43DFCCB2D037A202404EBEEFEDCD62C6F5CF1 (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, PlayerDTO_t7AF6A0F5A0C28B0B7408A558A9BE0202CCAB0874 ___0_local, int32_t ___1_phase, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19451,7 +19556,7 @@ IL_010d:
 		return;
 	}
 }
-// Method Definition Index: 74146
+// Method Definition Index: 74147
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView_ShowCardPreview_m158ED4E5AA9E60AF0FEC21C89B05346D0C061EA9 (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, CardDataSO_tD219CDA2271352E4C1A7C43349DB3A565CBDD685* ___0_card, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19627,7 +19732,7 @@ IL_0107:
 		return;
 	}
 }
-// Method Definition Index: 74147
+// Method Definition Index: 74148
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView_HideCardPreview_m781B5D462F8D5D5F04FFA79A6776AB5D22E387E0 (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19675,7 +19780,7 @@ IL_002c:
 		return;
 	}
 }
-// Method Definition Index: 74148
+// Method Definition Index: 74149
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView_RenderButtons_m9FA6376C36DD1CDF3C3FD005BB5910927046ED3F (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, int32_t ___0_phase, bool ___1_isLocalTurn, PlayerDTO_t7AF6A0F5A0C28B0B7408A558A9BE0202CCAB0874 ___2_local, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19740,7 +19845,7 @@ IL_0049:
 		return;
 	}
 }
-// Method Definition Index: 74149
+// Method Definition Index: 74150
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView_OnPlayCardClicked_mF66830145689C1F0D2B87B774843DE384804B455 (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, CardDataSO_tD219CDA2271352E4C1A7C43349DB3A565CBDD685* ___0_card, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19831,7 +19936,7 @@ IL_0057:
 		return;
 	}
 }
-// Method Definition Index: 74150
+// Method Definition Index: 74151
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView_OnBuyCardClicked_m211ADC200DED3CF688472EAD432A782E86F27A26 (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, CardDataSO_tD219CDA2271352E4C1A7C43349DB3A565CBDD685* ___0_card, const RuntimeMethod* method) 
 {
 	{
@@ -19844,7 +19949,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView_OnBuyCardClicked_m211ADC200DED3
 		return;
 	}
 }
-// Method Definition Index: 74151
+// Method Definition Index: 74152
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView_AnimatePlayedCard_m65BFE1C80C2C14B2D5969858556BE95EA670A938 (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, GameStateDTO_tBE2493AAD5C304C37AC3FBB5E2405DCD803E1CDE ___0_state, int32_t ___1_localActorNumber, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20016,7 +20121,7 @@ IL_00c7:
 		return;
 	}
 }
-// Method Definition Index: 74152
+// Method Definition Index: 74153
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView_AnimateDrawnCards_m4ED813A4BF8B5A1EA6052DCD906058639049071E (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, GameStateDTO_tBE2493AAD5C304C37AC3FBB5E2405DCD803E1CDE ___0_state, int32_t ___1_localActorNumber, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20351,7 +20456,7 @@ IL_0164:
 		return;
 	}
 }
-// Method Definition Index: 74153
+// Method Definition Index: 74154
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CardView_tFDD2CD932B3A388292029B4804B2C4F1E8918C09* GameView_FindUnassignedHandView_mA63D3E25C06E2602F4C13E16AE49F0772C913541 (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, int32_t ___0_cardId, HashSet_1_t2E9B8A892FE94EE02F9C2BEB9DAAB62549000CF3* ___1_assignedViews, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20480,7 +20585,7 @@ IL_006c:
 		return L_21;
 	}
 }
-// Method Definition Index: 74154
+// Method Definition Index: 74155
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RectTransformU5BU5D_tD8879AA94435492C205ABBE1E530FFD24CE0393D* GameView_ResolveHostilePlayedTargets_m4C196178CC217D26522DB0E3611D98E07AD5A83E (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, GameStateDTO_tBE2493AAD5C304C37AC3FBB5E2405DCD803E1CDE ___0_state, int32_t ___1_localActorNumber, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20781,7 +20886,7 @@ IL_010a:
 		return L_53;
 	}
 }
-// Method Definition Index: 74155
+// Method Definition Index: 74156
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView_CaptureLocalPlayStart_m31928652AC91F2688841FCDF308094ED9A8CDE9E (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, CardDataSO_tD219CDA2271352E4C1A7C43349DB3A565CBDD685* ___0_card, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20942,7 +21047,7 @@ IL_00a1:
 		return;
 	}
 }
-// Method Definition Index: 74156
+// Method Definition Index: 74157
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 GameView_ResolveOpponentPlayStart_mA7C4225990337E8E1F18B48A43A16E3076FF3381 (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21125,7 +21230,7 @@ IL_00b9:
 		return L_30;
 	}
 }
-// Method Definition Index: 74157
+// Method Definition Index: 74158
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 GameView_WorldToCanvasPosition_m7EB4A7E586CED987BF688776BB9C61DB7ACEF8F8 (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_worldPosition, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21252,7 +21357,7 @@ IL_006e:
 		return L_19;
 	}
 }
-// Method Definition Index: 74158
+// Method Definition Index: 74159
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView_ClearSpawned_m58D1FEF1B77960E6B5D5030E98037CE6E6F6FDB4 (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, List_1_t20E4754AF573CBDC992F12944E08859073CAFA2E* ___0_spawned, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21356,7 +21461,7 @@ IL_0048:
 		return;
 	}
 }
-// Method Definition Index: 74159
+// Method Definition Index: 74160
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView_EnterTargetSelectionMode_m78B92D76BF7DC9734D6B8C8D94486E66865384EC (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, CardDataSO_tD219CDA2271352E4C1A7C43349DB3A565CBDD685* ___0_card, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -21447,7 +21552,7 @@ IL_005b:
 		return;
 	}
 }
-// Method Definition Index: 74160
+// Method Definition Index: 74161
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView_ShowAllSelection_mE3C356AF67B82A9B769258021651D56EBD6FA601 (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21566,7 +21671,7 @@ IL_007d:
 		return;
 	}
 }
-// Method Definition Index: 74161
+// Method Definition Index: 74162
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView_OnAnyCommanderSelected_m39A32AC9CFE89891FB657C2045C078DA1118D441 (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, int32_t ___0_actorNumber, int32_t ___1_commanderIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21626,7 +21731,7 @@ IL_0042:
 		return;
 	}
 }
-// Method Definition Index: 74162
+// Method Definition Index: 74163
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView_ShowEnemySelection_mF95A9F74052397DE8F5F13B75129E5C511BD384C (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21741,7 +21846,7 @@ IL_0067:
 		return;
 	}
 }
-// Method Definition Index: 74163
+// Method Definition Index: 74164
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView_ShowOwnSelection_m211344541DB566F626A2DB0C1782CA5CA561499A (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21856,7 +21961,7 @@ IL_0067:
 		return;
 	}
 }
-// Method Definition Index: 74164
+// Method Definition Index: 74165
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView_OnEnemyCommanderSelected_mADBC2A170FDDF5CD53CDCE3851D0C29595CBE009 (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, int32_t ___0_actorNumber, int32_t ___1_commanderIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21991,7 +22096,7 @@ IL_0097:
 		return;
 	}
 }
-// Method Definition Index: 74165
+// Method Definition Index: 74166
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView_OnOwnCommanderSelected_m147B38F5DB8E7A4B2C941F8F550D01E118C342E0 (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, int32_t ___0_actorNumber, int32_t ___1_commanderIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22100,7 +22205,7 @@ IL_008c:
 		return;
 	}
 }
-// Method Definition Index: 74166
+// Method Definition Index: 74167
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView_ExitTargetSelectionMode_mCF5682015CABA694885046F35E596B9A7B8B7EBC (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, const RuntimeMethod* method) 
 {
 	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* G_B2_0 = NULL;
@@ -22238,7 +22343,7 @@ IL_007e:
 		return;
 	}
 }
-// Method Definition Index: 74167
+// Method Definition Index: 74168
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView_CancelTargetSelection_m42742260E4EFECEEAECEDD1D0F3C1F83F5E3FC2D (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -22250,7 +22355,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView_CancelTargetSelection_m42742260
 		return;
 	}
 }
-// Method Definition Index: 74168
+// Method Definition Index: 74169
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView__ctor_mAD802C2ED8FC75578B465CB6A021A0B5F3DFA479 (GameView_t46A892D28A81FAEBB038083E4465417CE3E177E3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22320,7 +22425,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameView__ctor_mAD802C2ED8FC75578B465CB6
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 74169
+// Method Definition Index: 74170
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuController_Start_m7A39D2FD2E715E8F8F1F204E3BAE5B683FD67440 (MainMenuController_t05A81E52380F471AAE1BDCB1012109FD5DB2E22F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22521,7 +22626,7 @@ IL_00f2:
 		return;
 	}
 }
-// Method Definition Index: 74170
+// Method Definition Index: 74171
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuController_OnDestroy_m08AC10EA234D5D2C59A913D59F06CAF7A3DD9141 (MainMenuController_t05A81E52380F471AAE1BDCB1012109FD5DB2E22F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22569,7 +22674,7 @@ IL_0043:
 		return;
 	}
 }
-// Method Definition Index: 74171
+// Method Definition Index: 74172
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuController_ShowModePanel_m8A40801D8C78DB297E3BF3B182C4E41373F3302E (MainMenuController_t05A81E52380F471AAE1BDCB1012109FD5DB2E22F* __this, const RuntimeMethod* method) 
 {
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* G_B2_0 = NULL;
@@ -22628,7 +22733,7 @@ IL_0027:
 		return;
 	}
 }
-// Method Definition Index: 74172
+// Method Definition Index: 74173
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuController_OnSameDeviceClicked_m248454E357C528F608BE142285A37606F5BE6019 (MainMenuController_t05A81E52380F471AAE1BDCB1012109FD5DB2E22F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22683,7 +22788,7 @@ IL_003c:
 		return;
 	}
 }
-// Method Definition Index: 74173
+// Method Definition Index: 74174
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuController_OnOnlineClicked_m8B0FD03E54F9EED442F977355D49C400536CFF77 (MainMenuController_t05A81E52380F471AAE1BDCB1012109FD5DB2E22F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22771,7 +22876,7 @@ IL_004a:
 		return;
 	}
 }
-// Method Definition Index: 74174
+// Method Definition Index: 74175
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuController_OnCreateRoomClicked_m442588486AEDD478ABCBBC4F44405CA9F9735E9F (MainMenuController_t05A81E52380F471AAE1BDCB1012109FD5DB2E22F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22850,7 +22955,7 @@ IL_0059:
 		return;
 	}
 }
-// Method Definition Index: 74175
+// Method Definition Index: 74176
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuController_OnJoinRoomClicked_mBA79F7999BCAB8BBBB58B855CB9617E6CE91B69C (MainMenuController_t05A81E52380F471AAE1BDCB1012109FD5DB2E22F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22956,7 +23061,7 @@ IL_006e:
 		return;
 	}
 }
-// Method Definition Index: 74176
+// Method Definition Index: 74177
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuController_OnStatusChanged_mB80DB816DFE0190D120256093AF230E2C1637E2F (MainMenuController_t05A81E52380F471AAE1BDCB1012109FD5DB2E22F* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	{
@@ -22967,7 +23072,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuController_OnStatusChanged_mB80D
 		return;
 	}
 }
-// Method Definition Index: 74177
+// Method Definition Index: 74178
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuController_OnLaunchFailed_m701EAFE32B45208D8D982C10755B46F3D8042B20 (MainMenuController_t05A81E52380F471AAE1BDCB1012109FD5DB2E22F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -22977,7 +23082,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuController_OnLaunchFailed_m701EA
 		return;
 	}
 }
-// Method Definition Index: 74178
+// Method Definition Index: 74179
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuController_SetOnlineButtonsInteractable_m8D9D4DC5E09B1B843F13CF7E67FEC600A334C58E (MainMenuController_t05A81E52380F471AAE1BDCB1012109FD5DB2E22F* __this, bool ___0_interactable, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23037,7 +23142,7 @@ IL_003f:
 		return;
 	}
 }
-// Method Definition Index: 74179
+// Method Definition Index: 74180
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuController_SetStatus_m5EE1279897A0E7BF5C7B1211C4B6ED6BEFC872E7 (MainMenuController_t05A81E52380F471AAE1BDCB1012109FD5DB2E22F* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23074,7 +23179,7 @@ IL_0020:
 		return;
 	}
 }
-// Method Definition Index: 74180
+// Method Definition Index: 74181
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* MainMenuController_GenerateRoomCode_mEA015BF5B2CBE39EDB18093F2DC50BF8AE7EC729 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23146,7 +23251,7 @@ IL_0044:
 		return L_11;
 	}
 }
-// Method Definition Index: 74181
+// Method Definition Index: 74182
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuController__ctor_m8EFC1807BE6F3FC6DDEBB14FDEA1E82B82163DDE (MainMenuController_t05A81E52380F471AAE1BDCB1012109FD5DB2E22F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23175,7 +23280,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuController__ctor_m8EFC1807BE6F3F
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 74182
+// Method Definition Index: 74183
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaController_SetPanel_mE9E0FE26C4C11D132D9CDB038B26C10EE928FFB5 (SafeAreaController_t87A682B50C5BC509BB40FA49B531B8F19014115D* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_panel, const RuntimeMethod* method) 
 {
 	{
@@ -23187,7 +23292,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaController_SetPanel_mE9E0FE26C4C
 		return;
 	}
 }
-// Method Definition Index: 74183
+// Method Definition Index: 74184
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaController_Start_m7E414604A29874DFBC40A885D728A2D1C94C53EA (SafeAreaController_t87A682B50C5BC509BB40FA49B531B8F19014115D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23199,7 +23304,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaController_Start_m7E414604A29874
 		return;
 	}
 }
-// Method Definition Index: 74184
+// Method Definition Index: 74185
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaController_Update_m4838F8EA83143C7D43A4507B0213E64749D2A875 (SafeAreaController_t87A682B50C5BC509BB40FA49B531B8F19014115D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23265,7 +23370,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 74185
+// Method Definition Index: 74186
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaController_Apply_mCB8C4BAE9E58E14CE0827D0DC255472984AF51C8 (SafeAreaController_t87A682B50C5BC509BB40FA49B531B8F19014115D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23481,7 +23586,7 @@ IL_014b:
 		return;
 	}
 }
-// Method Definition Index: 74186
+// Method Definition Index: 74187
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaController__ctor_m8E5A450A7DB58136C54488DA87EB4F43D33B1A32 (SafeAreaController_t87A682B50C5BC509BB40FA49B531B8F19014115D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23497,7 +23602,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaController__ctor_m8E5A450A7DB581
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 74187
+// Method Definition Index: 74188
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TargetHitEffect_Play_m41DEEFD1CADB884DF122E774589A4F1B61FD72A6 (TargetHitEffect_t742059BBC06FFD35F6CF50766569E05804962EFF* __this, float ___0_duration, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23540,7 +23645,7 @@ IL_001d:
 		return;
 	}
 }
-// Method Definition Index: 74188
+// Method Definition Index: 74189
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* TargetHitEffect_PlayRoutine_m7E4650661EFBEFD0DEE548BBD0112FA7A02CC0C5 (TargetHitEffect_t742059BBC06FFD35F6CF50766569E05804962EFF* __this, float ___0_duration, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23563,7 +23668,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* TargetHitEffect_PlayRoutine_m7
 		return L_2;
 	}
 }
-// Method Definition Index: 74189
+// Method Definition Index: 74190
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TargetHitEffect__ctor_m9C43EFB06A160A498AD1DAD8571ACDDC6459D712 (TargetHitEffect_t742059BBC06FFD35F6CF50766569E05804962EFF* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23585,7 +23690,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TargetHitEffect__ctor_m9C43EFB06A160A498
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 74190
+// Method Definition Index: 74191
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CPlayRoutineU3Ed__6__ctor_m630E2321EFDE854FCE8A4A512A17E096C09D19B4 (U3CPlayRoutineU3Ed__6_tB1DEC74E18D926ACEA36BE7313137C30E1282DC9* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -23595,14 +23700,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CPlayRoutineU3Ed__6__ctor_m630E2321EFD
 		return;
 	}
 }
-// Method Definition Index: 74191
+// Method Definition Index: 74192
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CPlayRoutineU3Ed__6_System_IDisposable_Dispose_mE2A738CBD92E1FBB84C921AFB7BBA7507BE415D2 (U3CPlayRoutineU3Ed__6_tB1DEC74E18D926ACEA36BE7313137C30E1282DC9* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 74192
+// Method Definition Index: 74193
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CPlayRoutineU3Ed__6_MoveNext_m68694656DFD9BB62F08CDB4621E3BBB685490AB4 (U3CPlayRoutineU3Ed__6_tB1DEC74E18D926ACEA36BE7313137C30E1282DC9* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23809,7 +23914,7 @@ IL_0167:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 74193
+// Method Definition Index: 74194
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CPlayRoutineU3Ed__6_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m7F6C22097EBE083D94B7773262B8913DCE3142B1 (U3CPlayRoutineU3Ed__6_tB1DEC74E18D926ACEA36BE7313137C30E1282DC9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23817,7 +23922,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CPlayRoutineU3Ed__6_System_C
 		return L_0;
 	}
 }
-// Method Definition Index: 74194
+// Method Definition Index: 74195
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CPlayRoutineU3Ed__6_System_Collections_IEnumerator_Reset_m6741280211AB3B33C4D55FC80635B9405B5FAAE5 (U3CPlayRoutineU3Ed__6_tB1DEC74E18D926ACEA36BE7313137C30E1282DC9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23826,7 +23931,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CPlayRoutineU3Ed__6_System_Collections
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CPlayRoutineU3Ed__6_System_Collections_IEnumerator_Reset_m6741280211AB3B33C4D55FC80635B9405B5FAAE5_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 74195
+// Method Definition Index: 74196
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CPlayRoutineU3Ed__6_System_Collections_IEnumerator_get_Current_m4C0306E3352BD6FC11D9D52050C4AD8535566579 (U3CPlayRoutineU3Ed__6_tB1DEC74E18D926ACEA36BE7313137C30E1282DC9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23842,7 +23947,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CPlayRoutineU3Ed__6_System_C
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 74196
+// Method Definition Index: 74197
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ShopManager__ctor_mF5B952E6C96C6FCC7E89DF63953DCFA5FD7BBFC1 (ShopManager_t485A22BC9A2AC4854D8B9D2D9B48558348DFAD4B* __this, GameStateManager_t7AA371565EA3CAF37B97C2CB741C0F36637C8AC3* ___0_state, Random_t79716069EDE67D1D7734F60AE402D0CA3FB6B4C8* ___1_rng, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23872,7 +23977,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ShopManager__ctor_mF5B952E6C96C6FCC7E89D
 		return;
 	}
 }
-// Method Definition Index: 74197
+// Method Definition Index: 74198
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ShopManager_TryPurchase_m99572C69BA7DE790533120BFE7674964C2D24C65 (ShopManager_t485A22BC9A2AC4854D8B9D2D9B48558348DFAD4B* __this, PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* ___0_player, CardDataSO_tD219CDA2271352E4C1A7C43349DB3A565CBDD685* ___1_card, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24049,7 +24154,7 @@ IL_00ba:
 		return L_37;
 	}
 }
-// Method Definition Index: 74198
+// Method Definition Index: 74199
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ShopManager_RefreshPool_mBD3EC908D436FBEC4E05DE139DA587C81237A0C7 (ShopManager_t485A22BC9A2AC4854D8B9D2D9B48558348DFAD4B* __this, PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* ___0_player, const RuntimeMethod* method) 
 {
 	{
@@ -24084,7 +24189,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ShopManager_RefreshPool_mBD3EC908D436FBE
 		return;
 	}
 }
-// Method Definition Index: 74199
+// Method Definition Index: 74200
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ShopManager_ResetPurchases_m0CF1AD39EB9CB40933047EA389A5FD15A11A468B (ShopManager_t485A22BC9A2AC4854D8B9D2D9B48558348DFAD4B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24102,7 +24207,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ShopManager_ResetPurchases_m0CF1AD39EB9C
 		return;
 	}
 }
-// Method Definition Index: 74200
+// Method Definition Index: 74201
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ShopManager_GetPurchases_m117DC71F09F1DF54819091D2C1C70B3E6305965D (ShopManager_t485A22BC9A2AC4854D8B9D2D9B48558348DFAD4B* __this, int32_t ___0_actorNumber, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24158,7 +24263,7 @@ IL_0018:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 74201
+// Method Definition Index: 74202
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tA8F1D166EFB87EDCBECB6F8B2106668AE2FCB831* ShopPool_GeneratePool_m29524544706B6C4284986DCA7E6043A4A73ABF43 (RuntimeObject* ___0_catalog, int32_t ___1_credits, GameConfigSO_t48342CF12C54C514F6150F95D2728E5DEB90BA91* ___2_config, Random_t79716069EDE67D1D7734F60AE402D0CA3FB6B4C8* ___3_rng, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24243,7 +24348,7 @@ IL_0064:
 		return L_31;
 	}
 }
-// Method Definition Index: 74202
+// Method Definition Index: 74203
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ShopPool_RefreshSlots_m044786697473A616F9460B3F9D19CFC0EAA317AC (List_1_tA8F1D166EFB87EDCBECB6F8B2106668AE2FCB831* ___0_pool, RuntimeObject* ___1_catalog, int32_t ___2_credits, GameConfigSO_t48342CF12C54C514F6150F95D2728E5DEB90BA91* ___3_config, Random_t79716069EDE67D1D7734F60AE402D0CA3FB6B4C8* ___4_rng, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24367,7 +24472,7 @@ IL_0031:
 		return;
 	}
 }
-// Method Definition Index: 74203
+// Method Definition Index: 74204
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ShopPool_FillTierQuota_m765A08D4D1092D09B48F1D5F0A709CB26E010D36 (List_1_tA8F1D166EFB87EDCBECB6F8B2106668AE2FCB831* ___0_pool, RuntimeObject* ___1_eligible, int32_t ___2_tier, int32_t ___3_targetCount, int32_t ___4_poolSize, Random_t79716069EDE67D1D7734F60AE402D0CA3FB6B4C8* ___5_rng, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24668,7 +24773,7 @@ IL_00f0:
 		return;
 	}
 }
-// Method Definition Index: 74204
+// Method Definition Index: 74205
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ShopPool_FillRemainingSlots_m941E4B17A37208359142CA32BAC3C2AD7BFD1054 (List_1_tA8F1D166EFB87EDCBECB6F8B2106668AE2FCB831* ___0_pool, RuntimeObject* ___1_eligible, int32_t ___2_poolSize, Random_t79716069EDE67D1D7734F60AE402D0CA3FB6B4C8* ___3_rng, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24851,7 +24956,7 @@ IL_0081:
 		return;
 	}
 }
-// Method Definition Index: 74205
+// Method Definition Index: 74206
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tA8F1D166EFB87EDCBECB6F8B2106668AE2FCB831* ShopPool_FilterByCredits_m9642DC4B25A28B8D7C5045B4BC43DAD60E94C036 (RuntimeObject* ___0_catalog, int32_t ___1_credits, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25015,7 +25120,7 @@ IL_005a:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 74206
+// Method Definition Index: 74207
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerState_get_ActorNumber_mBA5D62D7D55E81FC817FE79525C759F7069340B0 (PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25024,7 +25129,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerState_get_ActorNumber_mBA5D62D7
 		return L_0;
 	}
 }
-// Method Definition Index: 74207
+// Method Definition Index: 74208
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerState_get_Credits_m285D310026403C39ED81512FBA93007DB1491C7E (PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25033,7 +25138,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerState_get_Credits_m285D31002640
 		return L_0;
 	}
 }
-// Method Definition Index: 74208
+// Method Definition Index: 74209
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tA8F1D166EFB87EDCBECB6F8B2106668AE2FCB831* PlayerState_get_Hand_mB8A13F0B824C46D3BC32E8A4189282BB4F7DBCA4 (PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25042,7 +25147,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tA8F1D166EFB87EDCBECB6F8B2106668AE2FCB
 		return L_0;
 	}
 }
-// Method Definition Index: 74209
+// Method Definition Index: 74210
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tA8F1D166EFB87EDCBECB6F8B2106668AE2FCB831* PlayerState_get_Deck_mEA54F1C28A19E4E50B7E310269A457894F381C39 (PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25051,7 +25156,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tA8F1D166EFB87EDCBECB6F8B2106668AE2FCB
 		return L_0;
 	}
 }
-// Method Definition Index: 74210
+// Method Definition Index: 74211
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tA8F1D166EFB87EDCBECB6F8B2106668AE2FCB831* PlayerState_get_DiscardPile_m5D01F8FCB629653D3DFD15430DA179B7229B1BB3 (PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25060,7 +25165,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tA8F1D166EFB87EDCBECB6F8B2106668AE2FCB
 		return L_0;
 	}
 }
-// Method Definition Index: 74211
+// Method Definition Index: 74212
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tA8F1D166EFB87EDCBECB6F8B2106668AE2FCB831* PlayerState_get_ShopPool_mAE964A8C1ABEBEFECF013FEE5183D4FAA5CD1A77 (PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25069,7 +25174,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tA8F1D166EFB87EDCBECB6F8B2106668AE2FCB
 		return L_0;
 	}
 }
-// Method Definition Index: 74212
+// Method Definition Index: 74213
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CommanderStateU5BU5D_t90948AC4B600E6A6E0ABD6B1599050B123C2D54F* PlayerState_get_Commanders_m80E941288F47808FD10AC75965D504F6CD0A66D9 (PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25078,7 +25183,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CommanderStateU5BU5D_t90948AC4B600E6A6E0ABD6B
 		return L_0;
 	}
 }
-// Method Definition Index: 74213
+// Method Definition Index: 74214
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayerState_get_VerificaBlocked_mE7D5F596319C562A813FD4B83B12181EA03EAF1D (PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25087,7 +25192,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayerState_get_VerificaBlocked_mE7D5F59
 		return L_0;
 	}
 }
-// Method Definition Index: 74214
+// Method Definition Index: 74215
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerState_set_VerificaBlocked_m73ECA4B6FC39E87FF5C2B85924B2B70E91F475E8 (PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -25097,7 +25202,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerState_set_VerificaBlocked_m73ECA4B
 		return;
 	}
 }
-// Method Definition Index: 74215
+// Method Definition Index: 74216
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayerState_get_WikipediaInterceptActive_m856D5957979A0F49ED23594E597561A0E3352581 (PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25106,7 +25211,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayerState_get_WikipediaInterceptActive
 		return L_0;
 	}
 }
-// Method Definition Index: 74216
+// Method Definition Index: 74217
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerState_set_WikipediaInterceptActive_mE7F826D185335F094986B95D3C5EAAC898CB57F5 (PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -25116,7 +25221,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerState_set_WikipediaInterceptActive
 		return;
 	}
 }
-// Method Definition Index: 74217
+// Method Definition Index: 74218
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerState_get_VerificaPlayedCount_m29C7BA0903E67DF3CFB63AD05D92732014A20209 (PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25125,7 +25230,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerState_get_VerificaPlayedCount_m
 		return L_0;
 	}
 }
-// Method Definition Index: 74218
+// Method Definition Index: 74219
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerState_get_TotalNotes_m6085F8D0CAE761B4A7D50BBE8681C2FF98ECF95D (PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25148,7 +25253,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerState_get_TotalNotes_m6085F8D0C
 		return ((int32_t)il2cpp_codegen_add(L_3, L_7));
 	}
 }
-// Method Definition Index: 74219
+// Method Definition Index: 74220
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerState__ctor_m404D2294AF9DD4BDD21284E54ADCF5AF725C720F (PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* __this, int32_t ___0_actorNumber, CommanderStateU5BU5D_t90948AC4B600E6A6E0ABD6B1599050B123C2D54F* ___1_commanders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25192,7 +25297,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerState__ctor_m404D2294AF9DD4BDD2128
 		return;
 	}
 }
-// Method Definition Index: 74220
+// Method Definition Index: 74221
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerState_AddCredits_m1A41034F836A17202226813077851897BF3075FE (PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* __this, int32_t ___0_amount, const RuntimeMethod* method) 
 {
 	{
@@ -25204,7 +25309,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerState_AddCredits_m1A41034F836A1720
 		return;
 	}
 }
-// Method Definition Index: 74221
+// Method Definition Index: 74222
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerState_SpendCredits_m91DD405116EEA7B7F2BBC223C951EF181E56438A (PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* __this, int32_t ___0_amount, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -25233,7 +25338,7 @@ IL_0025:
 		return;
 	}
 }
-// Method Definition Index: 74222
+// Method Definition Index: 74223
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerState_IncrementVerificaPlayedCount_mA3DD938369593FEF686E88529CD82A252879BCA3 (PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25244,7 +25349,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerState_IncrementVerificaPlayedCount
 		return;
 	}
 }
-// Method Definition Index: 74223
+// Method Definition Index: 74224
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CommanderState_t15AF29069DD311AE4D15FA546F962155343067C9* PlayerState_LowestNoteCommander_mABA57B335D52BBF9867602C46A3A43BBF4EA0F86 (PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* __this, const RuntimeMethod* method) 
 {
 	CommanderState_t15AF29069DD311AE4D15FA546F962155343067C9* V_0 = NULL;
@@ -25337,7 +25442,7 @@ IL_0041:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 74224
+// Method Definition Index: 74225
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t CardRegistry_get_Count_mE2B7330B3B40B826F082173FD48D35BFBDD1BAC7 (CardRegistry_t1FC63B80879B79C8F647FD33BF8CD65E9D089E96* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25355,7 +25460,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t CardRegistry_get_Count_mE2B7330B3B40B
 		return L_1;
 	}
 }
-// Method Definition Index: 74225
+// Method Definition Index: 74226
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CardRegistry_Register_m306C5A838741F043AFA20F33ABCB75AD90E23E06 (CardRegistry_t1FC63B80879B79C8F647FD33BF8CD65E9D089E96* __this, CardDataSO_tD219CDA2271352E4C1A7C43349DB3A565CBDD685* ___0_card, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25434,7 +25539,7 @@ IL_0045:
 		return;
 	}
 }
-// Method Definition Index: 74226
+// Method Definition Index: 74227
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t CardRegistry_GetId_m3CB8E384D6DE49E2E10B52D6A8A1E5F68CF26A75 (CardRegistry_t1FC63B80879B79C8F647FD33BF8CD65E9D089E96* __this, CardDataSO_tD219CDA2271352E4C1A7C43349DB3A565CBDD685* ___0_card, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25495,7 +25600,7 @@ IL_0021:
 		return L_6;
 	}
 }
-// Method Definition Index: 74227
+// Method Definition Index: 74228
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CardDataSO_tD219CDA2271352E4C1A7C43349DB3A565CBDD685* CardRegistry_GetCard_mA7A6188D4E5CA7FC133C55D619584C8B768695DB (CardRegistry_t1FC63B80879B79C8F647FD33BF8CD65E9D089E96* __this, int32_t ___0_id, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25556,7 +25661,7 @@ IL_0025:
 		return L_7;
 	}
 }
-// Method Definition Index: 74228
+// Method Definition Index: 74229
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* CardRegistry_ToIds_m5F7A4190388DD88A36D52247152F511231442F82 (CardRegistry_t1FC63B80879B79C8F647FD33BF8CD65E9D089E96* __this, RuntimeObject* ___0_cards, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25632,7 +25737,7 @@ IL_0038:
 		return L_15;
 	}
 }
-// Method Definition Index: 74229
+// Method Definition Index: 74230
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CardRegistry_t1FC63B80879B79C8F647FD33BF8CD65E9D089E96* CardRegistry_Build_mECC1754E4838B09C0D6605FBEEE886E986CC18B4 (GameContentSO_t8EAAA4407579420AD79BBCDA4E965C2C1E663F3B* ___0_content, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25762,7 +25867,7 @@ IL_005a:
 		return L_19;
 	}
 }
-// Method Definition Index: 74230
+// Method Definition Index: 74231
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CardRegistry_RegisterCommanderCards_mA9AB8690ACF0AA161330299421BA56C57AB9A7ED (CardRegistry_t1FC63B80879B79C8F647FD33BF8CD65E9D089E96* ___0_registry, RuntimeObject* ___1_commanders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25937,7 +26042,7 @@ IL_005e:
 		return;
 	}
 }
-// Method Definition Index: 74231
+// Method Definition Index: 74232
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CardRegistry__ctor_mFD922E56FFE481C62D72BDB50B2C5442C3432CBB (CardRegistry_t1FC63B80879B79C8F647FD33BF8CD65E9D089E96* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26042,7 +26147,7 @@ IL2CPP_EXTERN_C void GameIntent_tBD633E6A453CAFFBBB22A021D1CD5453BB1CB750_marsha
 	il2cpp_codegen_com_destroy_safe_array(marshaled.___U3CTargetCommanderIndicesU3Ek__BackingField);
 	marshaled.___U3CTargetCommanderIndicesU3Ek__BackingField = NULL;
 }
-// Method Definition Index: 74232
+// Method Definition Index: 74233
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t GameIntent_get_Type_m042237E8755039CEE778CC8BDA7689CCAFE73071 (GameIntent_tBD633E6A453CAFFBBB22A021D1CD5453BB1CB750* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26060,7 +26165,7 @@ IL2CPP_EXTERN_C  uint8_t GameIntent_get_Type_m042237E8755039CEE778CC8BDA7689CCAF
 	_returnValue = GameIntent_get_Type_m042237E8755039CEE778CC8BDA7689CCAFE73071_inline(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 74233
+// Method Definition Index: 74234
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t GameIntent_get_ActorNumber_m69677902E7973E9538ABE9A4C3D51893B35B9299 (GameIntent_tBD633E6A453CAFFBBB22A021D1CD5453BB1CB750* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26078,7 +26183,7 @@ IL2CPP_EXTERN_C  int32_t GameIntent_get_ActorNumber_m69677902E7973E9538ABE9A4C3D
 	_returnValue = GameIntent_get_ActorNumber_m69677902E7973E9538ABE9A4C3D51893B35B9299_inline(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 74234
+// Method Definition Index: 74235
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t GameIntent_get_CardId_mD7743CB286162157CFA79F4C4415DD5D79121236 (GameIntent_tBD633E6A453CAFFBBB22A021D1CD5453BB1CB750* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26096,7 +26201,7 @@ IL2CPP_EXTERN_C  int32_t GameIntent_get_CardId_mD7743CB286162157CFA79F4C4415DD5D
 	_returnValue = GameIntent_get_CardId_mD7743CB286162157CFA79F4C4415DD5D79121236_inline(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 74235
+// Method Definition Index: 74236
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* GameIntent_get_TargetActorNumbers_m7E2A460FC8B185CFBD3FA7CCDF1B046B86D81758 (GameIntent_tBD633E6A453CAFFBBB22A021D1CD5453BB1CB750* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26114,7 +26219,7 @@ IL2CPP_EXTERN_C  Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* GameInte
 	_returnValue = GameIntent_get_TargetActorNumbers_m7E2A460FC8B185CFBD3FA7CCDF1B046B86D81758_inline(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 74236
+// Method Definition Index: 74237
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* GameIntent_get_TargetCommanderIndices_m56548B62810AE2776DA55729A15583417F3293BC (GameIntent_tBD633E6A453CAFFBBB22A021D1CD5453BB1CB750* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26132,7 +26237,7 @@ IL2CPP_EXTERN_C  Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* GameInte
 	_returnValue = GameIntent_get_TargetCommanderIndices_m56548B62810AE2776DA55729A15583417F3293BC_inline(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 74237
+// Method Definition Index: 74238
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameIntent__ctor_m82266B72E4D72418DBD452F90559C26F671D407A (GameIntent_tBD633E6A453CAFFBBB22A021D1CD5453BB1CB750* __this, uint8_t ___0_type, int32_t ___1_actorNumber, int32_t ___2_cardId, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___3_targetActorNumbers, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___4_targetCommanderIndices, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26216,7 +26321,7 @@ IL2CPP_EXTERN_C  void GameIntent__ctor_m82266B72E4D72418DBD452F90559C26F671D407A
 	_thisAdjusted = reinterpret_cast<GameIntent_tBD633E6A453CAFFBBB22A021D1CD5453BB1CB750*>(__this + _offset);
 	GameIntent__ctor_m82266B72E4D72418DBD452F90559C26F671D407A(_thisAdjusted, ___0_type, ___1_actorNumber, ___2_cardId, ___3_targetActorNumbers, ___4_targetCommanderIndices, method);
 }
-// Method Definition Index: 74238
+// Method Definition Index: 74239
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameIntent_tBD633E6A453CAFFBBB22A021D1CD5453BB1CB750 GameIntent_PlayCard_m62F08267E8EE68BB33691976427E178F575D3C32 (int32_t ___0_actorNumber, int32_t ___1_cardId, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___2_targetActorNumbers, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___3_targetCommanderIndices, const RuntimeMethod* method) 
 {
 	GameIntent_tBD633E6A453CAFFBBB22A021D1CD5453BB1CB750 V_0;
@@ -26241,7 +26346,7 @@ IL_000e:
 		return L_5;
 	}
 }
-// Method Definition Index: 74239
+// Method Definition Index: 74240
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameIntent_tBD633E6A453CAFFBBB22A021D1CD5453BB1CB750 GameIntent_BuyCard_m7B368C8BAB69B4010FBC20684591CD284673FC0D (int32_t ___0_actorNumber, int32_t ___1_cardId, const RuntimeMethod* method) 
 {
 	GameIntent_tBD633E6A453CAFFBBB22A021D1CD5453BB1CB750 V_0;
@@ -26264,7 +26369,7 @@ IL_000e:
 		return L_3;
 	}
 }
-// Method Definition Index: 74240
+// Method Definition Index: 74241
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameIntent_tBD633E6A453CAFFBBB22A021D1CD5453BB1CB750 GameIntent_PlayVerifica_m48EF2D2E6B8B281D7FE5029462F47D2865D08D11 (int32_t ___0_actorNumber, const RuntimeMethod* method) 
 {
 	GameIntent_tBD633E6A453CAFFBBB22A021D1CD5453BB1CB750 V_0;
@@ -26286,7 +26391,7 @@ IL_000e:
 		return L_2;
 	}
 }
-// Method Definition Index: 74241
+// Method Definition Index: 74242
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameIntent_tBD633E6A453CAFFBBB22A021D1CD5453BB1CB750 GameIntent_EndTurn_m4D57AD3DC05AE67123EDB6E9BEF0E678F80F6D82 (int32_t ___0_actorNumber, const RuntimeMethod* method) 
 {
 	GameIntent_tBD633E6A453CAFFBBB22A021D1CD5453BB1CB750 V_0;
@@ -26308,7 +26413,7 @@ IL_000e:
 		return L_2;
 	}
 }
-// Method Definition Index: 74242
+// Method Definition Index: 74243
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameIntent_tBD633E6A453CAFFBBB22A021D1CD5453BB1CB750 GameIntent_FinishShop_m1E08BE42EFD900621D17D19CD22852D098EB57A1 (int32_t ___0_actorNumber, const RuntimeMethod* method) 
 {
 	GameIntent_tBD633E6A453CAFFBBB22A021D1CD5453BB1CB750 V_0;
@@ -26330,7 +26435,7 @@ IL_000e:
 		return L_2;
 	}
 }
-// Method Definition Index: 74243
+// Method Definition Index: 74244
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameIntent__cctor_m8DA34D3DD5A008B6CC27AF60A587105414A904FA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26881,7 +26986,7 @@ IL2CPP_EXTERN_C void GameStateDTO_tBE2493AAD5C304C37AC3FBB5E2405DCD803E1CDE_mars
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 74244
+// Method Definition Index: 74245
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameStateDTO_tBE2493AAD5C304C37AC3FBB5E2405DCD803E1CDE GameStateDtoBuilder_Build_m2A1AD324E15D4A75387B0686FD5E3ABB3D652D44 (GameStateManager_t7AA371565EA3CAF37B97C2CB741C0F36637C8AC3* ___0_state, CardRegistry_t1FC63B80879B79C8F647FD33BF8CD65E9D089E96* ___1_registry, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27092,7 +27197,7 @@ IL_00e9:
 		return L_31;
 	}
 }
-// Method Definition Index: 74245
+// Method Definition Index: 74246
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayerDTO_t7AF6A0F5A0C28B0B7408A558A9BE0202CCAB0874 GameStateDtoBuilder_BuildPlayer_mEEE170C8D8450F0C8A96800E71FBB8C88D2C4B36 (PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* ___0_player, CardRegistry_t1FC63B80879B79C8F647FD33BF8CD65E9D089E96* ___1_registry, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27246,7 +27351,7 @@ IL_00cf:
 		return L_40;
 	}
 }
-// Method Definition Index: 74246
+// Method Definition Index: 74247
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CommanderDTO_tA3908D353E851704B198E61840E6D1D47D2BA6E6 GameStateDtoBuilder_BuildCommander_m71ECA02A2451E4AED2E2364A794955AEACCCB5EE (CommanderState_t15AF29069DD311AE4D15FA546F962155343067C9* ___0_commander, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27430,7 +27535,7 @@ IL2CPP_EXTERN_C void GameStateSyncedEvent_t22C0B6932B495AE2E678058160445670FE8ED
 {
 	GameStateDTO_tBE2493AAD5C304C37AC3FBB5E2405DCD803E1CDE_marshal_com_cleanup(marshaled.___U3CStateU3Ek__BackingField);
 }
-// Method Definition Index: 74247
+// Method Definition Index: 74248
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameStateDTO_tBE2493AAD5C304C37AC3FBB5E2405DCD803E1CDE GameStateSyncedEvent_get_State_m70948EDCDB383AB3CBF2798F7FD7BDB3B0D322D4 (GameStateSyncedEvent_t22C0B6932B495AE2E678058160445670FE8ED70E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27448,7 +27553,7 @@ IL2CPP_EXTERN_C  GameStateDTO_tBE2493AAD5C304C37AC3FBB5E2405DCD803E1CDE GameStat
 	_returnValue = GameStateSyncedEvent_get_State_m70948EDCDB383AB3CBF2798F7FD7BDB3B0D322D4_inline(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 74248
+// Method Definition Index: 74249
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t GameStateSyncedEvent_get_LocalActorNumber_m5B635F59FCB236EDF1B3918220CEC3AA9E4BECEE (GameStateSyncedEvent_t22C0B6932B495AE2E678058160445670FE8ED70E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27466,7 +27571,7 @@ IL2CPP_EXTERN_C  int32_t GameStateSyncedEvent_get_LocalActorNumber_m5B635F59FCB2
 	_returnValue = GameStateSyncedEvent_get_LocalActorNumber_m5B635F59FCB236EDF1B3918220CEC3AA9E4BECEE_inline(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 74249
+// Method Definition Index: 74250
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameStateSyncedEvent__ctor_m7F23A25F3DF4EF2AAE25D2DE7F61EDF00A4A9D64 (GameStateSyncedEvent_t22C0B6932B495AE2E678058160445670FE8ED70E* __this, GameStateDTO_tBE2493AAD5C304C37AC3FBB5E2405DCD803E1CDE ___0_state, int32_t ___1_localActorNumber, const RuntimeMethod* method) 
 {
 	{
@@ -27505,7 +27610,7 @@ IL2CPP_EXTERN_C  void GameStateSyncedEvent__ctor_m7F23A25F3DF4EF2AAE25D2DE7F61ED
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 74250
+// Method Definition Index: 74251
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool HotseatTransport_get_IsHost_m22E187CFBA7F213B826440D46A86C955E14A92DE (HotseatTransport_t35E830F1D837E51A3B599AAF7465D054160D8259* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27513,7 +27618,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool HotseatTransport_get_IsHost_m22E187CFBA7
 		return (bool)1;
 	}
 }
-// Method Definition Index: 74251
+// Method Definition Index: 74252
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t HotseatTransport_get_LocalActorNumber_mC9FE942312CC9869D3025B6E8007B7FD6AD35B64 (HotseatTransport_t35E830F1D837E51A3B599AAF7465D054160D8259* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27522,7 +27627,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t HotseatTransport_get_LocalActorNumber
 		return L_0;
 	}
 }
-// Method Definition Index: 74252
+// Method Definition Index: 74253
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HotseatTransport_set_LocalActorNumber_m288825376DF691F805315686EDAAFE175F50BCE6 (HotseatTransport_t35E830F1D837E51A3B599AAF7465D054160D8259* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -27532,7 +27637,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HotseatTransport_set_LocalActorNumber_m2
 		return;
 	}
 }
-// Method Definition Index: 74253
+// Method Definition Index: 74254
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HotseatTransport_add_IntentReceived_m117E157B054718B4B1811A9F7219F8C7B0BF9D9B (HotseatTransport_t35E830F1D837E51A3B599AAF7465D054160D8259* __this, Action_1_t8FACC3D9B046294E1DAAED66C616B8F1F23C05B6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27575,7 +27680,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 74254
+// Method Definition Index: 74255
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HotseatTransport_remove_IntentReceived_m601D31915A25AADF3042B3FFAC167D06ED65D3AD (HotseatTransport_t35E830F1D837E51A3B599AAF7465D054160D8259* __this, Action_1_t8FACC3D9B046294E1DAAED66C616B8F1F23C05B6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27618,7 +27723,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 74255
+// Method Definition Index: 74256
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HotseatTransport_add_StateReceived_mA614A224B5D6C1D41C3E9F3D313A16257932EE14 (HotseatTransport_t35E830F1D837E51A3B599AAF7465D054160D8259* __this, Action_1_tFE0ABC55F45283785CE4005C23A0CA445A7F3743* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27661,7 +27766,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 74256
+// Method Definition Index: 74257
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HotseatTransport_remove_StateReceived_m6DB60C7675457F0D93873FFA8B89082A2E5C7F9F (HotseatTransport_t35E830F1D837E51A3B599AAF7465D054160D8259* __this, Action_1_tFE0ABC55F45283785CE4005C23A0CA445A7F3743* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27704,7 +27809,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 74257
+// Method Definition Index: 74258
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HotseatTransport_add_ClientJoined_m9E7C3198C25D1C69053041C97D2B17B92AEDEB5B (HotseatTransport_t35E830F1D837E51A3B599AAF7465D054160D8259* __this, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27747,7 +27852,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 74258
+// Method Definition Index: 74259
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HotseatTransport_remove_ClientJoined_m6D8700F086C494F507E977D6544A3DDEB6250B85 (HotseatTransport_t35E830F1D837E51A3B599AAF7465D054160D8259* __this, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27790,7 +27895,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 74259
+// Method Definition Index: 74260
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HotseatTransport__ctor_mC7E85FBC2B534AF16FA44EF5976DEE99907C36B5 (HotseatTransport_t35E830F1D837E51A3B599AAF7465D054160D8259* __this, int32_t ___0_initialActorNumber, const RuntimeMethod* method) 
 {
 	{
@@ -27803,7 +27908,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HotseatTransport__ctor_mC7E85FBC2B534AF1
 		return;
 	}
 }
-// Method Definition Index: 74260
+// Method Definition Index: 74261
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HotseatTransport_SendIntent_m58B15465DCFEE3B93B8CE890DA929B22D2037EB0 (HotseatTransport_t35E830F1D837E51A3B599AAF7465D054160D8259* __this, GameIntent_tBD633E6A453CAFFBBB22A021D1CD5453BB1CB750 ___0_intent, const RuntimeMethod* method) 
 {
 	Action_1_t8FACC3D9B046294E1DAAED66C616B8F1F23C05B6* G_B2_0 = NULL;
@@ -27836,7 +27941,7 @@ IL_0014:
 		return;
 	}
 }
-// Method Definition Index: 74261
+// Method Definition Index: 74262
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HotseatTransport_BroadcastState_m485A302B329C47B42AC276E9237EE50589C77AC4 (HotseatTransport_t35E830F1D837E51A3B599AAF7465D054160D8259* __this, GameStateDTO_tBE2493AAD5C304C37AC3FBB5E2405DCD803E1CDE ___0_state, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -27897,7 +28002,7 @@ IL_0033:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 74272
+// Method Definition Index: 74273
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool LocalLoopbackTransport_get_IsHost_mEB4B3CBDD8D8ACEC2CF19EE5FCFBF1804FF8973B (LocalLoopbackTransport_t4CD4CDB158666536691EADE0513F588AB42CD7AB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27905,7 +28010,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool LocalLoopbackTransport_get_IsHost_mEB4B3
 		return (bool)1;
 	}
 }
-// Method Definition Index: 74273
+// Method Definition Index: 74274
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t LocalLoopbackTransport_get_LocalActorNumber_mA6D602119EF7ABC63CF2C534C5D7AFD416AB431C (LocalLoopbackTransport_t4CD4CDB158666536691EADE0513F588AB42CD7AB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27914,7 +28019,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t LocalLoopbackTransport_get_LocalActor
 		return L_0;
 	}
 }
-// Method Definition Index: 74274
+// Method Definition Index: 74275
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocalLoopbackTransport_add_IntentReceived_mFAF7C4B027B6649C7B6A204AB91D01D722E8E209 (LocalLoopbackTransport_t4CD4CDB158666536691EADE0513F588AB42CD7AB* __this, Action_1_t8FACC3D9B046294E1DAAED66C616B8F1F23C05B6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27957,7 +28062,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 74275
+// Method Definition Index: 74276
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocalLoopbackTransport_remove_IntentReceived_mC928649FAC12303C5E9DF5E850EF57E63F5262D7 (LocalLoopbackTransport_t4CD4CDB158666536691EADE0513F588AB42CD7AB* __this, Action_1_t8FACC3D9B046294E1DAAED66C616B8F1F23C05B6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28000,7 +28105,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 74276
+// Method Definition Index: 74277
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocalLoopbackTransport_add_StateReceived_m88BFBE60419BAE73B27BA6950B26B980DF68BCCF (LocalLoopbackTransport_t4CD4CDB158666536691EADE0513F588AB42CD7AB* __this, Action_1_tFE0ABC55F45283785CE4005C23A0CA445A7F3743* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28043,7 +28148,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 74277
+// Method Definition Index: 74278
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocalLoopbackTransport_remove_StateReceived_m25337163C9CBBC888848BAA2B8CB667684156082 (LocalLoopbackTransport_t4CD4CDB158666536691EADE0513F588AB42CD7AB* __this, Action_1_tFE0ABC55F45283785CE4005C23A0CA445A7F3743* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28086,7 +28191,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 74278
+// Method Definition Index: 74279
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocalLoopbackTransport_add_ClientJoined_mAD42B577CB4884112D41D4EB531F2F57AFDA4141 (LocalLoopbackTransport_t4CD4CDB158666536691EADE0513F588AB42CD7AB* __this, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28129,7 +28234,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 74279
+// Method Definition Index: 74280
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocalLoopbackTransport_remove_ClientJoined_mD2E83B9ABE90348258D16DE56A8E5C36921F9436 (LocalLoopbackTransport_t4CD4CDB158666536691EADE0513F588AB42CD7AB* __this, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28172,7 +28277,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 74280
+// Method Definition Index: 74281
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocalLoopbackTransport__ctor_m590E3439CAB5D6C6D6EB8CD47DFB871E28ADA408 (LocalLoopbackTransport_t4CD4CDB158666536691EADE0513F588AB42CD7AB* __this, int32_t ___0_localActorNumber, const RuntimeMethod* method) 
 {
 	{
@@ -28185,7 +28290,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocalLoopbackTransport__ctor_m590E3439CA
 		return;
 	}
 }
-// Method Definition Index: 74281
+// Method Definition Index: 74282
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocalLoopbackTransport_SendIntent_m1B5E60C05442708E392E6C2C8961AB3269868CF7 (LocalLoopbackTransport_t4CD4CDB158666536691EADE0513F588AB42CD7AB* __this, GameIntent_tBD633E6A453CAFFBBB22A021D1CD5453BB1CB750 ___0_intent, const RuntimeMethod* method) 
 {
 	Action_1_t8FACC3D9B046294E1DAAED66C616B8F1F23C05B6* G_B2_0 = NULL;
@@ -28218,7 +28323,7 @@ IL_0014:
 		return;
 	}
 }
-// Method Definition Index: 74282
+// Method Definition Index: 74283
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocalLoopbackTransport_BroadcastState_m135E4E4C3489F1AF4EE7790733AF20A1A329BD72 (LocalLoopbackTransport_t4CD4CDB158666536691EADE0513F588AB42CD7AB* __this, GameStateDTO_tBE2493AAD5C304C37AC3FBB5E2405DCD803E1CDE ___0_state, const RuntimeMethod* method) 
 {
 	Action_1_tFE0ABC55F45283785CE4005C23A0CA445A7F3743* G_B2_0 = NULL;
@@ -28259,7 +28364,7 @@ IL_0014:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 74283
+// Method Definition Index: 74284
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* NetworkGameManager_get_Transport_mD2825FD085DCE5C1793683430C3F3DFD013C8C78 (NetworkGameManager_tDA5D7482D75B6E70A24C892EFFB1E23B4FFAE1B5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28268,7 +28373,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* NetworkGameManager_get_Transpo
 		return L_0;
 	}
 }
-// Method Definition Index: 74284
+// Method Definition Index: 74285
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CardRegistry_t1FC63B80879B79C8F647FD33BF8CD65E9D089E96* NetworkGameManager_get_Registry_m23E447BD9A4BFB06196BAC99319378AE1D72F2DF (NetworkGameManager_tDA5D7482D75B6E70A24C892EFFB1E23B4FFAE1B5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28277,7 +28382,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CardRegistry_t1FC63B80879B79C8F647FD33BF8CD65
 		return L_0;
 	}
 }
-// Method Definition Index: 74285
+// Method Definition Index: 74286
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NetworkGameManager_get_LocalActorNumber_mD060100BC183D9FE8927E030506D773A7B4BB098 (NetworkGameManager_tDA5D7482D75B6E70A24C892EFFB1E23B4FFAE1B5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28295,7 +28400,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NetworkGameManager_get_LocalActorNumb
 		return L_1;
 	}
 }
-// Method Definition Index: 74286
+// Method Definition Index: 74287
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkGameManager_Awake_m80539CD859213E8DF6751B2B8FC1FD8770A6AF5C (NetworkGameManager_tDA5D7482D75B6E70A24C892EFFB1E23B4FFAE1B5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28381,7 +28486,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkGameManager_Awake_m80539CD859213E
 		return;
 	}
 }
-// Method Definition Index: 74287
+// Method Definition Index: 74288
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* NetworkGameManager_CreateTransport_m9F818486FF5923609506D807E602F60162F1080B (NetworkGameManager_tDA5D7482D75B6E70A24C892EFFB1E23B4FFAE1B5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28430,7 +28535,7 @@ IL_001f:
 		return L_4;
 	}
 }
-// Method Definition Index: 74288
+// Method Definition Index: 74289
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkGameManager_Start_mCAEB6037AC3E7CB1104E31906822EE5C80176A11 (NetworkGameManager_tDA5D7482D75B6E70A24C892EFFB1E23B4FFAE1B5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28491,7 +28596,7 @@ IL_0049:
 		return;
 	}
 }
-// Method Definition Index: 74289
+// Method Definition Index: 74290
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* NetworkGameManager_RequestStateUntilSynced_m0254E2F57BF282BB7CD0DC7F00BA112A02B875F0 (NetworkGameManager_tDA5D7482D75B6E70A24C892EFFB1E23B4FFAE1B5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28510,7 +28615,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* NetworkGameManager_RequestStat
 		return L_1;
 	}
 }
-// Method Definition Index: 74290
+// Method Definition Index: 74291
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkGameManager_OnClientJoined_m525024D37AECFA51E67627C93F46366B272AE322 (NetworkGameManager_tDA5D7482D75B6E70A24C892EFFB1E23B4FFAE1B5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28520,7 +28625,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkGameManager_OnClientJoined_m52502
 		return;
 	}
 }
-// Method Definition Index: 74291
+// Method Definition Index: 74292
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkGameManager_OnDestroy_m54687790667FCFE11E90EDA0421E2F3EA736BB1D (NetworkGameManager_tDA5D7482D75B6E70A24C892EFFB1E23B4FFAE1B5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28628,7 +28733,7 @@ IL_006f:
 		return;
 	}
 }
-// Method Definition Index: 74292
+// Method Definition Index: 74293
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkGameManager_SubmitPlayCard_m7BDC29C077733ACED690C363E0728905D8CCD68C (NetworkGameManager_tDA5D7482D75B6E70A24C892EFFB1E23B4FFAE1B5* __this, CardDataSO_tD219CDA2271352E4C1A7C43349DB3A565CBDD685* ___0_card, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___1_targetActorNumbers, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___2_targetCommanderIndices, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28660,7 +28765,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkGameManager_SubmitPlayCard_m7BDC2
 		return;
 	}
 }
-// Method Definition Index: 74293
+// Method Definition Index: 74294
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkGameManager_SubmitBuyCard_m9223855CA0EFE5213EF6D02841B1BF00ECD2D674 (NetworkGameManager_tDA5D7482D75B6E70A24C892EFFB1E23B4FFAE1B5* __this, CardDataSO_tD219CDA2271352E4C1A7C43349DB3A565CBDD685* ___0_card, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28689,7 +28794,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkGameManager_SubmitBuyCard_m922385
 		return;
 	}
 }
-// Method Definition Index: 74294
+// Method Definition Index: 74295
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkGameManager_SubmitPlayVerifica_m66B9440C94205E120DD456B758E097C76A462D5C (NetworkGameManager_tDA5D7482D75B6E70A24C892EFFB1E23B4FFAE1B5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28713,7 +28818,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkGameManager_SubmitPlayVerifica_m6
 		return;
 	}
 }
-// Method Definition Index: 74295
+// Method Definition Index: 74296
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkGameManager_SubmitEndTurn_m16FA98CA025D3AB6F9D0AE302900515524BCD442 (NetworkGameManager_tDA5D7482D75B6E70A24C892EFFB1E23B4FFAE1B5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28737,7 +28842,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkGameManager_SubmitEndTurn_m16FA98
 		return;
 	}
 }
-// Method Definition Index: 74296
+// Method Definition Index: 74297
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkGameManager_SubmitFinishShop_m794CB1D5877D6ED5B5EB8EEBC2FADCFD50180E95 (NetworkGameManager_tDA5D7482D75B6E70A24C892EFFB1E23B4FFAE1B5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28761,7 +28866,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkGameManager_SubmitFinishShop_m794
 		return;
 	}
 }
-// Method Definition Index: 74297
+// Method Definition Index: 74298
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkGameManager_OnGameOver_mCD2ABD8B18602D45D51EA90EED5E7C8849C89D86 (NetworkGameManager_tDA5D7482D75B6E70A24C892EFFB1E23B4FFAE1B5* __this, GameOverEvent_t7359E240630543A395D6EC69EC13890AD84DF54E ___0_outcome, const RuntimeMethod* method) 
 {
 	{
@@ -28779,7 +28884,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkGameManager_OnGameOver_mCD2ABD8B1
 		return;
 	}
 }
-// Method Definition Index: 74298
+// Method Definition Index: 74299
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkGameManager_OnCardPlayed_mEF614982513C6B2D28A07081B31E40E40D18FA8C (NetworkGameManager_tDA5D7482D75B6E70A24C892EFFB1E23B4FFAE1B5* __this, CardPlayedEvent_t2130E4DE020597F35519DB317C06A15110A9FC97 ___0_evt, const RuntimeMethod* method) 
 {
 	{
@@ -28796,7 +28901,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkGameManager_OnCardPlayed_mEF61498
 		return;
 	}
 }
-// Method Definition Index: 74299
+// Method Definition Index: 74300
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkGameManager_OnVerificaPlayed_m41277237F3D8F13EDE897E55A825DAA289667D35 (NetworkGameManager_tDA5D7482D75B6E70A24C892EFFB1E23B4FFAE1B5* __this, VerificaPlayedEvent_t7C3173601E5D7E27A3052E4422D9A7A51ACE13A9 ___0_evt, const RuntimeMethod* method) 
 {
 	{
@@ -28820,7 +28925,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkGameManager_OnVerificaPlayed_m412
 		return;
 	}
 }
-// Method Definition Index: 74300
+// Method Definition Index: 74301
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkGameManager_OnCardsDrawn_m8FC8AE4B56036CB431B9CCE062AAB2024B5766DC (NetworkGameManager_tDA5D7482D75B6E70A24C892EFFB1E23B4FFAE1B5* __this, CardsDrawnEvent_t67D0A2F9A2CDDDCFFD036A3FB6ED8D438F8576F6 ___0_evt, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28928,7 +29033,7 @@ IL_0066:
 		return;
 	}
 }
-// Method Definition Index: 74301
+// Method Definition Index: 74302
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkGameManager_RegisterPlayedCard_mD9FF108E55B3DD5A55D415DBB1657AF2647DF655 (NetworkGameManager_tDA5D7482D75B6E70A24C892EFFB1E23B4FFAE1B5* __this, CardDataSO_tD219CDA2271352E4C1A7C43349DB3A565CBDD685* ___0_card, int32_t ___1_actorNumber, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -28978,7 +29083,7 @@ IL_003e:
 		return;
 	}
 }
-// Method Definition Index: 74302
+// Method Definition Index: 74303
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkGameManager_OnIntentReceived_m67AA9E5F315A538841069E958D395F0393F4D9B4 (NetworkGameManager_tDA5D7482D75B6E70A24C892EFFB1E23B4FFAE1B5* __this, GameIntent_tBD633E6A453CAFFBBB22A021D1CD5453BB1CB750 ___0_intent, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29021,7 +29126,7 @@ IL_0025:
 		return;
 	}
 }
-// Method Definition Index: 74303
+// Method Definition Index: 74304
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkGameManager_OnStateReceived_mB9182D51F50E12378990C870946CE3C94C6505CF (NetworkGameManager_tDA5D7482D75B6E70A24C892EFFB1E23B4FFAE1B5* __this, GameStateDTO_tBE2493AAD5C304C37AC3FBB5E2405DCD803E1CDE ___0_state, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29050,7 +29155,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkGameManager_OnStateReceived_mB918
 		return;
 	}
 }
-// Method Definition Index: 74304
+// Method Definition Index: 74305
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkGameManager_BroadcastCurrentState_mC2CD40CF08F1C17363F0ACA4938459BB23F43DA2 (NetworkGameManager_tDA5D7482D75B6E70A24C892EFFB1E23B4FFAE1B5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29137,7 +29242,7 @@ IL_00c7:
 		return;
 	}
 }
-// Method Definition Index: 74305
+// Method Definition Index: 74306
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkGameManager_ProcessIntent_m322212EF3E52C973E4D8E0C10E5B79C333AEDA70 (NetworkGameManager_tDA5D7482D75B6E70A24C892EFFB1E23B4FFAE1B5* __this, GameIntent_tBD633E6A453CAFFBBB22A021D1CD5453BB1CB750 ___0_intent, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29326,7 +29431,7 @@ IL_010e:
 		return;
 	}
 }
-// Method Definition Index: 74306
+// Method Definition Index: 74307
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkGameManager_ResolvePresentationTargets_mB8901CE720759DB3DD3BA5E24825FAAE104CED57 (NetworkGameManager_tDA5D7482D75B6E70A24C892EFFB1E23B4FFAE1B5* __this, CardDataSO_tD219CDA2271352E4C1A7C43349DB3A565CBDD685* ___0_card, int32_t ___1_actorNumber, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29740,7 +29845,7 @@ IL_0178:
 		return;
 	}
 }
-// Method Definition Index: 74307
+// Method Definition Index: 74308
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkGameManager_AddPresentationTarget_mC04B46CA057B6909D24B77C175FEB7CAC91AFC8E (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* ___0_actors, List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* ___1_indices, int32_t ___2_actorNumber, int32_t ___3_commanderIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29846,7 +29951,7 @@ IL_0046:
 		return;
 	}
 }
-// Method Definition Index: 74308
+// Method Definition Index: 74309
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkGameManager_ClearPendingTargets_mB587E6930A657AEF2CD462C9C5BCFEB1077B8661 (NetworkGameManager_tDA5D7482D75B6E70A24C892EFFB1E23B4FFAE1B5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29870,7 +29975,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkGameManager_ClearPendingTargets_m
 		return;
 	}
 }
-// Method Definition Index: 74309
+// Method Definition Index: 74310
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* NetworkGameManager_CloneArray_mB77FE6BB9F5193C543BF086935C4DA3CA9645AFA (Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___0_source, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29929,7 +30034,7 @@ IL_001d:
 		return L_5;
 	}
 }
-// Method Definition Index: 74310
+// Method Definition Index: 74311
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* NetworkGameManager_ResolveTargets_m3FEF7F75E310445951C46CB3E6D597417F82997D (NetworkGameManager_tDA5D7482D75B6E70A24C892EFFB1E23B4FFAE1B5* __this, GameIntent_tBD633E6A453CAFFBBB22A021D1CD5453BB1CB750 ___0_intent, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30100,7 +30205,7 @@ IL_009e:
 		return L_34;
 	}
 }
-// Method Definition Index: 74311
+// Method Definition Index: 74312
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkGameManager__ctor_mA5FDD18ECBAC5F74D07A783804FE6FE3A270237D (NetworkGameManager_tDA5D7482D75B6E70A24C892EFFB1E23B4FFAE1B5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30446,7 +30551,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PointerEventData_set_eligibl
 		return;
 	}
 }
-// Method Definition Index: 74661
+// Method Definition Index: 74662
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* CardDataSO_get_Artwork_mAC5536EAC8F861737695D943A802CAA576EB67BD_inline (CardDataSO_tD219CDA2271352E4C1A7C43349DB3A565CBDD685* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30455,7 +30560,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F
 		return L_0;
 	}
 }
-// Method Definition Index: 74656
+// Method Definition Index: 74657
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* CardDataSO_get_CardName_mF8C5977963ABBCD1EE133322496B4F2E07D70BE0_inline (CardDataSO_tD219CDA2271352E4C1A7C43349DB3A565CBDD685* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30464,7 +30569,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* CardDataSO_get_CardName
 		return L_0;
 	}
 }
-// Method Definition Index: 74657
+// Method Definition Index: 74658
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* CardDataSO_get_Description_mFDE840BE15C52D30CE2D4F9A2EAA9E0044F8E578_inline (CardDataSO_tD219CDA2271352E4C1A7C43349DB3A565CBDD685* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30479,7 +30584,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_Invoke_m7126A54DACA72
 	typedef void (*FunctionPointerType) (RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 74615
+// Method Definition Index: 74616
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* CommanderDataSO_get_CommanderName_m9E95FDBA968C7C12414B863F714341AEB465C345_inline (CommanderDataSO_t309CF78E6491C0920DE1127748C07E0F9CF23181* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30488,7 +30593,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* CommanderDataSO_get_Com
 		return L_0;
 	}
 }
-// Method Definition Index: 74620
+// Method Definition Index: 74621
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* CommanderDataSO_get_BaseAbilityDescription_m19BA1E74C603A99DC6C7081E059D23394C5EFCAF_inline (CommanderDataSO_t309CF78E6491C0920DE1127748C07E0F9CF23181* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30497,7 +30602,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* CommanderDataSO_get_Bas
 		return L_0;
 	}
 }
-// Method Definition Index: 74621
+// Method Definition Index: 74622
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* CommanderDataSO_get_UnlockConditionDescription_m7338A6212A5EAA25D7E692CB0AF87B14E9E09949_inline (CommanderDataSO_t309CF78E6491C0920DE1127748C07E0F9CF23181* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30506,7 +30611,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* CommanderDataSO_get_Unl
 		return L_0;
 	}
 }
-// Method Definition Index: 74622
+// Method Definition Index: 74623
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* CommanderDataSO_get_SecondaryAbilityDescription_m4B4A10D0354AA4F1E710200E2917F84DC4B09806_inline (CommanderDataSO_t309CF78E6491C0920DE1127748C07E0F9CF23181* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30530,7 +30635,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9C
 		return;
 	}
 }
-// Method Definition Index: 74616
+// Method Definition Index: 74617
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t CommanderDataSO_get_Kind_m2CC19750CDFD024A243594F15149443F2806421E_inline (CommanderDataSO_t309CF78E6491C0920DE1127748C07E0F9CF23181* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30539,7 +30644,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t CommanderDataSO_get_Kind_
 		return L_0;
 	}
 }
-// Method Definition Index: 74619
+// Method Definition Index: 74620
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* CommanderDataSO_get_Portrait_m9476AB05F1856803EEFF135656ADC380BE02DD63_inline (CommanderDataSO_t309CF78E6491C0920DE1127748C07E0F9CF23181* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30548,7 +30653,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F
 		return L_0;
 	}
 }
-// Method Definition Index: 74372
+// Method Definition Index: 74373
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t SessionConfig_get_Mode_m4FCD30AEF85AAA6AEAE155B35DFBA5BF0E070C10_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30564,7 +30669,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t SessionConfig_get_Mode_m4
 		return L_0;
 	}
 }
-// Method Definition Index: 74377
+// Method Definition Index: 74378
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SessionConfig_set_Player0Commanders_m4754B3E991441630A62BC8F178043C12985EC4B5_inline (CommanderKindU5BU5D_tA1C4074E644CC24E2D2573F822CE1B967C72689B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30582,7 +30687,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SessionConfig_set_Player0Com
 		return;
 	}
 }
-// Method Definition Index: 74379
+// Method Definition Index: 74380
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SessionConfig_set_Player1Commanders_m0B650CF0A4F4991B4DB7A9C7EDBE1C4A16A90009_inline (CommanderKindU5BU5D_tA1C4074E644CC24E2D2573F822CE1B967C72689B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30600,7 +30705,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SessionConfig_set_Player1Com
 		return;
 	}
 }
-// Method Definition Index: 75923
+// Method Definition Index: 75924
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Hashtable_tD626399B3ADFD501225241D7366103F35472542A* Player_get_CustomProperties_m398B81FB1DEE02243650B8CB5FBF5C7F1B8928D6_inline (Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30609,7 +30714,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Hashtable_tD626399B3ADFD501225241
 		return L_0;
 	}
 }
-// Method Definition Index: 74624
+// Method Definition Index: 74625
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR CommanderDataSO_t309CF78E6491C0920DE1127748C07E0F9CF23181* CommanderState_get_Data_m131A57886EDA7651FA2F18E48537E0EC3F040D3B_inline (CommanderState_t15AF29069DD311AE4D15FA546F962155343067C9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30618,7 +30723,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR CommanderDataSO_t309CF78E6491C092
 		return L_0;
 	}
 }
-// Method Definition Index: 74628
+// Method Definition Index: 74629
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* CommanderState_get_ActiveDebuffs_m11C10DCB9264FB33498B7E125AB2B63AE1C19A37_inline (CommanderState_t15AF29069DD311AE4D15FA546F962155343067C9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30627,7 +30732,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* CommanderState_get
 		return L_0;
 	}
 }
-// Method Definition Index: 74649
+// Method Definition Index: 74650
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ActiveEffect_get_Magnitude_mD037BE470272627150A8B8C95ECC3FA96598BB52_inline (ActiveEffect_t5BD08F2FE1215C730F5372FC8E85BDD262EF4769* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30636,7 +30741,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ActiveEffect_get_Magnitud
 		return L_0;
 	}
 }
-// Method Definition Index: 74651
+// Method Definition Index: 74652
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ActiveEffect_get_RemainingTurns_mB4334943378CEB20EADE30119E992BBB147351BC_inline (ActiveEffect_t5BD08F2FE1215C730F5372FC8E85BDD262EF4769* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30665,7 +30770,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED02
 		return L_0;
 	}
 }
-// Method Definition Index: 74627
+// Method Definition Index: 74628
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* CommanderState_get_ActiveBuffs_m3B904F86D596599FC37F17359474ABEDB76DEDC9_inline (CommanderState_t15AF29069DD311AE4D15FA546F962155343067C9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30674,7 +30779,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* CommanderState_get
 		return L_0;
 	}
 }
-// Method Definition Index: 74632
+// Method Definition Index: 74633
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool CommanderState_get_SecondaryUnlocked_m88479ECA4EA505353FB090976F5CAFC9D4C30FE6_inline (CommanderState_t15AF29069DD311AE4D15FA546F962155343067C9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30750,7 +30855,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED02
 		return L_30;
 	}
 }
-// Method Definition Index: 74523
+// Method Definition Index: 74524
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GameContentSO_t8EAAA4407579420AD79BBCDA4E965C2C1E663F3B* GameStateManager_get_Content_m5083516E8239E92550CF382D0FE6063254871538_inline (GameStateManager_t7AA371565EA3CAF37B97C2CB741C0F36637C8AC3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30759,7 +30864,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GameContentSO_t8EAAA4407579420AD7
 		return L_0;
 	}
 }
-// Method Definition Index: 74590
+// Method Definition Index: 74591
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GameConfigSO_t48342CF12C54C514F6150F95D2728E5DEB90BA91* GameConfigSO_get_Instance_m93982A2C4E04A6EF1FF256AEE0D50B63CAADF422_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30774,7 +30879,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GameConfigSO_t48342CF12C54C514F61
 		return L_0;
 	}
 }
-// Method Definition Index: 74517
+// Method Definition Index: 74518
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GameStateManager_set_AutoStartOffline_mE0FF6FB27EEABEBA91DD5640EE3D9054F9E34539_inline (GameStateManager_t7AA371565EA3CAF37B97C2CB741C0F36637C8AC3* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -30784,7 +30889,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GameStateManager_set_AutoSta
 		return;
 	}
 }
-// Method Definition Index: 74608
+// Method Definition Index: 74609
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* GameContentSO_get_FirstPlayerCommanders_m95DB33E6C89E179E081CC1CDE976075E604E5097_inline (GameContentSO_t8EAAA4407579420AD79BBCDA4E965C2C1E663F3B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30793,7 +30898,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* GameContentSO_get_
 		return (RuntimeObject*)L_0;
 	}
 }
-// Method Definition Index: 74609
+// Method Definition Index: 74610
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* GameContentSO_get_SecondPlayerCommanders_m9A53C63240890FF5C4C53F569A4749E79AA464EC_inline (GameContentSO_t8EAAA4407579420AD79BBCDA4E965C2C1E663F3B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30802,7 +30907,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* GameContentSO_get_
 		return (RuntimeObject*)L_0;
 	}
 }
-// Method Definition Index: 74524
+// Method Definition Index: 74525
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* GameStateManager_get_Player0_m75C9C4FC9E8879910DF4AB0A710B4AE2D4D1107D_inline (GameStateManager_t7AA371565EA3CAF37B97C2CB741C0F36637C8AC3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30811,7 +30916,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR PlayerState_tFCD6BAB02D13A95543D9
 		return L_0;
 	}
 }
-// Method Definition Index: 74526
+// Method Definition Index: 74527
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* GameStateManager_get_Player1_mCB95C9EBF9519E414A6E076A0564679EDFF2D32B_inline (GameStateManager_t7AA371565EA3CAF37B97C2CB741C0F36637C8AC3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30820,7 +30925,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR PlayerState_tFCD6BAB02D13A95543D9
 		return L_0;
 	}
 }
-// Method Definition Index: 74212
+// Method Definition Index: 74213
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR CommanderStateU5BU5D_t90948AC4B600E6A6E0ABD6B1599050B123C2D54F* PlayerState_get_Commanders_m80E941288F47808FD10AC75965D504F6CD0A66D9_inline (PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30829,7 +30934,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR CommanderStateU5BU5D_t90948AC4B60
 		return L_0;
 	}
 }
-// Method Definition Index: 74522
+// Method Definition Index: 74523
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GameConfigSO_t48342CF12C54C514F6150F95D2728E5DEB90BA91* GameStateManager_get_GameConfig_m768E987DB26EE1469BCE18DBE7523FAB0E9ACA8B_inline (GameStateManager_t7AA371565EA3CAF37B97C2CB741C0F36637C8AC3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30838,7 +30943,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GameConfigSO_t48342CF12C54C514F61
 		return L_0;
 	}
 }
-// Method Definition Index: 74611
+// Method Definition Index: 74612
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* GameContentSO_get_ShopCatalog_m6748D6C59BE34B86D3B31B5C6B6CBE30D30D015E_inline (GameContentSO_t8EAAA4407579420AD79BBCDA4E965C2C1E663F3B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30847,7 +30952,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* GameContentSO_get_
 		return (RuntimeObject*)L_0;
 	}
 }
-// Method Definition Index: 74610
+// Method Definition Index: 74611
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR CardDataSO_tD219CDA2271352E4C1A7C43349DB3A565CBDD685* GameContentSO_get_VerificaCard_mD633459E6E9684A0F8F1834B121A04DFA8DB9129_inline (GameContentSO_t8EAAA4407579420AD79BBCDA4E965C2C1E663F3B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30856,7 +30961,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR CardDataSO_tD219CDA2271352E4C1A7C
 		return L_0;
 	}
 }
-// Method Definition Index: 74106
+// Method Definition Index: 74107
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GameAudioController_t070E94E0F7F6D8254C8ABB777E9109BE5B9C9C1A* GameAudioController_get_Instance_m852A294F47CD0F037B4409BC924C9E5950600669_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30871,7 +30976,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GameAudioController_t070E94E0F7F6
 		return L_0;
 	}
 }
-// Method Definition Index: 74107
+// Method Definition Index: 74108
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GameAudioController_set_Instance_mB45A48EAC7DCB3FA266FFE63B4529689FEF028B4_inline (GameAudioController_t070E94E0F7F6D8254C8ABB777E9109BE5B9C9C1A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30888,7 +30993,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GameAudioController_set_Inst
 		return;
 	}
 }
-// Method Definition Index: 74247
+// Method Definition Index: 74248
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GameStateDTO_tBE2493AAD5C304C37AC3FBB5E2405DCD803E1CDE GameStateSyncedEvent_get_State_m70948EDCDB383AB3CBF2798F7FD7BDB3B0D322D4_inline (GameStateSyncedEvent_t22C0B6932B495AE2E678058160445670FE8ED70E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30897,7 +31002,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GameStateDTO_tBE2493AAD5C304C37AC
 		return L_0;
 	}
 }
-// Method Definition Index: 74248
+// Method Definition Index: 74249
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t GameStateSyncedEvent_get_LocalActorNumber_m5B635F59FCB236EDF1B3918220CEC3AA9E4BECEE_inline (GameStateSyncedEvent_t22C0B6932B495AE2E678058160445670FE8ED70E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30906,7 +31011,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t GameStateSyncedEvent_get_
 		return L_0;
 	}
 }
-// Method Definition Index: 74403
+// Method Definition Index: 74404
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PhaseChangedEvent_get_Phase_mB5CABC283545C7E6982A5C57BAA499FBBFB71C85_inline (PhaseChangedEvent_tEFA26D6E51638C16E55ED415408A38072C6138E3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30915,7 +31020,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PhaseChangedEvent_get_Pha
 		return L_0;
 	}
 }
-// Method Definition Index: 74284
+// Method Definition Index: 74285
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR CardRegistry_t1FC63B80879B79C8F647FD33BF8CD65E9D089E96* NetworkGameManager_get_Registry_m23E447BD9A4BFB06196BAC99319378AE1D72F2DF_inline (NetworkGameManager_tDA5D7482D75B6E70A24C892EFFB1E23B4FFAE1B5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31011,7 +31116,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_12;
 	}
 }
-// Method Definition Index: 74373
+// Method Definition Index: 74374
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SessionConfig_set_Mode_mE05003302A8F61BD1AB913583204C9448AC33867_inline (int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31028,7 +31133,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SessionConfig_set_Mode_mE050
 		return;
 	}
 }
-// Method Definition Index: 74375
+// Method Definition Index: 74376
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SessionConfig_set_RoomCode_mEFC46089752D06DD0D69A0A6CB2B9FA67475D25A_inline (String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31269,7 +31374,7 @@ IL_000a:
 		return L_6;
 	}
 }
-// Method Definition Index: 74211
+// Method Definition Index: 74212
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_tA8F1D166EFB87EDCBECB6F8B2106668AE2FCB831* PlayerState_get_ShopPool_mAE964A8C1ABEBEFECF013FEE5183D4FAA5CD1A77_inline (PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31278,7 +31383,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_tA8F1D166EFB87EDCBECB6F8B2
 		return L_0;
 	}
 }
-// Method Definition Index: 74206
+// Method Definition Index: 74207
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerState_get_ActorNumber_mBA5D62D7D55E81FC817FE79525C759F7069340B0_inline (PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31287,7 +31392,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerState_get_ActorNumb
 		return L_0;
 	}
 }
-// Method Definition Index: 74596
+// Method Definition Index: 74597
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t GameConfigSO_get_ShopPurchasesPerRound_mDB9906B26A4CAB0D397BA5358FD53744A0ED04A3_inline (GameConfigSO_t48342CF12C54C514F6150F95D2728E5DEB90BA91* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31296,7 +31401,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t GameConfigSO_get_ShopPurc
 		return L_0;
 	}
 }
-// Method Definition Index: 74207
+// Method Definition Index: 74208
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerState_get_Credits_m285D310026403C39ED81512FBA93007DB1491C7E_inline (PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31305,7 +31410,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerState_get_Credits_m
 		return L_0;
 	}
 }
-// Method Definition Index: 74210
+// Method Definition Index: 74211
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_tA8F1D166EFB87EDCBECB6F8B2106668AE2FCB831* PlayerState_get_DiscardPile_m5D01F8FCB629653D3DFD15430DA179B7229B1BB3_inline (PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31314,7 +31419,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_tA8F1D166EFB87EDCBECB6F8B2
 		return L_0;
 	}
 }
-// Method Definition Index: 74598
+// Method Definition Index: 74599
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t GameConfigSO_get_ShopTierCSlots_mF338B722B34197BF5D40344F5B3CDAFC55335966_inline (GameConfigSO_t48342CF12C54C514F6150F95D2728E5DEB90BA91* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31323,7 +31428,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t GameConfigSO_get_ShopTier
 		return L_0;
 	}
 }
-// Method Definition Index: 74595
+// Method Definition Index: 74596
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t GameConfigSO_get_ShopPoolSize_m3949860585193118455BD598F44ADB568F845E74_inline (GameConfigSO_t48342CF12C54C514F6150F95D2728E5DEB90BA91* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31332,7 +31437,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t GameConfigSO_get_ShopPool
 		return L_0;
 	}
 }
-// Method Definition Index: 74599
+// Method Definition Index: 74600
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t GameConfigSO_get_ShopTierBSlots_mB40968BB2270155C1EFACB84203E782F13164596_inline (GameConfigSO_t48342CF12C54C514F6150F95D2728E5DEB90BA91* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31341,7 +31446,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t GameConfigSO_get_ShopTier
 		return L_0;
 	}
 }
-// Method Definition Index: 74600
+// Method Definition Index: 74601
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t GameConfigSO_get_ShopTierASlots_m128F1E369666C7DD3D0740A589A6D05CF26D289F_inline (GameConfigSO_t48342CF12C54C514F6150F95D2728E5DEB90BA91* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31350,7 +31455,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t GameConfigSO_get_ShopTier
 		return L_0;
 	}
 }
-// Method Definition Index: 74597
+// Method Definition Index: 74598
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t GameConfigSO_get_ShopRefreshSlots_m451AE5F3758F2E23E54B461DACA0EF1D3AE5C8D8_inline (GameConfigSO_t48342CF12C54C514F6150F95D2728E5DEB90BA91* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31359,7 +31464,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t GameConfigSO_get_ShopRefr
 		return L_0;
 	}
 }
-// Method Definition Index: 74662
+// Method Definition Index: 74663
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t CardDataSO_get_Tier_mE23E82D88591AC3C357DB23807FFFDF20CF34DA3_inline (CardDataSO_tD219CDA2271352E4C1A7C43349DB3A565CBDD685* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31368,7 +31473,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t CardDataSO_get_Tier_mE23E
 		return L_0;
 	}
 }
-// Method Definition Index: 74664
+// Method Definition Index: 74665
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t CardDataSO_get_MinCreditsRequired_mFAD5C83C55B281D180A6CAFCC838CA7F48C34B62_inline (CardDataSO_tD219CDA2271352E4C1A7C43349DB3A565CBDD685* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31377,7 +31482,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t CardDataSO_get_MinCredits
 		return L_0;
 	}
 }
-// Method Definition Index: 74618
+// Method Definition Index: 74619
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* CommanderDataSO_get_LinkedCards_mE6083DC98E766CAA59CBF8B222B864036D6357F7_inline (CommanderDataSO_t309CF78E6491C0920DE1127748C07E0F9CF23181* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31386,7 +31491,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* CommanderDataSO_ge
 		return (RuntimeObject*)L_0;
 	}
 }
-// Method Definition Index: 74232
+// Method Definition Index: 74233
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint8_t GameIntent_get_Type_m042237E8755039CEE778CC8BDA7689CCAFE73071_inline (GameIntent_tBD633E6A453CAFFBBB22A021D1CD5453BB1CB750* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31395,7 +31500,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint8_t GameIntent_get_Type_m0422
 		return L_0;
 	}
 }
-// Method Definition Index: 74233
+// Method Definition Index: 74234
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t GameIntent_get_ActorNumber_m69677902E7973E9538ABE9A4C3D51893B35B9299_inline (GameIntent_tBD633E6A453CAFFBBB22A021D1CD5453BB1CB750* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31404,7 +31509,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t GameIntent_get_ActorNumbe
 		return L_0;
 	}
 }
-// Method Definition Index: 74234
+// Method Definition Index: 74235
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t GameIntent_get_CardId_mD7743CB286162157CFA79F4C4415DD5D79121236_inline (GameIntent_tBD633E6A453CAFFBBB22A021D1CD5453BB1CB750* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31413,7 +31518,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t GameIntent_get_CardId_mD7
 		return L_0;
 	}
 }
-// Method Definition Index: 74235
+// Method Definition Index: 74236
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* GameIntent_get_TargetActorNumbers_m7E2A460FC8B185CFBD3FA7CCDF1B046B86D81758_inline (GameIntent_tBD633E6A453CAFFBBB22A021D1CD5453BB1CB750* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31422,7 +31527,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Int32U5BU5D_t19C97395396A72ECAF31
 		return L_0;
 	}
 }
-// Method Definition Index: 74236
+// Method Definition Index: 74237
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* GameIntent_get_TargetCommanderIndices_m56548B62810AE2776DA55729A15583417F3293BC_inline (GameIntent_tBD633E6A453CAFFBBB22A021D1CD5453BB1CB750* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31431,7 +31536,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Int32U5BU5D_t19C97395396A72ECAF31
 		return L_0;
 	}
 }
-// Method Definition Index: 74528
+// Method Definition Index: 74529
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* GameStateManager_get_ActivePlayer_mEDD741B1EC96B1C34811A8C224DC1911D5D888C8_inline (GameStateManager_t7AA371565EA3CAF37B97C2CB741C0F36637C8AC3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31440,7 +31545,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR PlayerState_tFCD6BAB02D13A95543D9
 		return L_0;
 	}
 }
-// Method Definition Index: 74533
+// Method Definition Index: 74534
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR TurnManager_tE21B1C28567B855D4B046191CEBD9773A8B2AF19* GameStateManager_get_Turns_m392D12A1CDF0399B814B56F17BE91C5F25ABA62D_inline (GameStateManager_t7AA371565EA3CAF37B97C2CB741C0F36637C8AC3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31449,7 +31554,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR TurnManager_tE21B1C28567B855D4B04
 		return L_0;
 	}
 }
-// Method Definition Index: 74208
+// Method Definition Index: 74209
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_tA8F1D166EFB87EDCBECB6F8B2106668AE2FCB831* PlayerState_get_Hand_mB8A13F0B824C46D3BC32E8A4189282BB4F7DBCA4_inline (PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31458,7 +31563,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_tA8F1D166EFB87EDCBECB6F8B2
 		return L_0;
 	}
 }
-// Method Definition Index: 74213
+// Method Definition Index: 74214
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool PlayerState_get_VerificaBlocked_mE7D5F596319C562A813FD4B83B12181EA03EAF1D_inline (PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31467,7 +31572,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool PlayerState_get_VerificaBloc
 		return L_0;
 	}
 }
-// Method Definition Index: 74209
+// Method Definition Index: 74210
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_tA8F1D166EFB87EDCBECB6F8B2106668AE2FCB831* PlayerState_get_Deck_mEA54F1C28A19E4E50B7E310269A457894F381C39_inline (PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31476,7 +31581,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_tA8F1D166EFB87EDCBECB6F8B2
 		return L_0;
 	}
 }
-// Method Definition Index: 74625
+// Method Definition Index: 74626
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t CommanderState_get_BaseNote_m99BAE1E29537C48CE9B10DBC41050FD4F5DA796C_inline (CommanderState_t15AF29069DD311AE4D15FA546F962155343067C9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31485,7 +31590,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t CommanderState_get_BaseNo
 		return L_0;
 	}
 }
-// Method Definition Index: 74252
+// Method Definition Index: 74253
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void HotseatTransport_set_LocalActorNumber_m288825376DF691F805315686EDAAFE175F50BCE6_inline (HotseatTransport_t35E830F1D837E51A3B599AAF7465D054160D8259* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -31495,7 +31600,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void HotseatTransport_set_LocalAc
 		return;
 	}
 }
-// Method Definition Index: 74376
+// Method Definition Index: 74377
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR CommanderKindU5BU5D_tA1C4074E644CC24E2D2573F822CE1B967C72689B* SessionConfig_get_Player0Commanders_m490CB1F26585498D895F9999976FE7D0E638E816_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31511,7 +31616,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR CommanderKindU5BU5D_tA1C4074E644C
 		return L_0;
 	}
 }
-// Method Definition Index: 74378
+// Method Definition Index: 74379
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR CommanderKindU5BU5D_tA1C4074E644CC24E2D2573F822CE1B967C72689B* SessionConfig_get_Player1Commanders_m5C05D8A73EE5ECEA6B9820953D941E63A2940543_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31527,7 +31632,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR CommanderKindU5BU5D_tA1C4074E644C
 		return L_0;
 	}
 }
-// Method Definition Index: 74413
+// Method Definition Index: 74414
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t GameOverEvent_get_WinnerActorNumber_mFF5F89734E2CC44554E51F6F1C9EADAE80622D0C_inline (GameOverEvent_t7359E240630543A395D6EC69EC13890AD84DF54E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31536,7 +31641,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t GameOverEvent_get_WinnerA
 		return L_0;
 	}
 }
-// Method Definition Index: 74414
+// Method Definition Index: 74415
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool GameOverEvent_get_IsDraw_mD609D955860B869B91C29741F1EF4767C1E605B7_inline (GameOverEvent_t7359E240630543A395D6EC69EC13890AD84DF54E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31545,7 +31650,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool GameOverEvent_get_IsDraw_mD6
 		return L_0;
 	}
 }
-// Method Definition Index: 74391
+// Method Definition Index: 74392
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR CardDataSO_tD219CDA2271352E4C1A7C43349DB3A565CBDD685* CardPlayedEvent_get_Card_m538C51F0523E139C1B03B6D3D4D04C50DEE9EA01_inline (CardPlayedEvent_t2130E4DE020597F35519DB317C06A15110A9FC97* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31554,7 +31659,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR CardDataSO_tD219CDA2271352E4C1A7C
 		return L_0;
 	}
 }
-// Method Definition Index: 74392
+// Method Definition Index: 74393
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* CardPlayedEvent_get_Player_m2A52562B640FFDBB9192CD770F8EEC6B966A3B10_inline (CardPlayedEvent_t2130E4DE020597F35519DB317C06A15110A9FC97* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31563,7 +31668,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR PlayerState_tFCD6BAB02D13A95543D9
 		return L_0;
 	}
 }
-// Method Definition Index: 74397
+// Method Definition Index: 74398
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* VerificaPlayedEvent_get_Player_mC293A074D6635A8001FBF94042AFB2CCC832307D_inline (VerificaPlayedEvent_t7C3173601E5D7E27A3052E4422D9A7A51ACE13A9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31572,7 +31677,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR PlayerState_tFCD6BAB02D13A95543D9
 		return L_0;
 	}
 }
-// Method Definition Index: 74411
+// Method Definition Index: 74412
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t CardsDrawnEvent_get_Count_m7589EB581322A583F66FDA30686A9A5B7204C788_inline (CardsDrawnEvent_t67D0A2F9A2CDDDCFFD036A3FB6ED8D438F8576F6* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31581,7 +31686,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t CardsDrawnEvent_get_Count
 		return L_0;
 	}
 }
-// Method Definition Index: 74410
+// Method Definition Index: 74411
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR PlayerState_tFCD6BAB02D13A95543D9429475E900430FEA8F3D* CardsDrawnEvent_get_Player_mBCD4F7DDD579B4440FABBAFBDE861B1CF80BC6D4_inline (CardsDrawnEvent_t67D0A2F9A2CDDDCFFD036A3FB6ED8D438F8576F6* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31590,7 +31695,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR PlayerState_tFCD6BAB02D13A95543D9
 		return L_0;
 	}
 }
-// Method Definition Index: 74534
+// Method Definition Index: 74535
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ShopManager_t485A22BC9A2AC4854D8B9D2D9B48558348DFAD4B* GameStateManager_get_Shop_m484AF3E685F487C608CAEB4DA487E80EA8E88238_inline (GameStateManager_t7AA371565EA3CAF37B97C2CB741C0F36637C8AC3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31599,7 +31704,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ShopManager_t485A22BC9A2AC4854D8B
 		return L_0;
 	}
 }
-// Method Definition Index: 74535
+// Method Definition Index: 74536
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR PhaseManager_tD9F4255ED96B482E703C51B5C29225A16E117F6A* GameStateManager_get_Phases_m9196ECB1B1CFA7716229B848429DEB8C384EDC8E_inline (GameStateManager_t7AA371565EA3CAF37B97C2CB741C0F36637C8AC3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31608,7 +31713,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR PhaseManager_tD9F4255ED96B482E703
 		return L_0;
 	}
 }
-// Method Definition Index: 74665
+// Method Definition Index: 74666
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* CardDataSO_get_Effects_m81A915759EEA6D1494F9267EB338574AAF2E0D59_inline (CardDataSO_tD219CDA2271352E4C1A7C43349DB3A565CBDD685* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31617,7 +31722,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* CardDataSO_get_Eff
 		return (RuntimeObject*)L_0;
 	}
 }
-// Method Definition Index: 74675
+// Method Definition Index: 74676
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t CardEffectSO_get_Target_mCB0F0528DE64584A40866ED9221D0B70C0F37D58_inline (CardEffectSO_t31A53B06A69A5D1854CE68A3F593E5F1DAEFBE83* __this, const RuntimeMethod* method) 
 {
 	{

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Shop_Rappresentante
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
   _cardName: Rappresentante di Classe
-  _description: Scambia le Note tra due comandanti scelti.
+  _description: Scambia i Voti tra due secchioni scelti.
   _cardType: 0
   _affinity: 2
   _tags: 4
@@ -23,3 +23,5 @@ MonoBehaviour:
   _minCreditsRequired: 0
   _effects:
   - {fileID: 11400000, guid: 3d677b006991daa4fa39d722954ffbec, type: 2}
+  _actionCost: 1
+  _isCooper: 0
