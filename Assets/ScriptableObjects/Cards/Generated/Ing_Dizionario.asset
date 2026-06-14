@@ -17,10 +17,12 @@ MonoBehaviour:
   _cardType: 0
   _affinity: 0
   _tags: 32
-  _artwork: {fileID: 21300000, guid: 9a26688fdcadff845982757746120303, type: 3}
+  _artwork: {fileID: 21300000, guid: ae2d4041363c732459d9eb64e3d6d8fa, type: 3}
   _tier: 0
   _shopCost: 0
   _minCreditsRequired: 0
   _effects:
   - {fileID: 11400000, guid: 9541d4ba273d4394a85e4779dcd7d7c6, type: 2}
   - {fileID: 11400000, guid: 42f64703e017ace4ab65005716dff891, type: 2}
+  _actionCost: 1
+  _isCooper: 0
