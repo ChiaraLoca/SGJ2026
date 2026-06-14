@@ -55,29 +55,39 @@ namespace FourE.UI
         /// </summary>
         private void SetupOfflineGameState()
         {
-            var gameStateGO = new GameObject("OfflineGameState");
-            _gameStateManager = gameStateGO.AddComponent<FourE.Core.GameStateManager>();
-            _gameStateManager.AutoStartOffline = false; // Non far partire la partita automaticamente
-
+            // Ottieni i reference necessari
             var config = FourE.Config.GameConfigSO.Instance;
+            if (config == null)
+            {
+                Debug.LogError("GameConfig non trovato!");
+                return;
+            }
 
-            // Carica il GameContent: se disponibile dalle dipendenze della scena, altrimenti cerca l'asset
+            // Carica il GameContent
             FourE.Config.GameContentSO content = FindObjectOfType<FourE.Config.GameContentSO>();
             if (content == null)
             {
-                // Fallback: carica da Resources o cerca negli asset (utilizzare il path dell'asset noto)
                 content = Resources.Load<FourE.Config.GameContentSO>("GameContent");
             }
 
-            // Se ancora non trovato, log error
             if (content == null)
             {
                 Debug.LogError("GameContent non trovato! Assicurati che sia in una cartella Resources o nella scena.");
                 return;
             }
 
-            // Assegna il content al GameStateManager
+            // Crea il GameObject offline DISABILITATO per evitare che Awake venga chiamato subito
+            var gameStateGO = new GameObject("OfflineGameState");
+            gameStateGO.SetActive(false);
+            _gameStateManager = gameStateGO.AddComponent<FourE.Core.GameStateManager>();
+
+            // Ora inizializza offline prima di attivare
+            _gameStateManager.InitializeOffline(config);
             _gameStateManager.SetGameContent(content);
+            _gameStateManager.AutoStartOffline = false;
+
+            // Attiva il GameObject (ma non fa partire la partita perché AutoStartOffline = false)
+            gameStateGO.SetActive(true);
 
             // Setup commander selections: converte da CommanderDataSO[] a CommanderKind[]
             var p0CmdsData = content.FirstPlayerCommanders.Take(2).ToArray();

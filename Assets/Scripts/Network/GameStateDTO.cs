@@ -50,6 +50,9 @@ namespace FourE.Network
         /// <summary>Id delle carte in mano (inclusa la Verifica, se pescata).</summary>
         public int[] HandCardIds;
 
+        /// <summary>True se questo giocatore è bloccato dal giocare la Verifica (Sciopero).</summary>
+        public bool VerificaBlocked;
+
         /// <summary>Numero di carte rimaste nel mazzo.</summary>
         public int DeckCount;
 
@@ -93,6 +96,9 @@ namespace FourE.Network
 
         /// <summary>True se l'esito è un pareggio.</summary>
         public bool IsDraw;
+
+        /// <summary>True se la Verifica può essere giocata nel turno corrente (non è il primo turno del round).</summary>
+        public bool CanPlayVerificaThisTurn;
 
         /// <summary>Numero progressivo dell'ultima carta giocata, usato per attivare la UI una sola volta.</summary>
         public int PlayedCardSequence;

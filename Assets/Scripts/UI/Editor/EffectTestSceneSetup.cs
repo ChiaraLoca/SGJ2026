@@ -151,7 +151,7 @@ namespace FourE.UI.Editor
             logTextRect.offsetMin = new Vector2(10, 10);
             logTextRect.offsetMax = new Vector2(-10, -10);
             var logText = logTextGO.AddComponent<Text>();
-            logText.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
+            logText.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
             logText.text = "Log output here...";
             logText.alignment = TextAnchor.UpperLeft;
             logText.fontSize = 14;
@@ -232,7 +232,7 @@ namespace FourE.UI.Editor
             textRect.offsetMax = Vector2.zero;
             var text = textGO.AddComponent<Text>();
             text.text = label;
-            text.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
+            text.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
             text.alignment = TextAnchor.MiddleCenter;
             text.color = Color.white;
 
@@ -263,7 +263,7 @@ namespace FourE.UI.Editor
             labelRect.offsetMax = Vector2.zero;
             var labelText = labelGO.AddComponent<Text>();
             labelText.text = label;
-            labelText.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
+            labelText.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
             labelText.alignment = TextAnchor.MiddleLeft;
             labelText.color = Color.white;
 
@@ -275,7 +275,7 @@ namespace FourE.UI.Editor
             var go = new GameObject(name);
             go.transform.SetParent(parent.transform, false);
             var text = go.AddComponent<Text>();
-            text.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
+            text.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
             text.color = Color.white;
             return text;
         }
@@ -293,7 +293,7 @@ namespace FourE.UI.Editor
             nameRect.offsetMin = new Vector2(5, -30);
             nameRect.offsetMax = new Vector2(-5, 0);
             var nameText = nameGO.AddComponent<Text>();
-            nameText.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
+            nameText.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
             nameText.text = "Commander";
             nameText.alignment = TextAnchor.MiddleCenter;
             nameText.color = Color.white;
@@ -308,7 +308,7 @@ namespace FourE.UI.Editor
             notesRect.offsetMin = new Vector2(5, 0);
             notesRect.offsetMax = new Vector2(-5, 0);
             var notesText = notesGO.AddComponent<Text>();
-            notesText.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
+            notesText.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
             notesText.text = "Note: 0";
             notesText.alignment = TextAnchor.MiddleCenter;
             notesText.color = Color.yellow;
@@ -322,7 +322,7 @@ namespace FourE.UI.Editor
             debuffRect.offsetMin = new Vector2(5, 0);
             debuffRect.offsetMax = new Vector2(-5, 0);
             var debuffText = debuffGO.AddComponent<Text>();
-            debuffText.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
+            debuffText.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
             debuffText.text = "Debuff: Nessuno";
             debuffText.alignment = TextAnchor.MiddleCenter;
             debuffText.color = Color.green;
@@ -337,7 +337,7 @@ namespace FourE.UI.Editor
             buffRect.offsetMin = new Vector2(5, 0);
             buffRect.offsetMax = new Vector2(-5, 0);
             var buffText = buffGO.AddComponent<Text>();
-            buffText.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
+            buffText.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
             buffText.text = "Buff: Nessuno";
             buffText.alignment = TextAnchor.MiddleCenter;
             buffText.color = Color.gray;
@@ -352,7 +352,7 @@ namespace FourE.UI.Editor
             secondaryRect.offsetMin = new Vector2(5, 0);
             secondaryRect.offsetMax = new Vector2(-5, 0);
             var secondaryText = secondaryGO.AddComponent<Text>();
-            secondaryText.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
+            secondaryText.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
             secondaryText.text = "✗ Passiva Secondaria";
             secondaryText.alignment = TextAnchor.MiddleCenter;
             secondaryText.color = Color.gray;
