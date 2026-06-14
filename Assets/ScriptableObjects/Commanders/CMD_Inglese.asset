@@ -21,7 +21,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a93ccf29e52be894e8c45e17b5a148ba, type: 2}
   - {fileID: 11400000, guid: acd6d68d70e6b79499ba276d3ab4a9d1, type: 2}
   - {fileID: 11400000, guid: a17a37eddd386034eb2ba2b45308da46, type: 2}
-  _portrait: {fileID: 0}
+  _portrait: {fileID: 981607260671651682, guid: f13a18aaca62a6045ab59edcbe3c933d, type: 3}
   _baseAbilityDescription: Quando aumenti la Nota di Inglese, +1 Nota all'altro tuo
     comandante
   _unlockConditionDescription: Avere 15 carte nel mazzo

@@ -24,8 +24,21 @@ namespace FourE.Config
         [SerializeField] private CardDataSO _verificaCard;
         [SerializeField] private CardDataSO[] _shopCatalog;
 
-        /// <summary>Tutti i comandanti selezionabili nella schermata di selezione (uno per <see cref="CommanderKind"/>).</summary>
-        public IReadOnlyList<CommanderDataSO> CommanderCatalog => _commanderCatalog;
+        /// <summary>
+        /// Tutti i comandanti selezionabili nella schermata di selezione.
+        /// Integra i default come fallback se il catalogo serializzato contiene riferimenti mancanti.
+        /// </summary>
+        public IReadOnlyList<CommanderDataSO> CommanderCatalog
+        {
+            get
+            {
+                List<CommanderDataSO> catalog = new List<CommanderDataSO>();
+                AddUniqueCommanders(catalog, _commanderCatalog);
+                AddUniqueCommanders(catalog, _firstPlayerCommanders);
+                AddUniqueCommanders(catalog, _secondPlayerCommanders);
+                return catalog;
+            }
+        }
 
         /// <summary>Comandanti assegnati al primo giocatore (lunghezza CommandersPerPlayer).</summary>
         public IReadOnlyList<CommanderDataSO> FirstPlayerCommanders => _firstPlayerCommanders;
@@ -46,14 +59,9 @@ namespace FourE.Config
         /// <returns>Il comandante trovato, oppure null se non è presente.</returns>
         public CommanderDataSO GetCommanderByKind(CommanderKind kind)
         {
-            if (_commanderCatalog == null)
+            foreach (CommanderDataSO commander in CommanderCatalog)
             {
-                return null;
-            }
-
-            foreach (CommanderDataSO commander in _commanderCatalog)
-            {
-                if (commander != null && commander.Kind == kind)
+                if (commander.Kind == kind)
                 {
                     return commander;
                 }
@@ -80,24 +88,5 @@ namespace FourE.Config
             }
         }
 
-        private static CommanderDataSO FindCommanderByKind(
-            IEnumerable<CommanderDataSO> commanders,
-            CommanderKind kind)
-        {
-            if (commanders == null)
-            {
-                return null;
-            }
-
-            foreach (CommanderDataSO commander in commanders)
-            {
-                if (commander != null && commander.Kind == kind)
-                {
-                    return commander;
-                }
-            }
-
-            return null;
-        }
     }
 }

@@ -15,7 +15,7 @@ namespace FourE.UI
 {
     /// <summary>
     /// Schermata di selezione comandanti. Ogni giocatore sceglie, in modo indipendente,
-    /// <see cref="GameConstants.CommandersPerPlayer"/> comandanti; i duplicati sono ammessi.
+    /// <see cref="GameConstants.CommandersPerPlayer"/> comandanti distinti.
     /// In <b>hotseat</b> i due giocatori scelgono a turno sullo stesso dispositivo.
     /// In <b>online</b> ciascuno sceglie sul proprio dispositivo: la scelta viaggia come Custom
     /// Property Photon e l'host, ricevute entrambe, le salva in <see cref="SessionConfig"/> e
@@ -44,6 +44,7 @@ namespace FourE.UI
         [SerializeField] private Text _detailUnlockLabel;
         [SerializeField] private Text _detailSecondaryAbilityLabel;
         [SerializeField] private Button _selectCommanderButton;
+        [SerializeField] private Text _selectCommanderButtonLabel;
 
         [Header("Etichette")]
         [SerializeField] private Text _titleLabel;
@@ -55,7 +56,7 @@ namespace FourE.UI
 
         [Header("Scena di gioco")]
         [Tooltip("Scena caricata dopo che tutti i giocatori hanno scelto.")]
-        [SerializeField] private string _gameSceneName = "SampleScene";
+        [SerializeField] private string _gameSceneName = "SampleUI";
 
         /// <summary>Chiave della Custom Property Photon che trasporta la scelta (array di int = CommanderKind).</summary>
         private const string CommanderSelectionPropertyKey = "cmd";
@@ -161,26 +162,39 @@ namespace FourE.UI
             if (_detailBaseAbilityLabel != null) _detailBaseAbilityLabel.text = data.BaseAbilityDescription;
             if (_detailUnlockLabel != null) _detailUnlockLabel.text = data.UnlockConditionDescription;
             if (_detailSecondaryAbilityLabel != null) _detailSecondaryAbilityLabel.text = data.SecondaryAbilityDescription;
+            RefreshSelectionButton();
         }
 
         /// <summary>
-        /// Aggiunge al piano delle scelte il comandante attualmente mostrato nel pannello di dettaglio.
+        /// Aggiunge o rimuove dalle scelte il comandante mostrato nel pannello di dettaglio.
         /// </summary>
         private void OnSelectInspectedClicked()
         {
-            if (_hasInspectedKind)
+            if (!_hasInspectedKind || _awaitingOthers)
             {
-                OnCommanderPicked(_inspectedKind);
+                return;
             }
+
+            int selectedIndex = _currentPicks.IndexOf(_inspectedKind);
+            if (selectedIndex >= 0)
+            {
+                _currentPicks.RemoveAt(selectedIndex);
+                RefreshSelectionUI();
+                return;
+            }
+
+            OnCommanderPicked(_inspectedKind);
         }
 
         /// <summary>
-        /// Aggiunge un comandante alle scelte correnti, se non si è già al massimo (duplicati ammessi).
+        /// Aggiunge un comandante distinto alle scelte correnti, se non si è già al massimo.
         /// </summary>
         /// <param name="kind">Comandante scelto.</param>
         private void OnCommanderPicked(CommanderKind kind)
         {
-            if (_awaitingOthers || _currentPicks.Count >= GameConstants.CommandersPerPlayer)
+            if (_awaitingOthers ||
+                _currentPicks.Count >= GameConstants.CommandersPerPlayer ||
+                _currentPicks.Contains(kind))
             {
                 return;
             }
@@ -232,6 +246,33 @@ namespace FourE.UI
             if (_confirmButton != null)
             {
                 _confirmButton.interactable = _currentPicks.Count == GameConstants.CommandersPerPlayer;
+            }
+
+            RefreshSelectionButton();
+        }
+
+        /// <summary>
+        /// Aggiorna testo e interattività del pulsante Seleziona/Deseleziona del dettaglio.
+        /// </summary>
+        private void RefreshSelectionButton()
+        {
+            if (_selectCommanderButton == null)
+            {
+                return;
+            }
+
+            bool isSelected = _hasInspectedKind && _currentPicks.Contains(_inspectedKind);
+            bool hasAvailableSlot = _currentPicks.Count < GameConstants.CommandersPerPlayer;
+            _selectCommanderButton.interactable =
+                !_awaitingOthers &&
+                _hasInspectedKind &&
+                (isSelected || hasAvailableSlot);
+
+            if (_selectCommanderButtonLabel != null)
+            {
+                _selectCommanderButtonLabel.text = isSelected
+                    ? "Deseleziona comandante"
+                    : "Seleziona comandante";
             }
         }
 
@@ -359,6 +400,7 @@ namespace FourE.UI
             if (_confirmButton != null) _confirmButton.interactable = false;
             if (_clearButton != null) _clearButton.interactable = false;
             if (_titleLabel != null) _titleLabel.text = "In attesa dell'altro giocatore…";
+            RefreshSelectionButton();
         }
 
 #if PHOTON_UNITY_NETWORKING

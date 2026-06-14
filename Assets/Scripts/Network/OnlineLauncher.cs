@@ -22,7 +22,7 @@ namespace FourE.Network
 #endif
     {
         [Tooltip("Scena di selezione comandanti caricata (sincronizzata) quando la stanza è al completo.")]
-        [SerializeField] private string _selectionSceneName = "CommanderSelect";
+        [SerializeField] private string _selectionSceneName = "CommanderSelectUI";
 
         /// <summary>Numero di giocatori per stanza in un 1v1.</summary>
         private const byte MaxPlayersPerRoom = 2;

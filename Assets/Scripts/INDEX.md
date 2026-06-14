@@ -28,18 +28,21 @@ Indice generale del codice. Ogni cartella ha un proprio `INDEX.md` (sottoindice)
 | Testare effetti di carte isolatamente (sandbox offline) | scena `Assets/Scenes/EffectTest.unity` + `UI/EffectTestSceneManager.cs`; genera automaticamente con menu `4E → Setup Scena Test Effetti` |
 | Avviare una partita | `Core/GameStateManager.cs` → `StartMatch()` |
 | Passive dei comandanti (base/secondaria, sblocco) | `Core/CommanderPassiveSystem.cs`; identità in `Commanders/CommanderKind.cs`; costanti in `Commanders/CommanderPassiveConstants.cs` |
-| Selezione dei 2 comandanti a inizio partita | scena `Assets/Scenes/CommanderSelect.unity` + `UI/CommanderSelectController.cs`; scelta in `Network/SessionConfig.cs`, risolta da `Core/GameStateManager.SetCommanderSelections()` |
+| Selezione dei 2 comandanti a inizio partita | scena `Assets/Scenes/CommanderSelectUI.unity` + `UI/CommanderSelectController.cs`; griglia 3x2 pronta per 6 opzioni, scelta in `Network/SessionConfig.cs`, risolta da `Core/GameStateManager.SetCommanderSelections()` |
 | Capire il flusso delle fasi (Play→Verifica→Shop→Draw→Esame) | `Core/PhaseManager.cs` |
-| Giocare una carta / Verifica / fine turno | `Core/TurnManager.cs` |
+| Giocare una carta / Verifica / fine turno | `Core/TurnManager.cs` → `TryPlayCard()` / `TryPlayVerifica()` / `EndTurn()` |
+| Carta che costa più di 1 azione (Studio Notturno) | `Cards/CardDataSO.cs` → `ActionCost`; `TurnManager` controlla `RemainingActions < card.ActionCost` |
+| Copiare l'effetto della carta successiva (Copiare) | `Cards/Effects/CopyNextCardEffectSO.cs`; flag `_copyNextCardActive` su `TurnManager.ActivateCopyNextCard()` |
+| Sapere se la Verifica è giocabile (non al 1° turno) | `Core/TurnManager.cs` → `CanPlayVerificaThisTurn`; propagato nel DTO come `GameStateDTO.CanPlayVerificaThisTurn` |
 | Aggiungere un nuovo tipo di effetto carta | `Cards/CardEffectSO.cs` (base) + nuova classe in `Cards/Effects/` |
 | Aggiungere una condizione per effetti condizionali | `Cards/CardConditionSO.cs` (base) + nuova classe in `Cards/Conditions/` |
-| Applicare una modifica di stato (Note, pesca, effetto a durata) | `Core/GameChanges.cs` (`IGameChange`) |
-| Risolvere i bersagli di un effetto | `Core/GameContext.cs` → `ResolveCommanders()` / `ResolvePlayer()` |
+| Applicare una modifica di stato (Note, pesca, effetto a durata) | `Core/GameChanges.cs` + `Core/GameChangesExtended.cs` (`IGameChange`) |
+| Risolvere i bersagli di un effetto | `Core/GameContext.cs` → `ResolveCommanders()` / `ResolvePlayer()`; redirect passiva Inglese via `SetCommanderRedirect()` |
 | Acquisto shop / refresh pool | `Shop/ShopManager.cs`, `Shop/ShopPool.cs` |
 | Conversione Note→Credits, salto Shop finale ed Esame Finale | `Core/PhaseManager.cs` → `HandleVerifica()`, `ConvertAndAdvance()`, `ResolveOutcome()` |
 | Pubblicare/ascoltare un evento di gioco | `Events/EventBus.cs`, tipi in `Events/GameEvents.cs` |
 | Inviare un'azione dal client all'host (intent) | `Network/NetworkGameManager.cs` → `Submit*()`, `Network/GameIntent.cs` |
-| Snapshot di stato per la rete/UI, inclusi mazzo/scarti, ultima carta giocata e azioni rimanenti | `Network/GameStateDTO.cs`, costruito da `Network/GameStateDtoBuilder.cs` e completato da `NetworkGameManager` |
+| Snapshot di stato per la rete/UI (mazzo/scarti, ultima carta, azioni, flag Verifica) | `Network/GameStateDTO.cs` (`CanPlayVerificaThisTurn`, `PlayerDTO.VerificaBlocked`); costruito da `Network/GameStateDtoBuilder.cs`, serializzato da `Network/NetworkSerializer.cs` |
 | Cambiare il trasporto (hotseat ↔ Photon) | `Network/INetworkTransport.cs` (impl: `HotseatTransport.cs`, `PhotonTransport.cs`); scelta in `Network/NetworkGameManager.cs` da `Network/SessionConfig.cs` |
 | Menu iniziale (stesso telefono / online) | scena `Assets/Scenes/MainMenu.unity` + `UI/MainMenuController.cs` |
 | Connettersi online per codice stanza | `Network/OnlineLauncher.cs` (PUN2); App ID in `PhotonServerSettings.asset` |
@@ -55,9 +58,9 @@ Indice generale del codice. Ogni cartella ha un proprio `INDEX.md` (sottoindice)
 
 ```
 Scena MainMenu → MainMenuController
-  → "Stesso telefono": SessionConfig.Mode=Hotseat → scena CommanderSelect
+  → "Stesso telefono": SessionConfig.Mode=Hotseat → scena CommanderSelectUI
         → ogni giocatore sceglie 2 comandanti → SessionConfig.Player0/1Commanders → scena di gioco (SampleUI)
-  → "Online": OnlineLauncher crea/raggiunge stanza per codice → (2 giocatori) LoadLevel(CommanderSelect)
+  → "Online": OnlineLauncher crea/raggiunge stanza per codice → (2 giocatori) LoadLevel(CommanderSelectUI)
         → ognuno sceglie i propri 2 comandanti (Custom Property Photon) → host raccoglie entrambe → LoadLevel(SampleUI)
 
 SampleScene → NetworkGameManager.Awake()

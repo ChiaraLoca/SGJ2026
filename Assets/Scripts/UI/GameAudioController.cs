@@ -28,7 +28,7 @@ namespace FourE.UI
         [SerializeField] private AudioClip _crowd;
         [SerializeField] private bool _autoPlayMainSoundtrack = true;
         [SerializeField] private bool _autoPlayCrowdInThisScene;
-        [SerializeField] private string[] _crowdSceneNames = { "MainMenu", "CommanderSelection" };
+        [SerializeField] private string[] _crowdSceneNames = { "MainMenu", "CommanderSelectUI" };
 
         [Header("Gameplay SFX")]
         [SerializeField] private AudioClip _cash;

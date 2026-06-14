@@ -42,11 +42,24 @@ namespace FourE.UI
 
             SetSelected(false);
 
-            if (_inspectButton != null)
+            Button cardButton = GetComponent<Button>();
+            ConfigureInspectButton(cardButton);
+
+            if (_inspectButton != cardButton)
             {
-                _inspectButton.onClick.RemoveAllListeners();
-                _inspectButton.onClick.AddListener(() => _onInspect?.Invoke(_kind));
+                ConfigureInspectButton(_inspectButton);
             }
+        }
+
+        private void ConfigureInspectButton(Button button)
+        {
+            if (button == null)
+            {
+                return;
+            }
+
+            button.onClick.RemoveAllListeners();
+            button.onClick.AddListener(() => _onInspect?.Invoke(_kind));
         }
 
         /// <summary>

@@ -95,6 +95,9 @@ namespace FourE.Network
             // L'host (hotseat o MasterClient online) avvia la partita e ne broadcasta lo stato.
             if (_transport.IsHost)
             {
+                _gameState.SetCommanderSelections(
+                    SessionConfig.Player0Commanders,
+                    SessionConfig.Player1Commanders);
                 _gameState.StartMatch();
                 BroadcastCurrentState();
                 return;
