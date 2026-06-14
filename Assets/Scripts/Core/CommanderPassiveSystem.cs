@@ -217,23 +217,41 @@ namespace FourE.Core
 
         /// <summary>
         /// Reagisce a una pesca: secondaria di Matematica (+1 Nota per carta pescata).
+        /// Si attiva solo per le pesche del giocatore che possiede il comandante.
         /// </summary>
         /// <param name="evt">Evento di pesca.</param>
         private void OnCardsDrawn(CardsDrawnEvent evt)
         {
-            PlayerState player = evt.Player;
-            if (player?.Commanders == null)
+            PlayerState drawingPlayer = evt.Player;
+            if (drawingPlayer == null)
             {
                 return;
             }
 
-            foreach (CommanderState commander in player.Commanders)
+            // Controlla esplicitamente su entrambi i giocatori: applica la secondaria
+            // solo al comandante il cui proprietario è il giocatore che ha pescato.
+            ApplyMateSecondaryIfOwner(_state.Player0, drawingPlayer, evt.Count);
+            ApplyMateSecondaryIfOwner(_state.Player1, drawingPlayer, evt.Count);
+        }
+
+        /// <summary>
+        /// Applica la secondaria di Matematica a un giocatore solo se è lui il giocatore che ha pescato.
+        /// </summary>
+        /// <param name="owner">Candidato proprietario del comandante Matematica.</param>
+        /// <param name="drawingPlayer">Giocatore che ha effettivamente pescato le carte.</param>
+        /// <param name="count">Numero di carte pescate.</param>
+        private void ApplyMateSecondaryIfOwner(PlayerState owner, PlayerState drawingPlayer, int count)
+        {
+            if (owner == null || owner.Commanders == null || owner != drawingPlayer)
             {
-                if (commander?.Data != null
-                    && commander.Data.Kind == CommanderKind.Matematica
-                    && commander.SecondaryUnlocked)
+                return;
+            }
+
+            foreach (CommanderState commander in owner.Commanders)
+            {
+                if (commander?.Data?.Kind == CommanderKind.Matematica && commander.SecondaryUnlocked)
                 {
-                    ApplyNoteDirect(commander, evt.Count * CommanderPassiveConstants.MateNotePerDraw);
+                    ApplyNoteDirect(commander, count * CommanderPassiveConstants.MateNotePerDraw);
                 }
             }
         }
