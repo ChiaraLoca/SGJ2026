@@ -80,8 +80,10 @@ namespace FourE.Core
                 switch (commander.Data.Kind)
                 {
                     case CommanderKind.Storia:
-                        int notes = player.VerificaPlayedCount * CommanderPassiveConstants.StoriaNotePerVerifica;
-                        ApplyNoteDirect(commander, notes);
+                        // Conta le Verifiche giocate da entrambi i giocatori nella partita.
+                        int totalVerifiche = (_state.Player0?.VerificaPlayedCount ?? 0)
+                                           + (_state.Player1?.VerificaPlayedCount ?? 0);
+                        ApplyNoteDirect(commander, totalVerifiche * CommanderPassiveConstants.StoriaNotePerVerifica);
                         break;
                     case CommanderKind.Matematica:
                         DeckOps.DrawTopToHand(player, CommanderPassiveConstants.MateExtraCardsPerRound, publishEvent: false);
