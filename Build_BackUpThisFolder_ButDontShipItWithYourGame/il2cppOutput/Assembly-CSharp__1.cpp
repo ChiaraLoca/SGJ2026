@@ -5678,10 +5678,10 @@ IL_0078:
 		CommanderDTOU5BU5D_t138EC9BB2D476998F5E0E7D3A19D1F6CE9228DD1* L_30 = V_0;
 		V_1 = L_30;
 		V_2 = 0;
-		goto IL_0110;
+		goto IL_00f3;
 	}
 
-IL_008d:
+IL_008a:
 	{
 		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:141>
 		CommanderDTOU5BU5D_t138EC9BB2D476998F5E0E7D3A19D1F6CE9228DD1* L_31 = V_1;
@@ -5732,35 +5732,23 @@ IL_008d:
 		int32_t L_55 = L_54.___ActiveDebuffCount;
 		NullCheck(L_53);
 		VirtualActionInvoker1< int32_t >::Invoke(16, L_53, L_55);
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:150>
-		BinaryWriter_tFB94D67EDFA3F6A34744A163BDABE287FDF2ED1E* L_56 = ___0_writer;
-		CommanderDTO_tA3908D353E851704B198E61840E6D1D47D2BA6E6 L_57 = V_3;
-		int32_t L_58 = L_57.___Kind;
-		NullCheck(L_56);
-		VirtualActionInvoker1< int32_t >::Invoke(16, L_56, L_58);
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:151>
-		BinaryWriter_tFB94D67EDFA3F6A34744A163BDABE287FDF2ED1E* L_59 = ___0_writer;
-		CommanderDTO_tA3908D353E851704B198E61840E6D1D47D2BA6E6 L_60 = V_3;
-		bool L_61 = L_60.___SecondaryUnlocked;
-		NullCheck(L_59);
-		VirtualActionInvoker1< bool >::Invoke(7, L_59, L_61);
-		int32_t L_62 = V_2;
-		V_2 = ((int32_t)il2cpp_codegen_add(L_62, 1));
+		int32_t L_56 = V_2;
+		V_2 = ((int32_t)il2cpp_codegen_add(L_56, 1));
 	}
 
-IL_0110:
+IL_00f3:
 	{
 		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:141>
-		int32_t L_63 = V_2;
-		CommanderDTOU5BU5D_t138EC9BB2D476998F5E0E7D3A19D1F6CE9228DD1* L_64 = V_1;
-		NullCheck(L_64);
-		if ((((int32_t)L_63) < ((int32_t)((int32_t)(((RuntimeArray*)L_64)->max_length)))))
+		int32_t L_57 = V_2;
+		CommanderDTOU5BU5D_t138EC9BB2D476998F5E0E7D3A19D1F6CE9228DD1* L_58 = V_1;
+		NullCheck(L_58);
+		if ((((int32_t)L_57) < ((int32_t)((int32_t)(((RuntimeArray*)L_58)->max_length)))))
 		{
-			goto IL_008d;
+			goto IL_008a;
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:153>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:151>
 		return;
 	}
 }
@@ -5785,6 +5773,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayerDTO_t7AF6A0F5A0C28B0B7408A558A9BE0202CC
 	PlayerDTO_t7AF6A0F5A0C28B0B7408A558A9BE0202CCAB0874 V_6;
 	memset((&V_6), 0, sizeof(V_6));
 	{
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:156>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:157>
 		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:158>
 		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:159>
 		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:160>
@@ -5794,8 +5784,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayerDTO_t7AF6A0F5A0C28B0B7408A558A9BE0202CC
 		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:164>
 		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:165>
 		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:166>
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:167>
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:168>
 		il2cpp_codegen_initobj((&V_2), sizeof(PlayerDTO_t7AF6A0F5A0C28B0B7408A558A9BE0202CCAB0874));
 		BinaryReader_t9A6D85F0FE9AE4EBB5E8D66997DFD1D84939E158* L_0 = ___0_reader;
 		NullCheck(L_0);
@@ -5839,24 +5827,26 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayerDTO_t7AF6A0F5A0C28B0B7408A558A9BE0202CC
 		Il2CppCodeGenWriteBarrier((void**)(&(&V_2)->___ShopPoolCardIds), (void*)L_15);
 		PlayerDTO_t7AF6A0F5A0C28B0B7408A558A9BE0202CCAB0874 L_16 = V_2;
 		V_0 = L_16;
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:170>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:168>
 		BinaryReader_t9A6D85F0FE9AE4EBB5E8D66997DFD1D84939E158* L_17 = ___0_reader;
 		NullCheck(L_17);
 		int32_t L_18;
 		L_18 = VirtualFuncInvoker0< int32_t >::Invoke(15, L_17);
 		V_1 = L_18;
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:171>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:169>
 		int32_t L_19 = V_1;
 		CommanderDTOU5BU5D_t138EC9BB2D476998F5E0E7D3A19D1F6CE9228DD1* L_20 = (CommanderDTOU5BU5D_t138EC9BB2D476998F5E0E7D3A19D1F6CE9228DD1*)(CommanderDTOU5BU5D_t138EC9BB2D476998F5E0E7D3A19D1F6CE9228DD1*)SZArrayNew(CommanderDTOU5BU5D_t138EC9BB2D476998F5E0E7D3A19D1F6CE9228DD1_il2cpp_TypeInfo_var, (uint32_t)L_19);
 		(&V_0)->___Commanders = L_20;
 		Il2CppCodeGenWriteBarrier((void**)(&(&V_0)->___Commanders), (void*)L_20);
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:172>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:170>
 		V_3 = 0;
 		goto IL_0102;
 	}
 
 IL_008b:
 	{
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:172>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:173>
 		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:174>
 		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:175>
 		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:176>
@@ -5865,8 +5855,6 @@ IL_008b:
 		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:179>
 		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:180>
 		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:181>
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:182>
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:183>
 		PlayerDTO_t7AF6A0F5A0C28B0B7408A558A9BE0202CCAB0874 L_21 = V_0;
 		CommanderDTOU5BU5D_t138EC9BB2D476998F5E0E7D3A19D1F6CE9228DD1* L_22 = L_21.___Commanders;
 		int32_t L_23 = V_3;
@@ -5909,14 +5897,14 @@ IL_008b:
 		CommanderDTO_tA3908D353E851704B198E61840E6D1D47D2BA6E6 L_38 = V_4;
 		NullCheck(L_22);
 		(L_22)->SetAt(static_cast<il2cpp_array_size_t>(L_23), (CommanderDTO_tA3908D353E851704B198E61840E6D1D47D2BA6E6)L_38);
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:172>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:170>
 		int32_t L_39 = V_3;
 		V_3 = ((int32_t)il2cpp_codegen_add(L_39, 1));
 	}
 
 IL_0102:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:172>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:170>
 		int32_t L_40 = V_3;
 		int32_t L_41 = V_1;
 		V_5 = (bool)((((int32_t)L_40) < ((int32_t)L_41))? 1 : 0);
@@ -5927,7 +5915,7 @@ IL_0102:
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:186>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:184>
 		PlayerDTO_t7AF6A0F5A0C28B0B7408A558A9BE0202CCAB0874 L_43 = V_0;
 		V_6 = L_43;
 		goto IL_0114;
@@ -5935,7 +5923,7 @@ IL_0102:
 
 IL_0114:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:187>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:185>
 		PlayerDTO_t7AF6A0F5A0C28B0B7408A558A9BE0202CCAB0874 L_44 = V_6;
 		return L_44;
 	}
@@ -5953,7 +5941,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkSerializer_WriteIntArray_mE71735D
 	int32_t V_1 = 0;
 	int32_t V_2 = 0;
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:192>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:190>
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_0 = ___1_values;
 		if (L_0)
 		{
@@ -5968,13 +5956,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkSerializer_WriteIntArray_mE71735D
 
 IL_000b:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:193>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:191>
 		BinaryWriter_tFB94D67EDFA3F6A34744A163BDABE287FDF2ED1E* L_2 = ___0_writer;
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_3 = ___1_values;
 		NullCheck(L_3);
 		NullCheck(L_2);
 		VirtualActionInvoker1< int32_t >::Invoke(16, L_2, ((int32_t)(((RuntimeArray*)L_3)->max_length)));
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:194>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:192>
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_4 = ___1_values;
 		V_0 = L_4;
 		V_1 = 0;
@@ -5983,14 +5971,14 @@ IL_000b:
 
 IL_001c:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:194>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:192>
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_5 = V_0;
 		int32_t L_6 = V_1;
 		NullCheck(L_5);
 		int32_t L_7 = L_6;
 		int32_t L_8 = (L_5)->GetAt(static_cast<il2cpp_array_size_t>(L_7));
 		V_2 = L_8;
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:196>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:194>
 		BinaryWriter_tFB94D67EDFA3F6A34744A163BDABE287FDF2ED1E* L_9 = ___0_writer;
 		int32_t L_10 = V_2;
 		NullCheck(L_9);
@@ -6001,7 +5989,7 @@ IL_001c:
 
 IL_002e:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:194>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:192>
 		int32_t L_12 = V_1;
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_13 = V_0;
 		NullCheck(L_13);
@@ -6011,7 +5999,7 @@ IL_002e:
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:198>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:196>
 		return;
 	}
 }
@@ -6030,24 +6018,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Int32U5BU5D_t19C97395396A72ECAF310612F0760F16
 	bool V_3 = false;
 	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* V_4 = NULL;
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:203>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:201>
 		BinaryReader_t9A6D85F0FE9AE4EBB5E8D66997DFD1D84939E158* L_0 = ___0_reader;
 		NullCheck(L_0);
 		int32_t L_1;
 		L_1 = VirtualFuncInvoker0< int32_t >::Invoke(15, L_0);
 		V_0 = L_1;
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:204>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:202>
 		int32_t L_2 = V_0;
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_3 = (Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C*)(Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C*)SZArrayNew(Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C_il2cpp_TypeInfo_var, (uint32_t)L_2);
 		V_1 = L_3;
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:205>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:203>
 		V_2 = 0;
 		goto IL_0022;
 	}
 
 IL_0013:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:207>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:205>
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_4 = V_1;
 		int32_t L_5 = V_2;
 		BinaryReader_t9A6D85F0FE9AE4EBB5E8D66997DFD1D84939E158* L_6 = ___0_reader;
@@ -6056,14 +6044,14 @@ IL_0013:
 		L_7 = VirtualFuncInvoker0< int32_t >::Invoke(15, L_6);
 		NullCheck(L_4);
 		(L_4)->SetAt(static_cast<il2cpp_array_size_t>(L_5), (int32_t)L_7);
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:205>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:203>
 		int32_t L_8 = V_2;
 		V_2 = ((int32_t)il2cpp_codegen_add(L_8, 1));
 	}
 
 IL_0022:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:205>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:203>
 		int32_t L_9 = V_2;
 		int32_t L_10 = V_0;
 		V_3 = (bool)((((int32_t)L_9) < ((int32_t)L_10))? 1 : 0);
@@ -6074,7 +6062,7 @@ IL_0022:
 		}
 	}
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:210>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:208>
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_12 = V_1;
 		V_4 = L_12;
 		goto IL_002f;
@@ -6082,7 +6070,7 @@ IL_0022:
 
 IL_002f:
 	{
-		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:211>
+		//<source_info:C:/Users/chiar/Documents/MyProjects/Summer Game Jam 2026/SGJ2026/Assets/Scripts/Network/NetworkSerializer.cs:209>
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_13 = V_4;
 		return L_13;
 	}
