@@ -19,6 +19,7 @@ namespace FourE.Cards.Editor
         private static readonly IReadOnlyDictionary<string, string> ArtworkAliases =
             new Dictionary<string, string>(StringComparer.Ordinal)
             {
+                { "compito", "compitoacasa" },
                 { "minacciare", "minaccia" },
                 { "studiare", "studio" }
             };
