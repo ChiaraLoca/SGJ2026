@@ -33,7 +33,11 @@ namespace FourE.Network
                 },
                 WinnerActorNumber = -1,
                 LastPlayedCardId = CardRegistry.NoCard,
-                LastPlayedActorNumber = -1
+                LastPlayedActorNumber = -1,
+                LastPlayedTargetActorNumbers = System.Array.Empty<int>(),
+                LastPlayedTargetCommanderIndices = System.Array.Empty<int>(),
+                LastDrawActorNumber = -1,
+                LastDrawnCardIds = System.Array.Empty<int>()
             };
         }
 

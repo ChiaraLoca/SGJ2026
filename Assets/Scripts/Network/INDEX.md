@@ -11,7 +11,7 @@ Torna all'[indice generale](../INDEX.md).
 | [PhotonEventCodes.cs](PhotonEventCodes.cs) | `static PhotonEventCodes` | Costanti `byte` dei codici evento: intent bassi (`PlayCard`…`FinishShop`), broadcast alti (`StateSync`, `GameStart`, `GameOver`) |
 | [CardRegistry.cs](CardRegistry.cs) | `CardRegistry` | Mappa stabile id↔`CardDataSO` (gli SO non viaggiano in rete). `Build(content)`, `GetId()`, `GetCard()`, `ToIds()`, `NoCard = -1` |
 | [GameIntent.cs](GameIntent.cs) | `enum IntentType` + struct `GameIntent` | Comando serializzabile (Command). Factory: `PlayCard()`, `BuyCard()`, `PlayVerifica()`, `EndTurn()`, `FinishShop()`. Bersagli come coppie (attore, indice comandante) |
-| [GameStateDTO.cs](GameStateDTO.cs) | struct `GameStateDTO`, `PlayerDTO`, `CommanderDTO` | Snapshot completo e serializzabile: fase, round, attore attivo, azioni rimanenti,conteggi mazzo/scarti, giocatori, esito e ultima carta giocata. `CommanderDTO` include `Kind` (identità, per risolvere nome/ritratto in UI) e `SecondaryUnlocked` |
+| [GameStateDTO.cs](GameStateDTO.cs) | struct `GameStateDTO`, `PlayerDTO`, `CommanderDTO` | Snapshot completo e serializzabile: fase, round, attore attivo, azioni, conteggi mazzo/scarti, giocatori, esito, ultima carta con bersagli e ultima pescata con id carte. `CommanderDTO` include `Kind` e `SecondaryUnlocked` |
 | [INetworkTransport.cs](INetworkTransport.cs) | interfaccia `INetworkTransport` | Seam di rete: `IsHost`, `LocalActorNumber`, `SendIntent()`, `BroadcastState()`, eventi `IntentReceived`/`StateReceived`/`ClientJoined` (resync late-join) |
 | [LocalLoopbackTransport.cs](LocalLoopbackTransport.cs) | `LocalLoopbackTransport` | Implementazione offline a giro chiuso (host locale, single-actor). Per test unitari e riferimento |
 | [HotseatTransport.cs](HotseatTransport.cs) | `HotseatTransport` | Hotseat locale: `LocalActorNumber` si aggiorna a `state.ActiveActorNumber` ad ogni broadcast, la UI segue il giocatore attivo |
@@ -21,7 +21,7 @@ Torna all'[indice generale](../INDEX.md).
 | [OnlineLauncher.cs](OnlineLauncher.cs) | `OnlineLauncher : MonoBehaviour` | Lato menu: connessione cloud + accoppiamento per codice stanza (`HostRoom`/`JoinExistingRoom`). A 2 giocatori l'host fa `LoadLevel("CommanderSelectUI")` (sincronizzata). Compila sempre; logica PUN2 sotto `#if`. Eventi `StatusChanged`/`Failed` |
 | [GameStateDtoBuilder.cs](GameStateDtoBuilder.cs) | `static GameStateDtoBuilder` | `Build(state, registry)`: costruisce il `GameStateDTO` dallo stato vivo |
 | [GameStateSyncedEvent.cs](GameStateSyncedEvent.cs) | struct `GameStateSyncedEvent` | Evento EventBus consumato dalla UI: `State`, `LocalActorNumber` |
-| [NetworkGameManager.cs](NetworkGameManager.cs) | `NetworkGameManager : MonoBehaviour` | Orchestratore. Applica le selezioni comandanti di `SessionConfig` prima di avviare il match. API UI `Submit*()`; host: `ProcessIntent()` (guard `IsHost`) → manager Core → `BroadcastState()`. Registra nei DTO carta e attore dell'ultima giocata per entrambi i client. `DefaultExecutionOrder(100)` |
+| [NetworkGameManager.cs](NetworkGameManager.cs) | `NetworkGameManager : MonoBehaviour` | Orchestratore. Applica le selezioni comandanti di `SessionConfig`, espone le API UI `Submit*()` e, solo host, processa intent e broadcast. Registra nel DTO ultima carta/bersagli e ultima pescata per gli effetti visuali sincronizzati. `DefaultExecutionOrder(100)` |
 
 ## Note
 

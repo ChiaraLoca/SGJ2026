@@ -155,6 +155,10 @@ MonoBehaviour:
   _portrait: {fileID: 79102664}
   _debuffIndicator: {fileID: 0}
   _selectButton: {fileID: 491161401}
+  _longPressDuration: 0.35
+  _unlockPulseDuration: 0.8
+  _unlockPulseScale: 1.18
+  _unlockPulseColor: {r: 1, g: 0.86, b: 0.2, a: 1}
 --- !u!114 &79102664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -529,6 +533,10 @@ MonoBehaviour:
   _portrait: {fileID: 284201119}
   _debuffIndicator: {fileID: 0}
   _selectButton: {fileID: 895285032}
+  _longPressDuration: 0.35
+  _unlockPulseDuration: 0.8
+  _unlockPulseScale: 1.18
+  _unlockPulseColor: {r: 1, g: 0.86, b: 0.2, a: 1}
 --- !u!114 &284201119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -917,6 +925,10 @@ MonoBehaviour:
   _portrait: {fileID: 464379197}
   _debuffIndicator: {fileID: 0}
   _selectButton: {fileID: 229434495}
+  _longPressDuration: 0.35
+  _unlockPulseDuration: 0.8
+  _unlockPulseScale: 1.18
+  _unlockPulseColor: {r: 1, g: 0.86, b: 0.2, a: 1}
 --- !u!114 &464379197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2525,6 +2537,10 @@ MonoBehaviour:
   _portrait: {fileID: 1188403285}
   _debuffIndicator: {fileID: 0}
   _selectButton: {fileID: 1955834013}
+  _longPressDuration: 0.35
+  _unlockPulseDuration: 0.8
+  _unlockPulseScale: 1.18
+  _unlockPulseColor: {r: 1, g: 0.86, b: 0.2, a: 1}
 --- !u!114 &1188403285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3029,8 +3045,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 10.41, y: 954}
-  m_SizeDelta: {x: -305.82, y: 639.2178}
+  m_AnchoredPosition: {x: -17.262, y: 908.2457}
+  m_SizeDelta: {x: -141.54, y: 730.4037}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1495030345
 MonoBehaviour:
@@ -3049,7 +3065,7 @@ MonoBehaviour:
     m_Right: 10
     m_Top: 10
     m_Bottom: 10
-  m_ChildAlignment: 3
+  m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 170, y: 250}
@@ -3403,11 +3419,16 @@ MonoBehaviour:
   _content: {fileID: 11400000, guid: ab94d01a7c5063d4ba727a5937db6885, type: 2}
   _cardPrefab: {fileID: 8629337302845329361, guid: f085530fce3e3b545b46baf791154aea, type: 3}
   _commanderAbilityPopupPrefab: {fileID: 1004, guid: b5c6d7e8f9014a23b456c789d012e345, type: 3}
+  _targetHitEffectPrefab: {fileID: 1003, guid: e4c8c9b3a8e9430ca30dd5466ac65b4b, type: 3}
   _cardPreviewScale: 2.4
   _playedCardScale: 2.4
   _playedCardMoveDuration: 0.4
   _playedCardHoldDuration: 2
   _playedCardFadeDuration: 0.35
+  _deckPileAnchor: {fileID: 2301000001}
+  _drawCardStartScale: 0.4
+  _drawCardMoveDuration: 0.45
+  _drawCardArcHeight: 90
   _handContainer: {fileID: 524391578}
   _shopContainer: {fileID: 1495030344}
   _handCardsBeforeOverlap: 4

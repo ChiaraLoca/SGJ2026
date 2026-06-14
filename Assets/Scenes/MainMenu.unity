@@ -787,7 +787,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 7, y: -205}
+  m_AnchoredPosition: {x: 7, y: -66}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &434766988
@@ -855,7 +855,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 7.0000005, y: -204.99992}
+  m_AnchoredPosition: {x: 7, y: -65.99986}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &602022146
@@ -1587,7 +1587,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5b2072af5dced541a3829c0ff0f6137, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FourE.UI.SafeAreaController
-  _panel: {fileID: 381281128}
 --- !u!114 &1343188512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1968,7 +1967,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.85, b: 0.3, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

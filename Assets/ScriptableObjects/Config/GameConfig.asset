@@ -19,6 +19,9 @@ MonoBehaviour:
   _shopPoolSize: 8
   _shopPurchasesPerRound: 2
   _shopRefreshSlots: 3
+  _shopTierCSlots: 3
+  _shopTierBSlots: 2
+  _shopTierASlots: 1
   _tierCostC: 1
   _tierCostB: 3
   _tierCostA: 10

@@ -108,5 +108,20 @@ namespace FourE.Network
 
         /// <summary>Attore che ha giocato l'ultima carta.</summary>
         public int LastPlayedActorNumber;
+
+        /// <summary>Attori proprietari dei comandanti colpiti dall'ultima carta.</summary>
+        public int[] LastPlayedTargetActorNumbers;
+
+        /// <summary>Indici dei comandanti colpiti, paralleli a <see cref="LastPlayedTargetActorNumbers"/>.</summary>
+        public int[] LastPlayedTargetCommanderIndices;
+
+        /// <summary>Numero progressivo dell'ultima pescata, usato per attivare la UI una sola volta.</summary>
+        public int DrawSequence;
+
+        /// <summary>Attore che ha effettuato l'ultima pescata.</summary>
+        public int LastDrawActorNumber;
+
+        /// <summary>Id registry delle carte ottenute nell'ultima pescata.</summary>
+        public int[] LastDrawnCardIds;
     }
 }
