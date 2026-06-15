@@ -218,7 +218,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Selezione comandanti
+  m_Text: Selezione secchioni
 --- !u!1 &419337281
 GameObject:
   m_ObjectHideFlags: 0
@@ -1071,7 +1071,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Nessun comandante scelto
+  m_Text: Nessun secchione scelto
 --- !u!1 &906848361
 GameObject:
   m_ObjectHideFlags: 0
@@ -1676,7 +1676,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u2014 Comandante \u2014"
+  m_Text: "\u2014 Secchione \u2014"
 --- !u!1 &1363955933
 GameObject:
   m_ObjectHideFlags: 0

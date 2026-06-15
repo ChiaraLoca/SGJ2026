@@ -24,4 +24,4 @@ MonoBehaviour:
   _portrait: {fileID: -7342247868100190475, guid: f2def18ea9d43004db121192733aa725, type: 3}
   _baseAbilityDescription: Alla fine del tuo turno, +2 Note ad Andrew se hai almeno un'azione non usata.
   _unlockConditionDescription: Gioca 6 carte in un singolo tuo turno.
-  _secondaryAbilityDescription: Alla fine del tuo turno, +2 Note anche all'altro comandante se hai almeno un'azione non usata.
+  _secondaryAbilityDescription: Alla fine del tuo turno, +2 Note anche all'altro secchione se hai almeno un'azione non usata.

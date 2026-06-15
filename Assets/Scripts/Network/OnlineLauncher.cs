@@ -114,7 +114,7 @@ namespace FourE.Network
         {
             if (PhotonNetwork.IsMasterClient && PhotonNetwork.CurrentRoom.PlayerCount >= MaxPlayersPerRoom)
             {
-                Report("Avversario trovato. Selezione comandanti…");
+                Report("Avversario trovato. Selezione secchioni…");
                 PhotonNetwork.LoadLevel(_selectionSceneName);
             }
         }

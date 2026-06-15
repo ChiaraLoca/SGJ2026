@@ -28,8 +28,8 @@ namespace FourE.Network
                 CanPlayVerificaThisTurn = state.Turns?.CanPlayVerificaThisTurn ?? false,
                 Players = new[]
                 {
-                    BuildPlayer(state.Player0, registry),
-                    BuildPlayer(state.Player1, registry)
+                    BuildPlayer(state, state.Player0, registry),
+                    BuildPlayer(state, state.Player1, registry)
                 },
                 WinnerActorNumber = -1,
                 LastPlayedCardId = CardRegistry.NoCard,
@@ -47,7 +47,10 @@ namespace FourE.Network
         /// <param name="player">Stato del giocatore.</param>
         /// <param name="registry">Registry per gli id carta.</param>
         /// <returns>DTO del giocatore.</returns>
-        private static PlayerDTO BuildPlayer(PlayerState player, CardRegistry registry)
+        private static PlayerDTO BuildPlayer(
+            GameStateManager state,
+            PlayerState player,
+            CardRegistry registry)
         {
             CommanderDTO[] commanders = new CommanderDTO[player.Commanders.Length];
             for (int i = 0; i < player.Commanders.Length; i++)
@@ -65,6 +68,7 @@ namespace FourE.Network
                 DeckCount = player.Deck.Count,
                 DiscardCount = player.DiscardPile.Count,
                 ShopPoolCardIds = registry.ToIds(player.ShopPool),
+                ShopFinished = state.Phases?.HasFinishedShop(player) ?? false,
                 Commanders = commanders
             };
         }

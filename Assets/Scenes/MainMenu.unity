@@ -1854,6 +1854,9 @@ MonoBehaviour:
   _roomPanel: {fileID: 602022144}
   _sameDeviceButton: {fileID: 196573425}
   _onlineButton: {fileID: 961865260}
+  _rulesButton: {fileID: 0}
+  _rulebookPopup: {fileID: 0}
+  _rulebookPopupPrefab: {fileID: 3691674687026771767, guid: b104c65977a2483489a9ce94fc41ceef, type: 3}
   _createRoomButton: {fileID: 1499302771}
   _joinRoomButton: {fileID: 1155385172}
   _backButton: {fileID: 1025385299}
@@ -2279,7 +2282,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Stesso telefono
+  m_Text: Giocatore Singolo
 --- !u!222 &1986569902
 CanvasRenderer:
   m_ObjectHideFlags: 0

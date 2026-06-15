@@ -7,7 +7,7 @@ using FourE.Network;
 namespace FourE.UI
 {
     /// <summary>
-    /// Menu iniziale: sceglie tra partita sullo stesso dispositivo (hotseat) e partita online
+    /// Menu iniziale: sceglie tra partita contro il computer e partita online
     /// per codice stanza. Bridge puro UI↔rete: imposta <see cref="SessionConfig"/> e delega
     /// connessione/accoppiamento a <see cref="OnlineLauncher"/>, senza logica di gioco.
     /// </summary>
@@ -27,6 +27,9 @@ namespace FourE.UI
         [Header("Scelta modalità")]
         [SerializeField] private Button _sameDeviceButton;
         [SerializeField] private Button _onlineButton;
+        [SerializeField] private Button _rulesButton;
+        [SerializeField] private RulebookPopup _rulebookPopup;
+        [SerializeField] private RulebookPopup _rulebookPopupPrefab;
 
         [Header("Stanza online")]
         [SerializeField] private Button _createRoomButton;
@@ -47,8 +50,10 @@ namespace FourE.UI
         /// </summary>
         private void Start()
         {
+            EnsureRulebookUi();
             _sameDeviceButton?.onClick.AddListener(OnSameDeviceClicked);
             _onlineButton?.onClick.AddListener(OnOnlineClicked);
+            _rulesButton?.onClick.AddListener(OnRulesClicked);
             _createRoomButton?.onClick.AddListener(OnCreateRoomClicked);
             _joinRoomButton?.onClick.AddListener(OnJoinRoomClicked);
             _backButton?.onClick.AddListener(ShowModePanel);
@@ -62,9 +67,42 @@ namespace FourE.UI
             ShowModePanel();
         }
 
+        /// <summary>
+        /// Crea i controlli del regolamento dai prefab e template serializzati quando non sono gia in scena.
+        /// </summary>
+        private void EnsureRulebookUi()
+        {
+            if (_rulesButton == null && _onlineButton != null && _modePanel != null)
+            {
+                _rulesButton = Instantiate(_onlineButton, _modePanel.transform);
+                _rulesButton.name = "RulesButton";
+                Text label = _rulesButton.GetComponentInChildren<Text>(true);
+                if (label != null)
+                {
+                    label.text = "Regolamento";
+                }
+            }
+
+            if (_rulebookPopup == null && _rulebookPopupPrefab != null && _modePanel != null)
+            {
+                Transform popupParent = _modePanel.transform.parent;
+                _rulebookPopup = Instantiate(_rulebookPopupPrefab, popupParent);
+                _rulebookPopup.name = "RulebookPopup";
+                _rulebookPopup.gameObject.SetActive(false);
+                _rulebookPopup.transform.SetAsLastSibling();
+            }
+        }
+
         /// <summary>Disiscrive dagli eventi del launcher al teardown.</summary>
         private void OnDestroy()
         {
+            _sameDeviceButton?.onClick.RemoveListener(OnSameDeviceClicked);
+            _onlineButton?.onClick.RemoveListener(OnOnlineClicked);
+            _rulesButton?.onClick.RemoveListener(OnRulesClicked);
+            _createRoomButton?.onClick.RemoveListener(OnCreateRoomClicked);
+            _joinRoomButton?.onClick.RemoveListener(OnJoinRoomClicked);
+            _backButton?.onClick.RemoveListener(ShowModePanel);
+
             if (_launcher != null)
             {
                 _launcher.StatusChanged -= OnStatusChanged;
@@ -81,11 +119,11 @@ namespace FourE.UI
         }
 
         /// <summary>
-        /// Avvia una partita hotseat: prima la selezione comandanti, poi la scena di gioco.
+        /// Avvia una partita PvE: il giocatore sceglie i propri secchioni e il computer riceve una coppia casuale.
         /// </summary>
         private void OnSameDeviceClicked()
         {
-            SessionConfig.Mode = NetworkMode.Hotseat;
+            SessionConfig.Mode = NetworkMode.Pve;
             SessionConfig.RoomCode = string.Empty;
             // Azzera eventuali selezioni precedenti: si rifanno nella schermata di selezione.
             SessionConfig.Player0Commanders = null;
@@ -105,6 +143,12 @@ namespace FourE.UI
             }
 
             SetStatus(string.Empty);
+        }
+
+        /// <summary>Apre il popup paginato del regolamento.</summary>
+        private void OnRulesClicked()
+        {
+            _rulebookPopup?.Show();
         }
 
         /// <summary>Crea una stanza con un codice generato e attende l'avversario.</summary>

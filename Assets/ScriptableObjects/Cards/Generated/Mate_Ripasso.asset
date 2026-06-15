@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Mate_Ripasso
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
   _cardName: Ripasso
-  _description: +1 Voto per ogni carta nel cimitero.
+  _description: +1 Voto per ogni carta negli scarti.
   _cardType: 0
   _affinity: 1
   _tags: 18

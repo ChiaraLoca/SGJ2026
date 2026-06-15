@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Shop_Sabotaggio
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
   _cardName: Sabotaggio
-  _description: -1 Voto per ogni carta Pratica nel cimitero avversario.
+  _description: -1 Voto per ogni carta Pratica negli scarti avversari.
   _cardType: 0
   _affinity: 2
   _tags: 1

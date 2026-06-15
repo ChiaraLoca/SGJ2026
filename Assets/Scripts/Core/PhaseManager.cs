@@ -111,6 +111,16 @@ namespace FourE.Core
         }
 
         /// <summary>
+        /// Verifica se il giocatore ha già confermato la conclusione dello shop corrente.
+        /// </summary>
+        /// <param name="player">Giocatore da controllare.</param>
+        /// <returns>True se la sua conferma è stata registrata.</returns>
+        public bool HasFinishedShop(PlayerState player)
+        {
+            return player != null && _shopFinished.Contains(player.ActorNumber);
+        }
+
+        /// <summary>
         /// Entra nella Fase SHOP azzerando acquisti e marcatori di completamento.
         /// </summary>
         private void EnterShop()

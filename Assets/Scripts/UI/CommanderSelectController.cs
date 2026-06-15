@@ -16,7 +16,7 @@ namespace FourE.UI
     /// <summary>
     /// Schermata di selezione comandanti. Ogni giocatore sceglie, in modo indipendente,
     /// <see cref="GameConstants.CommandersPerPlayer"/> comandanti distinti.
-    /// In <b>hotseat</b> i due giocatori scelgono a turno sullo stesso dispositivo.
+    /// In <b>PvE</b> il giocatore sceglie i propri secchioni e il computer ne riceve due casuali.
     /// In <b>online</b> ciascuno sceglie sul proprio dispositivo: la scelta viaggia come Custom
     /// Property Photon e l'host, ricevute entrambe, le salva in <see cref="SessionConfig"/> e
     /// carica la scena di gioco (sincronizzata sull'ospite). Bridge puro UI↔sessione.
@@ -66,6 +66,7 @@ namespace FourE.UI
         private readonly List<CommanderKind> _currentPicks = new();
         private int _currentPlayerStep;
         private bool _online;
+        private bool _pve;
         private bool _awaitingOthers;
         private CommanderKind _inspectedKind;
         private bool _hasInspectedKind;
@@ -76,6 +77,7 @@ namespace FourE.UI
         private void Start()
         {
             _online = SessionConfig.Mode == NetworkMode.Online;
+            _pve = SessionConfig.Mode == NetworkMode.Pve;
 
             if (_detailPanel != null) _detailPanel.SetActive(false);
             if (_selectCommanderButton != null) _selectCommanderButton.onClick.AddListener(OnSelectInspectedClicked);
@@ -254,7 +256,7 @@ namespace FourE.UI
             if (_selectionLabel != null)
             {
                 _selectionLabel.text = _currentPicks.Count == 0
-                    ? "Nessun comandante scelto"
+                    ? "Nessun secchione scelto"
                     : $"Scelti: {DescribePicks()}";
             }
 
@@ -305,7 +307,7 @@ namespace FourE.UI
         }
 
         /// <summary>
-        /// Conferma le scelte: in hotseat passa al giocatore successivo o avvia la partita;
+        /// Conferma le scelte: in PvE genera i secchioni del computer, in hotseat passa al giocatore successivo;
         /// in online pubblica la scelta e attende l'avversario.
         /// </summary>
         private void OnConfirmClicked()
@@ -319,6 +321,10 @@ namespace FourE.UI
             {
                 ConfirmOnline();
             }
+            else if (_pve)
+            {
+                ConfirmPve();
+            }
             else
             {
                 ConfirmHotseat();
@@ -326,7 +332,7 @@ namespace FourE.UI
         }
 
         // =====================================================================
-        // Hotseat
+        // Locale
         // =====================================================================
 
         /// <summary>
@@ -340,9 +346,54 @@ namespace FourE.UI
 
             if (_titleLabel != null)
             {
-                int playerNumber = playerStep + GameConstants.IndexToCountOffset;
-                _titleLabel.text = $"Giocatore {playerNumber}: scegli {GameConstants.CommandersPerPlayer} comandanti";
+                _titleLabel.text = _pve
+                    ? $"Scegli i tuoi {GameConstants.CommandersPerPlayer} secchioni"
+                    : $"Giocatore {playerStep + GameConstants.IndexToCountOffset}: scegli "
+                      + $"{GameConstants.CommandersPerPlayer} secchioni";
             }
+        }
+
+        /// <summary>
+        /// Salva la scelta umana, sorteggia due secchioni distinti per il computer e avvia la partita.
+        /// </summary>
+        private void ConfirmPve()
+        {
+            SessionConfig.Player0Commanders = _currentPicks.ToArray();
+            SessionConfig.Player1Commanders = DrawComputerCommanders();
+            SceneManager.LoadScene(_gameSceneName);
+        }
+
+        /// <summary>
+        /// Estrae dal catalogo due tipi di secchione distinti per l'avversario PvE.
+        /// </summary>
+        /// <returns>Coppia casuale di tipi, oppure null se il catalogo non è sufficiente.</returns>
+        private CommanderKind[] DrawComputerCommanders()
+        {
+            List<CommanderKind> available = new();
+            foreach (CommanderDataSO commander in _content.CommanderCatalog)
+            {
+                if (commander != null && !available.Contains(commander.Kind))
+                {
+                    available.Add(commander.Kind);
+                }
+            }
+
+            if (available.Count < GameConstants.CommandersPerPlayer)
+            {
+                return null;
+            }
+
+            for (int i = available.Count - 1; i > 0; i--)
+            {
+                int swapIndex = Random.Range(0, i + GameConstants.IndexToCountOffset);
+                (available[i], available[swapIndex]) = (available[swapIndex], available[i]);
+            }
+
+            return new[]
+            {
+                available[GameConstants.FirstCommanderIndex],
+                available[GameConstants.SecondCommanderIndex]
+            };
         }
 
         /// <summary>
@@ -392,7 +443,7 @@ namespace FourE.UI
             ResetCurrentPicks();
             if (_titleLabel != null)
             {
-                _titleLabel.text = $"Scegli i tuoi {GameConstants.CommandersPerPlayer} comandanti";
+                _titleLabel.text = $"Scegli i tuoi {GameConstants.CommandersPerPlayer} secchioni";
             }
 
 #if PHOTON_UNITY_NETWORKING

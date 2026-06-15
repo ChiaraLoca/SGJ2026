@@ -21,9 +21,13 @@ namespace FourE.Network
     {
         [Tooltip("Stato di gioco autoritativo da cui leggere ed eseguire gli intent.")]
         [SerializeField] private GameStateManager _gameState;
+        [Tooltip("Tempo lasciato alla presentazione completa di una carta prima della prossima decisione PvE.")]
+        [SerializeField] private float _computerActionDelaySeconds = 3f;
 
         private INetworkTransport _transport;
         private CardRegistry _registry;
+        private PveOpponentController _pveOpponent;
+        private Coroutine _computerActionRoutine;
         private bool _gameOver;
         private int _winnerActorNumber = GameOverEvent.NoWinner;
         private bool _isDraw;
@@ -87,11 +91,13 @@ namespace FourE.Network
 #if PHOTON_UNITY_NETWORKING
                 return new PhotonTransport();
 #else
-                Debug.LogWarning("Online mode requested but PUN2 is not installed; falling back to hotseat.");
+                Debug.LogWarning("Online mode requested but PUN2 is not installed; falling back to local mode.");
 #endif
             }
 
-            return new HotseatTransport(GameConstants.FirstCommanderIndex);
+            return SessionConfig.Mode == NetworkMode.Pve
+                ? new LocalLoopbackTransport(GameConstants.FirstCommanderIndex)
+                : new HotseatTransport(GameConstants.FirstCommanderIndex);
         }
 
         /// <summary>
@@ -107,6 +113,14 @@ namespace FourE.Network
                     SessionConfig.Player0Commanders,
                     SessionConfig.Player1Commanders);
                 _gameState.StartMatch();
+                if (SessionConfig.Mode == NetworkMode.Pve)
+                {
+                    _pveOpponent = new PveOpponentController(
+                        _gameState,
+                        _registry,
+                        new System.Random());
+                }
+
                 BroadcastCurrentState();
                 return;
             }
@@ -160,6 +174,12 @@ namespace FourE.Network
             EventBus.Unsubscribe<CardPlayedEvent>(OnCardPlayed);
             EventBus.Unsubscribe<VerificaPlayedEvent>(OnVerificaPlayed);
             EventBus.Unsubscribe<CardsDrawnEvent>(OnCardsDrawn);
+
+            if (_computerActionRoutine != null)
+            {
+                StopCoroutine(_computerActionRoutine);
+                _computerActionRoutine = null;
+            }
         }
 
         /// <summary>
@@ -316,6 +336,39 @@ namespace FourE.Network
             dto.LastDrawActorNumber = _lastDrawActorNumber;
             dto.LastDrawnCardIds = _lastDrawnCardIds;
             _transport.BroadcastState(dto);
+            ScheduleComputerAction();
+        }
+
+        /// <summary>
+        /// Accoda una decisione PvE quando il computer deve giocare o completare lo shop.
+        /// </summary>
+        private void ScheduleComputerAction()
+        {
+            if (_pveOpponent == null
+                || _gameOver
+                || !_pveOpponent.CanAct
+                || _computerActionRoutine != null)
+            {
+                return;
+            }
+
+            _computerActionRoutine = StartCoroutine(ComputerActionRoutine());
+        }
+
+        /// <summary>
+        /// Attende il tempo di lettura UI, esegue un intent del computer e sincronizza lo stato.
+        /// </summary>
+        /// <returns>Enumeratore della coroutine.</returns>
+        private System.Collections.IEnumerator ComputerActionRoutine()
+        {
+            yield return new WaitForSecondsRealtime(_computerActionDelaySeconds);
+            _computerActionRoutine = null;
+
+            if (_pveOpponent != null && _pveOpponent.TryCreateIntent(out GameIntent intent))
+            {
+                ProcessIntent(intent);
+                BroadcastCurrentState();
+            }
         }
 
         /// <summary>
@@ -335,7 +388,13 @@ namespace FourE.Network
                 case IntentType.PlayCard:
                     _pendingTargetActorNumbers = CloneArray(intent.TargetActorNumbers);
                     _pendingTargetCommanderIndices = CloneArray(intent.TargetCommanderIndices);
-                    _gameState.Turns.TryPlayCard(player, _registry.GetCard(intent.CardId), ResolveTargets(intent));
+                    bool deferComputerTurnEnd = SessionConfig.Mode == NetworkMode.Pve
+                        && player == _gameState.Player1;
+                    _gameState.Turns.TryPlayCard(
+                        player,
+                        _registry.GetCard(intent.CardId),
+                        ResolveTargets(intent),
+                        endTurnWhenActionsExhausted: !deferComputerTurnEnd);
                     ClearPendingTargets();
                     break;
                 case IntentType.BuyCard:

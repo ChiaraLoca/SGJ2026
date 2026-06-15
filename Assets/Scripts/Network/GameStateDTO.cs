@@ -62,6 +62,9 @@ namespace FourE.Network
         /// <summary>Id delle carte disponibili nel pool shop.</summary>
         public int[] ShopPoolCardIds;
 
+        /// <summary>True se il giocatore ha già confermato la conclusione dello shop corrente.</summary>
+        public bool ShopFinished;
+
         /// <summary>Stato dei due comandanti.</summary>
         public CommanderDTO[] Commanders;
     }

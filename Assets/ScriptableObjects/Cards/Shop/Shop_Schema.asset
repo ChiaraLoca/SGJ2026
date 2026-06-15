@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Shop_Schema
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
   _cardName: Schema
-  _description: Recupera una carta dal cimitero; pesca 1.
+  _description: Recupera una carta dagli scarti; pesca 1.
   _cardType: 0
   _affinity: 2
   _tags: 36

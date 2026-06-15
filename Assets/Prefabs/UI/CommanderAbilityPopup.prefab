@@ -252,7 +252,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Comandante
+  m_Text: Secchione
 --- !u!1 &4000
 GameObject:
   m_ObjectHideFlags: 0

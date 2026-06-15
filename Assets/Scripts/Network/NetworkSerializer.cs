@@ -133,6 +133,7 @@ namespace FourE.Network
             writer.Write(player.VerificaBlocked);
             writer.Write(player.DeckCount);
             writer.Write(player.DiscardCount);
+            writer.Write(player.ShopFinished);
             WriteIntArray(writer, player.HandCardIds);
             WriteIntArray(writer, player.ShopPoolCardIds);
 
@@ -161,6 +162,7 @@ namespace FourE.Network
                 VerificaBlocked = reader.ReadBoolean(),
                 DeckCount = reader.ReadInt32(),
                 DiscardCount = reader.ReadInt32(),
+                ShopFinished = reader.ReadBoolean(),
                 HandCardIds = ReadIntArray(reader),
                 ShopPoolCardIds = ReadIntArray(reader)
             };

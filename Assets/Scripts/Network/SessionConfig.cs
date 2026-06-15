@@ -8,8 +8,11 @@ namespace FourE.Network
     /// </summary>
     public enum NetworkMode
     {
-        /// <summary>Due giocatori sullo stesso dispositivo, a turni alternati (hotseat).</summary>
+        /// <summary>Modalita legacy con due giocatori sullo stesso dispositivo.</summary>
         Hotseat,
+
+        /// <summary>Partita locale contro un avversario controllato dal computer.</summary>
+        Pve,
 
         /// <summary>Partita 1v1 online via Photon, accoppiamento per codice stanza.</summary>
         Online
@@ -21,12 +24,12 @@ namespace FourE.Network
     /// </summary>
     public static class SessionConfig
     {
-        /// <summary>Modalità di rete attiva per la prossima partita. Default: hotseat locale.</summary>
-        public static NetworkMode Mode { get; set; } = NetworkMode.Hotseat;
+        /// <summary>Modalità di rete attiva per la prossima partita. Default: PvE locale.</summary>
+        public static NetworkMode Mode { get; set; } = NetworkMode.Pve;
 
         /// <summary>
         /// Codice stanza condiviso per la modalità online: l'host lo crea, l'ospite lo digita.
-        /// Ignorato in hotseat.
+        /// Ignorato nelle modalità locali.
         /// </summary>
         public static string RoomCode { get; set; } = string.Empty;
 
@@ -43,12 +46,12 @@ namespace FourE.Network
         public static CommanderKind[] Player1Commanders { get; set; }
 
         /// <summary>
-        /// Riporta la sessione ai valori di default (hotseat, nessun codice, selezioni azzerate).
+        /// Riporta la sessione ai valori di default (PvE, nessun codice, selezioni azzerate).
         /// Utile tra una partita e l'altra.
         /// </summary>
         public static void Reset()
         {
-            Mode = NetworkMode.Hotseat;
+            Mode = NetworkMode.Pve;
             RoomCode = string.Empty;
             Player0Commanders = null;
             Player1Commanders = null;

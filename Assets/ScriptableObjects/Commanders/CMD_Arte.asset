@@ -22,6 +22,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a567398e3b594e5e95d09c74c9e83393, type: 2}
   - {fileID: 11400000, guid: 5ad080fc8ab5483d8b6e2305d72c6de9, type: 2}
   _portrait: {fileID: -1444553823311179065, guid: 4a90a9c45fbb9884084fca7aa2868945, type: 3}
-  _baseAbilityDescription: Se l'avversario gioca una carta con un tag già giocato nel turno, -1 Nota al suo comandante con più Note.
-  _unlockConditionDescription: Avere nel cimitero carte con un totale di 6 tag diversi.
-  _secondaryAbilityDescription: I debuff delle tue carte contro un comandante avversario colpiscono anche l'altro.
+  _baseAbilityDescription: Se l'avversario gioca una carta con un tag già giocato nel turno, -1 Nota al suo secchione con più Note.
+  _unlockConditionDescription: Avere negli scarti carte con un totale di 6 tag diversi.
+  _secondaryAbilityDescription: I debuff delle tue carte contro un secchione avversario colpiscono anche l'altro.

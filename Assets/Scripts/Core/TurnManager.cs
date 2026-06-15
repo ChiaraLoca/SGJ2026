@@ -169,8 +169,15 @@ namespace FourE.Core
         /// <param name="player">Giocatore che gioca la carta.</param>
         /// <param name="card">Carta da giocare.</param>
         /// <param name="selectedTargets">Comandanti scelti a runtime per i bersagli selezionabili.</param>
+        /// <param name="endTurnWhenActionsExhausted">
+        /// Se true termina automaticamente il turno quando le azioni arrivano a zero.
+        /// </param>
         /// <returns>True se la carta è stata giocata.</returns>
-        public bool TryPlayCard(PlayerState player, CardDataSO card, IReadOnlyList<CommanderState> selectedTargets = null)
+        public bool TryPlayCard(
+            PlayerState player,
+            CardDataSO card,
+            IReadOnlyList<CommanderState> selectedTargets = null,
+            bool endTurnWhenActionsExhausted = true)
         {
             if (!IsActivePlayer(player) || _state.CurrentPhase != GamePhase.Play)
             {
@@ -230,7 +237,7 @@ namespace FourE.Core
                 _resolver.Resolve(card, copyContext);
             }
 
-            if (_cardsPlayedThisTurn >= _cardsAllowedThisTurn)
+            if (endTurnWhenActionsExhausted && _cardsPlayedThisTurn >= _cardsAllowedThisTurn)
             {
                 EndTurn(player);
             }

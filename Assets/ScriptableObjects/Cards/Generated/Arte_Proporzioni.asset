@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Arte_Proporzioni
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
   _cardName: Proporzioni
-  _description: +1 Nota per ogni tag diverso tra le carte nel tuo cimitero.
+  _description: +1 Nota per ogni tag diverso tra le carte nei tuoi scarti.
   _cardType: 0
   _affinity: 0
   _tags: 6

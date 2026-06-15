@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Diritto_Obiezione
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
   _cardName: Obiezione!
-  _description: -1 Nota a un comandante; +1 Azione.
+  _description: -1 Nota a un secchione; +1 Azione.
   _cardType: 0
   _affinity: 0
   _tags: 17

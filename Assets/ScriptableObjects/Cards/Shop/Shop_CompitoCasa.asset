@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Shop_CompitoCasa
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
   _cardName: Compito a Casa
-  _description: Metti 2 carte dal cimitero in cima al mazzo.
+  _description: Metti 2 carte dagli scarti in cima al mazzo.
   _cardType: 0
   _affinity: 2
   _tags: 4

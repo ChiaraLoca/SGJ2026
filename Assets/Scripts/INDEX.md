@@ -43,8 +43,8 @@ Indice generale del codice. Ogni cartella ha un proprio `INDEX.md` (sottoindice)
 | Pubblicare/ascoltare un evento di gioco | `Events/EventBus.cs`, tipi in `Events/GameEvents.cs` |
 | Inviare un'azione dal client all'host (intent) | `Network/NetworkGameManager.cs` → `Submit*()`, `Network/GameIntent.cs` |
 | Snapshot di stato per la rete/UI (mazzo/scarti, ultima carta e bersagli, pescata, azioni, flag Verifica) | `Network/GameStateDTO.cs`; costruito da `Network/GameStateDtoBuilder.cs`, completato dal `NetworkGameManager` e serializzato da `Network/NetworkSerializer.cs` |
-| Cambiare il trasporto (hotseat ↔ Photon) | `Network/INetworkTransport.cs` (impl: `HotseatTransport.cs`, `PhotonTransport.cs`); scelta in `Network/NetworkGameManager.cs` da `Network/SessionConfig.cs` |
-| Menu iniziale (stesso telefono / online) | scena `Assets/Scenes/MainMenu.unity` + `UI/MainMenuController.cs` |
+| Cambiare modalità (PvE/hotseat/Photon) | `Network/INetworkTransport.cs`; scelta in `Network/NetworkGameManager.cs` da `Network/SessionConfig.cs`; AI in `Network/PveOpponentController.cs` |
+| Menu iniziale (Giocatore Singolo / online) | scena `Assets/Scenes/MainMenu.unity` + `UI/MainMenuController.cs` |
 | Connettersi online per codice stanza | `Network/OnlineLauncher.cs` (PUN2); App ID in `PhotonServerSettings.asset` |
 | Ridisegnare la UI sullo stato e mostrare le azioni al giocatore attivo | `UI/GameView.cs` (ascolta `GameStateSyncedEvent`) |
 | Gestire musica/ambiente/SFX evento-driven | `UI/GameAudioController.cs` |
@@ -58,8 +58,8 @@ Indice generale del codice. Ogni cartella ha un proprio `INDEX.md` (sottoindice)
 
 ```
 Scena MainMenu → MainMenuController
-  → "Stesso telefono": SessionConfig.Mode=Hotseat → scena CommanderSelectUI
-        → ogni giocatore sceglie 2 comandanti → SessionConfig.Player0/1Commanders → scena di gioco (SampleUI)
+  → "Giocatore Singolo": SessionConfig.Mode=Pve → scena CommanderSelectUI
+        → l'umano sceglie 2 secchioni, il computer ne riceve 2 casuali → scena di gioco (SampleUI)
   → "Online": OnlineLauncher crea/raggiunge stanza per codice → (2 giocatori) LoadLevel(CommanderSelectUI)
         → ognuno sceglie i propri 2 comandanti (Custom Property Photon) → host raccoglie entrambe → LoadLevel(SampleUI)
 

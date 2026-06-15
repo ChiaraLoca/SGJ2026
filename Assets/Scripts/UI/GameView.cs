@@ -146,7 +146,7 @@ namespace FourE.UI
 
             if (_finishShopButton != null)
             {
-                _finishShopButton.onClick.AddListener(_network.SubmitFinishShop);
+                _finishShopButton.onClick.AddListener(OnFinishShopClicked);
             }
         }
 
@@ -529,8 +529,21 @@ namespace FourE.UI
 
             if (_finishShopButton != null)
             {
-                _finishShopButton.interactable = phase == GamePhase.Shop;
+                _finishShopButton.interactable = phase == GamePhase.Shop && !local.ShopFinished;
             }
+        }
+
+        /// <summary>
+        /// Disabilita subito il pulsante e invia la conferma di fine shop all'host.
+        /// </summary>
+        private void OnFinishShopClicked()
+        {
+            if (_finishShopButton != null)
+            {
+                _finishShopButton.interactable = false;
+            }
+
+            _network.SubmitFinishShop();
         }
 
         /// <summary>

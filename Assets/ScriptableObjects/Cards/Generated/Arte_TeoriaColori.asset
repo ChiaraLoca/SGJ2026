@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Arte_TeoriaColori
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
   _cardName: Teoria dei Colori
-  _description: +1 Nota al primo comandante scelto; -1 Nota al secondo.
+  _description: +1 Nota al primo secchione scelto; -1 Nota al secondo.
   _cardType: 0
   _affinity: 0
   _tags: 36
