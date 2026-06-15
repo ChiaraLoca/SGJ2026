@@ -24,7 +24,7 @@
 
 | Campo                   | Valore                                        |
 |-------------------------|-----------------------------------------------|
-| **Abilità Base**        | Inizi il round con 3 carte aggiuntive         |
+| **Abilità Base**        | Inizi il round con una carta aggiuntiva       |
 | **Condizione Sblocco**  | Arrivare al 3° round                          |
 | **Abilità Secondaria**  | Per ogni carta pescata, +1 Nota               |
 
@@ -137,7 +137,7 @@
 | Metodo    | C    | 1  | Pianificazione  | +1 Nota; +1 Azione | Qualsiasi comandante |
 | Codice Civile     | B    | 1  | Pianificazione    | +2 Note per ogni azione rimanente dopo aver giocato questa carta   | Qualsiasi Comandante            |
 ---
-| Costituzione  | B    | 1  | Letteratura, Pratica | Fino all'inizio del tuo prossimo turno, annulla tutti i + Note e + Carte che  danno le carte giocate dal tuo avversario  | No target |
+| Costituzione  | B    | 1  | Letteratura, Pratica | Fino all'inizio del tuo prossimo turno, annulla tutti i + Note, + Carte e + Azioni che danno le carte giocate dal tuo avversario | No target |
 
 ---
 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Diritto_Costituzione
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
   _cardName: Costituzione
-  _description: Fino al tuo prossimo turno, annulla +Note e +Carte delle carte avversarie.
+  _description: Fino al tuo prossimo turno, annulla +Note, +Carte e +Azioni delle carte avversarie.
   _cardType: 0
   _affinity: 0
   _tags: 9

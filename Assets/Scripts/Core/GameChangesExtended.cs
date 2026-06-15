@@ -12,10 +12,13 @@ namespace FourE.Core
     /// <summary>
     /// Concede o sottrae azioni giocabili nel turno corrente.
     /// </summary>
-    public sealed class GrantActionsChange : IGameChange
+    public sealed class GrantActionsChange : IGameChange, IPositiveActionCardChange
     {
         private readonly TurnManager _turns;
         private readonly int _amount;
+
+        /// <inheritdoc/>
+        bool IPositiveActionCardChange.IsPositiveActionBenefit => _amount > 0;
 
         /// <summary>Crea la modifica di azioni extra.</summary>
         /// <param name="turns">Gestore dei turni su cui agire.</param>

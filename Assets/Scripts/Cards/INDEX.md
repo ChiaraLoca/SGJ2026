@@ -27,7 +27,7 @@ Torna all'[indice generale](../INDEX.md).
 | [Effects/CooperBuffEffectSO.cs](Effects/CooperBuffEffectSO.cs) | `CooperBuffEffectSO` | Applica +2 Note al comandante più debole; se nota ≤ 3 dopo, ritorna in mano (Test di Cooper) |
 | [Effects/WikipediaEffectSO.cs](Effects/WikipediaEffectSO.cs) | `WikipediaEffectSO` | Attiva scudo di intercettazione: la prossima carta dell'avversario viene copiata in mano |
 | [Effects/ScalingEffectSO.cs](Effects/ScalingEffectSO.cs) | `ScalingEffectSO` | Note/azioni/pesca proporzionali a un `CountSource` (Ripasso, Riassunto, Appunti, Sabotaggio) |
-| [Effects/ConstitutionProtectionEffectSO.cs](Effects/ConstitutionProtectionEffectSO.cs) | `ConstitutionProtectionEffectSO` | Protezione fino al prossimo turno contro +Note e +Carte delle carte avversarie |
+| [Effects/ConstitutionProtectionEffectSO.cs](Effects/ConstitutionProtectionEffectSO.cs) | `ConstitutionProtectionEffectSO` | Protezione fino al prossimo turno contro +Note, +Carte e +Azioni delle carte avversarie |
 | [Effects/ForceDiscardEffectSO.cs](Effects/ForceDiscardEffectSO.cs) | `ForceDiscardEffectSO` + enum `ForceDiscardMode` | Avversario scarta carte: casuali (Gossip) o per tag (Politica, Bullismo) |
 | [Effects/EqualizeNotesEffectSO.cs](Effects/EqualizeNotesEffectSO.cs) | `EqualizeNotesEffectSO` | Alza il comandante più basso verso il più alto (Tutor) |
 | [Effects/SwapNotesEffectSO.cs](Effects/SwapNotesEffectSO.cs) | `SwapNotesEffectSO` | Scambia le Note tra 2 comandanti scelti (Rappresentante di Classe) |

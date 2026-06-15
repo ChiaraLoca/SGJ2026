@@ -40,6 +40,16 @@ namespace FourE.Core
     }
 
     /// <summary>
+    /// Contratto per una modifica carta che concede azioni positive al giocatore attivo.
+    /// Permette a Costituzione di annullarla prima del commit.
+    /// </summary>
+    public interface IPositiveActionCardChange
+    {
+        /// <summary>True se la modifica concede effettivamente azioni aggiuntive.</summary>
+        bool IsPositiveActionBenefit { get; }
+    }
+
+    /// <summary>
     /// Contesto passato a effetti e condizioni durante la risoluzione di una carta.
     /// Espone lo stato di gioco in lettura e raccoglie le modifiche da applicare al commit.
     /// </summary>
@@ -196,8 +206,14 @@ namespace FourE.Core
                 return true;
             }
 
-            return change is IPositivePlayerCardChange playerChange
-                   && playerChange.BeneficiaryPlayer == InactivePlayer;
+            if (change is IPositivePlayerCardChange playerChange
+                && playerChange.BeneficiaryPlayer == InactivePlayer)
+            {
+                return true;
+            }
+
+            return change is IPositiveActionCardChange actionChange
+                   && actionChange.IsPositiveActionBenefit;
         }
 
         /// <summary>

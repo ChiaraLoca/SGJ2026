@@ -59,7 +59,7 @@ namespace FourE.Players
         public bool WikipediaInterceptActive { get => _wikipediaInterceptActive; set => _wikipediaInterceptActive = value; }
 
         /// <summary>
-        /// True se Costituzione annulla aumenti di Note e carte ottenuti dalle carte dell'avversario.
+        /// True se Costituzione annulla aumenti di Note, carte e azioni delle carte avversarie.
         /// Decade all'inizio del prossimo turno del proprietario.
         /// </summary>
         public bool ConstitutionProtectionActive

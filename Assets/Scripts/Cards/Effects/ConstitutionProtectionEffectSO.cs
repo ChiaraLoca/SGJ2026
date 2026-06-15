@@ -5,7 +5,7 @@ namespace FourE.Cards.Effects
 {
     /// <summary>
     /// Attiva la protezione di Costituzione fino all'inizio del prossimo turno:
-    /// le carte avversarie non possono concedere Note positive o carte al proprietario.
+    /// le carte avversarie non possono concedere Note positive, carte o azioni.
     /// </summary>
     [CreateAssetMenu(
         fileName = "ConstitutionProtectionEffect",

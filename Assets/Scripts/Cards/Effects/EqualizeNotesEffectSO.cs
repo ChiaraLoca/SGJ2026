@@ -16,6 +16,12 @@ namespace FourE.Cards.Effects
         /// <inheritdoc/>
         public override void Apply(GameContext context)
         {
+            if (context.ActivePlayer == null)
+            {
+                return;
+            }
+
+            // Tutor opera sempre e soltanto sulla coppia del giocatore che lo ha giocato.
             context.RegisterChange(new EqualizeNotesChange(context.ActivePlayer, _maxAmount));
         }
     }

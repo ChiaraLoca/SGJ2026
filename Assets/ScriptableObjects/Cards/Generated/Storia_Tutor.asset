@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Storia_Tutor
   m_EditorClassIdentifier: Assembly-CSharp::FourE.Cards.CardDataSO
   _cardName: Tutor
-  _description: +4 Note al secchione con Nota piu' bassa (massimo: il valore del piu' alto).
+  _description: +4 Note al tuo secchione con Nota piu' bassa (massimo: il valore del tuo piu' alto).
   _cardType: 0
   _affinity: 0
   _tags: 6
